@@ -12,12 +12,13 @@
     "counts": {
       "segments_changed": 2,
       "changes": 7,
-      "applied": 3,
+      "applied": 4,
       "by_type": {
         "orthographic": 1,
         "deletion": 3,
         "insertion": 1,
-        "substitution": 2
+        "substitution": 1,
+        "prefix": 1
       },
       "by_confidence": {
         "low": 4,
@@ -34,13 +35,13 @@
     {
       "segment_id": 9,
       "original_text": "הַפְּסוֹלֶת דָּמֵי! הָכָא נָמֵי, כֵּיוָן דְּאִי בָּעֵי לְמִישְׁקַל, לָא מִשְׁתְּקִיל לֵיהּ יַיִן עַד דְּשָׁקֵיל לַהּ לְאֶבֶן —",
-      "reconstructed_text": "הַפְּסוֹלֶת דָּמֵי! הָכָא נָמֵי, כֵּיוָן דְּאִי בָּעֵי לְמִישְׁקַל, לָא מִשְׁתְּקִיל לֵיהּ יַיִן לְאֶבֶן —",
-      "reconstructed_html": "הַפְּסוֹלֶת דָּמֵי! הָכָא נָמֵי, כֵּיוָן דְּאִי בָּעֵי לְמִישְׁקַל, לָא מִשְׁתְּקִיל לֵיהּ יַיִן <span class=\"girsa-change girsa-deletion\" data-change-type=\"deletion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Shabbat 142b:10:1\" data-marker=\"ל&quot;ג\" data-original=\"עַד\">עַד</span> <span class=\"girsa-change girsa-deletion\" data-change-type=\"deletion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Shabbat 142b:10:1\" data-marker=\"ל&quot;ג\" data-original=\"דְּשָׁקֵיל\">דְּשָׁקֵיל</span> <span class=\"girsa-change girsa-deletion\" data-change-type=\"deletion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Shabbat 142b:10:1\" data-marker=\"ל&quot;ג\" data-original=\"לַהּ\">לַהּ</span> לְאֶבֶן —",
+      "reconstructed_text": "הַפְּסוֹלֶת דָּמֵי! הָכָא נָמֵי, כֵּיוָן דְּאִי בָּעֵי לְמִישְׁקַל, לָא מִשְׁתְּקִל לֵיהּ יַיִן לְאֶבֶן —",
+      "reconstructed_html": "הַפְּסוֹלֶת דָּמֵי! הָכָא נָמֵי, כֵּיוָן דְּאִי בָּעֵי לְמִישְׁקַל, לָא <span class=\"girsa-change\" data-change-type=\"orthographic\" data-confidence=\"low\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Shabbat 142b:10:1\" data-marker=\"ה&quot;ג\" data-original=\"מִשְׁתְּקִיל\">מִשְׁתְּקִ<span class=\"girsa-letter-del\">י</span>ל</span> לֵיהּ יַיִן <span class=\"girsa-change girsa-deletion\" data-change-type=\"deletion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Shabbat 142b:10:1\" data-marker=\"ל&quot;ג\" data-original=\"עַד\">עַד</span> <span class=\"girsa-change girsa-deletion\" data-change-type=\"deletion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Shabbat 142b:10:1\" data-marker=\"ל&quot;ג\" data-original=\"דְּשָׁקֵיל\">דְּשָׁקֵיל</span> <span class=\"girsa-change girsa-deletion\" data-change-type=\"deletion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Shabbat 142b:10:1\" data-marker=\"ל&quot;ג\" data-original=\"לַהּ\">לַהּ</span> לְאֶבֶן —",
       "changes": [
         {
           "type": "orthographic",
           "confidence": "low",
-          "apply": false,
+          "apply": true,
           "source": "rashi_girsa",
           "source_ref": "Rashi on Shabbat 142b:10:1",
           "marker": "ה\"ג",
@@ -48,6 +49,8 @@
           "seg_token_index": 9,
           "original": "מִשְׁתְּקִיל",
           "proposed": "משתקל",
+          "recon_text": "מִשְׁתְּקִל",
+          "marked_html": "מִשְׁתְּקִ<span class=\"girsa-letter-del\">י</span>ל",
           "proposed_vocalized": false,
           "before_context": "לְמִישְׁקַל, לָא",
           "after_context": "לֵיהּ יַיִן"
@@ -128,12 +131,14 @@
           "seg_token_index": 40,
           "original": "לְצוֹרֶךְ",
           "proposed": "שצריך",
+          "recon_text": "שצריךְ",
+          "marked_html": "<span class=\"girsa-letter-sub\">ש</span>צ<span class=\"girsa-letter-sub\">ר</span><span class=\"girsa-letter-sub\">י</span>ךְ",
           "proposed_vocalized": false,
           "before_context": "שָׁנוּ אֶלָּא",
           "after_context": "גּוּפוֹ, אֲבָל"
         },
         {
-          "type": "substitution",
+          "type": "prefix",
           "confidence": "low",
           "apply": false,
           "source": "rashi_dh",
@@ -143,6 +148,8 @@
           "seg_token_index": 43,
           "original": "לְצוֹרֶךְ",
           "proposed": "צריך",
+          "recon_text": "צריךְ",
+          "marked_html": "<span class=\"girsa-letter-del\">לְ</span>צ<span class=\"girsa-letter-sub\">ר</span><span class=\"girsa-letter-sub\">י</span>ךְ",
           "proposed_vocalized": false,
           "before_context": "גּוּפוֹ, אֲבָל",
           "after_context": "מְקוֹמוֹ —"
