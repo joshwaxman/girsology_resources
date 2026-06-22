@@ -11,10 +11,10 @@
     "counts": {
       "segments_changed": 1,
       "changes": 2,
-      "applied": 0,
+      "applied": 2,
       "by_type": {
-        "insertion": 1,
-        "substitution": 1
+        "substitution": 1,
+        "transposition": 1
       },
       "by_confidence": {
         "low": 2
@@ -29,28 +29,13 @@
     {
       "segment_id": 0,
       "original_text": "אֲבָל גַּבֵּי תְּמוּרַת וְלַד אָשָׁם, דְּלֵיכָּא שֵׁם עוֹלָה עַל אִמּוֹ, מוֹדֵי רַבִּי אֶלְעָזָר דִּבְדָמָיו אִין הוּא",
-      "reconstructed_text": "אֲבָל גַּבֵּי תְּמוּרַת וְלַד אָשָׁם, דְּלֵיכָּא שֵׁם עוֹלָה עַל אִמּוֹ, מוֹדֵי רַבִּי אֶלְעָזָר דִּבְדָמָיו אִין הוּא",
-      "reconstructed_html": "אֲבָל גַּבֵּי תְּמוּרַת וְלַד אָשָׁם, דְּלֵיכָּא שֵׁם עוֹלָה עַל אִמּוֹ, מוֹדֵי רַבִּי אֶלְעָזָר דִּבְדָמָיו אִין הוּא",
+      "reconstructed_text": "אֲבָל גַּבֵּי וְלַד תְּמוּרַת אָשָׁם, אין שֵׁם עוֹלָה עַל אִמּוֹ, מוֹדֵי רַבִּי אֶלְעָזָר דִּבְדָמָיו אִין הוּא",
+      "reconstructed_html": "אֲבָל גַּבֵּי <span class=\"girsa-change girsa-transposition-from girsa-dh\" data-change-type=\"transposition\" data-confidence=\"low\" data-source=\"rashi_dh\">תְּמוּרַת</span> וְלַד <span class=\"girsa-change girsa-dh\" data-change-type=\"transposition\" data-confidence=\"low\" data-source=\"rashi_dh\" data-source-ref=\"Rashi on Temurah 19a:1:1\" data-marker=\"(dibbur hamatchil)\" data-original=\"תְּמוּרַת\">תְּמוּרַת</span> אָשָׁם, <span class=\"girsa-change girsa-dh\" data-change-type=\"substitution\" data-confidence=\"low\" data-source=\"rashi_dh\" data-source-ref=\"Rashi on Temurah 19a:1:1\" data-marker=\"(dibbur hamatchil)\" data-original=\"דְּלֵיכָּא\">אין</span> שֵׁם עוֹלָה עַל אִמּוֹ, מוֹדֵי רַבִּי אֶלְעָזָר דִּבְדָמָיו אִין הוּא",
       "changes": [
-        {
-          "type": "insertion",
-          "confidence": "low",
-          "apply": false,
-          "source": "rashi_dh",
-          "source_ref": "Rashi on Temurah 19a:1:1",
-          "marker": "(dibbur hamatchil)",
-          "marker_type": "dh",
-          "after_token_index": 3,
-          "original": "",
-          "proposed": "תְּמוּרַת",
-          "proposed_vocalized": true,
-          "before_context": "אָשָׁם, דְּלֵיכָּא",
-          "after_context": ""
-        },
         {
           "type": "substitution",
           "confidence": "low",
-          "apply": false,
+          "apply": true,
           "source": "rashi_dh",
           "source_ref": "Rashi on Temurah 19a:1:1",
           "marker": "(dibbur hamatchil)",
@@ -61,6 +46,22 @@
           "proposed_vocalized": false,
           "before_context": "וְלַד אָשָׁם,",
           "after_context": "שֵׁם עוֹלָה"
+        },
+        {
+          "type": "transposition",
+          "confidence": "low",
+          "apply": true,
+          "source": "rashi_dh",
+          "source_ref": "Rashi on Temurah 19a:1:1",
+          "marker": "(dibbur hamatchil)",
+          "marker_type": "dh",
+          "seg_token_index": 2,
+          "after_token_index": 3,
+          "original": "תְּמוּרַת",
+          "proposed": "תְּמוּרַת",
+          "proposed_vocalized": true,
+          "before_context": "אֲבָל גַּבֵּי",
+          "after_context": "אָשָׁם, דְּלֵיכָּא"
         }
       ]
     }

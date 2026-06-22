@@ -12,10 +12,11 @@
     "counts": {
       "segments_changed": 2,
       "changes": 3,
-      "applied": 2,
+      "applied": 3,
       "by_type": {
         "substitution": 1,
-        "insertion": 2
+        "insertion": 1,
+        "transposition": 1
       },
       "by_confidence": {
         "medium": 1,
@@ -56,8 +57,8 @@
     {
       "segment_id": 5,
       "original_text": "יִצְחָק: אַחֲדָא. וְהָא ״כִּדְבָרָיו״ קָאָמַר, דִּנְפִישִׁי. וְעוֹד,",
-      "reconstructed_text": "יִצְחָק: אַחֲדָא. וְהָא ״כִּדְבָרָיו״ דִּנְפִישִׁי. קָאָמַר, דִּנְפִישִׁי. וְעוֹד,",
-      "reconstructed_html": "יִצְחָק: אַחֲדָא. וְהָא ״כִּדְבָרָיו״ <span class=\"girsa-change\" data-change-type=\"insertion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Pesachim 16a:6:1\" data-marker=\"ה&quot;ג\">דִּנְפִישִׁי.</span> קָאָמַר, דִּנְפִישִׁי. וְעוֹד,",
+      "reconstructed_text": "יִצְחָק: אַחֲדָא. וְהָא ״כִּדְבָרָיו״ דִּנְפִישִׁי. דִּנְפִישִׁי. קאמר וְעוֹד,",
+      "reconstructed_html": "יִצְחָק: אַחֲדָא. וְהָא ״כִּדְבָרָיו״ <span class=\"girsa-change\" data-change-type=\"insertion\" data-confidence=\"high\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Pesachim 16a:6:1\" data-marker=\"ה&quot;ג\">דִּנְפִישִׁי.</span> <span class=\"girsa-change girsa-transposition-from girsa-dh\" data-change-type=\"transposition\" data-confidence=\"low\" data-source=\"rashi_dh\">קָאָמַר,</span> דִּנְפִישִׁי. <span class=\"girsa-change girsa-dh\" data-change-type=\"transposition\" data-confidence=\"low\" data-source=\"rashi_dh\" data-source-ref=\"Rashi on Pesachim 16a:6:1\" data-marker=\"(dibbur hamatchil)\" data-original=\"קָאָמַר,\">קאמר</span> וְעוֹד,",
       "changes": [
         {
           "type": "insertion",
@@ -75,19 +76,20 @@
           "after_context": ""
         },
         {
-          "type": "insertion",
+          "type": "transposition",
           "confidence": "low",
-          "apply": false,
+          "apply": true,
           "source": "rashi_dh",
           "source_ref": "Rashi on Pesachim 16a:6:1",
           "marker": "(dibbur hamatchil)",
           "marker_type": "dh",
+          "seg_token_index": 4,
           "after_token_index": 5,
-          "original": "",
+          "original": "קָאָמַר,",
           "proposed": "קאמר",
           "proposed_vocalized": false,
-          "before_context": "וְעוֹד,",
-          "after_context": ""
+          "before_context": "וְהָא ״כִּדְבָרָיו״",
+          "after_context": "וְעוֹד,"
         }
       ]
     }
