@@ -12,21 +12,21 @@
     "counts": {
       "segments_changed": 3,
       "changes": 5,
-      "applied": 4,
+      "applied": 3,
       "by_type": {
+        "girsa-confirmed": 1,
         "substitution": 1,
-        "deletion": 1,
         "insertion": 1,
         "orthographic": 1,
         "suffix": 1
       },
       "by_confidence": {
-        "medium": 3,
-        "low": 2
+        "low": 3,
+        "medium": 2
       },
       "by_source": {
-        "rashi_dh": 2,
-        "rashi_girsa": 3
+        "rashi_girsa": 3,
+        "rashi_dh": 2
       },
       "skipped_abbrev": 1
     }
@@ -38,6 +38,23 @@
       "reconstructed_text": "שֶׁלֹּא כְּתִיקְנָהּ וְכוּלָּן כְּתִיקְנָן – פִּיגּוּל; מַנִּי? אִילֵּימָא רַבָּנַן – הָא אָמְרִי אמרַינַן אֵין מְפַגְּלִין בַּחֲצִי מַתִּיר!",
       "reconstructed_html": "שֶׁלֹּא כְּתִיקְנָהּ וְכוּלָּן כְּתִיקְנָן – פִּיגּוּל; מַנִּי? אִילֵּימָא רַבָּנַן – הָא אָמְרִי <span class=\"girsa-change girsa-dh\" data-change-type=\"substitution\" data-confidence=\"medium\" data-source=\"rashi_dh\" data-source-ref=\"Rashi on Zevachim 41b:9:1\" data-marker=\"(dibbur hamatchil)\" data-original=\"רַבָּנַן:\"><span class=\"girsa-letter-ins\">א</span><span class=\"girsa-letter-ins\">מ</span>רַ<span class=\"girsa-letter-sub\">י</span>נַן</span> אֵין מְפַגְּלִין בַּחֲצִי מַתִּיר!",
       "changes": [
+        {
+          "type": "girsa-confirmed",
+          "confidence": "low",
+          "apply": false,
+          "source": "rashi_girsa",
+          "source_ref": "Rashi on Zevachim 41b:15:1",
+          "marker": "לא גרסינן",
+          "marker_type": "delete",
+          "rashi_excerpt": "ולא גרסינן אלא כלומר לעולם כתקנן לפיגול ושלא כתיקנה חוץ למקומו וה\"ה נמי דאם נתן בשתיקה לא פיגל והאי דנקט שלא כתקנה איידי דתנא רישא בחיצונות נתן את הראשונה חוץ לזמנה ואת השניה חוץ למקומו פיגול וחייבין עליו כרת ודוקא נקט חוץ למקומו לאשמועינן רבותא דלא אתיא מחשבת חוץ למקומו דשניה ומפקא לה מידי פיגול משום דהוקבע בפיגול ראשונה שמתנה אחת מתרת ומפגל בהן תני נמי סיפא בפנימיות דכה\"ג אתיא מחשבה שניה ומפקא ליה מידי פיגול אע\"ג דלא צריך למתניה דהא בלאו הכי נמי",
+          "confirmed_status": "delete-partial",
+          "target_phrase": "אלא כלומר לעולם כתקנן לפיגול ושלא",
+          "seg_token_index": 0,
+          "original": "",
+          "proposed": "",
+          "before_context": "",
+          "after_context": "כְּתִיקְנָהּ וְכוּלָּן"
+        },
         {
           "type": "substitution",
           "confidence": "medium",
@@ -60,23 +77,9 @@
     {
       "segment_id": 13,
       "original_text": "אָשֵׁי אָמַר: שֶׁלֹּא לִשְׁמוֹ. מִכְּלָל דְּכִי לָא עָבֵיד לַהּ",
-      "reconstructed_text": "אָשֵׁי אָמַר: שֶׁלֹּא לִשְׁמוֹ. מִכְּלָל דְּכִי עָבֵיד לַהּ",
-      "reconstructed_html": "אָשֵׁי אָמַר: שֶׁלֹּא לִשְׁמוֹ. מִכְּלָל דְּכִי <span class=\"girsa-change girsa-deletion\" data-change-type=\"deletion\" data-confidence=\"medium\" data-source=\"rashi_girsa\" data-source-ref=\"Rashi on Zevachim 41b:15:1\" data-marker=\"לא גרסינן\" data-original=\"לָא\">לָא</span> עָבֵיד לַהּ",
+      "reconstructed_text": "אָשֵׁי אָמַר: שֶׁלֹּא לִשְׁמוֹ. מִכְּלָל דְּכִי לָא עָבֵיד לַהּ",
+      "reconstructed_html": "אָשֵׁי אָמַר: שֶׁלֹּא לִשְׁמוֹ. מִכְּלָל דְּכִי לָא עָבֵיד לַהּ",
       "changes": [
-        {
-          "type": "deletion",
-          "confidence": "medium",
-          "apply": true,
-          "source": "rashi_girsa",
-          "source_ref": "Rashi on Zevachim 41b:15:1",
-          "marker": "לא גרסינן",
-          "marker_type": "delete",
-          "seg_token_index": 6,
-          "original": "לָא",
-          "proposed": "",
-          "before_context": "מִכְּלָל דְּכִי",
-          "after_context": "עָבֵיד לַהּ"
-        },
         {
           "type": "insertion",
           "confidence": "low",
@@ -108,6 +111,7 @@
           "source_ref": "Rashi on Zevachim 41b:13:3",
           "marker": "ה\"ג",
           "marker_type": "assert",
+          "rashi_excerpt": "ה\"ג מִכְּלָל דְּכִי לָא עָבֵיד לַהּ חוּץ לִמְקוֹמוֹ וְשֶׁלֹּא לִשְׁמוֹ מיחייב",
           "seg_token_index": 5,
           "original": "מִחַיַּיב!",
           "proposed": "מיחייב.",
@@ -126,6 +130,7 @@
           "source_ref": "Rashi on Zevachim 41b:15:1",
           "marker": "ה\"ג",
           "marker_type": "assert",
+          "rashi_excerpt": "ה\"ג אַיְּידֵי דתני רֵישָׁא פִּיגּוּל וְחַיָּיבִין עָלָיו כָּרֵת, תְּנָא סֵיפָא פָּסוּל וְאֵין בּוֹ כָּרֵת",
           "seg_token_index": 7,
           "original": "דִּתְנָא",
           "proposed": "דתני",
