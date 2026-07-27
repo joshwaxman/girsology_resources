@@ -2,15 +2,18 @@
  "metadata": {
   "masechet": "berakhot",
   "source": "rif_diff",
-  "schema_version": 1,
-  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v1",
+  "schema_version": 2,
+  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v2",
   "counts": {
    "tokens": 265,
-   "citation": 14,
-   "addition": 101,
-   "variants": 17,
+   "citation": 56,
+   "citation_requote": 4,
+   "addition": 59,
+   "citation_transposition": 10,
+   "variants": 22,
    "parallel": 150,
-   "spans": 29
+   "citation_xtractate": 42,
+   "spans": 35
   },
   "rif_daf": "16a"
  },
@@ -20,6 +23,7 @@
    "spans": [
     {
      "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       0,
       3
@@ -38,6 +42,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       20,
       25
@@ -59,7 +64,7 @@
      ]
     }
    ],
-   "html": "<span class=\"rif-span rif-citation\" data-gemara-from=\"23a:2\">כדי לגמור את כולה</span> <span class=\"rif-span rif-addition\">והכין מסקנא בסוף מסכת ר&quot;ה וכן בתקיעות וכן בהלל וכן במגילה אבל בתפלה בלחוד אם שהה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"24b:16\">כדי לגמור את כולה <span class=\"rif-variant\" data-subtype=\"metathesis\" data-vilna=\"חֲזוֹר\">חוזר</span> לראש</span>"
+   "html": "<span class=\"rif-span rif-citation\" data-gemara-from=\"23a:2\" data-citation-kind=\"requote\">כדי לגמור את כולה</span> <span class=\"rif-span rif-addition\">והכין מסקנא בסוף מסכת ר&quot;ה וכן בתקיעות וכן בהלל וכן במגילה אבל בתפלה בלחוד אם שהה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"24b:16\" data-citation-kind=\"transposition\">כדי לגמור את כולה <span class=\"rif-variant\" data-subtype=\"metathesis\" data-vilna=\"חֲזוֹר\">חוזר</span> לראש</span>"
   },
   {
    "line": 2,
@@ -406,12 +411,38 @@
      "class": "addition",
      "token_range": [
       24,
-      36
+      27
      ],
-     "text": "פירוש צואה בפי טבעת היכי דמי אי דנראית פשיטא ואי דלא נראית לא"
+     "text": "פירוש צואה בפי טבעת"
     },
     {
      "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "yoma",
+     "token_range": [
+      28,
+      36
+     ],
+     "text": "היכי דמי אי דנראית פשיטא ואי דלא נראית לא",
+     "gemara_from": "30a:2",
+     "gemara_to": "30a:2",
+     "variants": [
+      {
+       "subtype": "prefix",
+       "vilna": "אִי",
+       "rif": "ואי",
+       "reading_vocalized": "ואִי",
+       "html": "<span class=\"girsa-letter-ins\">ו</span>אִי",
+       "gemara_ref": "30a:2",
+       "gemara_token": 14,
+       "ti": 33,
+       "gemara_masechet": "yoma"
+      }
+     ]
+    },
+    {
+     "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       37,
       40
@@ -433,12 +464,112 @@
      ]
     },
     {
-     "class": "addition",
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "yoma",
      "token_range": [
       41,
+      57
+     ],
+     "text": "לא צריכא דיושב ונראית ועומד ואינה נראית ומאי שנא מצואה שעל בשרו דאיתמר צואה על בשרו או",
+     "gemara_from": "30a:2",
+     "gemara_to": "30a:3",
+     "variants": [
+      {
+       "subtype": "prefix",
+       "vilna": "עוֹמֵד",
+       "rif": "ועומד",
+       "reading_vocalized": "ועוֹמֵד",
+       "html": "<span class=\"girsa-letter-ins\">ו</span>עוֹמֵד",
+       "gemara_ref": "30a:2",
+       "gemara_token": 26,
+       "ti": 45,
+       "gemara_masechet": "yoma"
+      },
+      {
+       "subtype": "prefix",
+       "vilna": "עַל",
+       "rif": "שעל",
+       "reading_vocalized": "שעַל",
+       "html": "<span class=\"girsa-letter-ins\">ש</span>עַל",
+       "gemara_ref": "30a:3",
+       "gemara_token": 3,
+       "ti": 51,
+       "gemara_masechet": "yoma"
+      }
+     ]
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      58,
+      59
+     ],
+     "text": "ידו מטונפת"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "yoma",
+     "token_range": [
+      60,
+      67
+     ],
+     "text": "מבית הכסא רב הונא אמר מותר לקרוא ק\"ש",
+     "gemara_from": "30a:3",
+     "gemara_to": "30a:3",
+     "variants": [
+      {
+       "subtype": "substitution",
+       "vilna": "בְּבֵית",
+       "rif": "מבית",
+       "reading_vocalized": "מבֵית",
+       "html": "<span class=\"girsa-letter-sub\">מ</span>בֵית",
+       "gemara_ref": "30a:3",
+       "gemara_token": 12,
+       "ti": 60,
+       "gemara_masechet": "yoma"
+      },
+      {
+       "subtype": "suffix",
+       "vilna": "לִקְרוֹת",
+       "rif": "לקרוא",
+       "reading_vocalized": "לִקְרוֹא",
+       "html": "לִקְרוֹ<span class=\"girsa-letter-sub\">א</span>",
+       "gemara_ref": "30a:3",
+       "gemara_token": 18,
+       "ti": 66,
+       "gemara_masechet": "yoma"
+      }
+     ]
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      68,
+      68
+     ],
+     "text": "ומשני"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "yoma",
+     "token_range": [
+      69,
+      76
+     ],
+     "text": "במקומה נפיש זוהמא שלא במקומה לא נפיש זוהמא",
+     "gemara_from": "30a:3",
+     "gemara_to": "30a:3"
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      77,
       82
      ],
-     "text": "לא צריכא דיושב ונראית ועומד ואינה נראית ומאי שנא מצואה שעל בשרו דאיתמר צואה על בשרו או ידו מטונפת מבית הכסא רב הונא אמר מותר לקרוא ק\"ש ומשני במקומה נפיש זוהמא שלא במקומה לא נפיש זוהמא מדקא מקשינן מינה שמעינן דהלכתא היא"
+     "text": "מדקא מקשינן מינה שמעינן דהלכתא היא"
     },
     {
      "class": "parallel",
@@ -493,7 +624,7 @@
      ]
     }
    ],
-   "html": "<span class=\"rif-span rif-addition\">וקי&quot;ל כרב הונא חדא דהוא רביה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:4\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"וְרַב\">דרב</span> חסדא</span> <span class=\"rif-span rif-addition\">ועוד דקא מקשינן מינה בפרק אמר להם הממונה דאמר רב פפא צואה במקומה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:4\">אסור לקרות ק&quot;ש</span> <span class=\"rif-span rif-addition\">פירוש צואה בפי טבעת היכי דמי אי דנראית פשיטא ואי דלא נראית לא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"25b:8\"><span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"נִתְּנָה\">ניתנה</span> תורה למלאכי השרת</span> <span class=\"rif-span rif-addition\">לא צריכא דיושב ונראית ועומד ואינה נראית ומאי שנא מצואה שעל בשרו דאיתמר צואה על בשרו או ידו מטונפת מבית הכסא רב הונא אמר מותר לקרוא ק&quot;ש ומשני במקומה נפיש זוהמא שלא במקומה לא נפיש זוהמא מדקא מקשינן מינה שמעינן דהלכתא היא</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:5\"><span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"אִתְּמַר:\">איתמר</span> ריח רע שיש לו עיקר רב הונא אמר מרחיק ארבע אמות וקורא ק&quot;ש ורב חסדא אמר מרחיק ארבע אמות ממקום</span> <span class=\"rif-span rif-addition\">שכלה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:5\">הריח וקורא תניא <span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"כְּוָתֵיהּ\">כוותיה</span> דרב חסדא לא יקרא אדם ק&quot;ש לא כנגד</span>"
+   "html": "<span class=\"rif-span rif-addition\">וקי&quot;ל כרב הונא חדא דהוא רביה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:4\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"וְרַב\">דרב</span> חסדא</span> <span class=\"rif-span rif-addition\">ועוד דקא מקשינן מינה בפרק אמר להם הממונה דאמר רב פפא צואה במקומה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:4\">אסור לקרות ק&quot;ש</span> <span class=\"rif-span rif-addition\">פירוש צואה בפי טבעת</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"30a:2\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"yoma\">היכי דמי אי דנראית פשיטא <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"אִי\">ואי</span> דלא נראית לא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"25b:8\" data-citation-kind=\"transposition\"><span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"נִתְּנָה\">ניתנה</span> תורה למלאכי השרת</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"30a:2\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"yoma\">לא צריכא דיושב ונראית <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"עוֹמֵד\">ועומד</span> ואינה נראית ומאי שנא מצואה <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"עַל\">שעל</span> בשרו דאיתמר צואה על בשרו או</span> <span class=\"rif-span rif-addition\">ידו מטונפת</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"30a:3\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"yoma\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"בְּבֵית\">מבית</span> הכסא רב הונא אמר מותר <span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"לִקְרוֹת\">לקרוא</span> ק&quot;ש</span> <span class=\"rif-span rif-addition\">ומשני</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"30a:3\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"yoma\">במקומה נפיש זוהמא שלא במקומה לא נפיש זוהמא</span> <span class=\"rif-span rif-addition\">מדקא מקשינן מינה שמעינן דהלכתא היא</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:5\"><span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"אִתְּמַר:\">איתמר</span> ריח רע שיש לו עיקר רב הונא אמר מרחיק ארבע אמות וקורא ק&quot;ש ורב חסדא אמר מרחיק ארבע אמות ממקום</span> <span class=\"rif-span rif-addition\">שכלה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"25a:5\">הריח וקורא תניא <span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"כְּוָתֵיהּ\">כוותיה</span> דרב חסדא לא יקרא אדם ק&quot;ש לא כנגד</span>"
   }
  ]
 }

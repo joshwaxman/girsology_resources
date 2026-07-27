@@ -2,15 +2,17 @@
  "metadata": {
   "masechet": "berakhot",
   "source": "rif_diff",
-  "schema_version": 1,
-  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v1",
+  "schema_version": 2,
+  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v2",
   "counts": {
    "tokens": 335,
    "parallel": 217,
-   "addition": 104,
-   "variants": 14,
-   "citation": 14,
-   "spans": 50
+   "addition": 95,
+   "variants": 16,
+   "citation": 23,
+   "citation_transposition": 14,
+   "citation_xtractate": 9,
+   "spans": 51
   },
   "rif_daf": "45a"
  },
@@ -286,6 +288,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       51,
       55
@@ -304,6 +307,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       57,
       58
@@ -383,7 +387,7 @@
      ]
     }
    ],
-   "html": "<span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:1\">תניא אמר ר&#x27; עקיבא פעם אחת נכנסתי אחר רבי יהושע לבית הכסא ולמדתי ממנו שלשה דברים</span> <span class=\"rif-span rif-addition\">למדתי שלא יפרע אדם עד שישב ולמדתי שלא יפנה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:1\">מזרח ומערב אלא צפון ודרום ולמדתי שאין מקנחין בימין אלא בשמאל אמר</span> <span class=\"rif-span rif-addition\">ליה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:1\">בן עזאי ע&quot;כ העזת פניך ברבך אמר לו תורה היא וללמוד אני צריך</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"62a:17\">איזהו צנוע זה הנפנה בלילה</span> <span class=\"rif-span rif-addition\">כדרך</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"62a:17\">שנפנה ביום</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:10\">אמר עולא אחורי <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"הַגָּדֵר\">גדר</span> נפנה מיד ובבקעה כל זמן שמתעטש ואין</span> <span class=\"rif-span rif-addition\">קולו נשמע רב אשי אמר</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:10\">כל זמן</span> <span class=\"rif-span rif-addition\">שאין חבירו רואה את פירועו</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:5\"><span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"דְּתַנְיָא,\">תניא</span> רבן שמעון בן גמליאל אומר עמוד החוזר מביא את האדם לידי הדרוקן סילון החוזר מביא את האדם לידי ירקון:</span>"
+   "html": "<span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:1\">תניא אמר ר&#x27; עקיבא פעם אחת נכנסתי אחר רבי יהושע לבית הכסא ולמדתי ממנו שלשה דברים</span> <span class=\"rif-span rif-addition\">למדתי שלא יפרע אדם עד שישב ולמדתי שלא יפנה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:1\">מזרח ומערב אלא צפון ודרום ולמדתי שאין מקנחין בימין אלא בשמאל אמר</span> <span class=\"rif-span rif-addition\">ליה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:1\">בן עזאי ע&quot;כ העזת פניך ברבך אמר לו תורה היא וללמוד אני צריך</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"62a:17\" data-citation-kind=\"transposition\">איזהו צנוע זה הנפנה בלילה</span> <span class=\"rif-span rif-addition\">כדרך</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"62a:17\" data-citation-kind=\"transposition\">שנפנה ביום</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:10\">אמר עולא אחורי <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"הַגָּדֵר\">גדר</span> נפנה מיד ובבקעה כל זמן שמתעטש ואין</span> <span class=\"rif-span rif-addition\">קולו נשמע רב אשי אמר</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62a:10\">כל זמן</span> <span class=\"rif-span rif-addition\">שאין חבירו רואה את פירועו</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:5\"><span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"דְּתַנְיָא,\">תניא</span> רבן שמעון בן גמליאל אומר עמוד החוזר מביא את האדם לידי הדרוקן סילון החוזר מביא את האדם לידי ירקון:</span>"
   },
   {
    "line": 3,
@@ -447,15 +451,51 @@
      ]
     },
     {
-     "class": "addition",
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "megillah",
      "token_range": [
       47,
+      55
+     ],
+     "text": "הכא דרך שער צפון להשתחות יצא דרך שער נגב",
+     "gemara_from": "29a:13",
+     "gemara_to": "29a:13",
+     "variants": [
+      {
+       "subtype": "substitution",
+       "vilna": "הַבָּא",
+       "rif": "הכא",
+       "reading_vocalized": "הַכא",
+       "html": "הַ<span class=\"girsa-letter-sub\">כ</span>א",
+       "gemara_ref": "29a:13",
+       "gemara_token": 34,
+       "ti": 47,
+       "gemara_masechet": "megillah"
+      },
+      {
+       "subtype": "orthographic",
+       "vilna": "לְהִשְׁתַּחֲווֹת",
+       "rif": "להשתחות",
+       "reading_vocalized": "לְהִשְׁתַּחֲוֹת",
+       "html": "לְהִשְׁתַּחֲ<span class=\"girsa-letter-del\">ו</span>וֹת",
+       "gemara_ref": "29a:13",
+       "gemara_token": 38,
+       "ti": 51,
+       "gemara_masechet": "megillah"
+      }
+     ]
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      56,
       73
      ],
-     "text": "הכא דרך שער צפון להשתחות יצא דרך שער נגב והבא דרך שער נגב יצא דרך שער צפונה לא ישוב דרך השער אשר בא בו כי נכחו יצא"
+     "text": "והבא דרך שער נגב יצא דרך שער צפונה לא ישוב דרך השער אשר בא בו כי נכחו יצא"
     }
    ],
-   "html": "<span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:18\">לא יכנס אדם להר הבית וכו&#x27; אמר רב נחמן אמר רבה בר אבוה הנכנס שלא לעשותו קפנדריא מותר לעשותו קפנדריא</span> <span class=\"rif-span rif-addition\">מאי קפנדריא דאמר אדמקיפנא אהדר איעול בהא</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:19\">אמר ר&#x27; חלבו אמר רב הונא הנכנס לבית הכנסת להתפלל</span> <span class=\"rif-span rif-addition\">מצוה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:19\"><span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"לַעֲשׂוֹתוֹ\">לעשות</span> קפנדריא שנא&#x27; ובבוא עם הארץ לפני ה&#x27; במועדים</span> <span class=\"rif-span rif-addition\">הכא דרך שער צפון להשתחות יצא דרך שער נגב והבא דרך שער נגב יצא דרך שער צפונה לא ישוב דרך השער אשר בא בו כי נכחו יצא</span>"
+   "html": "<span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:18\">לא יכנס אדם להר הבית וכו&#x27; אמר רב נחמן אמר רבה בר אבוה הנכנס שלא לעשותו קפנדריא מותר לעשותו קפנדריא</span> <span class=\"rif-span rif-addition\">מאי קפנדריא דאמר אדמקיפנא אהדר איעול בהא</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:19\">אמר ר&#x27; חלבו אמר רב הונא הנכנס לבית הכנסת להתפלל</span> <span class=\"rif-span rif-addition\">מצוה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"62b:19\"><span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"לַעֲשׂוֹתוֹ\">לעשות</span> קפנדריא שנא&#x27; ובבוא עם הארץ לפני ה&#x27; במועדים</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"29a:13\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"megillah\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"הַבָּא\">הכא</span> דרך שער צפון <span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"לְהִשְׁתַּחֲווֹת\">להשתחות</span> יצא דרך שער נגב</span> <span class=\"rif-span rif-addition\">והבא דרך שער נגב יצא דרך שער צפונה לא ישוב דרך השער אשר בא בו כי נכחו יצא</span>"
   },
   {
    "line": 4,
@@ -652,6 +692,7 @@
    "spans": [
     {
      "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       0,
       6
@@ -661,7 +702,7 @@
      "gemara_to": "64a:15"
     }
    ],
-   "html": "<span class=\"rif-span rif-citation\" data-gemara-from=\"64a:15\">הדרן עלך הרואה וסליקא לה מסכת ברכות</span>"
+   "html": "<span class=\"rif-span rif-citation\" data-gemara-from=\"64a:15\" data-citation-kind=\"transposition\">הדרן עלך הרואה וסליקא לה מסכת ברכות</span>"
   }
  ]
 }

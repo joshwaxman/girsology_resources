@@ -2,15 +2,18 @@
  "metadata": {
   "masechet": "berakhot",
   "source": "rif_diff",
-  "schema_version": 1,
-  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v1",
+  "schema_version": 2,
+  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v2",
   "counts": {
    "tokens": 427,
-   "addition": 352,
-   "citation": 35,
+   "addition": 177,
+   "citation": 210,
+   "citation_transposition": 18,
    "parallel": 40,
-   "variants": 3,
-   "spans": 30
+   "variants": 12,
+   "citation_xtractate": 175,
+   "citation_requote": 17,
+   "spans": 52
   },
   "rif_daf": "21b"
  },
@@ -28,6 +31,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       1,
       7
@@ -100,6 +104,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       33,
       43
@@ -129,7 +134,7 @@
      "text": "גמרה להא שמעתא מפומיה דרבי יוחנן רביה:"
     }
    ],
-   "html": "<span class=\"rif-span rif-addition\">בעוה&quot;ז</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"31a:4\">שנאמר אז ימלא שחוק פינו ולשוננו רנה</span> <span class=\"rif-span rif-addition\">אז יאמרו בגוים הגדיל</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:2\">ה&#x27;</span> <span class=\"rif-span rif-addition\">לעשות עם אלה אימתי ימלא שחוק פינו ולשוננו רנה בזמן שיאמרו בגוים הגדיל</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:2\">ה&#x27;</span> <span class=\"rif-span rif-addition\">לעשות עם אלה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:3\">אמרו</span> <span class=\"rif-span rif-addition\">עליו על</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"5a:2\">רבי שמעון בן לקיש <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"לֹא\">שלא</span> מלא שחוק פיו בעולם הזה מכי</span> <span class=\"rif-span rif-addition\">גמרה להא שמעתא מפומיה דרבי יוחנן רביה:</span>"
+   "html": "<span class=\"rif-span rif-addition\">בעוה&quot;ז</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"31a:4\" data-citation-kind=\"transposition\">שנאמר אז ימלא שחוק פינו ולשוננו רנה</span> <span class=\"rif-span rif-addition\">אז יאמרו בגוים הגדיל</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:2\">ה&#x27;</span> <span class=\"rif-span rif-addition\">לעשות עם אלה אימתי ימלא שחוק פינו ולשוננו רנה בזמן שיאמרו בגוים הגדיל</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:2\">ה&#x27;</span> <span class=\"rif-span rif-addition\">לעשות עם אלה</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:3\">אמרו</span> <span class=\"rif-span rif-addition\">עליו על</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"5a:2\" data-citation-kind=\"transposition\">רבי שמעון בן לקיש <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"לֹא\">שלא</span> מלא שחוק פיו בעולם הזה מכי</span> <span class=\"rif-span rif-addition\">גמרה להא שמעתא מפומיה דרבי יוחנן רביה:</span>"
   },
   {
    "line": 2,
@@ -138,9 +143,34 @@
      "class": "addition",
      "token_range": [
       0,
+      3
+     ],
+     "text": "גרסינן בגיטין בפרק קמא"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "gittin",
+     "token_range": [
+      4,
       13
      ],
-     "text": "גרסינן בגיטין בפרק קמא שלחו ליה למר עוקבא זמרא מנא לן דאסור שרטט וכתב"
+     "text": "שלחו ליה למר עוקבא זמרא מנא לן דאסור שרטט וכתב",
+     "gemara_from": "7a:8",
+     "gemara_to": "7a:8",
+     "variants": [
+      {
+       "subtype": "orthographic",
+       "vilna": "דַּאֲסִיר?",
+       "rif": "דאסור",
+       "reading_vocalized": "דַּאֲסִור",
+       "html": "דַּאֲסִ<span class=\"girsa-letter-sub\">ו</span>ר",
+       "gemara_ref": "7a:8",
+       "gemara_token": 7,
+       "ti": 11,
+       "gemara_masechet": "gittin"
+      }
+     ]
     },
     {
      "class": "parallel",
@@ -153,21 +183,58 @@
      "gemara_to": "31a:3"
     },
     {
-     "class": "addition",
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "gittin",
      "token_range": [
       15,
+      35
+     ],
+     "text": "אל תשמח ישראל אל גיל בעמים ולישלח להו בשיר לא ישתו יין ימר שכר לשותיו אי מההיא הוה אמינא זמרא במנא",
+     "gemara_from": "7a:8",
+     "gemara_to": "7a:9",
+     "variants": [
+      {
+       "subtype": "substitution",
+       "vilna": "מֵהָהוּא,",
+       "rif": "מההיא",
+       "reading_vocalized": "מֵהָהיא",
+       "html": "מֵהָה<span class=\"girsa-letter-sub\">י</span>א",
+       "gemara_ref": "7a:9",
+       "gemara_token": 11,
+       "ti": 31,
+       "gemara_masechet": "gittin"
+      },
+      {
+       "subtype": "substitution",
+       "vilna": "דְמָנָא,",
+       "rif": "במנא",
+       "reading_vocalized": "במָנָא",
+       "html": "<span class=\"girsa-letter-sub\">ב</span>מָנָא",
+       "gemara_ref": "7a:9",
+       "gemara_token": 17,
+       "ti": 35,
+       "gemara_masechet": "gittin"
+      }
+     ]
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      36,
       43
      ],
-     "text": "אל תשמח ישראל אל גיל בעמים ולישלח להו בשיר לא ישתו יין ימר שכר לשותיו אי מההיא הוה אמינא זמרא במנא הוא דאסיר אבל זמרא בפומא מותר קמ\"ל דאסיר"
+     "text": "הוא דאסיר אבל זמרא בפומא מותר קמ\"ל דאסיר"
     }
    ],
-   "html": "<span class=\"rif-span rif-addition\">גרסינן בגיטין בפרק קמא שלחו ליה למר עוקבא זמרא מנא לן דאסור שרטט וכתב</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:3\">להו</span> <span class=\"rif-span rif-addition\">אל תשמח ישראל אל גיל בעמים ולישלח להו בשיר לא ישתו יין ימר שכר לשותיו אי מההיא הוה אמינא זמרא במנא הוא דאסיר אבל זמרא בפומא מותר קמ&quot;ל דאסיר</span>"
+   "html": "<span class=\"rif-span rif-addition\">גרסינן בגיטין בפרק קמא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"7a:8\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"gittin\">שלחו ליה למר עוקבא זמרא מנא לן <span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"דַּאֲסִיר?\">דאסור</span> שרטט וכתב</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:3\">להו</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"7a:8\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"gittin\">אל תשמח ישראל אל גיל בעמים ולישלח להו בשיר לא ישתו יין ימר שכר לשותיו אי <span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"מֵהָהוּא,\">מההיא</span> הוה אמינא זמרא <span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"דְמָנָא,\">במנא</span></span> <span class=\"rif-span rif-addition\">הוא דאסיר אבל זמרא בפומא מותר קמ&quot;ל דאסיר</span>"
   },
   {
    "line": 3,
    "spans": [
     {
      "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       0,
       6
@@ -186,6 +253,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       10,
       15
@@ -198,12 +266,44 @@
      "class": "addition",
      "token_range": [
       16,
+      20
+     ],
+     "text": "שנא' הסיר המצנפת והרים העטרה"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "gittin",
+     "token_range": [
+      21,
+      25
+     ],
+     "text": "בזמן שמצנפת בראש כהן גדול",
+     "gemara_from": "7a:15",
+     "gemara_to": "7a:15"
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      26,
+      26
+     ],
+     "text": "תהא"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "gittin",
+     "token_range": [
+      27,
       48
      ],
-     "text": "שנא' הסיר המצנפת והרים העטרה בזמן שמצנפת בראש כהן גדול תהא עטרה בראש כל אדם נסתלקה מצנפת מראש כהן גדול נסתלקה עטרה מראש כל אדם א\"ל דומיא דכהן גדול בגברי אבל בנשי לא"
+     "text": "עטרה בראש כל אדם נסתלקה מצנפת מראש כהן גדול נסתלקה עטרה מראש כל אדם א\"ל דומיא דכהן גדול בגברי אבל בנשי לא",
+     "gemara_from": "7a:15",
+     "gemara_to": "7a:17"
     }
    ],
-   "html": "<span class=\"rif-span rif-citation\" data-gemara-from=\"36a:22\">רבינא אשכחיה למר בר רב אשי דקא</span> <span class=\"rif-span rif-addition\">גדיל כלילא לברתיה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"24b:6\">אמר ליה לא סבר לה מר</span> <span class=\"rif-span rif-addition\">שנא&#x27; הסיר המצנפת והרים העטרה בזמן שמצנפת בראש כהן גדול תהא עטרה בראש כל אדם נסתלקה מצנפת מראש כהן גדול נסתלקה עטרה מראש כל אדם א&quot;ל דומיא דכהן גדול בגברי אבל בנשי לא</span>"
+   "html": "<span class=\"rif-span rif-citation\" data-gemara-from=\"36a:22\" data-citation-kind=\"requote\">רבינא אשכחיה למר בר רב אשי דקא</span> <span class=\"rif-span rif-addition\">גדיל כלילא לברתיה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"24b:6\" data-citation-kind=\"requote\">אמר ליה לא סבר לה מר</span> <span class=\"rif-span rif-addition\">שנא&#x27; הסיר המצנפת והרים העטרה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"7a:15\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"gittin\">בזמן שמצנפת בראש כהן גדול</span> <span class=\"rif-span rif-addition\">תהא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"7a:15\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"gittin\">עטרה בראש כל אדם נסתלקה מצנפת מראש כהן גדול נסתלקה עטרה מראש כל אדם א&quot;ל דומיא דכהן גדול בגברי אבל בנשי לא</span>"
   },
   {
    "line": 4,
@@ -212,12 +312,171 @@
      "class": "addition",
      "token_range": [
       0,
+      2
+     ],
+     "text": "וגרסינן בסוף סוטה"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sotah",
+     "token_range": [
+      3,
+      46
+     ],
+     "text": "אמר רב אודנא דשמע זמרא תעקר אמר רבא זמרא בביתא חורבא בסיפא שנאמר קול ישורר בחלון חורב בסף אמר רב יוסף זמרן גברי ועניין נשי פריצותא זמרן נשי ועניין גברי כאש בנעורת למאי נפקא מינה לבטולי הא מקמי הא אמר ר' יוחנן כל השותה",
+     "gemara_from": "48a:16",
+     "gemara_to": "48a:20",
+     "variants": [
+      {
+       "subtype": "suffix",
+       "vilna": "דְּשָׁמְעָא",
+       "rif": "דשמע",
+       "reading_vocalized": "דְּשָׁמְעָ",
+       "html": "דְּשָׁמְעָ<span class=\"girsa-letter-del\">א</span>",
+       "gemara_ref": "48a:16",
+       "gemara_token": 3,
+       "ti": 6,
+       "gemara_masechet": "sotah"
+      },
+      {
+       "subtype": "orthographic",
+       "vilna": "חֹרֶב",
+       "rif": "חורב",
+       "reading_vocalized": "חֹורֶב",
+       "html": "חֹ<span class=\"girsa-letter-ins\">ו</span>רֶב",
+       "gemara_ref": "48a:16",
+       "gemara_token": 16,
+       "ti": 19,
+       "gemara_masechet": "sotah"
+      },
+      {
+       "subtype": "suffix",
+       "vilna": "זָמְרִי",
+       "rif": "זמרן",
+       "reading_vocalized": "זָמְרִן",
+       "html": "זָמְרִ<span class=\"girsa-letter-sub\">ן</span>",
+       "gemara_ref": "48a:19",
+       "gemara_token": 3,
+       "ti": 24,
+       "gemara_masechet": "sotah"
+      },
+      {
+       "subtype": "suffix",
+       "vilna": "(זָמְרִי)",
+       "rif": "זמרן",
+       "reading_vocalized": "זָמְרִן",
+       "html": "זָמְרִ<span class=\"girsa-letter-sub\">ן</span>",
+       "gemara_ref": "48a:19",
+       "gemara_token": 8,
+       "ti": 29,
+       "gemara_masechet": "sotah"
+      }
+     ]
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      47,
+      47
+     ],
+     "text": "יין"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sotah",
+     "token_range": [
+      48,
+      67
+     ],
+     "text": "בארבעה מיני זמר מביא חמש פורעניות לעולם שנאמר הוי משכימי בבקר שכר ירדופו מאחרי בנשף יין ידליקם והיה כנור ונבל",
+     "gemara_from": "48a:20",
+     "gemara_to": "48a:20",
+     "variants": [
+      {
+       "subtype": "orthographic",
+       "vilna": "יִרְדֹּפוּ",
+       "rif": "ירדופו",
+       "reading_vocalized": "יִרְדֹּופוּ",
+       "html": "יִרְדֹּ<span class=\"girsa-letter-ins\">ו</span>פוּ",
+       "gemara_ref": "48a:20",
+       "gemara_token": 17,
+       "ti": 60,
+       "gemara_masechet": "sotah"
+      }
+     ]
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      68,
+      68
+     ],
+     "text": "תוף"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sotah",
+     "token_range": [
+      69,
+      71
+     ],
+     "text": "וחליל ויין משתיהם",
+     "gemara_from": "48a:20",
+     "gemara_to": "48a:20"
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      72,
+      72
+     ],
+     "text": "וגו'"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sotah",
+     "token_range": [
+      73,
+      74
+     ],
+     "text": "מה כתיב",
+     "gemara_from": "48a:21",
+     "gemara_to": "48a:21"
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      75,
+      75
+     ],
+     "text": "בתריה"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sotah",
+     "token_range": [
+      76,
+      86
+     ],
+     "text": "לכן גלה עמי מבלי דעת וכבודו מתי רעב והמונו צחה צמא",
+     "gemara_from": "48a:21",
+     "gemara_to": "48a:21"
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      87,
       87
      ],
-     "text": "וגרסינן בסוף סוטה אמר רב אודנא דשמע זמרא תעקר אמר רבא זמרא בביתא חורבא בסיפא שנאמר קול ישורר בחלון חורב בסף אמר רב יוסף זמרן גברי ועניין נשי פריצותא זמרן נשי ועניין גברי כאש בנעורת למאי נפקא מינה לבטולי הא מקמי הא אמר ר' יוחנן כל השותה יין בארבעה מיני זמר מביא חמש פורעניות לעולם שנאמר הוי משכימי בבקר שכר ירדופו מאחרי בנשף יין ידליקם והיה כנור ונבל תוף וחליל ויין משתיהם וגו' מה כתיב בתריה לכן גלה עמי מבלי דעת וכבודו מתי רעב והמונו צחה צמא וגו'"
+     "text": "וגו'"
     }
    ],
-   "html": "<span class=\"rif-span rif-addition\">וגרסינן בסוף סוטה אמר רב אודנא דשמע זמרא תעקר אמר רבא זמרא בביתא חורבא בסיפא שנאמר קול ישורר בחלון חורב בסף אמר רב יוסף זמרן גברי ועניין נשי פריצותא זמרן נשי ועניין גברי כאש בנעורת למאי נפקא מינה לבטולי הא מקמי הא אמר ר&#x27; יוחנן כל השותה יין בארבעה מיני זמר מביא חמש פורעניות לעולם שנאמר הוי משכימי בבקר שכר ירדופו מאחרי בנשף יין ידליקם והיה כנור ונבל תוף וחליל ויין משתיהם וגו&#x27; מה כתיב בתריה לכן גלה עמי מבלי דעת וכבודו מתי רעב והמונו צחה צמא וגו&#x27;</span>"
+   "html": "<span class=\"rif-span rif-addition\">וגרסינן בסוף סוטה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"48a:16\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sotah\">אמר רב אודנא <span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"דְּשָׁמְעָא\">דשמע</span> זמרא תעקר אמר רבא זמרא בביתא חורבא בסיפא שנאמר קול ישורר בחלון <span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"חֹרֶב\">חורב</span> בסף אמר רב יוסף <span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"זָמְרִי\">זמרן</span> גברי ועניין נשי פריצותא <span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"(זָמְרִי)\">זמרן</span> נשי ועניין גברי כאש בנעורת למאי נפקא מינה לבטולי הא מקמי הא אמר ר&#x27; יוחנן כל השותה</span> <span class=\"rif-span rif-addition\">יין</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"48a:20\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sotah\">בארבעה מיני זמר מביא חמש פורעניות לעולם שנאמר הוי משכימי בבקר שכר <span class=\"rif-variant\" data-subtype=\"orthographic\" data-vilna=\"יִרְדֹּפוּ\">ירדופו</span> מאחרי בנשף יין ידליקם והיה כנור ונבל</span> <span class=\"rif-span rif-addition\">תוף</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"48a:20\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sotah\">וחליל ויין משתיהם</span> <span class=\"rif-span rif-addition\">וגו&#x27;</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"48a:21\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sotah\">מה כתיב</span> <span class=\"rif-span rif-addition\">בתריה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"48a:21\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sotah\">לכן גלה עמי מבלי דעת וכבודו מתי רעב והמונו צחה צמא</span> <span class=\"rif-span rif-addition\">וגו&#x27;</span>"
   },
   {
    "line": 5,
@@ -240,12 +499,66 @@
      "class": "addition",
      "token_range": [
       0,
-      84
+      2
      ],
-     "text": "גרסי' בפרק חלק תנו רבנן הקורא פסוק משיר השירים ועושה אותו כמין זמר והקורא פסוק בבית המשתה בלא זמנו מביא רעה לעולם מפני שהתורה חוגרת שק ועומדת לפני הקב\"ה ואומרת רבש\"ע עשוני בניך ככנור שמנגנים בו הנכרים א\"ל הקב\"ה בתי אם כן מה יעשו בני בשעה שהן אוכלים ושותים ושמחים אמרה לפניו רבש\"ע אם בעלי מקרא הם יעסקו במקרא בנביאים ובכתובים ואם בעלי משנה הם יעסקו במשנה בהלכות ובהגדות ואם בעלי תלמוד הם יעסקו בתלמוד בהלכות פסח בפסח בהלכות עצרת בעצרת בהלכות החג בחג העיד"
+     "text": "גרסי' בפרק חלק"
     },
     {
      "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sanhedrin",
+     "token_range": [
+      3,
+      15
+     ],
+     "text": "תנו רבנן הקורא פסוק משיר השירים ועושה אותו כמין זמר והקורא פסוק בבית",
+     "gemara_from": "101a:2",
+     "gemara_to": "101a:2",
+     "variants": [
+      {
+       "subtype": "prefix",
+       "vilna": "שִׁיר",
+       "rif": "משיר",
+       "reading_vocalized": "משִׁיר",
+       "html": "<span class=\"girsa-letter-ins\">מ</span>שִׁיר",
+       "gemara_ref": "101a:2",
+       "gemara_token": 5,
+       "ti": 7,
+       "gemara_masechet": "sanhedrin"
+      }
+     ]
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      16,
+      16
+     ],
+     "text": "המשתה"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sanhedrin",
+     "token_range": [
+      17,
+      29
+     ],
+     "text": "בלא זמנו מביא רעה לעולם מפני שהתורה חוגרת שק ועומדת לפני הקב\"ה ואומרת",
+     "gemara_from": "101a:2",
+     "gemara_to": "101a:2"
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      30,
+      84
+     ],
+     "text": "רבש\"ע עשוני בניך ככנור שמנגנים בו הנכרים א\"ל הקב\"ה בתי אם כן מה יעשו בני בשעה שהן אוכלים ושותים ושמחים אמרה לפניו רבש\"ע אם בעלי מקרא הם יעסקו במקרא בנביאים ובכתובים ואם בעלי משנה הם יעסקו במשנה בהלכות ובהגדות ואם בעלי תלמוד הם יעסקו בתלמוד בהלכות פסח בפסח בהלכות עצרת בעצרת בהלכות החג בחג העיד"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       85,
       88
@@ -276,12 +589,44 @@
      "class": "addition",
      "token_range": [
       91,
+      93
+     ],
+     "text": "יהושע בן חנניה"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sanhedrin",
+     "token_range": [
+      94,
+      95
+     ],
+     "text": "הקורא פסוק",
+     "gemara_from": "101a:3",
+     "gemara_to": "101a:3"
+    },
+    {
+     "class": "addition",
+     "token_range": [
+      96,
+      96
+     ],
+     "text": "אחד"
+    },
+    {
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sanhedrin",
+     "token_range": [
+      97,
       105
      ],
-     "text": "יהושע בן חנניה הקורא פסוק אחד בזמנו מביא טובה לעולם שנאמר ודבר בעתו מה טוב:"
+     "text": "בזמנו מביא טובה לעולם שנאמר ודבר בעתו מה טוב:",
+     "gemara_from": "101a:3",
+     "gemara_to": "101a:3"
     }
    ],
-   "html": "<span class=\"rif-span rif-addition\">גרסי&#x27; בפרק חלק תנו רבנן הקורא פסוק משיר השירים ועושה אותו כמין זמר והקורא פסוק בבית המשתה בלא זמנו מביא רעה לעולם מפני שהתורה חוגרת שק ועומדת לפני הקב&quot;ה ואומרת רבש&quot;ע עשוני בניך ככנור שמנגנים בו הנכרים א&quot;ל הקב&quot;ה בתי אם כן מה יעשו בני בשעה שהן אוכלים ושותים ושמחים אמרה לפניו רבש&quot;ע אם בעלי מקרא הם יעסקו במקרא בנביאים ובכתובים ואם בעלי משנה הם יעסקו במשנה בהלכות ובהגדות ואם בעלי תלמוד הם יעסקו בתלמוד בהלכות פסח בפסח בהלכות עצרת בעצרת בהלכות החג בחג העיד</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"25b:18\">ר&#x27; שמעון בן אלעזר</span> <span class=\"rif-span rif-addition\">משום</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:4\">ר&#x27;</span> <span class=\"rif-span rif-addition\">יהושע בן חנניה הקורא פסוק אחד בזמנו מביא טובה לעולם שנאמר ודבר בעתו מה טוב:</span>"
+   "html": "<span class=\"rif-span rif-addition\">גרסי&#x27; בפרק חלק</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"101a:2\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sanhedrin\">תנו רבנן הקורא פסוק <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"שִׁיר\">משיר</span> השירים ועושה אותו כמין זמר והקורא פסוק בבית</span> <span class=\"rif-span rif-addition\">המשתה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"101a:2\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sanhedrin\">בלא זמנו מביא רעה לעולם מפני שהתורה חוגרת שק ועומדת לפני הקב&quot;ה ואומרת</span> <span class=\"rif-span rif-addition\">רבש&quot;ע עשוני בניך ככנור שמנגנים בו הנכרים א&quot;ל הקב&quot;ה בתי אם כן מה יעשו בני בשעה שהן אוכלים ושותים ושמחים אמרה לפניו רבש&quot;ע אם בעלי מקרא הם יעסקו במקרא בנביאים ובכתובים ואם בעלי משנה הם יעסקו במשנה בהלכות ובהגדות ואם בעלי תלמוד הם יעסקו בתלמוד בהלכות פסח בפסח בהלכות עצרת בעצרת בהלכות החג בחג העיד</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"25b:18\" data-citation-kind=\"requote\">ר&#x27; שמעון בן אלעזר</span> <span class=\"rif-span rif-addition\">משום</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"31a:4\">ר&#x27;</span> <span class=\"rif-span rif-addition\">יהושע בן חנניה</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"101a:3\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sanhedrin\">הקורא פסוק</span> <span class=\"rif-span rif-addition\">אחד</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"101a:3\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sanhedrin\">בזמנו מביא טובה לעולם שנאמר ודבר בעתו מה טוב:</span>"
   },
   {
    "line": 7,

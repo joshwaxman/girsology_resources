@@ -2,14 +2,17 @@
  "metadata": {
   "masechet": "berakhot",
   "source": "rif_diff",
-  "schema_version": 1,
-  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v1",
+  "schema_version": 2,
+  "generated_by": "mivami/tzurat/rif_diff/002_build_sidecars.py v2",
   "counts": {
    "tokens": 252,
    "parallel": 112,
-   "addition": 95,
-   "citation": 45,
-   "variants": 5,
+   "addition": 77,
+   "citation": 63,
+   "citation_transposition": 20,
+   "variants": 6,
+   "citation_requote": 25,
+   "citation_xtractate": 18,
    "spans": 35
   },
   "rif_daf": "7a"
@@ -102,6 +105,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "transposition",
      "token_range": [
       1,
       20
@@ -160,6 +164,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       36,
       39
@@ -190,6 +195,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       47,
       54
@@ -220,6 +226,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       56,
       58
@@ -238,6 +245,7 @@
     },
     {
      "class": "citation",
+     "citation_kind": "requote",
      "token_range": [
       81,
       90
@@ -277,15 +285,32 @@
      ]
     },
     {
-     "class": "addition",
+     "class": "citation",
+     "citation_kind": "xtractate",
+     "gemara_masechet": "sotah",
      "token_range": [
       95,
       112
      ],
-     "text": "יוחנן כל השואל צרכיו בלשון ארמי אין מלאכי השרת נזקקין לו לפי שאין מלאכי השרת מכירין בלשון ארמית:"
+     "text": "יוחנן כל השואל צרכיו בלשון ארמי אין מלאכי השרת נזקקין לו לפי שאין מלאכי השרת מכירין בלשון ארמית:",
+     "gemara_from": "33a:6",
+     "gemara_to": "33a:6",
+     "variants": [
+      {
+       "subtype": "suffix",
+       "vilna": "אֲרַמִּי!",
+       "rif": "ארמית:",
+       "reading_vocalized": "אֲרַמִּית",
+       "html": "אֲרַמִּי<span class=\"girsa-letter-ins\">ת</span>",
+       "gemara_ref": "33a:6",
+       "gemara_token": 32,
+       "ti": 112,
+       "gemara_masechet": "sotah"
+      }
+     ]
     }
    ],
-   "html": "<span class=\"rif-span rif-addition\">גמ&#x27;</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"13a:25\">ת&quot;ר ק&quot;ש ככתבה דברי רבי וחכמים אומרים בכל לשון מ&quot;ט דרבי אמר קרא והיו בהוייתן יהו ורבנן מ&quot;ט <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"אָמַר\">דאמר</span> קרא</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"13a:19\">שמע בכל לשון שאתה שומע</span> <span class=\"rif-span rif-addition\">אבל</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"13a:36\">והיו שלא יקרא למפרע</span> <span class=\"rif-span rif-addition\">הוא דאתא וקי&quot;ל כרבנן חדא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"9a:7\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"וְיָחִיד\">דיחיד</span> ורבים הלכה כרבים</span> <span class=\"rif-span rif-addition\">ועוד דסתם לן תנא דמתני&#x27; כוותייהו דתנן</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"40b:9\">ואלו <span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"נֶאֱמָרִים\">נאמרין</span> בכל לשון פרשת סוטה וידוי מעשר</span> <span class=\"rif-span rif-addition\">וק&quot;ש</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"40b:9\">ותפלה וברכת המזון</span> <span class=\"rif-span rif-addition\">ושבועת העדות ושבועת הפקדון וקיי&quot;ל דסתם מתני&#x27; ומחלוקת דברייתא הלכה כסתם מתני&#x27; והא דקתני תפלה בכל לשון ה&quot;מ בצבור אבל ביחיד לא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"17b:3\">דאמר רב יהודה אמר רב לעולם אל ישאל אדם צרכיו</span> <span class=\"rif-span rif-addition\">בלשון ארמי</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"13b:12\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"קָאָמַר\">ואמר</span> ר&#x27;</span> <span class=\"rif-span rif-addition\">יוחנן כל השואל צרכיו בלשון ארמי אין מלאכי השרת נזקקין לו לפי שאין מלאכי השרת מכירין בלשון ארמית:</span>"
+   "html": "<span class=\"rif-span rif-addition\">גמ&#x27;</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"13a:25\" data-citation-kind=\"transposition\">ת&quot;ר ק&quot;ש ככתבה דברי רבי וחכמים אומרים בכל לשון מ&quot;ט דרבי אמר קרא והיו בהוייתן יהו ורבנן מ&quot;ט <span class=\"rif-variant\" data-subtype=\"prefix\" data-vilna=\"אָמַר\">דאמר</span> קרא</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"13a:19\">שמע בכל לשון שאתה שומע</span> <span class=\"rif-span rif-addition\">אבל</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"13a:36\">והיו שלא יקרא למפרע</span> <span class=\"rif-span rif-addition\">הוא דאתא וקי&quot;ל כרבנן חדא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"9a:7\" data-citation-kind=\"requote\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"וְיָחִיד\">דיחיד</span> ורבים הלכה כרבים</span> <span class=\"rif-span rif-addition\">ועוד דסתם לן תנא דמתני&#x27; כוותייהו דתנן</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"40b:9\" data-citation-kind=\"requote\">ואלו <span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"נֶאֱמָרִים\">נאמרין</span> בכל לשון פרשת סוטה וידוי מעשר</span> <span class=\"rif-span rif-addition\">וק&quot;ש</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"40b:9\" data-citation-kind=\"requote\">ותפלה וברכת המזון</span> <span class=\"rif-span rif-addition\">ושבועת העדות ושבועת הפקדון וקיי&quot;ל דסתם מתני&#x27; ומחלוקת דברייתא הלכה כסתם מתני&#x27; והא דקתני תפלה בכל לשון ה&quot;מ בצבור אבל ביחיד לא</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"17b:3\" data-citation-kind=\"requote\">דאמר רב יהודה אמר רב לעולם אל ישאל אדם צרכיו</span> <span class=\"rif-span rif-addition\">בלשון ארמי</span> <span class=\"rif-span rif-parallel\" data-gemara-from=\"13b:12\"><span class=\"rif-variant\" data-subtype=\"substitution\" data-vilna=\"קָאָמַר\">ואמר</span> ר&#x27;</span> <span class=\"rif-span rif-citation\" data-gemara-from=\"33a:6\" data-citation-kind=\"xtractate\" data-gemara-masechet=\"sotah\">יוחנן כל השואל צרכיו בלשון ארמי אין מלאכי השרת נזקקין לו לפי שאין מלאכי השרת מכירין בלשון <span class=\"rif-variant\" data-subtype=\"suffix\" data-vilna=\"אֲרַמִּי!\">ארמית:</span></span>"
   },
   {
    "line": 5,
