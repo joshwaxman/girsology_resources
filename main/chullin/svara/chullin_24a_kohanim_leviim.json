@@ -1,6 +1,11 @@
 {
  "sugya": "chullin_24a_kohanim_leviim",
  "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
  "range": {
   "start": "Chullin.24a.7",
   "end": "Chullin.24b.1"
@@ -480,6 +485,8 @@
      "verse": "במדבר ח,כד",
      "gloss_en": "'zot asher la-leviim' -- THIS (the passage of years) pertains to the Levites, and no other disqualification pertains to the Levites",
      "withdrawn": false,
+     "answered": false,
+     "answered_by": [],
      "locus": "Chullin.24a.9",
      "daf": "24a",
      "sentenceId": 8
@@ -508,6 +515,8 @@
      "verse": "במדבר ח,כד",
      "gloss_en": "'asher la-leviim' -- and not 'asher la-kohanim': the age disqualification is the Levites', not the priests'",
      "withdrawn": false,
+     "answered": false,
+     "answered_by": [],
      "locus": "Chullin.24a.10",
      "daf": "24a",
      "sentenceId": 9
@@ -578,7 +587,7 @@
         },
         "children": [
          {
-          "node": "not exclusion_attacked(miut_zot_laleviim,K)",
+          "node": "not exclusion_attacked(miut_zot_laleviim,S)",
           "gloss_en": "'zot asher la-leviim' -- THIS (the passage of years) pertains to the Levites, and no other disqualification pertains to the Levites",
           "sentenceRef": {
            "daf": "24a",
@@ -594,6 +603,24 @@
          "daf": "24a",
          "sentenceId": 8
         }
+       },
+       {
+        "node": "not ground_scoped(miut_zot_laleviim)",
+        "gloss_en": "'zot asher la-leviim' -- THIS (the passage of years) pertains to the Levites, and no other disqualification pertains to the Levites",
+        "sentenceRef": {
+         "daf": "24a",
+         "sentenceId": 8
+        },
+        "children": [
+         {
+          "node": "not ground_aliba(miut_zot_laleviim,T)",
+          "gloss_en": "'zot asher la-leviim' -- THIS (the passage of years) pertains to the Levites, and no other disqualification pertains to the Levites",
+          "sentenceRef": {
+           "daf": "24a",
+           "sentenceId": 8
+          }
+         }
+        ]
        }
       ]
      },
@@ -604,32 +631,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},O,P)",
+          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},X,Y)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siman_yafe]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siman_yafe]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,L | {L ∉ [r_yosei,tanna_kamma_siman]},Q)",
+          "node": "not collapses(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]},Z)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,D | {D ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "dispute(frame_siman_yafe,siman_yafe_cutoff)"
            },
            {
-            "node": "not party(frame_siman_yafe,L | {L ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,r_yosei,M | {M ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,r_yosei,V | {V ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -638,7 +677,19 @@
             "node": "party(frame_siman_yafe,r_yosei)"
            },
            {
-            "node": "not party(frame_siman_yafe,M | {M ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,V | {V ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,V | {V ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -646,7 +697,19 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -663,7 +726,7 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,K | {K ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -676,14 +739,29 @@
            },
            {
             "node": "not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman)"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,L | {L ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,N | {N ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,W | {W ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,M | {M ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -692,7 +770,19 @@
             "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
            },
            {
-            "node": "not party(frame_siman_yafe,N | {N ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,W | {W ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,N | {N ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,W | {W ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -700,7 +790,7 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,O | {O ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -712,7 +802,22 @@
             "node": "proved(party(frame_siman_yafe,r_yosei))"
            },
            {
-            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
+            "node": "proved(not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,P | {P ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman))"
            }
           ]
          },
@@ -720,7 +825,19 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,Q | {Q ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,R | {R ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -739,7 +856,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(U,teiku)"
+          "node": "not verdict(D1,teiku)"
          }
         ]
        },
@@ -747,7 +864,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(S,teiku)"
+          "node": "not verdict(B1,teiku)"
          }
         ]
        },
@@ -811,7 +928,7 @@
         },
         "children": [
          {
-          "node": "not pircha(kv_mumin_leviim,N)",
+          "node": "not pircha(kv_mumin_leviim,V)",
           "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
           "sentenceRef": {
            "daf": "24a",
@@ -819,58 +936,84 @@
           }
          },
          {
-          "node": "not schema_instance(kv_mumin_leviim,U | {U ∉ [kal_vachomer]},V)",
+          "node": "not defeated_regardless(kv_mumin_leviim)",
           "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
           "sentenceRef": {
            "daf": "24a",
            "sentenceId": 8
-          }
-         },
-         {
-          "node": "not schema_instance(kv_mumin_leviim,kal_vachomer,W | {W ∉ [mumin_poslin_beleviim]})",
-          "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 8
-          }
-         },
-         {
-          "node": "proved(schema_instance(kv_mumin_leviim,kal_vachomer,mumin_poslin_beleviim))",
-          "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 8
-          }
-         },
-         {
-          "node": "not rejects_middah(O | {O ∉ [ctl_voice_never]},kal_vachomer)"
-         },
-         {
-          "node": "proved(schema_instance(kv_mumin_leviim,kal_vachomer,mumin_poslin_beleviim))",
-          "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 8
-          }
-         },
-         {
-          "node": "not rejects_middah(ctl_voice_never,kal_vachomer)"
-         },
-         {
-          "node": "not scriptural_exclusion(kv_mumin_leviim,Q)",
-          "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 8
-          }
-         },
-         {
-          "node": "not restricted_by(kv_mumin_leviim,P)",
-          "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 8
-          }
+          },
+          "children": [
+           {
+            "node": "not schema_instance(kv_mumin_leviim,D1 | {D1 ∉ [kal_vachomer]},E1)",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           },
+           {
+            "node": "not schema_instance(kv_mumin_leviim,kal_vachomer,F1 | {F1 ∉ [mumin_poslin_beleviim]})",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           },
+           {
+            "node": "proved(schema_instance(kv_mumin_leviim,kal_vachomer,mumin_poslin_beleviim))",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           },
+           {
+            "node": "not rejects_middah(W | {W ∉ [ctl_voice_never]},kal_vachomer)"
+           },
+           {
+            "node": "proved(schema_instance(kv_mumin_leviim,kal_vachomer,mumin_poslin_beleviim))",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           },
+           {
+            "node": "not rejects_middah(ctl_voice_never,kal_vachomer)"
+           },
+           {
+            "node": "not challenge(Z | {Z ∉ [ctl_challenge_never]},teyuvta,kv_mumin_leviim)",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           },
+           {
+            "node": "not challenge(ctl_challenge_never,teyuvta,kv_mumin_leviim)",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           },
+           {
+            "node": "not scriptural_exclusion(kv_mumin_leviim,Y)",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           },
+           {
+            "node": "not restricted_by(kv_mumin_leviim,X)",
+            "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 8
+            }
+           }
+          ]
          }
         ]
        }
@@ -883,32 +1026,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},R,S)",
+          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},A1,B1)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siman_yafe]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siman_yafe]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,K | {K ∉ [r_yosei,tanna_kamma_siman]},T)",
+          "node": "not collapses(frame_siman_yafe,S | {S ∉ [r_yosei,tanna_kamma_siman]},C1)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,D | {D ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "dispute(frame_siman_yafe,siman_yafe_cutoff)"
            },
            {
-            "node": "not party(frame_siman_yafe,K | {K ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,S | {S ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,S | {S ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,r_yosei,L | {L ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,r_yosei,T | {T ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -917,7 +1072,19 @@
             "node": "party(frame_siman_yafe,r_yosei)"
            },
            {
-            "node": "not party(frame_siman_yafe,L | {L ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,T | {T ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,T | {T ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -925,7 +1092,19 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -942,7 +1121,7 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,K | {K ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -955,14 +1134,29 @@
            },
            {
             "node": "not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman)"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,L | {L ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,M | {M ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,U | {U ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,M | {M ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -971,7 +1165,19 @@
             "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
            },
            {
-            "node": "not party(frame_siman_yafe,M | {M ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,N | {N ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -979,7 +1185,7 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,O | {O ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -991,7 +1197,22 @@
             "node": "proved(party(frame_siman_yafe,r_yosei))"
            },
            {
-            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
+            "node": "proved(not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,P | {P ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman))"
            }
           ]
          },
@@ -999,7 +1220,19 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,Q | {Q ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,R | {R ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1018,7 +1251,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(A1,teiku)"
+          "node": "not verdict(J1,teiku)"
          }
         ]
        },
@@ -1026,7 +1259,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(Y,teiku)"
+          "node": "not verdict(H1,teiku)"
          }
         ]
        },
@@ -1090,7 +1323,7 @@
         },
         "children": [
          {
-          "node": "not exclusion_attacked(miut_velo_lakohanim,K)",
+          "node": "not exclusion_attacked(miut_velo_lakohanim,S)",
           "gloss_en": "'asher la-leviim' -- and not 'asher la-kohanim': the age disqualification is the Levites', not the priests'",
           "sentenceRef": {
            "daf": "24a",
@@ -1106,6 +1339,24 @@
          "daf": "24a",
          "sentenceId": 9
         }
+       },
+       {
+        "node": "not ground_scoped(miut_velo_lakohanim)",
+        "gloss_en": "'asher la-leviim' -- and not 'asher la-kohanim': the age disqualification is the Levites', not the priests'",
+        "sentenceRef": {
+         "daf": "24a",
+         "sentenceId": 9
+        },
+        "children": [
+         {
+          "node": "not ground_aliba(miut_velo_lakohanim,T)",
+          "gloss_en": "'asher la-leviim' -- and not 'asher la-kohanim': the age disqualification is the Levites', not the priests'",
+          "sentenceRef": {
+           "daf": "24a",
+           "sentenceId": 9
+          }
+         }
+        ]
        }
       ]
      },
@@ -1116,32 +1367,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},O,P)",
+          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},X,Y)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siman_yafe]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siman_yafe]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,L | {L ∉ [r_yosei,tanna_kamma_siman]},Q)",
+          "node": "not collapses(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]},Z)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,D | {D ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "dispute(frame_siman_yafe,siman_yafe_cutoff)"
            },
            {
-            "node": "not party(frame_siman_yafe,L | {L ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,r_yosei,M | {M ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,r_yosei,V | {V ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1150,7 +1413,19 @@
             "node": "party(frame_siman_yafe,r_yosei)"
            },
            {
-            "node": "not party(frame_siman_yafe,M | {M ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,V | {V ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,V | {V ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -1158,7 +1433,19 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1175,7 +1462,7 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,K | {K ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1188,14 +1475,29 @@
            },
            {
             "node": "not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman)"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,L | {L ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,N | {N ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,W | {W ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,M | {M ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1204,7 +1506,19 @@
             "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
            },
            {
-            "node": "not party(frame_siman_yafe,N | {N ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,W | {W ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,N | {N ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,W | {W ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -1212,7 +1526,7 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,O | {O ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1224,7 +1538,22 @@
             "node": "proved(party(frame_siman_yafe,r_yosei))"
            },
            {
-            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
+            "node": "proved(not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,P | {P ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman))"
            }
           ]
          },
@@ -1232,7 +1561,19 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,Q | {Q ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,R | {R ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1251,7 +1592,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(U,teiku)"
+          "node": "not verdict(D1,teiku)"
          }
         ]
        },
@@ -1259,7 +1600,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(S,teiku)"
+          "node": "not verdict(B1,teiku)"
          }
         ]
        },
@@ -1323,7 +1664,7 @@
         },
         "children": [
          {
-          "node": "not pircha(kv_shanim_kohanim,N)",
+          "node": "not pircha(kv_shanim_kohanim,V)",
           "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
           "sentenceRef": {
            "daf": "24a",
@@ -1331,58 +1672,84 @@
           }
          },
          {
-          "node": "not schema_instance(kv_shanim_kohanim,U | {U ∉ [kal_vachomer]},V)",
+          "node": "not defeated_regardless(kv_shanim_kohanim)",
           "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
           "sentenceRef": {
            "daf": "24a",
            "sentenceId": 9
-          }
-         },
-         {
-          "node": "not schema_instance(kv_shanim_kohanim,kal_vachomer,W | {W ∉ [shanim_poslin_bekohanim]})",
-          "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 9
-          }
-         },
-         {
-          "node": "proved(schema_instance(kv_shanim_kohanim,kal_vachomer,shanim_poslin_bekohanim))",
-          "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 9
-          }
-         },
-         {
-          "node": "not rejects_middah(O | {O ∉ [ctl_voice_never]},kal_vachomer)"
-         },
-         {
-          "node": "proved(schema_instance(kv_shanim_kohanim,kal_vachomer,shanim_poslin_bekohanim))",
-          "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 9
-          }
-         },
-         {
-          "node": "not rejects_middah(ctl_voice_never,kal_vachomer)"
-         },
-         {
-          "node": "not scriptural_exclusion(kv_shanim_kohanim,Q)",
-          "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 9
-          }
-         },
-         {
-          "node": "not restricted_by(kv_shanim_kohanim,P)",
-          "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
-          "sentenceRef": {
-           "daf": "24a",
-           "sentenceId": 9
-          }
+          },
+          "children": [
+           {
+            "node": "not schema_instance(kv_shanim_kohanim,D1 | {D1 ∉ [kal_vachomer]},E1)",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           },
+           {
+            "node": "not schema_instance(kv_shanim_kohanim,kal_vachomer,F1 | {F1 ∉ [shanim_poslin_bekohanim]})",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           },
+           {
+            "node": "proved(schema_instance(kv_shanim_kohanim,kal_vachomer,shanim_poslin_bekohanim))",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           },
+           {
+            "node": "not rejects_middah(W | {W ∉ [ctl_voice_never]},kal_vachomer)"
+           },
+           {
+            "node": "proved(schema_instance(kv_shanim_kohanim,kal_vachomer,shanim_poslin_bekohanim))",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           },
+           {
+            "node": "not rejects_middah(ctl_voice_never,kal_vachomer)"
+           },
+           {
+            "node": "not challenge(Z | {Z ∉ [ctl_challenge_never]},teyuvta,kv_shanim_kohanim)",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           },
+           {
+            "node": "not challenge(ctl_challenge_never,teyuvta,kv_shanim_kohanim)",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           },
+           {
+            "node": "not scriptural_exclusion(kv_shanim_kohanim,Y)",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           },
+           {
+            "node": "not restricted_by(kv_shanim_kohanim,X)",
+            "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+            "sentenceRef": {
+             "daf": "24a",
+             "sentenceId": 9
+            }
+           }
+          ]
          }
         ]
        }
@@ -1395,32 +1762,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},R,S)",
+          "node": "not collapses(B | {B ∉ [frame_siman_yafe]},A1,B1)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siman_yafe]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siman_yafe]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,K | {K ∉ [r_yosei,tanna_kamma_siman]},T)",
+          "node": "not collapses(frame_siman_yafe,S | {S ∉ [r_yosei,tanna_kamma_siman]},C1)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,D | {D ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "dispute(frame_siman_yafe,siman_yafe_cutoff)"
            },
            {
-            "node": "not party(frame_siman_yafe,K | {K ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,S | {S ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,S | {S ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,r_yosei,L | {L ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,r_yosei,T | {T ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,E | {E ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1429,7 +1808,19 @@
             "node": "party(frame_siman_yafe,r_yosei)"
            },
            {
-            "node": "not party(frame_siman_yafe,L | {L ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,T | {T ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,T | {T ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -1437,7 +1828,19 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,F | {F ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1454,7 +1857,7 @@
           "node": "not collapses(frame_siman_yafe,r_yosei,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,G | {G ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,K | {K ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1467,14 +1870,29 @@
            },
            {
             "node": "not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman)"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,L | {L ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,M | {M ∉ [r_yosei,tanna_kamma_siman]})",
+          "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,U | {U ∉ [r_yosei,tanna_kamma_siman]})",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,H | {H ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,M | {M ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1483,7 +1901,19 @@
             "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
            },
            {
-            "node": "not party(frame_siman_yafe,M | {M ∉ [r_yosei,tanna_kamma_siman]})"
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,N | {N ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not party(frame_siman_yafe,U | {U ∉ [r_yosei,tanna_kamma_siman]})"
            }
           ]
          },
@@ -1491,7 +1921,7 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,r_yosei)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,I | {I ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,O | {O ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1503,7 +1933,22 @@
             "node": "proved(party(frame_siman_yafe,r_yosei))"
            },
            {
-            "node": "not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei)"
+            "node": "proved(not position_identity(frame_siman_yafe,tanna_kamma_siman,r_yosei))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,P | {P ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,r_yosei))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siman_yafe,r_yosei,tanna_kamma_siman))"
            }
           ]
          },
@@ -1511,7 +1956,19 @@
           "node": "not collapses(frame_siman_yafe,tanna_kamma_siman,tanna_kamma_siman)",
           "children": [
            {
-            "node": "not dispute(frame_siman_yafe,J | {J ∉ [siman_yafe_cutoff]})"
+            "node": "not dispute(frame_siman_yafe,Q | {Q ∉ [siman_yafe_cutoff]})"
+           },
+           {
+            "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "proved(party(frame_siman_yafe,tanna_kamma_siman))"
+           },
+           {
+            "node": "not dispute(frame_siman_yafe,R | {R ∉ [siman_yafe_cutoff]})"
            },
            {
             "node": "proved(dispute(frame_siman_yafe,siman_yafe_cutoff))"
@@ -1530,7 +1987,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(A1,teiku)"
+          "node": "not verdict(J1,teiku)"
          }
         ]
        },
@@ -1538,7 +1995,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(Y,teiku)"
+          "node": "not verdict(H1,teiku)"
          }
         ]
        },
@@ -1574,5 +2031,5 @@
   }
  ],
  "kb": "svara/chullin_24a_kohanim_leviim.pl",
- "kbVersion": "sha256-0c87973ff439ddcd"
+ "kbVersion": "sha256-d3b60a3a8558be39"
 }

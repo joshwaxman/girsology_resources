@@ -1,0 +1,573 @@
+{
+ "sugya": "ber_21a_birkot_kv",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.21a.3",
+  "end": "Berakhot.21a.6"
+ },
+ "voices": [
+  {
+   "id": "rav_yehuda",
+   "kind": "amora"
+  },
+  {
+   "id": "r_yochanan",
+   "kind": "amora"
+  },
+  {
+   "id": "stam_21a",
+   "kind": "stam"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_bhm_achar_deoraita",
+   "gloss_en": "the blessing after food is from the Torah -- 'and you shall eat and be satisfied and bless'",
+   "content": {
+    "pred": "deoraita",
+    "args": [
+     "birkat_hamazon_leachareha"
+    ]
+   },
+   "locus": "Berakhot.21a.3",
+   "daf": "21a",
+   "sentenceId": 2
+  },
+  {
+   "id": "p_bht_lifnei_deoraita",
+   "gloss_en": "the blessing before Torah study is from the Torah -- 'when I proclaim the name of the Lord, ascribe greatness to our God'",
+   "content": {
+    "pred": "deoraita",
+    "args": [
+     "birkat_hatorah_lefaneha"
+    ]
+   },
+   "locus": "Berakhot.21a.4",
+   "daf": "21a",
+   "sentenceId": 3
+  }
+ ],
+ "commits": [
+  {
+   "holder": "rav_yehuda",
+   "prop": "p_bhm_achar_deoraita",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.21a.3",
+   "daf": "21a",
+   "sentenceId": 2
+  },
+  {
+   "holder": "rav_yehuda",
+   "prop": "p_bht_lifnei_deoraita",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.21a.4",
+   "daf": "21a",
+   "sentenceId": 3
+  }
+ ],
+ "schemas": [
+  {
+   "id": "kv_bht_achareha",
+   "kind": "kal_vachomer",
+   "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+   "holder": "r_yochanan",
+   "structure": {
+    "lenient": "mazon",
+    "strict": "torah",
+    "property": "teunah_leachareha",
+    "concludes": "birkat_hatorah_leachareha_required"
+   },
+   "status": "blocked",
+   "grounds": [
+    {
+     "kind": "objection",
+     "id": "pircha_mazon_neheneh",
+     "verse": null,
+     "gloss_en": "מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share",
+     "withdrawn": false,
+     "answered": false,
+     "answered_by": [],
+     "locus": "Berakhot.21a.6",
+     "daf": "21a",
+     "sentenceId": 5
+    }
+   ],
+   "locus": "Berakhot.21a.5",
+   "daf": "21a",
+   "sentenceId": 4
+  },
+  {
+   "id": "kv_bhm_lefaneha",
+   "kind": "kal_vachomer",
+   "gloss_en": "Torah requires no blessing after yet requires one before; food, which requires one after, surely requires one before",
+   "holder": "r_yochanan",
+   "structure": {
+    "lenient": "torah",
+    "strict": "mazon",
+    "property": "teunah_lefaneha",
+    "concludes": "birkat_hamazon_lefaneha_required"
+   },
+   "status": "blocked",
+   "grounds": [
+    {
+     "kind": "objection",
+     "id": "pircha_torah_chayei_olam",
+     "verse": null,
+     "gloss_en": "מה לתורה שכן חיי עולם -- what of Torah? it is eternal life, which food does not share",
+     "withdrawn": false,
+     "answered": false,
+     "answered_by": [],
+     "locus": "Berakhot.21a.6",
+     "daf": "21a",
+     "sentenceId": 5
+    }
+   ],
+   "locus": "Berakhot.21a.5",
+   "daf": "21a",
+   "sentenceId": 4
+  }
+ ],
+ "questions": [],
+ "attributions": [],
+ "queries": [
+  {
+   "id": "status_kv_bht_achareha",
+   "kind": "status",
+   "subject": "kv_bht_achareha",
+   "label_en": "What blocks this kal vachomer?",
+   "goal_display": "blocked_by(kv_bht_achareha, G)",
+   "verdict": "answers",
+   "answers": [
+    {
+     "G": "objection(pircha_mazon_neheneh)"
+    }
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "blocked_by(kv_bht_achareha,objection(pircha_mazon_neheneh))",
+      "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+      "sentenceRef": {
+       "daf": "21a",
+       "sentenceId": 4
+      },
+      "children": [
+       {
+        "node": "pircha(kv_bht_achareha,pircha_mazon_neheneh)",
+        "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+        "sentenceRef": {
+         "daf": "21a",
+         "sentenceId": 4
+        }
+       },
+       {
+        "node": "not ground_scoped(pircha_mazon_neheneh)",
+        "gloss_en": "מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share",
+        "sentenceRef": {
+         "daf": "21a",
+         "sentenceId": 5
+        },
+        "children": [
+         {
+          "node": "not ground_aliba(pircha_mazon_neheneh,B)",
+          "gloss_en": "מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share",
+          "sentenceRef": {
+           "daf": "21a",
+           "sentenceId": 5
+          }
+         }
+        ]
+       },
+       {
+        "node": "not withdrawn(pircha_mazon_neheneh)",
+        "gloss_en": "מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share",
+        "sentenceRef": {
+         "daf": "21a",
+         "sentenceId": 5
+        }
+       },
+       {
+        "node": "not pircha_answered_globally(pircha_mazon_neheneh)",
+        "gloss_en": "מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share",
+        "sentenceRef": {
+         "daf": "21a",
+         "sentenceId": 5
+        },
+        "children": [
+         {
+          "node": "not pircha_answered(pircha_mazon_neheneh,C)",
+          "gloss_en": "מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share",
+          "sentenceRef": {
+           "daf": "21a",
+           "sentenceId": 5
+          }
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not collapses(D,E,F)",
+          "children": [
+           {
+            "node": "not dispute(D,N)"
+           },
+           {
+            "node": "not dispute(D,L)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(J,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(H,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "cf_drop_pircha_mazon_neheneh",
+   "kind": "counterfactual",
+   "subject": "kv_bht_achareha",
+   "label_en": "Had this objection not stood, what would follow?",
+   "delta": {
+    "drop_ground": "pircha_mazon_neheneh"
+   },
+   "goal_display": "concluded(kv_bht_achareha, birkat_hatorah_leachareha_required)",
+   "verdict": "answers",
+   "answers": [
+    {}
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "concluded(kv_bht_achareha,birkat_hatorah_leachareha_required)",
+      "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+      "sentenceRef": {
+       "daf": "21a",
+       "sentenceId": 4
+      },
+      "children": [
+       {
+        "node": "schema_instance(kv_bht_achareha,kal_vachomer,birkat_hatorah_leachareha_required)",
+        "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+        "sentenceRef": {
+         "daf": "21a",
+         "sentenceId": 4
+        }
+       },
+       {
+        "node": "not defeated(kv_bht_achareha)",
+        "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+        "sentenceRef": {
+         "daf": "21a",
+         "sentenceId": 4
+        },
+        "children": [
+         {
+          "node": "not pircha(kv_bht_achareha,B)",
+          "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+          "sentenceRef": {
+           "daf": "21a",
+           "sentenceId": 4
+          }
+         },
+         {
+          "node": "not defeated_regardless(kv_bht_achareha)",
+          "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+          "sentenceRef": {
+           "daf": "21a",
+           "sentenceId": 4
+          },
+          "children": [
+           {
+            "node": "not schema_instance(kv_bht_achareha,J | {J ∉ [kal_vachomer]},K)",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "not schema_instance(kv_bht_achareha,kal_vachomer,L | {L ∉ [birkat_hatorah_leachareha_required]})",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "proved(schema_instance(kv_bht_achareha,kal_vachomer,birkat_hatorah_leachareha_required))",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "not rejects_middah(C | {C ∉ [ctl_voice_never]},kal_vachomer)"
+           },
+           {
+            "node": "proved(schema_instance(kv_bht_achareha,kal_vachomer,birkat_hatorah_leachareha_required))",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "not rejects_middah(ctl_voice_never,kal_vachomer)"
+           },
+           {
+            "node": "not challenge(F | {F ∉ [ch_teyuvta_mishnah,ctl_challenge_never]},teyuvta,kv_bht_achareha)",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "not challenge(ch_teyuvta_mishnah,teyuvta,kv_bht_achareha)",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "not challenge(ctl_challenge_never,teyuvta,kv_bht_achareha)",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "not scriptural_exclusion(kv_bht_achareha,E)",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           },
+           {
+            "node": "not restricted_by(kv_bht_achareha,D)",
+            "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after",
+            "sentenceRef": {
+             "daf": "21a",
+             "sentenceId": 4
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not collapses(G,H,I)",
+          "children": [
+           {
+            "node": "not dispute(G,T)"
+           },
+           {
+            "node": "not dispute(G,R)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(P,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(N,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "note": "counterfactual — NOT the sugya's conclusion"
+  },
+  {
+   "id": "status_kv_bhm_lefaneha",
+   "kind": "status",
+   "subject": "kv_bhm_lefaneha",
+   "label_en": "What blocks this kal vachomer?",
+   "goal_display": "blocked_by(kv_bhm_lefaneha, G)",
+   "verdict": "answers",
+   "answers": [
+    {
+     "G": "teyuvta(ch_teyuvta_mishnah)"
+    },
+    {
+     "G": "objection(pircha_torah_chayei_olam)"
+    }
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "blocked_by(kv_bhm_lefaneha,teyuvta(ch_teyuvta_mishnah))",
+      "gloss_en": "Torah requires no blessing after yet requires one before; food, which requires one after, surely requires one before",
+      "sentenceRef": {
+       "daf": "21a",
+       "sentenceId": 4
+      },
+      "children": [
+       {
+        "node": "challenge(ch_teyuvta_mishnah,teyuvta,kv_bhm_lefaneha)",
+        "gloss_en": "Torah requires no blessing after yet requires one before; food, which requires one after, surely requires one before",
+        "sentenceRef": {
+         "daf": "21a",
+         "sentenceId": 4
+        }
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not collapses(B,C,D)",
+          "children": [
+           {
+            "node": "not dispute(B,L)"
+           },
+           {
+            "node": "not dispute(B,J)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(H,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(F,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "cf_drop_pircha_torah_chayei_olam",
+   "kind": "counterfactual",
+   "subject": "kv_bhm_lefaneha",
+   "label_en": "Had this objection not stood, what would follow?",
+   "delta": {
+    "drop_ground": "pircha_torah_chayei_olam"
+   },
+   "goal_display": "concluded(kv_bhm_lefaneha, birkat_hamazon_lefaneha_required)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null,
+   "note": "counterfactual — NOT the sugya's conclusion"
+  }
+ ],
+ "kb": "svara/ber_21a_birkot_kv.pl",
+ "kbVersion": "sha256-d3b60a3a8558be39"
+}

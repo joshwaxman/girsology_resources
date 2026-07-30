@@ -1,6 +1,11 @@
 {
  "sugya": "chullin_23b_siur",
  "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
  "range": {
   "start": "Chullin.23b.2",
   "end": "Chullin.23b.10"
@@ -466,6 +471,8 @@
      "verse": null,
      "gloss_en": "או דלמא בריה הוא -- perhaps siur is an entity in itself, neither chametz nor matza; the either-way argument did not consider this case",
      "withdrawn": false,
+     "answered": false,
+     "answered_by": [],
      "locus": "Chullin.23b.7",
      "daf": "23b",
      "sentenceId": 6
@@ -530,6 +537,50 @@
          "daf": "23b",
          "sentenceId": 6
         }
+       },
+       {
+        "node": "not ground_scoped(pircha_beriya_third_case)",
+        "gloss_en": "או דלמא בריה הוא -- perhaps siur is an entity in itself, neither chametz nor matza; the either-way argument did not consider this case",
+        "sentenceRef": {
+         "daf": "23b",
+         "sentenceId": 6
+        },
+        "children": [
+         {
+          "node": "not ground_aliba(pircha_beriya_third_case,S)",
+          "gloss_en": "או דלמא בריה הוא -- perhaps siur is an entity in itself, neither chametz nor matza; the either-way argument did not consider this case",
+          "sentenceRef": {
+           "daf": "23b",
+           "sentenceId": 6
+          }
+         }
+        ]
+       },
+       {
+        "node": "not withdrawn(pircha_beriya_third_case)",
+        "gloss_en": "או דלמא בריה הוא -- perhaps siur is an entity in itself, neither chametz nor matza; the either-way argument did not consider this case",
+        "sentenceRef": {
+         "daf": "23b",
+         "sentenceId": 6
+        }
+       },
+       {
+        "node": "not pircha_answered_globally(pircha_beriya_third_case)",
+        "gloss_en": "או דלמא בריה הוא -- perhaps siur is an entity in itself, neither chametz nor matza; the either-way argument did not consider this case",
+        "sentenceRef": {
+         "daf": "23b",
+         "sentenceId": 6
+        },
+        "children": [
+         {
+          "node": "not pircha_answered(pircha_beriya_third_case,W)",
+          "gloss_en": "או דלמא בריה הוא -- perhaps siur is an entity in itself, neither chametz nor matza; the either-way argument did not consider this case",
+          "sentenceRef": {
+           "daf": "23b",
+           "sentenceId": 6
+          }
+         }
+        ]
        }
       ]
      },
@@ -540,32 +591,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siur_definition]},P,Q)",
+          "node": "not collapses(B | {B ∉ [frame_siur_definition]},Z,A1)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siur_definition]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siur_definition]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]},R)",
+          "node": "not collapses(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]},B1)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,D | {D ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
            },
            {
             "node": "dispute(frame_siur_definition,definition_of_siur)"
            },
            {
-            "node": "not party(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_meir,L | {L ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_meir,U | {U ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -574,7 +637,19 @@
             "node": "party(frame_siur_definition,r_meir)"
            },
            {
-            "node": "not party(frame_siur_definition,L | {L ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -582,7 +657,19 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -599,7 +686,7 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,K | {K ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -612,14 +699,29 @@
            },
            {
             "node": "not position_identity(frame_siur_definition,r_meir,r_yehuda)"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,L | {L ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_yehuda,M | {M ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_yehuda,V | {V ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,M | {M ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -628,7 +730,19 @@
             "node": "proved(party(frame_siur_definition,r_yehuda))"
            },
            {
-            "node": "not party(frame_siur_definition,M | {M ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,V | {V ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,N | {N ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not party(frame_siur_definition,V | {V ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -636,7 +750,7 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,O | {O ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -648,7 +762,22 @@
             "node": "proved(party(frame_siur_definition,r_meir))"
            },
            {
-            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
+            "node": "proved(not position_identity(frame_siur_definition,r_yehuda,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,P | {P ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siur_definition,r_meir,r_yehuda))"
            }
           ]
          },
@@ -656,7 +785,19 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,Q | {Q ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,R | {R ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -675,7 +816,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(N | {N ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(X | {X ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "verdict(q_palges_matneh_beriya,teiku)"
@@ -695,7 +836,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(O | {O ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(Y | {Y ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "proved(verdict(q_palges_matneh_beriya,teiku))"
@@ -771,7 +912,7 @@
         },
         "children": [
          {
-          "node": "not pircha(mn_siur_either_way,N)",
+          "node": "not pircha(mn_siur_either_way,V)",
           "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
           "sentenceRef": {
            "daf": "23b",
@@ -779,58 +920,84 @@
           }
          },
          {
-          "node": "not schema_instance(mn_siur_either_way,W | {W ∉ [mah_nafshach]},X)",
+          "node": "not defeated_regardless(mn_siur_either_way)",
           "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
           "sentenceRef": {
            "daf": "23b",
            "sentenceId": 6
-          }
-         },
-         {
-          "node": "not schema_instance(mn_siur_either_way,mah_nafshach,Y | {Y ∉ [fulfills_neder_either_way]})",
-          "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
-          "sentenceRef": {
-           "daf": "23b",
-           "sentenceId": 6
-          }
-         },
-         {
-          "node": "proved(schema_instance(mn_siur_either_way,mah_nafshach,fulfills_neder_either_way))",
-          "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
-          "sentenceRef": {
-           "daf": "23b",
-           "sentenceId": 6
-          }
-         },
-         {
-          "node": "not rejects_middah(O | {O ∉ [ctl_voice_never]},mah_nafshach)"
-         },
-         {
-          "node": "proved(schema_instance(mn_siur_either_way,mah_nafshach,fulfills_neder_either_way))",
-          "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
-          "sentenceRef": {
-           "daf": "23b",
-           "sentenceId": 6
-          }
-         },
-         {
-          "node": "not rejects_middah(ctl_voice_never,mah_nafshach)"
-         },
-         {
-          "node": "not scriptural_exclusion(mn_siur_either_way,Q)",
-          "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
-          "sentenceRef": {
-           "daf": "23b",
-           "sentenceId": 6
-          }
-         },
-         {
-          "node": "not restricted_by(mn_siur_either_way,P)",
-          "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
-          "sentenceRef": {
-           "daf": "23b",
-           "sentenceId": 6
-          }
+          },
+          "children": [
+           {
+            "node": "not schema_instance(mn_siur_either_way,F1 | {F1 ∉ [mah_nafshach]},G1)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           },
+           {
+            "node": "not schema_instance(mn_siur_either_way,mah_nafshach,H1 | {H1 ∉ [fulfills_neder_either_way]})",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           },
+           {
+            "node": "proved(schema_instance(mn_siur_either_way,mah_nafshach,fulfills_neder_either_way))",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           },
+           {
+            "node": "not rejects_middah(W | {W ∉ [ctl_voice_never]},mah_nafshach)"
+           },
+           {
+            "node": "proved(schema_instance(mn_siur_either_way,mah_nafshach,fulfills_neder_either_way))",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           },
+           {
+            "node": "not rejects_middah(ctl_voice_never,mah_nafshach)"
+           },
+           {
+            "node": "not challenge(B1 | {B1 ∉ [ctl_challenge_never]},teyuvta,mn_siur_either_way)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           },
+           {
+            "node": "not challenge(ctl_challenge_never,teyuvta,mn_siur_either_way)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           },
+           {
+            "node": "not scriptural_exclusion(mn_siur_either_way,Y)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           },
+           {
+            "node": "not restricted_by(mn_siur_either_way,X)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            }
+           }
+          ]
          }
         ]
        }
@@ -843,32 +1010,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siur_definition]},T,U)",
+          "node": "not collapses(B | {B ∉ [frame_siur_definition]},C1,D1)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siur_definition]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siur_definition]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]},V)",
+          "node": "not collapses(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]},E1)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,D | {D ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
            },
            {
             "node": "dispute(frame_siur_definition,definition_of_siur)"
            },
            {
-            "node": "not party(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "not party(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_meir,L | {L ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_meir,T | {T ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -877,7 +1056,19 @@
             "node": "party(frame_siur_definition,r_meir)"
            },
            {
-            "node": "not party(frame_siur_definition,L | {L ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -885,7 +1076,19 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -902,7 +1105,7 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,K | {K ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -915,14 +1118,29 @@
            },
            {
             "node": "not position_identity(frame_siur_definition,r_meir,r_yehuda)"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,L | {L ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_yehuda,M | {M ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_yehuda,U | {U ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,M | {M ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -931,7 +1149,19 @@
             "node": "proved(party(frame_siur_definition,r_yehuda))"
            },
            {
-            "node": "not party(frame_siur_definition,M | {M ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,N | {N ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -939,7 +1169,7 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,O | {O ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -951,7 +1181,22 @@
             "node": "proved(party(frame_siur_definition,r_meir))"
            },
            {
-            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
+            "node": "proved(not position_identity(frame_siur_definition,r_yehuda,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,P | {P ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siur_definition,r_meir,r_yehuda))"
            }
           ]
          },
@@ -959,7 +1204,19 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,Q | {Q ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,R | {R ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -978,7 +1235,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(R | {R ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(Z | {Z ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "verdict(q_palges_matneh_beriya,teiku)"
@@ -998,7 +1255,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(S | {S ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(A1 | {A1 ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "proved(verdict(q_palges_matneh_beriya,teiku))"
@@ -1073,32 +1330,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siur_definition]},P,Q)",
+          "node": "not collapses(B | {B ∉ [frame_siur_definition]},X,Y)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siur_definition]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siur_definition]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]},R)",
+          "node": "not collapses(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]},Z)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,D | {D ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
            },
            {
             "node": "dispute(frame_siur_definition,definition_of_siur)"
            },
            {
-            "node": "not party(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "not party(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_meir,L | {L ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_meir,T | {T ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1107,7 +1376,19 @@
             "node": "party(frame_siur_definition,r_meir)"
            },
            {
-            "node": "not party(frame_siur_definition,L | {L ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -1115,7 +1396,19 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1132,7 +1425,7 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,K | {K ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1145,14 +1438,29 @@
            },
            {
             "node": "not position_identity(frame_siur_definition,r_meir,r_yehuda)"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,L | {L ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_yehuda,M | {M ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_yehuda,U | {U ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,M | {M ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1161,7 +1469,19 @@
             "node": "proved(party(frame_siur_definition,r_yehuda))"
            },
            {
-            "node": "not party(frame_siur_definition,M | {M ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,N | {N ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -1169,7 +1489,7 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,O | {O ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1181,7 +1501,22 @@
             "node": "proved(party(frame_siur_definition,r_meir))"
            },
            {
-            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
+            "node": "proved(not position_identity(frame_siur_definition,r_yehuda,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,P | {P ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siur_definition,r_meir,r_yehuda))"
            }
           ]
          },
@@ -1189,7 +1524,19 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,Q | {Q ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,R | {R ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1208,7 +1555,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(N | {N ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(V | {V ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "proved(verdict(q_palges_matneh_beriya,teiku))"
@@ -1228,7 +1575,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(O | {O ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(W | {W ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "proved(verdict(q_palges_matneh_beriya,teiku))"
@@ -1302,32 +1649,44 @@
         "node": "not o_chk_1",
         "children": [
          {
-          "node": "not collapses(B | {B ∉ [frame_siur_definition]},P,Q)",
+          "node": "not collapses(B | {B ∉ [frame_siur_definition]},X,Y)",
           "children": [
            {
             "node": "not dispute(B | {B ∉ [frame_siur_definition]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [frame_siur_definition]},D)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]},R)",
+          "node": "not collapses(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]},Z)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,D | {D ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
            },
            {
             "node": "dispute(frame_siur_definition,definition_of_siur)"
            },
            {
-            "node": "not party(frame_siur_definition,K | {K ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "not party(frame_siur_definition,S | {S ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_meir,L | {L ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_meir,T | {T ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,E | {E ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1336,7 +1695,19 @@
             "node": "party(frame_siur_definition,r_meir)"
            },
            {
-            "node": "not party(frame_siur_definition,L | {L ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not party(frame_siur_definition,T | {T ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -1344,7 +1715,19 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,F | {F ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1361,7 +1744,7 @@
           "node": "not collapses(frame_siur_definition,r_meir,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,G | {G ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,K | {K ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1374,14 +1757,29 @@
            },
            {
             "node": "not position_identity(frame_siur_definition,r_meir,r_yehuda)"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,L | {L ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
            }
           ]
          },
          {
-          "node": "not collapses(frame_siur_definition,r_yehuda,M | {M ∉ [r_meir,r_yehuda]})",
+          "node": "not collapses(frame_siur_definition,r_yehuda,U | {U ∉ [r_meir,r_yehuda]})",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,H | {H ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,M | {M ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1390,7 +1788,19 @@
             "node": "proved(party(frame_siur_definition,r_yehuda))"
            },
            {
-            "node": "not party(frame_siur_definition,M | {M ∉ [r_meir,r_yehuda]})"
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,N | {N ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not party(frame_siur_definition,U | {U ∉ [r_meir,r_yehuda]})"
            }
           ]
          },
@@ -1398,7 +1808,7 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_meir)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,I | {I ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,O | {O ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1410,7 +1820,22 @@
             "node": "proved(party(frame_siur_definition,r_meir))"
            },
            {
-            "node": "not position_identity(frame_siur_definition,r_yehuda,r_meir)"
+            "node": "proved(not position_identity(frame_siur_definition,r_yehuda,r_meir))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,P | {P ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(frame_siur_definition,r_meir,r_yehuda))"
            }
           ]
          },
@@ -1418,7 +1843,19 @@
           "node": "not collapses(frame_siur_definition,r_yehuda,r_yehuda)",
           "children": [
            {
-            "node": "not dispute(frame_siur_definition,J | {J ∉ [definition_of_siur]})"
+            "node": "not dispute(frame_siur_definition,Q | {Q ∉ [definition_of_siur]})"
+           },
+           {
+            "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "proved(party(frame_siur_definition,r_yehuda))"
+           },
+           {
+            "node": "not dispute(frame_siur_definition,R | {R ∉ [definition_of_siur]})"
            },
            {
             "node": "proved(dispute(frame_siur_definition,definition_of_siur))"
@@ -1437,7 +1874,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(N | {N ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(V | {V ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "verdict(q_palges_matneh_beriya,teiku)"
@@ -1457,7 +1894,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(O | {O ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(W | {W ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "proved(verdict(q_palges_matneh_beriya,teiku))"
@@ -1494,5 +1931,5 @@
   }
  ],
  "kb": "svara/chullin_23b_siur.pl",
- "kbVersion": "sha256-0c87973ff439ddcd"
+ "kbVersion": "sha256-d3b60a3a8558be39"
 }

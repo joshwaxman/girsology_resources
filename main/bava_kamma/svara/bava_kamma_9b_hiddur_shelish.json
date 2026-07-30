@@ -1,0 +1,252 @@
+{
+ "sugya": "bava_kamma_9b_hiddur_shelish",
+ "tractate": "Bava_Kamma",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Bava_Kamma.9a.20",
+  "end": "Bava_Kamma.9b.4"
+ },
+ "voices": [
+  {
+   "id": "r_zeira",
+   "kind": "amora"
+  },
+  {
+   "id": "rav_huna",
+   "kind": "amora"
+  },
+  {
+   "id": "rav_ashi",
+   "kind": "amora"
+  },
+  {
+   "id": "stam_9b",
+   "kind": "stam"
+  },
+  {
+   "id": "bnei_maarava",
+   "kind": "unknown"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_bemitzvah_ad_shelish",
+   "gloss_en": "for a mitzva -- up to a third",
+   "content": {
+    "pred": "bemitzvah_ad",
+    "args": [
+     "shelish"
+    ]
+   },
+   "locus": "Bava_Kamma.9a.20",
+   "daf": "9a",
+   "sentenceId": 19
+  },
+  {
+   "id": "p_shelish_beito",
+   "gloss_en": "the third means a third of his wealth",
+   "content": {
+    "pred": "shelish_hu",
+    "args": [
+     "shelish_beito"
+    ]
+   },
+   "locus": "Bava_Kamma.9b.1",
+   "daf": "9b",
+   "sentenceId": 0
+  },
+  {
+   "id": "p_hiddur_ad_shelish",
+   "gloss_en": "for beautifying a mitzva -- up to a third of [the cost of] the mitzva",
+   "content": {
+    "pred": "hiddur_mitzvah_ad",
+    "args": [
+     "shelish_bamitzvah"
+    ]
+   },
+   "locus": "Bava_Kamma.9b.2",
+   "daf": "9b",
+   "sentenceId": 1
+  },
+  {
+   "id": "p_ad_shelish_mishelo",
+   "gloss_en": "up to a third -- from his own; from there on -- from the Holy One's",
+   "content": {
+    "pred": "ad_shelish",
+    "args": [
+     "mishelo"
+    ]
+   },
+   "locus": "Bava_Kamma.9b.4",
+   "daf": "9b",
+   "sentenceId": 3
+  }
+ ],
+ "commits": [
+  {
+   "holder": "stam_9b",
+   "prop": "p_shelish_beito",
+   "stance": "entertain",
+   "ctx": "hyp(h_shelish_beito)",
+   "locus": "Bava_Kamma.9b.1",
+   "daf": "9b",
+   "sentenceId": 0
+  },
+  {
+   "holder": "r_zeira",
+   "prop": "p_hiddur_ad_shelish",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bava_Kamma.9b.2",
+   "daf": "9b",
+   "sentenceId": 1
+  }
+ ],
+ "schemas": [],
+ "questions": [
+  {
+   "id": "q_shelish_milgav_o_milvar",
+   "gloss_en": "is the third reckoned from within (a third of the base cost added) or from without (a third of the total outlay)?",
+   "recordedVerdict": "teiku",
+   "external": false,
+   "status": "teiku",
+   "locus": "Bava_Kamma.9b.3",
+   "daf": "9b",
+   "sentenceId": 2
+  }
+ ],
+ "attributions": [
+  {
+   "reporter": "r_zeira",
+   "subject": "rav_huna",
+   "prop": "p_bemitzvah_ad_shelish",
+   "locus": "Bava_Kamma.9a.20",
+   "daf": "9a",
+   "sentenceId": 19
+  },
+  {
+   "reporter": "bnei_maarava",
+   "subject": "r_zeira",
+   "prop": "p_ad_shelish_mishelo",
+   "locus": "Bava_Kamma.9b.4",
+   "daf": "9b",
+   "sentenceId": 3
+  }
+ ],
+ "queries": [
+  {
+   "id": "status_q_shelish_milgav_o_milvar",
+   "kind": "status",
+   "subject": "q_shelish_milgav_o_milvar",
+   "label_en": "Is this resolved?",
+   "goal_display": "status(q_shelish_milgav_o_milvar, X)",
+   "verdict": "answers",
+   "answers": [
+    {
+     "X": "teiku"
+    }
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "status(q_shelish_milgav_o_milvar,teiku)",
+      "children": [
+       {
+        "node": "question(q_shelish_milgav_o_milvar)"
+       },
+       {
+        "node": "verdict(q_shelish_milgav_o_milvar,teiku)"
+       },
+       {
+        "node": "not permitted(q_shelish_milgav_o_milvar)"
+       },
+       {
+        "node": "not ¬ permitted(q_shelish_milgav_o_milvar)"
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not collapses(D,E,F)",
+          "children": [
+           {
+            "node": "not dispute(D,L)"
+           },
+           {
+            "node": "not dispute(D,J)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(B | {B ∉ [q_shelish_milgav_o_milvar]},teiku)"
+         },
+         {
+          "node": "proved(verdict(q_shelish_milgav_o_milvar,teiku))"
+         },
+         {
+          "node": "proved(not permitted(q_shelish_milgav_o_milvar))"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(C | {C ∉ [q_shelish_milgav_o_milvar]},teiku)"
+         },
+         {
+          "node": "proved(verdict(q_shelish_milgav_o_milvar,teiku))"
+         },
+         {
+          "node": "proved(not ¬ permitted(q_shelish_milgav_o_milvar))"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "id": "split_rav_huna",
+   "kind": "attribution",
+   "subject": "rav_huna",
+   "label_en": "What does rav_huna hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(rav_huna, P1, P2)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null
+  }
+ ],
+ "kb": "svara/bava_kamma_9b_hiddur_shelish.pl",
+ "kbVersion": "sha256-d3b60a3a8558be39"
+}

@@ -6,9 +6,13 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(tzeit_hakochavim, 0).
+timepoint_scale(tzeit_hakochavim, night_from_tzeit).
 boundary_time(end_first_watch, 4).
+timepoint_scale(end_first_watch, night_from_tzeit).
 boundary_time(chatzot, 6).
+timepoint_scale(chatzot, night_from_tzeit).
 boundary_time(amud_hashachar, 12).
+timepoint_scale(amud_hashachar, night_from_tzeit).
 
 % --------------------------------------------------------------------
 % voices
