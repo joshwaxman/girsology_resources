@@ -61,8 +61,8 @@ commit(ika_damri, holds(rav_chisda, reading_of(lo_hifsid_clause, lo_hifsid_birko
 % L3: redactorial verdicts on an attack (teyuvta / kashya)
 % --------------------------------------------------------------------
 % Berakhot.10b.34 -- מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה -- תיובתא דרב חסדא תיובתא
-challenge(c_teyuvta_rav_chisda, teyuvta, reading_of(lo_hifsid_clause, hifsid_birkot_krishma)).
-challenge_by(c_teyuvta_rav_chisda, stam_10b).
+challenge(chal_teyuvta_rav_chisda, teyuvta, reading_of(lo_hifsid_clause, hifsid_birkot_krishma)).
+challenge_by(chal_teyuvta_rav_chisda, stam_10b).
 
 % --------------------------------------------------------------------
 % L3: support edges (evidence FOR a position; never establishes)

@@ -184,17 +184,20 @@
  "hypotheses": [],
  "challenges": [
   {
-   "id": "c_teyuvta_rav_chisda",
+   "id": "chal_teyuvta_rav_chisda",
    "kind": "teyuvta",
    "against": "p_lo_yomar_yotzer_or",
    "by": "stam_10b",
    "gloss_en": "מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה -- תיובתא דרב חסדא תיובתא",
    "effect": "refutes",
+   "answered_by": [],
    "locus": "Berakhot.10b.34",
    "daf": "10b",
    "sentenceId": 33
   }
  ],
+ "objections": [],
+ "rulings": [],
  "queries": [
   {
    "id": "split_rav_chisda",
@@ -447,6 +450,114 @@
      }
     ]
    }
+  },
+  {
+   "id": "refuted_chal_teyuvta_rav_chisda",
+   "kind": "status",
+   "subject": "chal_teyuvta_rav_chisda",
+   "label_en": "Does the redactor's refutation stand?",
+   "goal_display": "refuted_content(reading_of(lo_hifsid_clause, hifsid_birkot_krishma))",
+   "verdict": "answers",
+   "answers": [
+    {}
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "refuted_content(reading_of(lo_hifsid_clause,hifsid_birkot_krishma))",
+      "children": [
+       {
+        "node": "teyuvta_refutes(reading_of(lo_hifsid_clause,hifsid_birkot_krishma),chal_teyuvta_rav_chisda)",
+        "gloss_en": "מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה -- תיובתא דרב חסדא תיובתא",
+        "sentenceRef": {
+         "daf": "10b",
+         "sentenceId": 33
+        },
+        "children": [
+         {
+          "node": "challenge(chal_teyuvta_rav_chisda,teyuvta,reading_of(lo_hifsid_clause,hifsid_birkot_krishma))",
+          "gloss_en": "מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה -- תיובתא דרב חסדא תיובתא",
+          "sentenceRef": {
+           "daf": "10b",
+           "sentenceId": 33
+          }
+         },
+         {
+          "node": "not challenge_blunted(chal_teyuvta_rav_chisda)",
+          "gloss_en": "מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה -- תיובתא דרב חסדא תיובתא",
+          "sentenceRef": {
+           "daf": "10b",
+           "sentenceId": 33
+          },
+          "children": [
+           {
+            "node": "not challenge_answered(chal_teyuvta_rav_chisda,B)",
+            "gloss_en": "מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה -- תיובתא דרב חסדא תיובתא",
+            "sentenceRef": {
+             "daf": "10b",
+             "sentenceId": 33
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not collapses(C,D,E)",
+          "children": [
+           {
+            "node": "not dispute(C,M)"
+           },
+           {
+            "node": "not dispute(C,K)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(I,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(G,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
   }
  ],
  "kb": "svara/berakhot_10b_lo_hifsid.pl",
@@ -533,7 +644,7 @@
     "data": {}
    },
    {
-    "id": "challenge:c_teyuvta_rav_chisda",
+    "id": "challenge:chal_teyuvta_rav_chisda",
     "type": "challenge",
     "label_he": "מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה",
     "label_en": "מיתיבי... אבל מברך הוא שתים לפניה ואחת לאחריה -- תיובתא דרב חסדא תיובתא",
@@ -633,7 +744,7 @@
   ],
   "edges": [
    {
-    "source": "challenge:c_teyuvta_rav_chisda",
+    "source": "challenge:chal_teyuvta_rav_chisda",
     "target": "prop:p_lo_yomar_yotzer_or",
     "type": "challenges",
     "regime": "attack",
@@ -642,7 +753,7 @@
    },
    {
     "source": "voice:stam_10b",
-    "target": "challenge:c_teyuvta_rav_chisda",
+    "target": "challenge:chal_teyuvta_rav_chisda",
     "type": "advances",
     "regime": "structural"
    },
@@ -721,5 +832,5 @@
    }
   ]
  },
- "kbVersion": "sha256-64223d371e92e09a"
+ "kbVersion": "sha256-7f11aa6aa37f8157"
 }

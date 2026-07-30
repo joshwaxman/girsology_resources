@@ -103,8 +103,8 @@ commit(r_zerika, holds(r_yehoshua_ben_levi, size(mishmarot_halayla, arba)), asse
 % L3: redactorial verdicts on an attack (teyuvta / kashya)
 % --------------------------------------------------------------------
 % Berakhot.3b.13 -- is 'the middle of the middles' written? 'the middle' is written!
-challenge(c_mi_ktiv_tikhonot, kashya, reading_of(ashmoret_hatikhona, tikhona_shebatikhonot)).
-challenge_by(c_mi_ktiv_tikhonot, r_natan).
+challenge(chal_mi_ktiv_tikhonot, kashya, reading_of(ashmoret_hatikhona, tikhona_shebatikhonot)).
+challenge_by(chal_mi_ktiv_tikhonot, r_natan).
 
 % --------------------------------------------------------------------
 % L3: support edges (evidence FOR a position; never establishes)

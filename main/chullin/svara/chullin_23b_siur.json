@@ -526,6 +526,8 @@
  ],
  "hypotheses": [],
  "challenges": [],
+ "objections": [],
+ "rulings": [],
  "queries": [
   {
    "id": "status_mn_siur_either_way",
@@ -1009,20 +1011,112 @@
             "node": "not rejects_middah(ctl_voice_never,mah_nafshach)"
            },
            {
-            "node": "not challenge(B1 | {B1 ∉ [ctl_challenge_never]},teyuvta,mn_siur_either_way)",
+            "node": "not teyuvta_refutes(mn_siur_either_way,Z | {Z ∉ [ctl_ch_blunted,ctl_ch_kv_blunted,ctl_ch_kv_live,ctl_ch_live_teyuvta,ctl_challenge_never]})",
             "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
             "sentenceRef": {
              "daf": "23b",
              "sentenceId": 6
-            }
+            },
+            "children": [
+             {
+              "node": "not challenge(Z | {Z ∉ [ctl_ch_blunted,ctl_ch_kv_blunted,ctl_ch_kv_live,ctl_ch_live_teyuvta,ctl_challenge_never]},teyuvta,mn_siur_either_way)",
+              "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+              "sentenceRef": {
+               "daf": "23b",
+               "sentenceId": 6
+              }
+             }
+            ]
            },
            {
-            "node": "not challenge(ctl_challenge_never,teyuvta,mn_siur_either_way)",
+            "node": "not teyuvta_refutes(mn_siur_either_way,ctl_ch_blunted)",
             "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
             "sentenceRef": {
              "daf": "23b",
              "sentenceId": 6
-            }
+            },
+            "children": [
+             {
+              "node": "not challenge(ctl_ch_blunted,teyuvta,mn_siur_either_way)",
+              "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+              "sentenceRef": {
+               "daf": "23b",
+               "sentenceId": 6
+              }
+             }
+            ]
+           },
+           {
+            "node": "not teyuvta_refutes(mn_siur_either_way,ctl_ch_kv_blunted)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            },
+            "children": [
+             {
+              "node": "not challenge(ctl_ch_kv_blunted,teyuvta,mn_siur_either_way)",
+              "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+              "sentenceRef": {
+               "daf": "23b",
+               "sentenceId": 6
+              }
+             }
+            ]
+           },
+           {
+            "node": "not teyuvta_refutes(mn_siur_either_way,ctl_ch_kv_live)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            },
+            "children": [
+             {
+              "node": "not challenge(ctl_ch_kv_live,teyuvta,mn_siur_either_way)",
+              "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+              "sentenceRef": {
+               "daf": "23b",
+               "sentenceId": 6
+              }
+             }
+            ]
+           },
+           {
+            "node": "not teyuvta_refutes(mn_siur_either_way,ctl_ch_live_teyuvta)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            },
+            "children": [
+             {
+              "node": "not challenge(ctl_ch_live_teyuvta,teyuvta,mn_siur_either_way)",
+              "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+              "sentenceRef": {
+               "daf": "23b",
+               "sentenceId": 6
+              }
+             }
+            ]
+           },
+           {
+            "node": "not teyuvta_refutes(mn_siur_either_way,ctl_challenge_never)",
+            "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+            "sentenceRef": {
+             "daf": "23b",
+             "sentenceId": 6
+            },
+            "children": [
+             {
+              "node": "not challenge(ctl_challenge_never,teyuvta,mn_siur_either_way)",
+              "gloss_en": "if siur is a safek: if it is matza he fulfilled the matza vow, if chametz the chametz vow -- either way he fulfills",
+              "sentenceRef": {
+               "daf": "23b",
+               "sentenceId": 6
+              }
+             }
+            ]
            },
            {
             "node": "not scriptural_exclusion(mn_siur_either_way,Y)",
@@ -1278,7 +1372,7 @@
         "node": "not o_chk_2",
         "children": [
          {
-          "node": "not verdict(Z | {Z ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(A1 | {A1 ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "verdict(q_palges_matneh_beriya,teiku)"
@@ -1298,7 +1392,7 @@
         "node": "not o_chk_3",
         "children": [
          {
-          "node": "not verdict(A1 | {A1 ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
+          "node": "not verdict(B1 | {B1 ∉ [q_palges_matneh_beriya,q_siur_neder]},teiku)"
          },
          {
           "node": "proved(verdict(q_palges_matneh_beriya,teiku))"
@@ -2579,5 +2673,5 @@
    }
   ]
  },
- "kbVersion": "sha256-64223d371e92e09a"
+ "kbVersion": "sha256-7f11aa6aa37f8157"
 }
