@@ -70,7 +70,7 @@ locus(p_shmuel_kerabbanan, 'Sanhedrin.6a.1').
 content(p_shmuel_kerabbanan, not_aligned(shmuel_shnayim_din, rsbg)).
 prop(p_shnayim_ein_din).
 gloss(p_shnayim_ein_din, 'two who judged monetary cases -- all agree their judgment is no judgment').
-locus(p_shnayim_ein_din, 'Sanhedrin.6a.2').
+locus(p_shnayim_ein_din, 'Sanhedrin.6a.1').
 content(p_shnayim_ein_din, din_status(shnayim_shedanu, ein_din)).
 prop(p_dan_hadin).
 gloss(p_dan_hadin, 'one who judged a case [alone] and erred -- what he did is done, and he pays from his own home (so a single judge\'s judgment stands)').

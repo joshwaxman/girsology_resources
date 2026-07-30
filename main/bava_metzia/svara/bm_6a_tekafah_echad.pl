@@ -176,7 +176,7 @@ commit(rabba, proof(masuta_hekdesh_valid, from_safek_bechor), deny, actual).
 commit(rabba, distinction(safek_bechor, kedusha_haba_meeleha), assert, actual).
 % Bava_Metzia.6b.4
 commit(rabba, motziin_miyado(safek_bechor_seized_by_kohen), assert, actual).
-% Bava_Metzia.6b.5 -- תניא דמסייע לך -- offered in SUPPORT of Rabba's tekafo-kohen ruling; the schema has no support edges, so the relation lives in this note
+% Bava_Metzia.6b.5 -- תניא דמסייע לך -- offered in SUPPORT of Rabba's tekafo-kohen ruling; the edge itself is the s_mesaya_dir entry under supports:
 commit(rav_chananya, din_baraita(sfeikot, nichnasin_ladir), assert, actual).
 % Bava_Metzia.6b.7 -- אי משום הא לא תסייעיה למר -- the mah-nafshach deflection (schema mn_nine_exempt)
 commit(abaye, case_framing(dir_baraita, nine_plus_safek), assert, actual).
@@ -238,3 +238,17 @@ schema_instance(mn_nine_exempt, mah_nafshach, dir_baraita_no_support_for_rabba).
 schema_holder(mn_nine_exempt, abaye).
 %   defeater at Bava_Metzia.6b.8: לאו מילתא היא דאמרי -- an animal of uncertain status is excluded from the tithe count entirely (עשירי ודאי ולא עשירי ספק), so the nine-plus-safek framing cannot be what the baraita means
 pircha(mn_nine_exempt, pircha_asiri_vadai).
+
+% --------------------------------------------------------------------
+% L3: support edges (evidence FOR a position; never establishes)
+% --------------------------------------------------------------------
+% Bava_Metzia.6b.5 -- תניא דמסייע לך -- the pen-baraita (הספיקות נכנסין לדיר להתעשר) supports Rabba's tekafo-kohen ruling: a safek is treated as its possessor's
+support(motziin_miyado(safek_bechor_seized_by_kohen), s_mesaya_dir).
+support_kind(s_mesaya_dir, mesaya).
+support_by(s_mesaya_dir, rav_chananya).
+support_source(s_mesaya_dir, p_dir_baraita).
+%   deflected at Bava_Metzia.6b.7: אי משום הא לא תסייעיה למר -- read the baraita as nine animals plus the safek, where the owner is exempt whichever way you look at it
+support_deflected(s_mesaya_dir, defl_nine_plus_safek).
+deflection_by(defl_nine_plus_safek, abaye).
+%   deflection refuted at Bava_Metzia.7a.1: הדר אמר אביי לאו מילתא היא דאמרי -- a safek never enters the tithe count at all (עשירי ודאי ולא עשירי ספק), so the deflection collapses and the support stands
+deflection_refuted(defl_nine_plus_safek, refut_asiri_vadai).
