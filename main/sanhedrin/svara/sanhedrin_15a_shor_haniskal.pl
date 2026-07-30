@@ -20,10 +20,10 @@ voice(md_chenek_chamur, shita).
 % --------------------------------------------------------------------
 % L1: reified propositions (content is a TERM, not a formula)
 % --------------------------------------------------------------------
-prop(p_shor_haniskal_23).
-gloss(p_shor_haniskal_23, 'the ox to be stoned is judged by twenty-three').
-locus(p_shor_haniskal_23, 'Sanhedrin.15a.15').
-content(p_shor_haniskal_23, size(beit_din_shor_haniskal, esrim_veshlosha)).
+prop(p_shor_haniskal_n23).
+gloss(p_shor_haniskal_n23, 'the ox to be stoned is judged by twenty-three').
+locus(p_shor_haniskal_n23, 'Sanhedrin.15a.15').
+content(p_shor_haniskal_n23, size(beit_din_shor_haniskal, esrim_veshlosha)).
 prop(p_kemitat_bealim).
 gloss(p_kemitat_bealim, 'the surviving (procedural) reading: וגם בעליו יומת teaches that as the owner\'s death would require twenty-three, so the ox\'s trial').
 locus(p_kemitat_bealim, 'Sanhedrin.15a.15').

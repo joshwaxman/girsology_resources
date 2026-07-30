@@ -105,7 +105,7 @@ commit(r_yosi, source(tashbitu_erev_yom_tov, ach_chalak), assert, actual).
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)
 % --------------------------------------------------------------------
-dispute(m_sof_achilat_chametz, end_of_eating_chametz_on_14).
+dispute(m_sof_achilat_chametz, end_of_eating_chametz_on_n14).
 party(m_sof_achilat_chametz, r_meir).
 party(m_sof_achilat_chametz, r_yehuda).
 dispute(m_makor_tashbitu, source_of_tashbitu_erev_yom_tov).

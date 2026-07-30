@@ -61,14 +61,14 @@ prop(p_beit_din_noteh).
 gloss(p_beit_din_noteh, 'the Torah said: constitute for yourself a court that can lean (an odd-numbered court)').
 locus(p_beit_din_noteh, 'Sanhedrin.3b.6').
 content(p_beit_din_noteh, mitzva(beit_din_noteh)).
-prop(p_gedola_71).
-gloss(p_gedola_71, 'the great Sanhedrin comprised seventy-one').
-locus(p_gedola_71, 'Sanhedrin.3b.7').
-content(p_gedola_71, size(sanhedri_gedola, shivim_veechad)).
-prop(p_gedola_70).
-gloss(p_gedola_70, 'the great Sanhedrin comprised seventy').
-locus(p_gedola_70, 'Sanhedrin.3b.7').
-content(p_gedola_70, size(sanhedri_gedola, shivim)).
+prop(p_gedola_n71).
+gloss(p_gedola_n71, 'the great Sanhedrin comprised seventy-one').
+locus(p_gedola_n71, 'Sanhedrin.3b.7').
+content(p_gedola_n71, size(sanhedri_gedola, shivim_veechad)).
+prop(p_gedola_n70).
+gloss(p_gedola_n70, 'the great Sanhedrin comprised seventy').
+locus(p_gedola_n70, 'Sanhedrin.3b.7').
+content(p_gedola_n70, size(sanhedri_gedola, shivim)).
 prop(p_smicha_shlosha).
 gloss(p_smicha_shlosha, 'laying on of the elders\' hands and the heifer rite are by three').
 locus(p_smicha_shlosha, 'Sanhedrin.3b.9').

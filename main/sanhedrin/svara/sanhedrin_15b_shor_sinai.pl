@@ -16,14 +16,14 @@ voice(stam_15b, stam).
 % --------------------------------------------------------------------
 % L1: reified propositions (content is a TERM, not a formula)
 % --------------------------------------------------------------------
-prop(p_ish_23).
-gloss(p_ish_23, 'a man [liable to death at Sinai] is judged by twenty-three -- the small Sanhedrin').
-locus(p_ish_23, 'Sanhedrin.15b.6').
-content(p_ish_23, size(sanhedri_ketana, esrim_veshlosha)).
-prop(p_behema_23).
-gloss(p_behema_23, 'the beast of Sinai is judged by twenty-three').
-locus(p_behema_23, 'Sanhedrin.15b.6').
-content(p_behema_23, size(beit_din_shor_sinai, esrim_veshlosha)).
+prop(p_ish_n23).
+gloss(p_ish_n23, 'a man [liable to death at Sinai] is judged by twenty-three -- the small Sanhedrin').
+locus(p_ish_n23, 'Sanhedrin.15b.6').
+content(p_ish_n23, size(sanhedri_ketana, esrim_veshlosha)).
+prop(p_behema_n23).
+gloss(p_behema_n23, 'the beast of Sinai is judged by twenty-three').
+locus(p_behema_n23, 'Sanhedrin.15b.6').
+content(p_behema_n23, size(beit_din_shor_sinai, esrim_veshlosha)).
 prop(p_gamar_shaah).
 gloss(p_gamar_shaah, 'the temporary (Sinai) ruling derives from the standing law of the generations -- resolved affirmatively by the ta-shema').
 locus(p_gamar_shaah, 'Sanhedrin.15b.6').
@@ -55,4 +55,4 @@ schema_target(m_hekesh_ish_behema, behemat_sinai).
 support(gamar_min(horaat_shaah, dorot), s_ta_shema_rami).
 support_kind(s_ta_shema_rami, ta_shema).
 support_by(s_ta_shema_rami, rami_bar_yechezkel).
-support_source(s_ta_shema_rami, p_behema_23).
+support_source(s_ta_shema_rami, p_behema_n23).

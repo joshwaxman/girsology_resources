@@ -17,14 +17,14 @@ voice(r_yehuda, tanna).
 % --------------------------------------------------------------------
 % L1: reified propositions (content is a TERM, not a formula)
 % --------------------------------------------------------------------
-prop(p_gedola_71).
-gloss(p_gedola_71, 'the great Sanhedrin comprised seventy-one').
-locus(p_gedola_71, 'Sanhedrin.16b.18').
-content(p_gedola_71, size(sanhedri_gedola, shivim_veechad)).
-prop(p_gedola_70).
-gloss(p_gedola_70, 'the great Sanhedrin comprised seventy').
-locus(p_gedola_70, 'Sanhedrin.16b.18').
-content(p_gedola_70, size(sanhedri_gedola, shivim)).
+prop(p_gedola_n71).
+gloss(p_gedola_n71, 'the great Sanhedrin comprised seventy-one').
+locus(p_gedola_n71, 'Sanhedrin.16b.18').
+content(p_gedola_n71, size(sanhedri_gedola, shivim_veechad)).
+prop(p_gedola_n70).
+gloss(p_gedola_n70, 'the great Sanhedrin comprised seventy').
+locus(p_gedola_n70, 'Sanhedrin.16b.18').
+content(p_gedola_n70, size(sanhedri_gedola, shivim)).
 prop(p_imach_bahadayhu).
 gloss(p_imach_bahadayhu, '\'with you\' of vehityatzvu: and you among them -- Moshe joins the seventy, hence seventy-one').
 locus(p_imach_bahadayhu, 'Sanhedrin.16b.18').

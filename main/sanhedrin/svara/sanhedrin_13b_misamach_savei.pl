@@ -83,14 +83,14 @@ prop(p_tisgei_bechad).
 gloss(p_tisgei_bechad, '(inside the hypothesis) one ordainer would suffice, as Moshe acted alone -- against the given three').
 locus(p_tisgei_bechad, 'Sanhedrin.13b.10').
 content(p_tisgei_bechad, size_required(misamach_savei, echad)).
-prop(p_moshe_71).
-gloss(p_moshe_71, '(entertained) Moshe stood in the place of seventy-one').
-locus(p_moshe_71, 'Sanhedrin.13b.10').
-content(p_moshe_71, bimkom(moshe, shivim_veechad)).
-prop(p_libei_71).
-gloss(p_libei_71, '(inside the hypothesis) ordination would then require seventy-one -- against the given three').
-locus(p_libei_71, 'Sanhedrin.13b.10').
-content(p_libei_71, size_required(misamach_savei, shivim_veechad)).
+prop(p_moshe_n71).
+gloss(p_moshe_n71, '(entertained) Moshe stood in the place of seventy-one').
+locus(p_moshe_n71, 'Sanhedrin.13b.10').
+content(p_moshe_n71, bimkom(moshe, shivim_veechad)).
+prop(p_libei_n71).
+gloss(p_libei_n71, '(inside the hypothesis) ordination would then require seventy-one -- against the given three').
+locus(p_libei_n71, 'Sanhedrin.13b.10').
+content(p_libei_n71, size_required(misamach_savei, shivim_veechad)).
 prop(p_samchin_bishma).
 gloss(p_samchin_bishma, 'ordination is not a literal laying of hands: they ordain him by name -- call him \'Rabbi\' and license him to judge cases of fines').
 locus(p_samchin_bishma, 'Sanhedrin.13b.11').
@@ -134,9 +134,9 @@ commit(abaye, source_of(misamach_savei, vayismoch_yadav), entertain, hyp(h_vayis
 % Sanhedrin.13b.10
 commit(abaye, size_required(misamach_savei, echad), assert, hyp(h_vayismoch)).
 % Sanhedrin.13b.10
-commit(abaye, bimkom(moshe, shivim_veechad), entertain, hyp(h_moshe_71)).
+commit(abaye, bimkom(moshe, shivim_veechad), entertain, hyp(h_moshe_n71)).
 % Sanhedrin.13b.10
-commit(abaye, size_required(misamach_savei, shivim_veechad), assert, hyp(h_moshe_71)).
+commit(abaye, size_required(misamach_savei, shivim_veechad), assert, hyp(h_moshe_n71)).
 % Sanhedrin.13b.11 -- answering Rav Acha son of Rava's question 'bida mamash samchin leih?'
 commit(rav_ashi, defined_as(misamach_savei, minui_bishma), assert, actual).
 
@@ -153,9 +153,9 @@ party(m_smicha_size, r_yehuda).
 hypothesis(h_vayismoch, p_source_vayismoch).
 % Sanhedrin.13b.10
 hypothesis_verdict(h_vayismoch, reductio).
-hypothesis(h_moshe_71, p_moshe_71).
+hypothesis(h_moshe_n71, p_moshe_n71).
 % Sanhedrin.13b.10
-hypothesis_verdict(h_moshe_71, reductio).
+hypothesis_verdict(h_moshe_n71, reductio).
 
 % --------------------------------------------------------------------
 % L3: redactorial verdicts on an attack (teyuvta / kashya)

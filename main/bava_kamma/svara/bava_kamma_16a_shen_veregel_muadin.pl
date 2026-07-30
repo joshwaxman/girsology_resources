@@ -30,11 +30,11 @@ content(p_resha_chatzer_hanizak, okimta(matnitin_shen_muedet, chatzer_hanizak)).
 prop(p_keren_chn_chatzi).
 gloss(p_keren_chn_chatzi, 'the Rabbanan: keren-type damage in the injured party\'s courtyard is unusual (משונה) and pays half damages').
 locus(p_keren_chn_chatzi, 'Bava_Kamma.15b.24').
-content(p_keren_chn_chatzi, chiyuv_keren_bechatzer_hanizak(chatzi_nezek)).
+content(p_keren_chn_chatzi, meshalem_bechatzer_hanizak(keren, chatzi_nezek)).
 prop(p_keren_chn_shalem).
 gloss(p_keren_chn_shalem, 'R. Tarfon: unusual keren-type damage in the injured party\'s courtyard pays full damages').
 locus(p_keren_chn_shalem, 'Bava_Kamma.15b.25').
-content(p_keren_chn_shalem, chiyuv_keren_bechatzer_hanizak(nezek_shalem)).
+content(p_keren_chn_shalem, meshalem_bechatzer_hanizak(keren, nezek_shalem)).
 prop(p_resha_rabbanan_seifa_tarfon).
 gloss(p_resha_rabbanan_seifa_tarfon, 'Shmuel to Rav Yehuda: sharp one, leave the mishnah and follow me -- the first clause is the Rabbanan and the later clause is R. Tarfon').
 locus(p_resha_rabbanan_seifa_tarfon, 'Bava_Kamma.15b.27').
@@ -62,9 +62,9 @@ content(p_chasorei_ravina, chasorei_mechsera(matnitin_tamim_umuadim, girsa_ravin
 % Bava_Kamma.15b.23
 commit(stam_15b, okimta(matnitin_shen_muedet, chatzer_hanizak), assert, actual).
 % Bava_Kamma.15b.24
-commit(rabbanan, chiyuv_keren_bechatzer_hanizak(chatzi_nezek), assert, actual).
+commit(rabbanan, meshalem_bechatzer_hanizak(keren, chatzi_nezek), assert, actual).
 % Bava_Kamma.15b.25
-commit(r_tarfon, chiyuv_keren_bechatzer_hanizak(nezek_shalem), assert, actual).
+commit(r_tarfon, meshalem_bechatzer_hanizak(keren, nezek_shalem), assert, actual).
 % Bava_Kamma.15b.27
 commit(shmuel, reading_of(matnitin_tamim_umuadim, resha_rabbanan_seifa_tarfon), assert, actual).
 % Bava_Kamma.16a.1 -- רבי אלעזר משמיה דרב אמר
@@ -77,7 +77,7 @@ commit(ravina, chasorei_mechsera(matnitin_tamim_umuadim, girsa_ravina), assert, 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)
 % --------------------------------------------------------------------
-dispute(frame_keren_chatzer_hanizak, chiyuv_keren_bechatzer_hanizak).
+dispute(frame_keren_chatzer_hanizak, meshalem_bechatzer_hanizak).
 party(frame_keren_chatzer_hanizak, r_tarfon).
 party(frame_keren_chatzer_hanizak, rabbanan).
 

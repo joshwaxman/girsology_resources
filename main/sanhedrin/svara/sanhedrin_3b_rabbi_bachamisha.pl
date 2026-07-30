@@ -36,14 +36,14 @@ prop(p_tlata_bigmar).
 gloss(p_tlata_bigmar, '(entertained) the written \'three\' refers to the verdict stage, so five must sit that three conclude the verdict').
 locus(p_tlata_bigmar, 'Sanhedrin.3b.14').
 content(p_tlata_bigmar, written_at_stage(shlosha_dayanim, gmar_din)).
-prop(p_gedola_141).
-gloss(p_gedola_141, '(inside the hypothesis) the great Sanhedrin would need 141 so that the verdict is concluded by 71').
-locus(p_gedola_141, 'Sanhedrin.3b.15').
-content(p_gedola_141, size_required(sanhedri_gedola, meah_arbaim_veechad)).
-prop(p_ketana_45).
-gloss(p_ketana_45, '(inside the hypothesis) the small Sanhedrin would need 45 so that the verdict is concluded by 23').
-locus(p_ketana_45, 'Sanhedrin.3b.15').
-content(p_ketana_45, size_required(sanhedri_ketana, arbaim_vechamisha)).
+prop(p_gedola_n141).
+gloss(p_gedola_n141, '(inside the hypothesis) the great Sanhedrin would need 141 so that the verdict is concluded by 71').
+locus(p_gedola_n141, 'Sanhedrin.3b.15').
+content(p_gedola_n141, size_required(sanhedri_gedola, meah_arbaim_veechad)).
+prop(p_ketana_n45).
+gloss(p_ketana_n45, '(inside the hypothesis) the small Sanhedrin would need 45 so that the verdict is concluded by 23').
+locus(p_ketana_n45, 'Sanhedrin.3b.15').
+content(p_ketana_n45, size_required(sanhedri_ketana, arbaim_vechamisha)).
 prop(p_mishat_asifa).
 gloss(p_mishat_asifa, 'the counts are anchored at the start: seventy from the moment of gathering, and likewise three from the moment of the litigant\'s approach -- not at the verdict stage').
 locus(p_mishat_asifa, 'Sanhedrin.3b.16').
