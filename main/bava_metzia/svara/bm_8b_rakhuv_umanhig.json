@@ -606,6 +606,53 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_kinyan_behema",
+   "topic": "modes_that_acquire_camel_and_donkey",
+   "parties": [
+    "tanna_kama_gamal",
+    "r_yehuda"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_mishnah_proves_rakhuv",
+   "assumes": "p_mishnah_rakhuv_kanei",
+   "verdict": "abandoned",
+   "opened_by": "stam_8b",
+   "discharge_locus": "Bava_Metzia.8b.12",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_mishnah_rakhuv_kanei"
+   ],
+   "locus": "Bava_Metzia.8b.11",
+   "daf": "8b",
+   "sentenceId": 10
+  },
+  {
+   "id": "h_tk_is_ryehuda",
+   "assumes": "p_tk_same_ryehuda",
+   "verdict": "reductio",
+   "opened_by": "stam_8b",
+   "discharge_locus": "Bava_Metzia.9a.7",
+   "discharge_concludes": "p_tzad_echad",
+   "entails_identity": {
+    "frame": "frame_kinyan_behema",
+    "v1": "r_yehuda",
+    "v2": "tanna_kama_gamal"
+   },
+   "quarantined": [
+    "p_tk_same_ryehuda"
+   ],
+   "locus": "Bava_Metzia.9a.7",
+   "daf": "9a",
+   "sentenceId": 6
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_q_rakhuv",
@@ -929,5 +976,820 @@
   }
  ],
  "kb": "svara/bm_8b_rakhuv_umanhig.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_shmuel_tarti",
+    "type": "prop",
+    "label_he": "שמעית מיניה דמר שמואל תרתי: רכוב ומנהיג, חד קני וחד לא קני, ולא ידענא הי מינייהו",
+    "label_en": "Shmuel ruled on rider and leader -- one acquires, one does not; which is which was lost in transmis…",
+    "locus": "Bava_Metzia.8b.1",
+    "daf": "8b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "ruled_pair",
+      "args": [
+       "shmuel",
+       "rakhuv_manhig_one_acquires"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_q_rakhuv",
+    "type": "prop",
+    "label_he": "רכוב במקום מנהיג איבעיא ליה: רכוב עדיף דהא תפיס בה, או דלמא מנהיג עדיף דאזלא מחמתיה",
+    "label_en": "does the rider (who grasps the animal) prevail over the leader (who makes it walk)?",
+    "locus": "Bava_Metzia.8b.3",
+    "daf": "8b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "kanei",
+      "args": [
+       "rakhuv_bimkom_manhig"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kilayim_shmuel",
+    "type": "prop",
+    "label_he": "מדאפיך שמואל ותני: וחכמים פוטרין את היושב בקרון",
+    "label_en": "in Shmuel's text of the kilayim mishna it is the RABBIS who exempt the wagon-sitter (the printed te…",
+    "locus": "Bava_Metzia.8b.5",
+    "daf": "8b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "mishnah_text",
+      "args": [
+       "kilayim_karon",
+       "chachamim_potrin_yoshev"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rakhuv_lo_kanei",
+    "type": "prop",
+    "label_he": "שמע מינה רכוב לחודיה לא קני, וכל שכן רכוב במקום מנהיג",
+    "label_en": "Rav Yehuda's inference: a plain rider does not acquire, all the more so a rider alongside a leader",
+    "locus": "Bava_Metzia.8b.5",
+    "daf": "8b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "lo_kanei",
+      "args": [
+       "rakhuv_lechudei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_moseira_lo_kanei",
+    "type": "prop",
+    "label_he": "מוסירה לא קני",
+    "label_en": "holding the reins of an ownerless animal does not acquire it",
+    "locus": "Bava_Metzia.8b.7",
+    "daf": "8b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "lo_kanei",
+      "args": [
+       "moseira_bimtziah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chelbo_huna",
+    "type": "prop",
+    "label_he": "מוסירה מחבירו קנה, במציאה ובנכסי הגר לא קני",
+    "label_en": "Rav Huna: reins acquire when handed over by a fellow person; for a find or a convert's estate they…",
+    "locus": "Bava_Metzia.8b.9",
+    "daf": "8b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "moseira",
+       "kanei_mechavero_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mishnah_rakhuv_kanei",
+    "type": "prop",
+    "label_he": "אלא לאו רבנן, ושמע מינה רכוב קני",
+    "label_en": "(entertained) our mishna (rider and leader both acquire) must be the Rabbis -- so a rider acquires",
+    "locus": "Bava_Metzia.8b.11",
+    "daf": "8b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "kanei_fact",
+      "args": [
+       "rakhuv_lechudei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_manhig_beraglav",
+    "type": "prop",
+    "label_he": "הכא במאי עסקינן במנהיג ברגליו",
+    "label_en": "deflection: the mishna's 'rider' also drives the animal with his feet -- a second kind of leading",
+    "locus": "Bava_Metzia.8b.12",
+    "daf": "8b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "mishnah_rakhuv",
+       "manhig_beraglav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tk_bemida_zo",
+    "type": "prop",
+    "label_he": "שנים שהיו מושכין בגמל ומנהיגין בחמור... במדה זאת קנו",
+    "label_en": "first tanna: pulling a camel or driving a donkey (or one pulling and one driving) acquires -- 'in t…",
+    "locus": "Bava_Metzia.8b.13",
+    "daf": "8b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "kinyan_behema",
+       "moshech_umanhig_kanu"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ryehuda_meshicha",
+    "type": "prop",
+    "label_he": "רבי יהודה אומר: לעולם לא קנה עד שתהא משיכה בגמל והנהגה בחמור",
+    "label_en": "R' Yehuda: only the animal's OWN mode acquires -- pulling for a camel, driving for a donkey",
+    "locus": "Bava_Metzia.9a.1",
+    "daf": "9a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "kinyan_behema",
+       "only_native_mode"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tk_same_ryehuda",
+    "type": "prop",
+    "label_he": "אי הכי היינו רבי יהודה",
+    "label_en": "(entertained) if 'in this manner' excludes the reversed modes, the first tanna's position simply IS…",
+    "locus": "Bava_Metzia.9a.7",
+    "daf": "9a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "same",
+      "args": [
+       "shitat_tk_behema",
+       "shitat_ryehuda_behema"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tzad_echad",
+    "type": "prop",
+    "label_he": "איכא בינייהו צד אחד דלא קנה",
+    "label_en": "the positions are distinct: they differ over exactly one mode that does not acquire",
+    "locus": "Bava_Metzia.9a.7",
+    "daf": "9a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "distinct",
+      "args": [
+       "shitat_tk_behema",
+       "shitat_ryehuda_behema"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tzad_meshicha_chamor",
+    "type": "prop",
+    "label_he": "אית דאמרי משיכה בחמור",
+    "label_en": "version 1: the mode the first tanna concedes does not acquire is pulling a donkey",
+    "locus": "Bava_Metzia.9a.7",
+    "daf": "9a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "tzad_delo_kanei",
+       "meshicha_bachamor"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tzad_hanhaga_gamal",
+    "type": "prop",
+    "label_he": "ואיכא דאמרי הנהגה בגמל",
+    "label_en": "version 2: the conceded mode is driving a camel",
+    "locus": "Bava_Metzia.9a.7",
+    "daf": "9a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "tzad_delo_kanei",
+       "hanhaga_begamal"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rav_ashi_text",
+    "type": "prop",
+    "label_he": "זה קנה חמור ובית פגיה, וזה קנה מה שתפוס בידו, והשאר לא קנה",
+    "label_en": "Rav Ashi's text of the reins baraita: the rider-driver acquires the donkey and its halter; the rein…",
+    "locus": "Bava_Metzia.9a.13",
+    "daf": "9a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "rakhuv_umoseira",
+       "rav_ashi_division"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yachol_lenatkah",
+    "type": "prop",
+    "label_he": "הואיל ויכול לנתקה ולהביאה אצלו",
+    "label_en": "R' Abbahu: keep the baraita as taught -- the reins-holder acquires because he could yank them to hi…",
+    "locus": "Bava_Metzia.9a.14",
+    "daf": "9a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "kinyan",
+       "yachol_lenatko_kanei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_eliezer_sadeh_ir",
+    "type": "prop",
+    "label_he": "רכוב בשדה ומנהיג בעיר קנה",
+    "label_en": "R' Eliezer: riding acquires in the field, leading in the city",
+    "locus": "Bava_Metzia.9a.16",
+    "daf": "9a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "kinyan_behema",
+       "rakhuv_sadeh_manhig_ir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kahana_darkan",
+    "type": "prop",
+    "label_he": "לפי שאין דרכן של בני אדם לרכוב בעיר",
+    "label_en": "Rav Kahana: riding fails in the city because people do not normally ride there",
+    "locus": "Bava_Metzia.9a.17",
+    "daf": "9a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "rakhuv_bair",
+       "unusual_act"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mikach_kederech",
+    "type": "prop",
+    "label_he": "אלא במקח וממכר עסקינן, דאמר ליה קני כדרך שבני אדם קונין",
+    "label_en": "resolution: R' Eliezer's ruling concerns a sale, where the seller said 'acquire the way people acqu…",
+    "locus": "Bava_Metzia.9a.19",
+    "daf": "9a",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "eliezer_baraita",
+       "mikach_umimkar"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_q_meshoch_kelim",
+    "type": "prop",
+    "label_he": "משוך בהמה זו וקני כלים שעליה, מהו",
+    "label_en": "R' Elazar: does pulling the animal acquire the vessels on its back?",
+    "locus": "Bava_Metzia.9b.2",
+    "daf": "9b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "kinyan_q",
+      "args": [
+       "meshicha_likanot_kelim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chatzer_mehalechet",
+    "type": "prop",
+    "label_he": "חצר מהלכת היא, וחצר מהלכת לא קנה",
+    "label_en": "Rava: the animal is a walking courtyard, and a walking courtyard acquires nothing (and what would n…",
+    "locus": "Bava_Metzia.9b.4",
+    "daf": "9b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "chatzer_mehalechet",
+       "lo_kanya"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hilcheta_kefuta",
+    "type": "prop",
+    "label_he": "והלכתא בכפותה",
+    "label_en": "the redactor's ruling: the vessels are acquired only when the animal is bound",
+    "locus": "Bava_Metzia.9b.6",
+    "daf": "9b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "kelim_al_behema",
+       "kefuta_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "question:q_rakhuv",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "rider against leader: which acquires? Every תא שמע is deflected; no verdict is recorded",
+    "locus": "Bava_Metzia.8b.3",
+    "daf": "8b",
+    "sentenceId": 2,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "dispute:frame_kinyan_behema",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "modes that acquire camel and donkey",
+    "data": {
+     "topic": "modes_that_acquire_camel_and_donkey"
+    }
+   },
+   {
+    "id": "hypothesis:h_mishnah_proves_rakhuv",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) our mishna (rider and leader both acquire) must be the Rabbis -- so a rider…",
+    "locus": "Bava_Metzia.8b.11",
+    "daf": "8b",
+    "sentenceId": 10,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_8b",
+     "discharge_locus": "Bava_Metzia.8b.12"
+    }
+   },
+   {
+    "id": "hypothesis:h_tk_is_ryehuda",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) if 'in this manner' excludes the reversed modes, the first tanna's position…",
+    "locus": "Bava_Metzia.9a.7",
+    "daf": "9a",
+    "sentenceId": 6,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_8b",
+     "discharge_locus": "Bava_Metzia.9a.7"
+    }
+   },
+   {
+    "id": "voice:ika_damri_batra",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ika damri batra",
+    "data": {}
+   },
+   {
+    "id": "voice:ika_damri_kama",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ika damri kama",
+    "data": {}
+   },
+   {
+    "id": "voice:lishna_batra_8b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "lishna batra 8b",
+    "data": {}
+   },
+   {
+    "id": "voice:lishna_kama_8b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "lishna kama 8b",
+    "data": {}
+   },
+   {
+    "id": "voice:r_abbahu",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r abbahu",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_elazar",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r elazar",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_eliezer",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r eliezer",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_kahana",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav kahana",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_veshmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav veshmuel",
+    "data": {}
+   },
+   {
+    "id": "voice:rav_yehuda_amora",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda amora",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_8b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 8b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_idi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna idi",
+    "data": {}
+   },
+   {
+    "id": "voice:tanna_kama_gamal",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kama gamal",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:frame_kinyan_behema",
+    "target": "voice:tanna_kama_gamal",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_kinyan_behema",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_mishnah_proves_rakhuv",
+    "target": "prop:p_mishnah_rakhuv_kanei",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "hypothesis:h_mishnah_proves_rakhuv",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_tk_is_ryehuda",
+    "target": "prop:p_tk_same_ryehuda",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_tk_is_ryehuda",
+    "target": "prop:p_tzad_echad",
+    "type": "discharge_concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_tk_is_ryehuda",
+    "target": "dispute:frame_kinyan_behema",
+    "type": "would_collapse",
+    "regime": "structural",
+    "v1": "r_yehuda",
+    "v2": "tanna_kama_gamal"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "hypothesis:h_tk_is_ryehuda",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_yehuda_amora",
+    "target": "prop:p_shmuel_tarti",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda_amora",
+    "target": "prop:p_q_rakhuv",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_kilayim_shmuel",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda_amora",
+    "target": "prop:p_rakhuv_lo_kanei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "prop:p_chelbo_huna",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_mishnah_rakhuv_kanei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_mishnah_proves_rakhuv)"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_manhig_beraglav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_kama_gamal",
+    "target": "prop:p_tk_bemida_zo",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ryehuda_meshicha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_tk_same_ryehuda",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_tk_is_ryehuda)"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_rav_ashi_text",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_abbahu",
+    "target": "prop:p_yachol_lenatkah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_yachol_lenatkah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:r_eliezer",
+    "target": "prop:p_eliezer_sadeh_ir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_kahana",
+    "target": "prop:p_kahana_darkan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_mikach_kederech",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_elazar",
+    "target": "prop:p_q_meshoch_kelim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_chatzer_mehalechet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_hilcheta_kefuta",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:lishna_kama_8b",
+    "target": "prop:p_moseira_lo_kanei",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rav_veshmuel"
+   },
+   {
+    "source": "voice:lishna_batra_8b",
+    "target": "prop:p_moseira_lo_kanei",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "tanna_idi"
+   },
+   {
+    "source": "voice:ika_damri_kama",
+    "target": "prop:p_tzad_meshicha_chamor",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "tanna_kama_gamal"
+   },
+   {
+    "source": "voice:ika_damri_batra",
+    "target": "prop:p_tzad_hanhaga_gamal",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "tanna_kama_gamal"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

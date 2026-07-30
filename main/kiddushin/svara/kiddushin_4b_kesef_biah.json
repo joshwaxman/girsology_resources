@@ -211,6 +211,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.4b.7",
      "daf": "4b",
      "sentenceId": 6
@@ -241,6 +247,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.4b.13",
      "daf": "4b",
      "sentenceId": 12
@@ -255,6 +267,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_isha_kesef",
@@ -383,6 +398,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "isha_niknet_bekesef_midin",
+     "gloss_en": "a woman should be acquired by money, a fortiori: the Hebrew maidservant is not acquired by intercourse yet is acquired by money; a woman, acquired by intercourse, surely should be acquired by money"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_amah_yotzet_bekesef",
+      "text_en": "blocked by the objection: me'ikara dedina pircha (Rav Ashi): your source is the Hebrew maidservant, who is also RELEASED by money -- say it of her, but not of a wife, who is not released by money"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_amah_yotzet_bekesef",
+      "drop": "pircha_amah_yotzet_bekesef",
+      "drop_node": "ground:pircha_amah_yotzet_bekesef",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -703,6 +741,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "isha_niknet_beviah_midin",
+     "gloss_en": "a woman should be acquired by intercourse, a fortiori: the yevama is not acquired by money yet is acquired by intercourse; a woman, acquired by money, surely should be acquired by intercourse"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_yevamah_zekukah",
+      "text_en": "blocked by the objection: me'ikara dedina pircha (Rav Ashi): your source is the yevama, who is already bound and standing (zekukah ve'omedet) to the yavam -- not so a woman being betrothed"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_yevamah_zekukah",
+      "drop": "pircha_yevamah_zekukah",
+      "drop_node": "ground:pircha_yevamah_zekukah",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -894,5 +955,334 @@
   }
  ],
  "kb": "svara/kiddushin_4b_kesef_biah.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_isha_niknet_bekesef",
+    "type": "prop",
+    "label_he": "אין קיחה אלא בכסף",
+    "label_en": "a woman is acquired (betrothed) with money -- 'taking' is only with money, as at the field of Ephron",
+    "locus": "Kiddushin.4b.3",
+    "daf": "4b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "isha",
+       "kesef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_isha_niknet_beviah",
+    "type": "prop",
+    "label_he": "ובעלה -- מלמד שנקנית בביאה",
+    "label_en": "a woman is acquired (betrothed) with intercourse",
+    "locus": "Kiddushin.4b.10",
+    "daf": "4b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "isha",
+       "biah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_amah_lo_beviah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a Hebrew maidservant is not acquired by intercourse",
+    "locus": "Kiddushin.4b.4",
+    "daf": "4b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "lo_niknet_be",
+      "args": [
+       "amah_ivriah",
+       "biah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_amah_bekesef",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a Hebrew maidservant is acquired by money",
+    "locus": "Kiddushin.4b.4",
+    "daf": "4b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "amah_ivriah",
+       "kesef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yevamah_beviah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a yevama is acquired by intercourse",
+    "locus": "Kiddushin.4b.5",
+    "daf": "4b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "yevamah",
+       "biah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yevamah_lo_bekesef",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a yevama is not acquired by money",
+    "locus": "Kiddushin.4b.5",
+    "daf": "4b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "lo_niknet_be",
+      "args": [
+       "yevamah",
+       "kesef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_amah_yotzet_bekesef",
+    "type": "prop",
+    "label_he": "שכן יוצאה בכסף",
+    "label_en": "a Hebrew maidservant is also RELEASED by money (deducting her redemption)",
+    "locus": "Kiddushin.4b.7",
+    "daf": "4b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "yotzet_be",
+      "args": [
+       "amah_ivriah",
+       "kesef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_isha_kesef",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "a woman should be acquired by money, a fortiori: the Hebrew maidservant is not acquired by intercou…",
+    "locus": "Kiddushin.4b.4",
+    "daf": "4b",
+    "sentenceId": 3,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "baraita_ki_yikach",
+     "structure": {
+      "lenient": "amah_ivriah",
+      "strict": "isha",
+      "property": "niknet_bekesef",
+      "concludes": "isha_niknet_bekesef_midin"
+     }
+    }
+   },
+   {
+    "id": "concl:isha_niknet_bekesef_midin",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "a woman should be acquired by money, a fortiori: the Hebrew maidservant is not acquired by intercou…",
+    "data": {
+     "term": "isha_niknet_bekesef_midin"
+    }
+   },
+   {
+    "id": "ground:pircha_amah_yotzet_bekesef",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "me'ikara dedina pircha (Rav Ashi): your source is the Hebrew maidservant, who is also RELEASED by m…",
+    "locus": "Kiddushin.4b.7",
+    "daf": "4b",
+    "sentenceId": 6,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:kv_isha_biah",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "a woman should be acquired by intercourse, a fortiori: the yevama is not acquired by money yet is a…",
+    "locus": "Kiddushin.4b.10",
+    "daf": "4b",
+    "sentenceId": 9,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "baraita_ki_yikach",
+     "structure": {
+      "lenient": "yevamah",
+      "strict": "isha",
+      "property": "niknet_beviah",
+      "concludes": "isha_niknet_beviah_midin"
+     }
+    }
+   },
+   {
+    "id": "concl:isha_niknet_beviah_midin",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "a woman should be acquired by intercourse, a fortiori: the yevama is not acquired by money yet is a…",
+    "data": {
+     "term": "isha_niknet_beviah_midin"
+    }
+   },
+   {
+    "id": "ground:pircha_yevamah_zekukah",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "me'ikara dedina pircha (Rav Ashi): your source is the yevama, who is already bound and standing (ze…",
+    "locus": "Kiddushin.4b.13",
+    "daf": "4b",
+    "sentenceId": 12,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "voice:baraita_ki_yikach",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita ki yikach",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "schema:kv_isha_kesef",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_isha_kesef",
+    "target": "concl:isha_niknet_bekesef_midin",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_amah_yotzet_bekesef",
+    "target": "schema:kv_isha_kesef",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "schema:kv_isha_biah",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_isha_biah",
+    "target": "concl:isha_niknet_beviah_midin",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_yevamah_zekukah",
+    "target": "schema:kv_isha_biah",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "prop:p_isha_niknet_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "prop:p_isha_niknet_beviah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "prop:p_amah_lo_beviah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "prop:p_amah_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "prop:p_yevamah_beviah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ki_yikach",
+    "target": "prop:p_yevamah_lo_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_amah_yotzet_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

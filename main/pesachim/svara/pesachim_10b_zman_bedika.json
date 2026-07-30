@@ -262,6 +262,34 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_bedika_batar_issura",
+   "topic": "bedika_after_the_issur",
+   "parties": [
+    "r_yehuda",
+    "chachamim"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_shalosh_chovot",
+   "assumes": "p_shalosh_chovot",
+   "verdict": "reductio",
+   "opened_by": "rav_chisda",
+   "discharge_locus": "Pesachim.10b.18",
+   "discharge_concludes": "p_ry_im_lo_badak",
+   "entails_identity": null,
+   "quarantined": [
+    "p_shalosh_chovot"
+   ],
+   "locus": "Pesachim.10b.15",
+   "daf": "10b",
+   "sentenceId": 14
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "split_r_yehuda",
@@ -275,5 +303,363 @@
   }
  ],
  "kb": "svara/pesachim_10b_zman_bedika.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ry_shalosh_prakim",
+    "type": "prop",
+    "label_he": "בודקין אור ארבעה עשר ובארבעה עשר שחרית ובשעת הביעור",
+    "label_en": "R' Yehuda: bedika at three times -- the night of the 14th, the morning of the 14th, and the hour of…",
+    "locus": "Pesachim.10b.13",
+    "daf": "10b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "bedika_times",
+      "args": [
+       "leil_arbaa_asar",
+       "shacharit_arbaa_asar",
+       "shaat_habiur"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chachamim_fallback",
+    "type": "prop",
+    "label_he": "לא בדק ... יבדוק בתוך המועד, לא בדק בתוך המועד יבדוק לאחר המועד",
+    "label_en": "Chachamim: whenever he has not yet checked he checks -- even within the festival, even after it",
+    "locus": "Pesachim.10b.14",
+    "daf": "10b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "bedika_after",
+      "args": [
+       "issur_onset"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shalosh_chovot",
+    "type": "prop",
+    "label_he": "כנגד שלש השבתות שבתורה",
+    "label_en": "R' Yehuda's three bedikot are three separate obligations, corresponding to the three הַשְׁבָּתוֹת i…",
+    "locus": "Pesachim.10b.15",
+    "daf": "10b",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "rationale",
+      "args": [
+       "shalosh_bedikot",
+       "shalosh_hashbatot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shelo_badak_bishlosha",
+    "type": "prop",
+    "label_he": "כל שלא בדק בשלשה פרקים הללו שוב אינו בודק",
+    "label_en": "R' Yehuda (per Rav Yosef): one who did not check at these three times checks no more",
+    "locus": "Pesachim.10b.16",
+    "daf": "10b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "no_bedika_after",
+      "args": [
+       "shlosha_prakim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shelo_badak_beechad",
+    "type": "prop",
+    "label_he": "כל שלא בדק באחד משלשה פרקים הללו שוב אינו בודק",
+    "label_en": "R' Yehuda (per Mar Zutra's version): one who did not check at ONE of these three times checks no mo…",
+    "locus": "Pesachim.10b.17",
+    "daf": "10b",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "no_bedika_after",
+      "args": [
+       "echad_mishlosha_prakim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ry_im_lo_badak",
+    "type": "prop",
+    "label_he": "אלא רבי יהודה נמי אם לא בדק קאמר",
+    "label_en": "R' Yehuda too means: if he did not check at one time, he checks at the next -- the three times are…",
+    "locus": "Pesachim.10b.18",
+    "daf": "10b",
+    "sentenceId": 17,
+    "data": {
+     "content": {
+      "pred": "fallback_times",
+      "args": [
+       "bedikat_chametz"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ry_deadline",
+    "type": "prop",
+    "label_he": "מקמי איסורא אין, בתר איסורא לא",
+    "label_en": "R' Yehuda: bedika only before the issur takes hold, not after it",
+    "locus": "Pesachim.10b.19",
+    "daf": "10b",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "deadline",
+      "args": [
+       "bedikat_chametz",
+       "issur_onset"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ry_gezeira",
+    "type": "prop",
+    "label_he": "גזירה דילמא אתי למיכל מיניה",
+    "label_en": "the reason: a decree, lest while searching after the issur he come to eat of it",
+    "locus": "Pesachim.10b.19",
+    "daf": "10b",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "issur_bedika_batar_issura",
+       "dilma_ati_lemeichal"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lo_gazrinan",
+    "type": "prop",
+    "label_he": "ורבנן סברי לא גזרינן",
+    "label_en": "Chachamim: we do not make that decree",
+    "locus": "Pesachim.10b.19",
+    "daf": "10b",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "rejects_decree",
+      "args": [
+       "dilma_ati_lemeichal"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_bedika_batar_issura",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "bedika after the issur",
+    "data": {
+     "topic": "bedika_after_the_issur"
+    }
+   },
+   {
+    "id": "hypothesis:h_shalosh_chovot",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: R' Yehuda's three bedikot are three separate obligations, corresponding to the three הַשְׁ…",
+    "locus": "Pesachim.10b.15",
+    "daf": "10b",
+    "sentenceId": 14,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "rav_chisda",
+     "discharge_locus": "Pesachim.10b.18"
+    }
+   },
+   {
+    "id": "voice:chachamim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "chachamim",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:mar_zutra",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mar zutra",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rabba_bar_rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabba bar rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_chisda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav chisda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_yosef",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yosef",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_pes_10b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam pes 10b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_bedika_batar_issura",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_bedika_batar_issura",
+    "target": "voice:chachamim",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_shalosh_chovot",
+    "target": "prop:p_shalosh_chovot",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_shalosh_chovot",
+    "target": "prop:p_ry_im_lo_badak",
+    "type": "discharge_concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_chisda",
+    "target": "hypothesis:h_shalosh_chovot",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ry_shalosh_prakim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_chachamim_fallback",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_chisda",
+    "target": "prop:p_shalosh_chovot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_shalosh_chovot)"
+   },
+   {
+    "source": "voice:rabba_bar_rav_huna",
+    "target": "prop:p_shalosh_chovot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_shalosh_chovot)"
+   },
+   {
+    "source": "voice:stam_pes_10b",
+    "target": "prop:p_ry_im_lo_badak",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ry_deadline",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ry_gezeira",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_lo_gazrinan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yosef",
+    "target": "prop:p_shelo_badak_bishlosha",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yehuda"
+   },
+   {
+    "source": "voice:mar_zutra",
+    "target": "prop:p_shelo_badak_beechad",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yehuda"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

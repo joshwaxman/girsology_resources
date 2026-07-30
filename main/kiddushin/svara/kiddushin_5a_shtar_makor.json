@@ -118,6 +118,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.5a.2",
      "daf": "5a",
      "sentenceId": 1
@@ -148,6 +154,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.5a.12",
      "daf": "5a",
      "sentenceId": 11
@@ -178,6 +190,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.5a.13",
      "daf": "5a",
      "sentenceId": 12
@@ -208,6 +226,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.5a.14",
      "daf": "5a",
      "sentenceId": 13
@@ -222,6 +246,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_shtar_machnis",
@@ -350,6 +377,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "shtar_machnis",
+     "gloss_en": "a document should betroth, a fortiori: money, which does not release from marriage, betroths; a document, which releases, surely should betroth"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_kesef_podeh_hekdesh",
+      "text_en": "blocked by the objection: money redeems consecrated property and second tithe, which a document cannot -- the source is stronger than the target"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_kesef_podeh_hekdesh",
+      "drop": "pircha_kesef_podeh_hekdesh",
+      "drop_node": "ground:pircha_kesef_podeh_hekdesh",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -670,6 +720,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "shtar_machnis",
+     "gloss_en": "let the Torah not write document, and derive it from money and intercourse together"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_hanaatan_merubah",
+      "text_en": "blocked by the objection: money and intercourse both carry substantive benefit (hana'atan merubah); a document does not"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_hanaatan_merubah",
+      "drop": "pircha_hanaatan_merubah",
+      "drop_node": "ground:pircha_hanaatan_merubah",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -986,6 +1059,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "biah_konah",
+     "gloss_en": "let the Torah not write intercourse, and derive it from money and document together"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_kinyanan_merubeh",
+      "text_en": "blocked by the objection: money and document effect acquisition in many domains (kinyanan merubeh); intercourse does not"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_kinyanan_merubeh",
+      "drop": "pircha_kinyanan_merubeh",
+      "drop_node": "ground:pircha_kinyanan_merubeh",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -1306,6 +1402,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "kesef_koneh",
+     "gloss_en": "let the Torah not write money, and derive it from document and intercourse together"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_yeshnan_beal_korcha",
+      "text_en": "blocked by the objection: document and intercourse both operate against her will (divorce; the yevama); money in MARRIAGE never does -- the maidservant counterexample is not marriage (5a.15)"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_yeshnan_beal_korcha",
+      "drop": "pircha_yeshnan_beal_korcha",
+      "drop_node": "ground:pircha_yeshnan_beal_korcha",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -1497,5 +1616,356 @@
   }
  ],
  "kb": "svara/kiddushin_5a_shtar_makor.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_isha_niknet_bishtar",
+    "type": "prop",
+    "label_he": "ויצאה והיתה -- מקיש הויה ליציאה",
+    "label_en": "a woman is betrothed by document -- the verse likens becoming-betrothed (havayah) to leaving (yetzi…",
+    "locus": "Kiddushin.5a.3",
+    "daf": "5a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "isha",
+       "shtar"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_mitgareshet_bekesef",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a woman is NOT divorced by money",
+    "locus": "Kiddushin.5a.4",
+    "daf": "5a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "lo_yotzet_be",
+      "args": [
+       "eshet_ish",
+       "kesef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_shtar_machnis",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "a document should betroth, a fortiori: money, which does not release from marriage, betroths; a doc…",
+    "locus": "Kiddushin.5a.1",
+    "daf": "5a",
+    "sentenceId": 0,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": "kesef",
+      "strict": "shtar",
+      "property": "machnis",
+      "concludes": "shtar_machnis"
+     }
+    }
+   },
+   {
+    "id": "concl:shtar_machnis",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "a document should betroth, a fortiori: money, which does not release from marriage, betroths; a doc…",
+    "data": {
+     "term": "shtar_machnis"
+    }
+   },
+   {
+    "id": "ground:pircha_kesef_podeh_hekdesh",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "money redeems consecrated property and second tithe, which a document cannot -- the source is stron…",
+    "locus": "Kiddushin.5a.2",
+    "daf": "5a",
+    "sentenceId": 1,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:ba_shtar_mitartei",
+    "type": "schema",
+    "label_he": "בניין אב",
+    "label_en": "let the Torah not write document, and derive it from money and intercourse together",
+    "locus": "Kiddushin.5a.12",
+    "daf": "5a",
+    "sentenceId": 11,
+    "data": {
+     "kind": "binyan_av",
+     "status": "blocked",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "shtar_machnis"
+     }
+    }
+   },
+   {
+    "id": "ground:pircha_hanaatan_merubah",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "money and intercourse both carry substantive benefit (hana'atan merubah); a document does not",
+    "locus": "Kiddushin.5a.12",
+    "daf": "5a",
+    "sentenceId": 11,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:ba_biah_mitartei",
+    "type": "schema",
+    "label_he": "בניין אב",
+    "label_en": "let the Torah not write intercourse, and derive it from money and document together",
+    "locus": "Kiddushin.5a.13",
+    "daf": "5a",
+    "sentenceId": 12,
+    "data": {
+     "kind": "binyan_av",
+     "status": "blocked",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "biah_konah"
+     }
+    }
+   },
+   {
+    "id": "concl:biah_konah",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "let the Torah not write intercourse, and derive it from money and document together",
+    "data": {
+     "term": "biah_konah"
+    }
+   },
+   {
+    "id": "ground:pircha_kinyanan_merubeh",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "money and document effect acquisition in many domains (kinyanan merubeh); intercourse does not",
+    "locus": "Kiddushin.5a.13",
+    "daf": "5a",
+    "sentenceId": 12,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:ba_kesef_mitartei",
+    "type": "schema",
+    "label_he": "בניין אב",
+    "label_en": "let the Torah not write money, and derive it from document and intercourse together",
+    "locus": "Kiddushin.5a.14",
+    "daf": "5a",
+    "sentenceId": 13,
+    "data": {
+     "kind": "binyan_av",
+     "status": "blocked",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "kesef_koneh"
+     }
+    }
+   },
+   {
+    "id": "concl:kesef_koneh",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "let the Torah not write money, and derive it from document and intercourse together",
+    "data": {
+     "term": "kesef_koneh"
+    }
+   },
+   {
+    "id": "ground:pircha_yeshnan_beal_korcha",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "document and intercourse both operate against her will (divorce; the yevama); money in MARRIAGE nev…",
+    "locus": "Kiddushin.5a.14",
+    "daf": "5a",
+    "sentenceId": 13,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "voice:abaye",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "abaye",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yosei_haglili",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei haglili",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_5a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 5a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:kv_shtar_machnis",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_shtar_machnis",
+    "target": "concl:shtar_machnis",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_kesef_podeh_hekdesh",
+    "target": "schema:kv_shtar_machnis",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:ba_shtar_mitartei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:ba_shtar_mitartei",
+    "target": "concl:shtar_machnis",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_hanaatan_merubah",
+    "target": "schema:ba_shtar_mitartei",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:ba_biah_mitartei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:ba_biah_mitartei",
+    "target": "concl:biah_konah",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_kinyanan_merubeh",
+    "target": "schema:ba_biah_mitartei",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:ba_kesef_mitartei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:ba_kesef_mitartei",
+    "target": "concl:kesef_koneh",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_yeshnan_beal_korcha",
+    "target": "schema:ba_kesef_mitartei",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "prop:p_isha_niknet_bishtar",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_ein_mitgareshet_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_ein_mitgareshet_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei_haglili",
+    "target": "prop:p_ein_mitgareshet_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

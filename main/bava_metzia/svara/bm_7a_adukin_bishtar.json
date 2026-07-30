@@ -689,6 +689,34 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_adukin_bishtar",
+   "topic": "jointly_grasped_promissory_note",
+   "parties": [
+    "rebbi",
+    "rashbag"
+   ]
+  },
+  {
+   "id": "frame_tofes_toref",
+   "topic": "division_by_section_grasped",
+   "parties": [
+    "r_elazar",
+    "r_yochanan"
+   ]
+  },
+  {
+   "id": "frame_magbiah",
+   "topic": "lifting_a_find_for_another",
+   "parties": [
+    "rami_bar_chama",
+    "rava"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "split_tanna_kama_dayan",
@@ -702,5 +730,885 @@
   }
  ],
  "kb": "svara/bm_7a_adukin_bishtar.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_yitkayem",
+    "type": "prop",
+    "label_he": "יתקיים השטר בחותמיו",
+    "label_en": "Rebbi: the jointly-grasped note must be ratified through its signatories (and then the creditor col…",
+    "locus": "Bava_Metzia.7a.15",
+    "daf": "7a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "adukin_bishtar",
+       "yitkayem_bechotmav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yachloku",
+    "type": "prop",
+    "label_he": "יחלוקו",
+    "label_en": "RSHBG: the jointly-grasped note is divided -- the debtor pays half",
+    "locus": "Bava_Metzia.7a.16",
+    "daf": "7a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "adukin_bishtar",
+       "yachloku"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mekuyam_all_divide",
+    "type": "prop",
+    "label_he": "במקויים דברי הכל יחלוקו, כי פליגי בשאינו מקויים",
+    "label_en": "Rav Nachman (cited by Rava): with a ratified note all agree they divide; the dispute concerns an un…",
+    "locus": "Bava_Metzia.7a.19",
+    "daf": "7a",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "dispute_scope",
+      "args": [
+       "adukin_bishtar",
+       "unratified_note_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_modeh_tzarich",
+    "type": "prop",
+    "label_he": "מודה בשטר שכתבו צריך לקיימו... חספא בעלמא הוא",
+    "label_en": "Rebbi: even when the debtor admits writing it, the creditor must ratify the note -- unratified it i…",
+    "locus": "Bava_Metzia.7a.20",
+    "daf": "7a",
+    "sentenceId": 19,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "modeh_bishtar",
+       "tzarich_lekaymo"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_modeh_ein_tzarich",
+    "type": "prop",
+    "label_he": "מודה בשטר שכתבו אין צריך לקיימו",
+    "label_en": "RSHBG: when the debtor admits writing it, no ratification is needed, so even unratified they divide",
+    "locus": "Bava_Metzia.7a.22",
+    "daf": "7a",
+    "sentenceId": 21,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "modeh_bishtar",
+       "ein_tzarich_lekaymo"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lo_yotzio",
+    "type": "prop",
+    "label_he": "נפל ליד דיין לא יוציאו עולמית",
+    "label_en": "a note that fell into a judge's hand is never surrendered (repayment is suspected)",
+    "locus": "Bava_Metzia.7a.17",
+    "daf": "7a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "nafal_leyad_dayan",
+       "lo_yotzio_olamit"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bechezkato",
+    "type": "prop",
+    "label_he": "הרי הוא בחזקתו",
+    "label_en": "the note retains its presumptive validity (repayment is not suspected)",
+    "locus": "Bava_Metzia.7a.17",
+    "daf": "7a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "nafal_leyad_dayan",
+       "harei_hu_bechezkato"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nafal_hanpek",
+    "type": "prop",
+    "label_he": "ואחר שמצא שטר שנפל ליד דיין... דכתב ביה הנפק... לא יוציאו עולמית, דחיישינן לפירעון",
+    "label_en": "Rava: the clause means a third party who found a note already bearing court ratification -- even so…",
+    "locus": "Bava_Metzia.7b.1",
+    "daf": "7b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "nafal_leyad_dayan",
+       "found_note_with_hanpek"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ketuba_baraita",
+    "type": "prop",
+    "label_he": "מצא שטר כתובה בשוק... רבי יוסי אומר: עודה תחת בעלה יחזיר לאשה, נתארמלה או נתגרשה לא יחזיר",
+    "label_en": "found-ketuba baraita: the Rabbis never return it without the husband's admission; R' Yosei returns…",
+    "locus": "Bava_Metzia.7b.4",
+    "daf": "7b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "found_ketuba",
+       "yosei_splits_by_marriage"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yosei_chayash",
+    "type": "prop",
+    "label_he": "(איפוך) נפל ליד דיין לא יוציאו עולמית, דברי רבי יוסי",
+    "label_en": "reading A: R' Yosei DOES suspect repayment -- the never-surrender ruling is his",
+    "locus": "Bava_Metzia.7b.6",
+    "daf": "7b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_yosei_peraon",
+       "chayash_leperaon"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yosei_lo_chayash",
+    "type": "prop",
+    "label_he": "לדידי אפילו נתארמלה או נתגרשה נמי לא חיישינן לפירעון",
+    "label_en": "reading B (Rav Pappa): R' Yosei never suspects repayment; his ketuba concession was argued only wit…",
+    "locus": "Bava_Metzia.7b.9",
+    "daf": "7b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_yosei_peraon",
+       "lo_chayash_leperaon"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ketuba_all_yosei",
+    "type": "prop",
+    "label_he": "שטר כתובה כולה רבי יוסי, וחסורי מחסרא והכי קתני",
+    "label_en": "(within the eipoch resolution) the ketuba baraita is entirely R' Yosei, restored by chisurei mechse…",
+    "locus": "Bava_Metzia.7b.8",
+    "daf": "7b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "ketuba_baraita_author",
+       "all_r_yosei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yosei_ledivreihem",
+    "type": "prop",
+    "label_he": "רבי יוסי לדבריהם דרבנן קאמר להו: לדידכו אודו לי מיהת בעודה תחת בעלה",
+    "label_en": "(Rav Pappa) R' Yosei's ketuba ruling was spoken to the Rabbis on their own premises: at least conce…",
+    "locus": "Bava_Metzia.7b.9",
+    "daf": "7b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "found_ketuba",
+       "yachzir_while_married"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tzrarei_atpesah",
+    "type": "prop",
+    "label_he": "אימור צררי אתפסה",
+    "label_en": "the Rabbis' reply to R' Yosei: even while married, say he gave her bundles of money against the ket…",
+    "locus": "Bava_Metzia.7b.11",
+    "daf": "7b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "found_ketuba",
+       "tzrarei_concern"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shtei_ketubot",
+    "type": "prop",
+    "label_he": "טעמא דרבנן הכא משום דחיישינן לשתי כתובות, ורבי יוסי לשתי כתובות לא חייש",
+    "label_en": "(Ravina) in the ketuba case the Rabbis' concern is a second ketuba having been written; R' Yosei do…",
+    "locus": "Bava_Metzia.7b.12",
+    "daf": "7b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "found_ketuba",
+       "shtei_ketubot_concern"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_elazar_tofes_toref",
+    "type": "prop",
+    "label_he": "אחד אדוק בטופס ואחד אדוק בתורף -- זה נוטל טופס וזה נוטל תורף",
+    "label_en": "R' Elazar: they halve only when both grasp the same section; otherwise each takes the section (stan…",
+    "locus": "Bava_Metzia.7b.13",
+    "daf": "7b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "adukin_split_grasp",
+       "each_takes_his_section"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yochanan_cholkin",
+    "type": "prop",
+    "label_he": "לעולם חולקין",
+    "label_en": "R' Yochanan: they always divide equally",
+    "locus": "Bava_Metzia.7b.13",
+    "daf": "7b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "adukin_split_grasp",
+       "always_halve"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lidmei",
+    "type": "prop",
+    "label_he": "לדמי... 'ויחלוקו' נמי דאמרן -- לדמי",
+    "label_en": "Ravina: all these divisions are divisions of VALUE, not of the paper -- otherwise halving a garment…",
+    "locus": "Bava_Metzia.7b.17",
+    "daf": "7b",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "yachloku_rulings",
+       "division_of_value"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_magbiah_kana",
+    "type": "prop",
+    "label_he": "זאת אומרת: המגביה מציאה לחבירו קנה חבירו",
+    "label_en": "Rami bar Chama: the mishna implies that one who lifts a found item for another acquires it for the…",
+    "locus": "Bava_Metzia.8a.4",
+    "daf": "8a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "magbiah_lechavero",
+       "kana_chavero"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_magbiah_lo_kana",
+    "type": "prop",
+    "label_he": "לעולם אימא לך המגביה מציאה לחבירו לא קנה חבירו",
+    "label_en": "Rava: lifting solely for another does NOT acquire for him",
+    "locus": "Bava_Metzia.8a.6",
+    "daf": "8a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "magbiah_lechavero",
+       "lo_kana_chavero"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_migo_zachei",
+    "type": "prop",
+    "label_he": "מגו דזכי לנפשיה זכי נמי לחבריה",
+    "label_en": "Rava: since each litigant acquires part for himself, he acquires the rest for the other -- proven f…",
+    "locus": "Bava_Metzia.8a.6",
+    "daf": "8a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "kinyan",
+       "migo_dezachei_lenafshei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_src_reisha",
+    "type": "prop",
+    "label_he": "אי נימא מרישא -- שנים אוחזין בטלית",
+    "label_en": "candidate source 1: the opening clause -- but there each claims he lifted ALL of it himself",
+    "locus": "Bava_Metzia.8a.14",
+    "daf": "8a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "inference_source",
+      "args": [
+       "magbiah_kana_chavero",
+       "reisha_ochazin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_src_kula_sheli",
+    "type": "prop",
+    "label_he": "אלא מהא דקתני זה אומר כולה שלי וזה אומר כולה שלי, הא תו למה לי",
+    "label_en": "candidate source 2: the seemingly superfluous second clause -- but it was already assigned to buyin…",
+    "locus": "Bava_Metzia.8a.15",
+    "daf": "8a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "inference_source",
+      "args": [
+       "magbiah_kana_chavero",
+       "clause_kula_sheli"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_src_chetzya",
+    "type": "prop",
+    "label_he": "אלא מסיפא: זה אומר כולה שלי וזה אומר חציה שלי",
+    "label_en": "candidate source 3: the all-vs-half clause -- but it is needed to teach that the half-claimant is a…",
+    "locus": "Bava_Metzia.8a.17",
+    "daf": "8a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "inference_source",
+      "args": [
+       "magbiah_kana_chavero",
+       "clause_chetzya_sheli"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_src_rochvin",
+    "type": "prop",
+    "label_he": "אלא מהא: היו שנים רוכבין על גבי בהמה",
+    "label_en": "candidate source 4: the two-riders clause -- but it may be teaching that riding acquires",
+    "locus": "Bava_Metzia.8a.20",
+    "daf": "8a",
+    "sentenceId": 19,
+    "data": {
+     "content": {
+      "pred": "inference_source",
+      "args": [
+       "magbiah_kana_chavero",
+       "clause_rochvin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_src_modin",
+    "type": "prop",
+    "label_he": "אלא מסיפא: בזמן שהן מודין... חולקין בלא שבועה -- במאי? אי במקח וממכר צריכא למימר? אלא לאו במציאה",
+    "label_en": "the surviving source: the when-they-admit clause must concern a found item, and its point is that j…",
+    "locus": "Bava_Metzia.8a.22",
+    "daf": "8a",
+    "sentenceId": 21,
+    "data": {
+     "content": {
+      "pred": "inference_source",
+      "args": [
+       "magbiah_kana_chavero",
+       "clause_modin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:frame_adukin_bishtar",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "jointly grasped promissory note",
+    "data": {
+     "topic": "jointly_grasped_promissory_note"
+    }
+   },
+   {
+    "id": "dispute:frame_tofes_toref",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "division by section grasped",
+    "data": {
+     "topic": "division_by_section_grasped"
+    }
+   },
+   {
+    "id": "dispute:frame_magbiah",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "lifting a find for another",
+    "data": {
+     "topic": "lifting_a_find_for_another"
+    }
+   },
+   {
+    "id": "voice:r_elazar",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r elazar",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rabbanan_ketuba",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabbanan ketuba",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:rami_bar_chama",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rami bar chama",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rashbag",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rashbag",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_nachman_bm7",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav nachman bm7",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_pappa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav pappa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:ravina",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ravina",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rebbi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rebbi",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:stam_7b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 7b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_kama_dayan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kama dayan",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:tosefta_as_taught",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tosefta as taught",
+    "data": {}
+   },
+   {
+    "id": "voice:trad_eipoch",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "trad eipoch",
+    "data": {}
+   },
+   {
+    "id": "voice:trad_ravina",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "trad ravina",
+    "data": {}
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:frame_adukin_bishtar",
+    "target": "voice:rebbi",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_adukin_bishtar",
+    "target": "voice:rashbag",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_tofes_toref",
+    "target": "voice:r_elazar",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_tofes_toref",
+    "target": "voice:r_yochanan",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_magbiah",
+    "target": "voice:rami_bar_chama",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_magbiah",
+    "target": "voice:rava",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rebbi",
+    "target": "prop:p_yitkayem",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rashbag",
+    "target": "prop:p_yachloku",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_nachman_bm7",
+    "target": "prop:p_mekuyam_all_divide",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rebbi",
+    "target": "prop:p_modeh_tzarich",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rashbag",
+    "target": "prop:p_modeh_ein_tzarich",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_nafal_hanpek",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_7b",
+    "target": "prop:p_ketuba_baraita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_7b",
+    "target": "prop:p_ketuba_all_yosei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(trad_eipoch)"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_yosei_ledivreihem",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(rabbanan_ketuba)"
+   },
+   {
+    "source": "voice:rabbanan_ketuba",
+    "target": "prop:p_tzrarei_atpesah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbanan_ketuba",
+    "target": "prop:p_shtei_ketubot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(trad_ravina)"
+   },
+   {
+    "source": "voice:r_elazar",
+    "target": "prop:p_elazar_tofes_toref",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_yochanan_cholkin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ravina",
+    "target": "prop:p_lidmei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rami_bar_chama",
+    "target": "prop:p_magbiah_kana",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_magbiah_lo_kana",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_migo_zachei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_7b",
+    "target": "prop:p_src_reisha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:stam_7b",
+    "target": "prop:p_src_kula_sheli",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:stam_7b",
+    "target": "prop:p_src_chetzya",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:stam_7b",
+    "target": "prop:p_src_rochvin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:stam_7b",
+    "target": "prop:p_src_modin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_src_modin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:tosefta_as_taught",
+    "target": "prop:p_lo_yotzio",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "tanna_kama_dayan"
+   },
+   {
+    "source": "voice:tosefta_as_taught",
+    "target": "prop:p_bechezkato",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei"
+   },
+   {
+    "source": "voice:trad_eipoch",
+    "target": "prop:p_yosei_chayash",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei"
+   },
+   {
+    "source": "voice:rav_pappa",
+    "target": "prop:p_yosei_lo_chayash",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei"
+   },
+   {
+    "source": "voice:trad_ravina",
+    "target": "prop:p_yosei_chayash",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

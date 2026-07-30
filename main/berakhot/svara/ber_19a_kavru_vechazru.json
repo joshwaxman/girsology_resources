@@ -127,7 +127,192 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_kulah_davka",
+   "assumes": "p_reading_whole",
+   "verdict": "reductio",
+   "opened_by": "stam_19a",
+   "discharge_locus": "Berakhot.19a.23",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_reading_whole"
+   ],
+   "locus": "Berakhot.19a.22",
+   "daf": "19a",
+   "sentenceId": 21
+  }
+ ],
+ "challenges": [],
  "queries": [],
  "kb": "svara/ber_19a_kavru_vechazru.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_rule",
+    "type": "prop",
+    "label_he": "קברו את המת וחזרו, אם יכולין להתחיל ולגמור עד שלא יגיעו לשורה יתחילו",
+    "label_en": "if the returning buriers can begin and finish before reaching the row of comforters, they begin",
+    "locus": "Berakhot.19a.22",
+    "daf": "19a",
+    "sentenceId": 21,
+    "data": {
+     "content": {
+      "pred": "rule",
+      "args": [
+       "chozrim_min_hakever",
+       "matchilim_im_gomrim_ad_hashura"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_reading_whole",
+    "type": "prop",
+    "label_he": "אם יכולים להתחיל ולגמור את כולה אין, אבל פרק אחד או פסוק אחד לא",
+    "label_en": "construal: only if they can finish the WHOLE Shema do they begin -- one chapter or one verse, no",
+    "locus": "Berakhot.19a.22",
+    "daf": "19a",
+    "sentenceId": 21,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mishnat_kavru",
+       "kulah_davka"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_baraita_perek",
+    "type": "prop",
+    "label_he": "קברו את המת וחזרו, אם יכולין להתחיל ולגמור אפילו פרק אחד או פסוק אחד",
+    "label_en": "the baraita: if they can begin and finish even one chapter or one verse, they begin",
+    "locus": "Berakhot.19a.22",
+    "daf": "19a",
+    "sentenceId": 21,
+    "data": {
+     "content": {
+      "pred": "rule",
+      "args": [
+       "chozrim_min_hakever",
+       "matchilim_afilu_perek_o_pasuk"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_reading_perek",
+    "type": "prop",
+    "label_he": "הכי נמי קאמר: אם יכולין להתחיל ולגמור אפילו פרק אחד או אפילו פסוק אחד עד שלא יגיעו לשורה יתחילו",
+    "label_en": "the mishnah itself means: even one chapter or one verse before reaching the row -- they begin; othe…",
+    "locus": "Berakhot.19a.23",
+    "daf": "19a",
+    "sentenceId": 22,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mishnat_kavru",
+       "afilu_perek_o_pasuk"
+      ]
+     }
+    }
+   },
+   {
+    "id": "hypothesis:h_kulah_davka",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: construal: only if they can finish the WHOLE Shema do they begin -- one chapter or one ver…",
+    "locus": "Berakhot.19a.22",
+    "daf": "19a",
+    "sentenceId": 21,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_19a",
+     "discharge_locus": "Berakhot.19a.23"
+    }
+   },
+   {
+    "id": "voice:baraita_kavru",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita kavru",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:mishnah_kavru",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah kavru",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_19a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 19a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_kulah_davka",
+    "target": "prop:p_reading_whole",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_19a",
+    "target": "hypothesis:h_kulah_davka",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:mishnah_kavru",
+    "target": "prop:p_mishnah_rule",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_kavru",
+    "target": "prop:p_baraita_perek",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_19a",
+    "target": "prop:p_reading_whole",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_kulah_davka)"
+   },
+   {
+    "source": "voice:stam_19a",
+    "target": "prop:p_reading_perek",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

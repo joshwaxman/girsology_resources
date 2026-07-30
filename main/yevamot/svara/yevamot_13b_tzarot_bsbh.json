@@ -389,6 +389,26 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_tzarot_laachim",
+   "topic": "tzarot_layibum",
+   "parties": [
+    "beit_shammai",
+    "beit_hillel"
+   ]
+  },
+  {
+   "id": "m_chaltzu_kehuna",
+   "topic": "kashrut_chalutzat_tzara_lakehuna",
+   "parties": [
+    "beit_shammai",
+    "beit_hillel"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "split_rav",
@@ -402,5 +422,503 @@
   }
  ],
  "kb": "svara/yevamot_13b_tzarot_bsbh.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_tzarot_mutarot",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "rival wives of forbidden relatives are permitted in yibbum to the brothers",
+    "locus": "Yevamot.13a.17",
+    "daf": "13a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "tzarot_laachim",
+      "args": [
+       "mutarot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tzarot_asurot",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "rival wives of forbidden relatives are forbidden to the brothers",
+    "locus": "Yevamot.13a.17",
+    "daf": "13a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "tzarot_laachim",
+      "args": [
+       "asurot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chaltzu_pesulot",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "if the rivals performed chalitza they are disqualified from the priesthood (the chalitza was needed)",
+    "locus": "Yevamot.13b.1",
+    "daf": "13b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "chaltzu_tzarot",
+      "args": [
+       "pesulot_lakehuna"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chaltzu_kesherot",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "if the rivals performed chalitza they remain qualified for the priesthood (the chalitza was meaning…",
+    "locus": "Yevamot.13b.1",
+    "daf": "13b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "chaltzu_tzarot",
+      "args": [
+       "kesherot_lakehuna"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nityabmu_kesherot",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "if the rivals entered yibbum they remain qualified",
+    "locus": "Yevamot.13b.1",
+    "daf": "13b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "nityabmu_tzarot",
+      "args": [
+       "kesherot_lakehuna"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nityabmu_pesulot",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "if the rivals entered yibbum they are disqualified",
+    "locus": "Yevamot.13b.1",
+    "daf": "13b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "nityabmu_tzarot",
+      "args": [
+       "pesulot_lakehuna"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taam_bs_chutza",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Beit Shammai's reason: ״החוצה״ implies an inside (ervah) wife alongside the outside one, and the To…",
+    "locus": "Yevamot.13b.3",
+    "daf": "13b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "taam_bs",
+      "args": [
+       "derashat_hachutza"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_kiddushin_biyevama",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "kiddushin do not take hold in a yevama -- לא תהיה בה הויה לזר",
+    "locus": "Yevamot.13b.4",
+    "daf": "13b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "ein_kiddushin",
+      "args": [
+       "yevama",
+       "zar"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chutza_kelachutz",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "once חוצה is written it is as if לחוץ were written, per R' Nechemya's rule on the locative he",
+    "locus": "Yevamot.13b.5",
+    "daf": "13b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "milat_chutza",
+       "lachutz"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nechemya_rule",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "any word needing a lamed prefix may take a he suffix instead (אלים-אלימה, מצרים-מצרימה)",
+    "locus": "Yevamot.13b.6",
+    "daf": "13b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "rule",
+      "args": [
+       "lamed_replaced_by_he"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_zar_source",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Rav's rule (no kiddushin in a yevama) follows from לאיש זר, freeing חוצה",
+    "locus": "Yevamot.13b.7",
+    "daf": "13b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "derived_from",
+      "args": [
+       "ein_kiddushin_biyevama",
+       "leish_zar"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chutza_arusa",
+    "type": "prop",
+    "label_he": "חוצה",
+    "label_en": "חוצה serves to include the betrothed woman (ארוסה) in the rule",
+    "locus": "Yevamot.13b.8",
+    "daf": "13b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "teaches",
+      "args": [
+       "milat_chutza",
+       "ribui_arusa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taam_bs_ein_isur_chal",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Beit Shammai's reason is the principle that a prohibition does not take hold where another already…",
+    "locus": "Yevamot.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "taam_bs",
+      "args": [
+       "ein_isur_chal_al_isur"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nasa_chai_kadim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "challenge: where the surviving brother married first, the wife's-sister prohibition precedes the br…",
+    "locus": "Yevamot.13b.11",
+    "daf": "13b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "objection",
+      "args": [
+       "ein_isur_chal_al_isur",
+       "nasa_chai_kodem"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tzarat_ervah_shelo_bimkom",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "answer: then the brother's-wife prohibition never lands, she carries no levirate bond, and the riva…",
+    "locus": "Yevamot.13b.12",
+    "daf": "13b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "answer",
+      "args": [
+       "ein_isur_chal_al_isur",
+       "tzarat_ervah_shelo_bimkom_sharya"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_tzarot_laachim",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "tzarot layibum",
+    "data": {
+     "topic": "tzarot_layibum"
+    }
+   },
+   {
+    "id": "dispute:m_chaltzu_kehuna",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "kashrut chalutzat tzara lakehuna",
+    "data": {
+     "topic": "kashrut_chalutzat_tzara_lakehuna"
+    }
+   },
+   {
+    "id": "voice:beit_hillel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "beit hillel",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:beit_shammai",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "beit shammai",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:r_nechemya",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r nechemya",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_shimon_ben_pazi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r shimon ben pazi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_13b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 13b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_tzarot_laachim",
+    "target": "voice:beit_shammai",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_tzarot_laachim",
+    "target": "voice:beit_hillel",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_chaltzu_kehuna",
+    "target": "voice:beit_shammai",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_chaltzu_kehuna",
+    "target": "voice:beit_hillel",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:beit_shammai",
+    "target": "prop:p_tzarot_mutarot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:beit_hillel",
+    "target": "prop:p_tzarot_asurot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:beit_shammai",
+    "target": "prop:p_chaltzu_pesulot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:beit_hillel",
+    "target": "prop:p_chaltzu_kesherot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:beit_shammai",
+    "target": "prop:p_nityabmu_kesherot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:beit_hillel",
+    "target": "prop:p_nityabmu_pesulot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon_ben_pazi",
+    "target": "prop:p_taam_bs_chutza",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(beit_shammai)"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_taam_bs_ein_isur_chal",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(beit_shammai)"
+   },
+   {
+    "source": "voice:stam_13b",
+    "target": "prop:p_chutza_kelachutz",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(beit_hillel)"
+   },
+   {
+    "source": "voice:r_nechemya",
+    "target": "prop:p_nechemya_rule",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_13b",
+    "target": "prop:p_zar_source",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(beit_shammai)"
+   },
+   {
+    "source": "voice:stam_13b",
+    "target": "prop:p_chutza_arusa",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(beit_hillel)"
+   },
+   {
+    "source": "voice:stam_13b",
+    "target": "prop:p_nasa_chai_kadim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:stam_13b",
+    "target": "prop:p_tzarat_ervah_shelo_bimkom",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(beit_shammai)"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_ein_kiddushin_biyevama",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rav"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

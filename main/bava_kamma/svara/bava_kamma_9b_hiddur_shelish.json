@@ -139,6 +139,22 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_shelish_beito",
+   "assumes": "p_shelish_beito",
+   "verdict": "reductio",
+   "opened_by": null,
+   "discharge_locus": "Bava_Kamma.9b.1",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_shelish_beito"
+   ]
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_q_shelish_milgav_o_milvar",
@@ -250,5 +266,179 @@
   }
  ],
  "kb": "svara/bava_kamma_9b_hiddur_shelish.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_bemitzvah_ad_shelish",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "for a mitzva -- up to a third",
+    "locus": "Bava_Kamma.9a.20",
+    "daf": "9a",
+    "sentenceId": 19,
+    "data": {
+     "content": {
+      "pred": "bemitzvah_ad",
+      "args": [
+       "shelish"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shelish_beito",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the third means a third of his wealth",
+    "locus": "Bava_Kamma.9b.1",
+    "daf": "9b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "shelish_hu",
+      "args": [
+       "shelish_beito"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hiddur_ad_shelish",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "for beautifying a mitzva -- up to a third of [the cost of] the mitzva",
+    "locus": "Bava_Kamma.9b.2",
+    "daf": "9b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "hiddur_mitzvah_ad",
+      "args": [
+       "shelish_bamitzvah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ad_shelish_mishelo",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "up to a third -- from his own; from there on -- from the Holy One's",
+    "locus": "Bava_Kamma.9b.4",
+    "daf": "9b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "ad_shelish",
+      "args": [
+       "mishelo"
+      ]
+     }
+    }
+   },
+   {
+    "id": "question:q_shelish_milgav_o_milvar",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "is the third reckoned from within (a third of the base cost added) or from without (a third of the…",
+    "locus": "Bava_Kamma.9b.3",
+    "daf": "9b",
+    "sentenceId": 2,
+    "data": {
+     "status": "teiku",
+     "recordedVerdict": "teiku"
+    }
+   },
+   {
+    "id": "hypothesis:h_shelish_beito",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: the third means a third of his wealth",
+    "data": {
+     "verdict": "reductio",
+     "discharge_locus": "Bava_Kamma.9b.1"
+    }
+   },
+   {
+    "id": "voice:bnei_maarava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "bnei maarava",
+    "data": {
+     "kind": "unknown"
+    }
+   },
+   {
+    "id": "voice:r_zeira",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r zeira",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_9b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 9b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_shelish_beito",
+    "target": "prop:p_shelish_beito",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_9b",
+    "target": "prop:p_shelish_beito",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_shelish_beito)"
+   },
+   {
+    "source": "voice:r_zeira",
+    "target": "prop:p_hiddur_ad_shelish",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_zeira",
+    "target": "prop:p_bemitzvah_ad_shelish",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rav_huna"
+   },
+   {
+    "source": "voice:bnei_maarava",
+    "target": "prop:p_ad_shelish_mishelo",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_zeira"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

@@ -186,6 +186,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_q_al_hatekufa",
@@ -287,5 +290,206 @@
   }
  ],
  "kb": "svara/sanhedrin_11b_al_hatekufa.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_shlosha_devarim",
+    "type": "prop",
+    "label_he": "על שלשה דברים מעברין את השנה: על האביב ועל פירות האילן ועל התקופה",
+    "label_en": "the year is intercalated on three grounds: the grain's ripening, the fruit of the trees, and the eq…",
+    "locus": "Sanhedrin.11b.5",
+    "daf": "11b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "ibur_grounds",
+      "args": [
+       "aviv",
+       "perot_hailan",
+       "tekufa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shnayim_mearvin",
+    "type": "prop",
+    "label_he": "על שנים מהן מעברין",
+    "label_en": "when two of the grounds are present, the year is intercalated",
+    "locus": "Sanhedrin.11b.5",
+    "daf": "11b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "ibur_on_count",
+      "args": [
+       "shnayim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_echad_ein_mearvin",
+    "type": "prop",
+    "label_he": "ועל אחד מהן אין מעברין",
+    "label_en": "on one ground alone the year is not intercalated",
+    "locus": "Sanhedrin.11b.5",
+    "daf": "11b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "no_ibur_on_count",
+      "args": [
+       "echad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_aviv_smechin",
+    "type": "prop",
+    "label_he": "ובזמן שאביב אחד מהן הכל שמחין",
+    "label_en": "when the grain's ripening is one of the two grounds, all rejoice",
+    "locus": "Sanhedrin.11b.6",
+    "daf": "11b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "rejoice_when",
+      "args": [
+       "aviv_included"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rsbg_clause",
+    "type": "prop",
+    "label_he": "רבן שמעון בן גמליאל אומר: על התקופה",
+    "label_en": "RSbG said the bare clause 'on the tekufa' -- an utterance whose referent the Gemara cannot fix",
+    "locus": "Sanhedrin.11b.6",
+    "daf": "11b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "said_clause",
+      "args": [
+       "rsbg_al_hatekufa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_reading_smechin",
+    "type": "prop",
+    "label_he": "על התקופה שמחין",
+    "label_en": "candidate reading: RSbG glosses the rejoicing clause -- it is over the tekufa that all rejoice",
+    "locus": "Sanhedrin.11b.6",
+    "daf": "11b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "rsbg_al_hatekufa",
+       "smechin_al_hatekufa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_reading_mearvin",
+    "type": "prop",
+    "label_he": "או על התקופה מעברין",
+    "label_en": "candidate reading: RSbG dissents from the threshold -- the tekufa alone suffices to intercalate",
+    "locus": "Sanhedrin.11b.6",
+    "daf": "11b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "rsbg_al_hatekufa",
+       "mearvin_al_hatekufa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "question:q_al_hatekufa",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "did RSbG mean that over the tekufa they rejoice, or that the tekufa alone suffices to intercalate?",
+    "locus": "Sanhedrin.11b.6",
+    "daf": "11b",
+    "sentenceId": 5,
+    "data": {
+     "status": "teiku",
+     "recordedVerdict": "teiku"
+    }
+   },
+   {
+    "id": "voice:baraita_ibur",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita ibur",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:rsbg",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rsbg",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:baraita_ibur",
+    "target": "prop:p_shlosha_devarim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ibur",
+    "target": "prop:p_shnayim_mearvin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ibur",
+    "target": "prop:p_echad_ein_mearvin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_ibur",
+    "target": "prop:p_aviv_smechin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_rsbg_clause",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

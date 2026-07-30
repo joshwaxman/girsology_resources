@@ -526,6 +526,65 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_minyan_elohim",
+   "topic": "derivation_of_three_judges",
+   "parties": [
+    "r_yoshiya",
+    "r_yonatan"
+   ]
+  },
+  {
+   "id": "m_gedola_size",
+   "topic": "size_of_great_sanhedrin",
+   "parties": [
+    "tanna_kama_gedola",
+    "r_yehuda"
+   ]
+  },
+  {
+   "id": "m_smicha_size",
+   "topic": "size_of_smicha_court",
+   "parties": [
+    "r_shimon",
+    "r_yehuda"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_dorshin_techilot",
+   "assumes": "p_mipalgei_bedorshin",
+   "verdict": "abandoned",
+   "opened_by": "stam_3b",
+   "discharge_locus": "Sanhedrin.3b.4",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_mipalgei_bedorshin"
+   ],
+   "locus": "Sanhedrin.3b.4",
+   "daf": "3b",
+   "sentenceId": 3
+  },
+  {
+   "id": "h_delo_keyoshiya",
+   "assumes": "p_mishnah_not_yoshiya",
+   "verdict": "abandoned",
+   "opened_by": "stam_3b",
+   "discharge_locus": "Sanhedrin.3b.13",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_mishnah_not_yoshiya"
+   ],
+   "locus": "Sanhedrin.3b.12",
+   "daf": "3b",
+   "sentenceId": 11
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_ruba_mamonot",
@@ -1337,6 +1396,21 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "ruba_bedinei_mamonot",
+     "gloss_en": "if capital law, the graver domain, follows the majority, monetary law follows it all the more"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:kv_ruba_mamonot",
+      "text_en": "the kal vachomer licenses ruba_bedinei_mamonot: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   },
   {
@@ -1351,5 +1425,725 @@
   }
  ],
  "kb": "svara/sanhedrin_3b_shlosha_menalan.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mamonot_shlosha",
+    "type": "prop",
+    "label_he": "דיני ממונות בשלשה",
+    "label_en": "monetary cases are judged by three",
+    "locus": "Sanhedrin.3b.2",
+    "daf": "3b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_mamonot",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_minyan_shalosh_hazkarot",
+    "type": "prop",
+    "label_he": "ונקרב... עד האלהים... אשר ירשיען אלהים – הרי כאן שלשה",
+    "label_en": "three is derived by counting all three mentions of Elohim in the passage",
+    "locus": "Sanhedrin.3b.2",
+    "daf": "3b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "shlosha_mamonot",
+       "shalosh_hazkarot_elohim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_minyan_shtayim_plus_echad",
+    "type": "prop",
+    "label_he": "הרי כאן שנים, ואין בית דין שקול, מוסיפין עליהן עוד אחד",
+    "label_en": "three is derived from the two later mentions of Elohim plus one added because a court may not be ev…",
+    "locus": "Sanhedrin.3b.3",
+    "daf": "3b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "shlosha_mamonot",
+       "shtei_hazkarot_veshakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_beit_din_shakul",
+    "type": "prop",
+    "label_he": "אין בית דין שקול",
+    "label_en": "a court may not be evenly balanced -- one judge is added to any even count",
+    "locus": "Sanhedrin.3b.3",
+    "daf": "3b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "principle",
+      "args": [
+       "ein_beit_din_shakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mipalgei_bedorshin",
+    "type": "prop",
+    "label_he": "נימא בדורשין תחילות קמיפלגי",
+    "label_en": "(entertained) the two tannaim dispute whether first occurrences are expounded",
+    "locus": "Sanhedrin.3b.4",
+    "daf": "3b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "hinges_on",
+      "args": [
+       "m_minyan_elohim",
+       "dorshin_techilot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_dorshin_techilot",
+    "type": "prop",
+    "label_he": "דכולי עלמא אין דורשין תחילות",
+    "label_en": "first occurrences are not expounded -- held by both parties",
+    "locus": "Sanhedrin.3b.4",
+    "daf": "3b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "principle",
+      "args": [
+       "ein_dorshin_techilot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_elohim_leminyana",
+    "type": "prop",
+    "label_he": "אם כן נימא קרא אל השופט... שמע מינה למניינא",
+    "label_en": "OPAQUE morphology argument: had the verse meant only 'the judge' it would say el hashofet; el haElo…",
+    "locus": "Sanhedrin.3b.4",
+    "daf": "3b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "word_for_count",
+      "args": [
+       "el_haelohim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_elohim_lishna",
+    "type": "prop",
+    "label_he": "לישנא דעלמא נקט: מאן דאית ליה דינא ליקרב לגבי דיינא",
+    "label_en": "el haElohim is ordinary idiom -- one who has a claim approaches the judge -- and teaches no count",
+    "locus": "Sanhedrin.3b.5",
+    "daf": "3b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "word_is_idiom",
+      "args": [
+       "el_haelohim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_beit_din_noteh",
+    "type": "prop",
+    "label_he": "התורה אמרה עשה לך בית דין נוטה",
+    "label_en": "the Torah said: constitute for yourself a court that can lean (an odd-numbered court)",
+    "locus": "Sanhedrin.3b.6",
+    "daf": "3b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "mitzva",
+      "args": [
+       "beit_din_noteh"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_gedola_71",
+    "type": "prop",
+    "label_he": "סנהדרי גדולה היתה של שבעים ואחד",
+    "label_en": "the great Sanhedrin comprised seventy-one",
+    "locus": "Sanhedrin.3b.7",
+    "daf": "3b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "sanhedri_gedola",
+       "shivim_veechad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_gedola_70",
+    "type": "prop",
+    "label_he": "רבי יהודה אומר שבעים",
+    "label_en": "the great Sanhedrin comprised seventy",
+    "locus": "Sanhedrin.3b.7",
+    "daf": "3b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "sanhedri_gedola",
+       "shivim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_smicha_shlosha",
+    "type": "prop",
+    "label_he": "סמיכת זקנים ועריפת עגלה בשלשה, דברי רבי שמעון",
+    "label_en": "laying on of the elders' hands and the heifer rite are by three",
+    "locus": "Sanhedrin.3b.9",
+    "daf": "3b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_smicha",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_smicha_chamisha",
+    "type": "prop",
+    "label_he": "רבי יהודה אומר בחמשה",
+    "label_en": "laying on of the elders' hands is by five",
+    "locus": "Sanhedrin.3b.9",
+    "daf": "3b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_smicha",
+       "chamisha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_smicha_derivation",
+    "type": "prop",
+    "label_he": "וסמכו – שנים, זקני – שנים, ואין בית דין שקול, מוסיפין עליהן עוד אחד",
+    "label_en": "R' Yehuda's five: vesamchu = two, ziknei = two, plus one because a court may not be evenly balanced",
+    "locus": "Sanhedrin.3b.10",
+    "daf": "3b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "chamisha_smicha",
+       "shtei_milim_veshakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yehuda_shar_odd",
+    "type": "prop",
+    "label_he": "אילו רבי יהודה בסנהדרי גדולה הוא דלית ליה, הא בשאר בי דינא אית ליה",
+    "label_en": "other courts (not the great Sanhedrin) require the odd-making extra judge",
+    "locus": "Sanhedrin.3b.11",
+    "daf": "3b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "requires_odd",
+      "args": [
+       "shar_batei_din"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_linetot_nefashot",
+    "type": "prop",
+    "label_he": "והאי לנטות מאי עביד ליה? מוקים לה בדיני נפשות",
+    "label_en": "R' Yoshiya applies 'to lean after the majority' to capital cases only",
+    "locus": "Sanhedrin.3b.11",
+    "daf": "3b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "applies_to",
+      "args": [
+       "linetot_acharei_rabim",
+       "dinei_nefashot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ruba_mamonot",
+    "type": "prop",
+    "label_he": "שנים אומרים זכאי ואחד אומר חייב – זכאי...",
+    "label_en": "in monetary cases the court follows its majority",
+    "locus": "Sanhedrin.3b.12",
+    "daf": "3b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "zil_batar_ruba",
+      "args": [
+       "dinei_mamonot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mishnah_not_yoshiya",
+    "type": "prop",
+    "label_he": "נימא דלא כרבי יאשיה",
+    "label_en": "(entertained) the majority-rule mishna does not follow R' Yoshiya",
+    "locus": "Sanhedrin.3b.12",
+    "daf": "3b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "not_aligned",
+      "args": [
+       "mishnah_rov",
+       "r_yoshiya"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_ruba_mamonot",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "if capital law, the graver domain, follows the majority, monetary law follows it all the more",
+    "locus": "Sanhedrin.3b.13",
+    "daf": "3b",
+    "sentenceId": 12,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "stands",
+     "holder": "r_yoshiya",
+     "structure": {
+      "lenient": "dinei_mamonot",
+      "strict": "dinei_nefashot",
+      "property": "zil_batar_ruba",
+      "concludes": "ruba_bedinei_mamonot"
+     }
+    }
+   },
+   {
+    "id": "concl:ruba_bedinei_mamonot",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "if capital law, the graver domain, follows the majority, monetary law follows it all the more",
+    "data": {
+     "term": "ruba_bedinei_mamonot"
+    }
+   },
+   {
+    "id": "dispute:m_minyan_elohim",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "derivation of three judges",
+    "data": {
+     "topic": "derivation_of_three_judges"
+    }
+   },
+   {
+    "id": "dispute:m_gedola_size",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "size of great sanhedrin",
+    "data": {
+     "topic": "size_of_great_sanhedrin"
+    }
+   },
+   {
+    "id": "dispute:m_smicha_size",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "size of smicha court",
+    "data": {
+     "topic": "size_of_smicha_court"
+    }
+   },
+   {
+    "id": "hypothesis:h_dorshin_techilot",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the two tannaim dispute whether first occurrences are expounded",
+    "locus": "Sanhedrin.3b.4",
+    "daf": "3b",
+    "sentenceId": 3,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_3b",
+     "discharge_locus": "Sanhedrin.3b.4"
+    }
+   },
+   {
+    "id": "hypothesis:h_delo_keyoshiya",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the majority-rule mishna does not follow R' Yoshiya",
+    "locus": "Sanhedrin.3b.12",
+    "daf": "3b",
+    "sentenceId": 11,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_3b",
+     "discharge_locus": "Sanhedrin.3b.13"
+    }
+   },
+   {
+    "id": "voice:mishnah_rov",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah rov",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:r_eliezer_bryhg",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r eliezer bryhg",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_shimon",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r shimon",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yonatan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yonatan",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yoshiya",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yoshiya",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:stam_3b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 3b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_kama_gedola",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kama gedola",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yoshiya",
+    "target": "schema:kv_ruba_mamonot",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_ruba_mamonot",
+    "target": "concl:ruba_bedinei_mamonot",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_minyan_elohim",
+    "target": "voice:r_yoshiya",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_minyan_elohim",
+    "target": "voice:r_yonatan",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_gedola_size",
+    "target": "voice:tanna_kama_gedola",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_gedola_size",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_smicha_size",
+    "target": "voice:r_shimon",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_smicha_size",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_dorshin_techilot",
+    "target": "prop:p_mipalgei_bedorshin",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "hypothesis:h_dorshin_techilot",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_delo_keyoshiya",
+    "target": "prop:p_mishnah_not_yoshiya",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "hypothesis:h_delo_keyoshiya",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_yoshiya",
+    "target": "prop:p_mamonot_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yonatan",
+    "target": "prop:p_mamonot_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yoshiya",
+    "target": "prop:p_minyan_shalosh_hazkarot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yonatan",
+    "target": "prop:p_minyan_shtayim_plus_echad",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yonatan",
+    "target": "prop:p_ein_beit_din_shakul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "prop:p_mipalgei_bedorshin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_dorshin_techilot)"
+   },
+   {
+    "source": "voice:r_yoshiya",
+    "target": "prop:p_ein_dorshin_techilot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yonatan",
+    "target": "prop:p_ein_dorshin_techilot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yoshiya",
+    "target": "prop:p_elohim_leminyana",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yonatan",
+    "target": "prop:p_elohim_lishna",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_eliezer_bryhg",
+    "target": "prop:p_beit_din_noteh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yoshiya",
+    "target": "prop:p_yehuda_shar_odd",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_yehuda_shar_odd",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yoshiya",
+    "target": "prop:p_linetot_nefashot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_kama_gedola",
+    "target": "prop:p_gedola_71",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_gedola_70",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_smicha_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_smicha_chamisha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_smicha_derivation",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishnah_rov",
+    "target": "prop:p_ruba_mamonot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yoshiya",
+    "target": "prop:p_ruba_mamonot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "prop:p_mishnah_not_yoshiya",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_delo_keyoshiya)"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "prop:p_gedola_70",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yoshiya"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

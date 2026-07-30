@@ -159,6 +159,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.3a.7",
      "daf": "3a",
      "sentenceId": 6
@@ -189,6 +195,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.3b.3",
      "daf": "3b",
      "sentenceId": 2
@@ -203,6 +215,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_gs_kicha_chalifin",
@@ -331,6 +346,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "isha_niknet_bechalifin",
+     "gloss_en": "extend kicha/kicha from Ephron's field: as a field is acquired by symbolic exchange, so a woman should be acquired by symbolic exchange"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_pachot_mishaveh_perutah",
+      "text_en": "blocked by the objection: chalifin are effective with an item worth less than a peruta, and a woman does not make herself acquired for less than a peruta"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_pachot_mishaveh_perutah",
+      "drop": "pircha_pachot_mishaveh_perutah",
+      "drop_node": "ground:pircha_pachot_mishaveh_perutah",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -651,6 +689,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "eshet_ish_yotzet_bechalitza",
+     "gloss_en": "a wife should be released by chalitza too, a fortiori from the yevama"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_sefer_kritut",
+      "text_en": "blocked by the verse: 'sefer kritut' -- a scroll severs her, and nothing else severs her"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_sefer_kritut",
+      "drop": "miut_sefer_kritut",
+      "drop_node": "ground:miut_sefer_kritut",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -842,5 +903,283 @@
   }
  ],
  "kb": "svara/kiddushin_3a_minyana_memaet.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_minyan_memaet_chuppah",
+    "type": "prop",
+    "label_he": "מניינא דרישא למעוטי חופה",
+    "label_en": "the count 'three' in the reisha comes to exclude chuppah (it does not effect betrothal)",
+    "locus": "Kiddushin.3a.5",
+    "daf": "3a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "minyan_memaet",
+      "args": [
+       "chuppah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chuppah_konah",
+    "type": "prop",
+    "label_he": "רב הונא דאמר חופה קונה מקל וחומר",
+    "label_en": "chuppah effects betrothal, by a kal vachomer",
+    "locus": "Kiddushin.3a.5",
+    "daf": "3a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "konah",
+      "args": [
+       "chuppah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_minyan_memaet_chalifin",
+    "type": "prop",
+    "label_he": "למעוטי חליפין",
+    "label_en": "per Rav Huna, the count comes to exclude chalifin (symbolic exchange)",
+    "locus": "Kiddushin.3a.6",
+    "daf": "3a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "minyan_memaet",
+      "args": [
+       "chalifin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_isha_lo_bechalifin",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a woman is not acquired through chalifin",
+    "locus": "Kiddushin.3a.6",
+    "daf": "3a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "lo_niknet_be",
+      "args": [
+       "isha",
+       "chalifin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_eshet_ish_lo_bechalitza",
+    "type": "prop",
+    "label_he": "ספר כורתה ואין דבר אחר כורתה",
+    "label_en": "a wife is not released from her marriage by chalitza -- only the scroll severs her",
+    "locus": "Kiddushin.3b.3",
+    "daf": "3b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "lo_yotzet_be",
+      "args": [
+       "eshet_ish",
+       "chalitza"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:gs_kicha_chalifin",
+    "type": "schema",
+    "label_he": "גזרה שווה",
+    "label_en": "extend kicha/kicha from Ephron's field: as a field is acquired by symbolic exchange, so a woman sho…",
+    "locus": "Kiddushin.3a.6",
+    "daf": "3a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "gezera_shava",
+     "status": "blocked",
+     "holder": "stam_3a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "isha_niknet_bechalifin"
+     }
+    }
+   },
+   {
+    "id": "concl:isha_niknet_bechalifin",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "extend kicha/kicha from Ephron's field: as a field is acquired by symbolic exchange, so a woman sho…",
+    "data": {
+     "term": "isha_niknet_bechalifin"
+    }
+   },
+   {
+    "id": "ground:pircha_pachot_mishaveh_perutah",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "chalifin are effective with an item worth less than a peruta, and a woman does not make herself acq…",
+    "locus": "Kiddushin.3a.7",
+    "daf": "3a",
+    "sentenceId": 6,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:kv_eshet_ish_chalitza",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "a wife should be released by chalitza too, a fortiori from the yevama",
+    "locus": "Kiddushin.3b.2",
+    "daf": "3b",
+    "sentenceId": 1,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "stam_3a",
+     "structure": {
+      "lenient": "yevamah",
+      "strict": "eshet_ish",
+      "property": "yotzet_bechalitza",
+      "concludes": "eshet_ish_yotzet_bechalitza"
+     }
+    }
+   },
+   {
+    "id": "concl:eshet_ish_yotzet_bechalitza",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "a wife should be released by chalitza too, a fortiori from the yevama",
+    "data": {
+     "term": "eshet_ish_yotzet_bechalitza"
+    }
+   },
+   {
+    "id": "ground:miut_sefer_kritut",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'sefer kritut' -- a scroll severs her, and nothing else severs her",
+    "locus": "Kiddushin.3b.3",
+    "daf": "3b",
+    "sentenceId": 2,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "דברים כד,א"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_3a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 3a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_3a",
+    "target": "schema:gs_kicha_chalifin",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:gs_kicha_chalifin",
+    "target": "concl:isha_niknet_bechalifin",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_pachot_mishaveh_perutah",
+    "target": "schema:gs_kicha_chalifin",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_3a",
+    "target": "schema:kv_eshet_ish_chalitza",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_eshet_ish_chalitza",
+    "target": "concl:eshet_ish_yotzet_bechalitza",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_sefer_kritut",
+    "target": "schema:kv_eshet_ish_chalitza",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "voice:stam_3a",
+    "target": "prop:p_minyan_memaet_chuppah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "prop:p_chuppah_konah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_3a",
+    "target": "prop:p_minyan_memaet_chalifin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(rav_huna)"
+   },
+   {
+    "source": "voice:stam_3a",
+    "target": "prop:p_isha_lo_bechalifin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_3a",
+    "target": "prop:p_eshet_ish_lo_bechalitza",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

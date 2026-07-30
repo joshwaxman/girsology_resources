@@ -322,6 +322,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.25a.3",
      "daf": "25a",
      "sentenceId": 2
@@ -352,6 +358,27 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [
+      {
+       "id": "tocho_already_spent",
+       "gloss_en": "but those instances of tokho are already expounded for other derashot",
+       "answered_by": {
+        "id": "four_instances_of_tocho",
+        "gloss_en": "four instances are written: one for the law itself, one for the gezera shava, one for 'this one not another', one for 'tokho and not tokh tokho'",
+        "locus": "Chullin.25a.8",
+        "daf": "25a",
+        "sentenceId": 7
+       },
+       "locus": "Chullin.25a.6",
+       "daf": "25a",
+       "sentenceId": 5
+      }
+     ],
+     "spent": false,
+     "aliba": null,
+     "state": "restored",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.25a.5",
      "daf": "25a",
      "sentenceId": 4
@@ -382,6 +409,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.25a.10",
      "daf": "25a",
      "sentenceId": 9
@@ -396,6 +429,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_gs_tokho_letamei_litamei",
@@ -580,6 +616,21 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "cheres_impure_from_avir_without_contact",
+     "gloss_en": "tokho-to-transmit / tokho-to-become-impure: just as the vessel transmits impurity through its airspace without contact, it becomes impure through its airspace without contact"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:gs_tokho_letamei_litamei",
+      "text_en": "the gezera shava licenses cheres_impure_from_avir_without_contact: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   },
   {
@@ -709,6 +760,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "cheres_impure_from_gav",
+     "gloss_en": "earthenware should be impure from its outer side too"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_tzamid_patil",
+      "text_en": "blocked by the verse: 'every open vessel with no sealed cover' -- with a cover it is pure, so not via the outer side"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_tzamid_patil",
+      "drop": "miut_tzamid_patil",
+      "drop_node": "ground:miut_tzamid_patil",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -941,25 +1015,35 @@
         "children": [
          {
           "node": "not exclusion_attacked(miut_tocho,B | {B ∉ [tocho_already_spent]})",
-          "gloss_en": "'tokho' -- the airspace of THIS vessel, not of another",
+          "gloss_en": "but those instances of tokho are already expounded for other derashot",
           "sentenceRef": {
            "daf": "25a",
-           "sentenceId": 4
+           "sentenceId": 5
           }
          },
          {
           "node": "exclusion_attacked(miut_tocho,tocho_already_spent)",
-          "gloss_en": "'tokho' -- the airspace of THIS vessel, not of another",
+          "gloss_en": "but those instances of tokho are already expounded for other derashot",
           "sentenceRef": {
            "daf": "25a",
-           "sentenceId": 4
+           "sentenceId": 5
           }
          },
          {
           "node": "attack_answered(tocho_already_spent)",
+          "gloss_en": "but those instances of tokho are already expounded for other derashot",
+          "sentenceRef": {
+           "daf": "25a",
+           "sentenceId": 5
+          },
           "children": [
            {
-            "node": "exclusion_attack_answered(tocho_already_spent,four_instances_of_tocho)"
+            "node": "exclusion_attack_answered(tocho_already_spent,four_instances_of_tocho)",
+            "gloss_en": "four instances are written: one for the law itself, one for the gezera shava, one for 'this one not another', one for 'tokho and not tokh tokho'",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 7
+            }
            }
           ]
          }
@@ -1045,7 +1129,268 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "shetef_impure_from_avir",
+     "gloss_en": "all other vessels should be impure from their airspace too"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_tocho",
+      "text_en": "blocked by the verse: 'tokho' -- the airspace of THIS vessel, not of another (the exclusion was attacked, but the attack was answered, so it stands)"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_four_instances_of_tocho",
+      "drop": "four_instances_of_tocho",
+      "drop_node": "refutation:four_instances_of_tocho",
+      "outcome": "concludes",
+      "text_en": "the exclusion would be spent again and the inference would stand"
+     },
+     {
+      "counterfactual": "cf_drop_miut_tocho",
+      "drop": "miut_tocho",
+      "drop_node": "ground:miut_tocho",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
+  },
+  {
+   "id": "cf_drop_four_instances_of_tocho",
+   "kind": "counterfactual",
+   "subject": "kv_shetef_avir",
+   "label_en": "Had the attack on the exclusion not been answered, would the inference stand?",
+   "delta": {
+    "drop_ground": "four_instances_of_tocho"
+   },
+   "goal_display": "concluded(kv_shetef_avir, shetef_impure_from_avir)",
+   "verdict": "answers",
+   "answers": [
+    {}
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "concluded(kv_shetef_avir,shetef_impure_from_avir)",
+      "gloss_en": "all other vessels should be impure from their airspace too",
+      "sentenceRef": {
+       "daf": "25a",
+       "sentenceId": 3
+      },
+      "children": [
+       {
+        "node": "schema_instance(kv_shetef_avir,kal_vachomer,shetef_impure_from_avir)",
+        "gloss_en": "all other vessels should be impure from their airspace too",
+        "sentenceRef": {
+         "daf": "25a",
+         "sentenceId": 3
+        }
+       },
+       {
+        "node": "not defeated(kv_shetef_avir)",
+        "gloss_en": "all other vessels should be impure from their airspace too",
+        "sentenceRef": {
+         "daf": "25a",
+         "sentenceId": 3
+        },
+        "children": [
+         {
+          "node": "not pircha(kv_shetef_avir,C)",
+          "gloss_en": "all other vessels should be impure from their airspace too",
+          "sentenceRef": {
+           "daf": "25a",
+           "sentenceId": 3
+          }
+         },
+         {
+          "node": "not defeated_regardless(kv_shetef_avir)",
+          "gloss_en": "all other vessels should be impure from their airspace too",
+          "sentenceRef": {
+           "daf": "25a",
+           "sentenceId": 3
+          },
+          "children": [
+           {
+            "node": "not schema_instance(kv_shetef_avir,K | {K ∉ [kal_vachomer]},L)",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "not schema_instance(kv_shetef_avir,kal_vachomer,M | {M ∉ [shetef_impure_from_avir]})",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "proved(schema_instance(kv_shetef_avir,kal_vachomer,shetef_impure_from_avir))",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "not rejects_middah(D | {D ∉ [ctl_voice_never]},kal_vachomer)"
+           },
+           {
+            "node": "proved(schema_instance(kv_shetef_avir,kal_vachomer,shetef_impure_from_avir))",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "not rejects_middah(ctl_voice_never,kal_vachomer)"
+           },
+           {
+            "node": "not challenge(G | {G ∉ [ctl_challenge_never]},teyuvta,kv_shetef_avir)",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "not challenge(ctl_challenge_never,teyuvta,kv_shetef_avir)",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "not scriptural_exclusion(kv_shetef_avir,F | {F ∉ [miut_tocho]})",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "scriptural_exclusion(kv_shetef_avir,miut_tocho)",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           },
+           {
+            "node": "exclusion_spent(miut_tocho)",
+            "gloss_en": "'tokho' -- the airspace of THIS vessel, not of another",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 4
+            },
+            "children": [
+             {
+              "node": "exclusion_attacked(miut_tocho,tocho_already_spent)",
+              "gloss_en": "but those instances of tokho are already expounded for other derashot",
+              "sentenceRef": {
+               "daf": "25a",
+               "sentenceId": 5
+              }
+             },
+             {
+              "node": "not attack_answered(tocho_already_spent)",
+              "gloss_en": "but those instances of tokho are already expounded for other derashot",
+              "sentenceRef": {
+               "daf": "25a",
+               "sentenceId": 5
+              },
+              "children": [
+               {
+                "node": "not exclusion_attack_answered(tocho_already_spent,B)",
+                "gloss_en": "but those instances of tokho are already expounded for other derashot",
+                "sentenceRef": {
+                 "daf": "25a",
+                 "sentenceId": 5
+                }
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "node": "not restricted_by(kv_shetef_avir,E)",
+            "gloss_en": "all other vessels should be impure from their airspace too",
+            "sentenceRef": {
+             "daf": "25a",
+             "sentenceId": 3
+            }
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not collapses(H,I,J)",
+          "children": [
+           {
+            "node": "not dispute(H,U)"
+           },
+           {
+            "node": "not dispute(H,S)"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(Q,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(O,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "note": "counterfactual — NOT the sugya's conclusion"
   },
   {
    "id": "cf_drop_miut_tocho",
@@ -1363,6 +1708,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "shetef_not_impure_from_gav",
+     "gloss_en": "other vessels should not be impure from their outer side either"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_hu_tzamid_patil",
+      "text_en": "blocked by the verse: 'IT is impure' -- this one alone is pure when covered; all other vessels are impure either way"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_hu_tzamid_patil",
+      "drop": "miut_hu_tzamid_patil",
+      "drop_node": "ground:miut_hu_tzamid_patil",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -1554,5 +1922,585 @@
   }
  ],
  "kb": "svara/chullin_25a_tumat_kelim.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishna_complementary",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "what is pure in an earthenware vessel is impure in all other vessels, and what is pure in all other…",
+    "locus": "Chullin.24b.10",
+    "daf": "24b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "purity_complementary",
+      "args": [
+       "keli_cheres",
+       "keli_shetef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_cheres_avir",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "an earthenware vessel becomes impure from an impure item in its airspace",
+    "locus": "Chullin.24b.11",
+    "daf": "24b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "impure_from",
+      "args": [
+       "keli_cheres",
+       "avir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_cheres_not_gav",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "an earthenware vessel does NOT become impure from contact with its outer side",
+    "locus": "Chullin.24b.11",
+    "daf": "24b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "not_impure_from",
+      "args": [
+       "keli_cheres",
+       "gav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shetef_gav",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "other vessels become impure from contact with their outer side",
+    "locus": "Chullin.24b.11",
+    "daf": "24b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "impure_from",
+      "args": [
+       "keli_shetef",
+       "gav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shetef_not_avir",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "other vessels do NOT become impure from an item in their airspace",
+    "locus": "Chullin.24b.11",
+    "daf": "24b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "not_impure_from",
+      "args": [
+       "keli_shetef",
+       "avir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_cheres_avir_shelo_naga",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "an earthenware vessel becomes impure from an item in its airspace even if the item never touched th…",
+    "locus": "Chullin.24b.12",
+    "daf": "24b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "impure_from_avir_without_contact",
+      "args": [
+       "keli_cheres"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_cheres_metamei_shelo_naga",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the Torah testified that an impure earthenware vessel renders food in its airspace impure without c…",
+    "locus": "Chullin.24b.14",
+    "daf": "24b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "transmits_impurity_via_avir_without_contact",
+      "args": [
+       "keli_cheres"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tokh_tokho_tahor",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "food in the airspace of an inner vessel inside an impure earthenware vessel stays pure ('tokho' and…",
+    "locus": "Chullin.25a.8",
+    "daf": "25a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "not_impure",
+      "args": [
+       "okhel_betokh_tokho"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:gs_tokho_letamei_litamei",
+    "type": "schema",
+    "label_he": "גזרה שווה",
+    "label_en": "tokho-to-transmit / tokho-to-become-impure: just as the vessel transmits impurity through its airsp…",
+    "locus": "Chullin.24b.13",
+    "daf": "24b",
+    "sentenceId": 12,
+    "data": {
+     "kind": "gezera_shava",
+     "status": "stands",
+     "holder": "r_yonatan_ben_avtolemos",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "cheres_impure_from_avir_without_contact"
+     }
+    }
+   },
+   {
+    "id": "concl:cheres_impure_from_avir_without_contact",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "tokho-to-transmit / tokho-to-become-impure: just as the vessel transmits impurity through its airsp…",
+    "data": {
+     "term": "cheres_impure_from_avir_without_contact"
+    }
+   },
+   {
+    "id": "schema:kv_cheres_gav",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "earthenware should be impure from its outer side too",
+    "locus": "Chullin.25a.2",
+    "daf": "25a",
+    "sentenceId": 1,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "rav_adda_bar_ahava",
+     "structure": {
+      "lenient": "keli_shetef",
+      "strict": "keli_cheres",
+      "property": "impure_from_gav",
+      "concludes": "cheres_impure_from_gav"
+     }
+    }
+   },
+   {
+    "id": "concl:cheres_impure_from_gav",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "earthenware should be impure from its outer side too",
+    "data": {
+     "term": "cheres_impure_from_gav"
+    }
+   },
+   {
+    "id": "ground:miut_tzamid_patil",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'every open vessel with no sealed cover' -- with a cover it is pure, so not via the outer side",
+    "locus": "Chullin.25a.3",
+    "daf": "25a",
+    "sentenceId": 2,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "במדבר יט,טו"
+    }
+   },
+   {
+    "id": "schema:kv_shetef_avir",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "all other vessels should be impure from their airspace too",
+    "locus": "Chullin.25a.4",
+    "daf": "25a",
+    "sentenceId": 3,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "stam_25a",
+     "structure": {
+      "lenient": "keli_cheres",
+      "strict": "keli_shetef",
+      "property": "impure_from_avir",
+      "concludes": "shetef_impure_from_avir"
+     }
+    }
+   },
+   {
+    "id": "concl:shetef_impure_from_avir",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "all other vessels should be impure from their airspace too",
+    "data": {
+     "term": "shetef_impure_from_avir"
+    }
+   },
+   {
+    "id": "ground:miut_tocho",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'tokho' -- the airspace of THIS vessel, not of another",
+    "locus": "Chullin.25a.5",
+    "daf": "25a",
+    "sentenceId": 4,
+    "data": {
+     "kind": "verse",
+     "state": "restored",
+     "verse": "ויקרא יא,לג"
+    }
+   },
+   {
+    "id": "attack:tocho_already_spent",
+    "type": "attack",
+    "label_he": "דחיית המיעוט",
+    "label_en": "but those instances of tokho are already expounded for other derashot",
+    "locus": "Chullin.25a.6",
+    "daf": "25a",
+    "sentenceId": 5
+   },
+   {
+    "id": "refutation:four_instances_of_tocho",
+    "type": "refutation",
+    "label_he": "סתירה",
+    "label_en": "four instances are written: one for the law itself, one for the gezera shava, one for 'this one not…",
+    "locus": "Chullin.25a.8",
+    "daf": "25a",
+    "sentenceId": 7,
+    "data": {
+     "engine_fact": "exclusion_attack_answered"
+    }
+   },
+   {
+    "id": "schema:kv_shetef_not_gav",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "other vessels should not be impure from their outer side either",
+    "locus": "Chullin.25a.9",
+    "daf": "25a",
+    "sentenceId": 8,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "stam_25a",
+     "structure": {
+      "lenient": "keli_cheres",
+      "strict": "keli_shetef",
+      "property": "not_impure_from_gav",
+      "concludes": "shetef_not_impure_from_gav"
+     }
+    }
+   },
+   {
+    "id": "concl:shetef_not_impure_from_gav",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "other vessels should not be impure from their outer side either",
+    "data": {
+     "term": "shetef_not_impure_from_gav"
+    }
+   },
+   {
+    "id": "ground:miut_hu_tzamid_patil",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'IT is impure' -- this one alone is pure when covered; all other vessels are impure either way",
+    "locus": "Chullin.25a.10",
+    "daf": "25a",
+    "sentenceId": 9,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "במדבר יט,טו"
+    }
+   },
+   {
+    "id": "voice:baraita_avir_kelim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita avir kelim",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_tokho",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita tokho",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:mishna_kelim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna kelim",
+    "data": {
+     "kind": "mishna"
+    }
+   },
+   {
+    "id": "voice:r_yonatan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yonatan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yonatan_ben_avtolemos",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yonatan ben avtolemos",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_adda_bar_ahava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav adda bar ahava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_25a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 25a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yonatan_ben_avtolemos",
+    "target": "schema:gs_tokho_letamei_litamei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:gs_tokho_letamei_litamei",
+    "target": "concl:cheres_impure_from_avir_without_contact",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_adda_bar_ahava",
+    "target": "schema:kv_cheres_gav",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_cheres_gav",
+    "target": "concl:cheres_impure_from_gav",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_tzamid_patil",
+    "target": "schema:kv_cheres_gav",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "voice:stam_25a",
+    "target": "schema:kv_shetef_avir",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_shetef_avir",
+    "target": "concl:shetef_impure_from_avir",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_tocho",
+    "target": "schema:kv_shetef_avir",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "attack:tocho_already_spent",
+    "target": "ground:miut_tocho",
+    "type": "attacks",
+    "regime": "attack",
+    "live": false,
+    "neutralized_by": "answered"
+   },
+   {
+    "source": "refutation:four_instances_of_tocho",
+    "target": "attack:tocho_already_spent",
+    "type": "refutes",
+    "regime": "attack",
+    "live": true
+   },
+   {
+    "source": "voice:stam_25a",
+    "target": "schema:kv_shetef_not_gav",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_shetef_not_gav",
+    "target": "concl:shetef_not_impure_from_gav",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_hu_tzamid_patil",
+    "target": "schema:kv_shetef_not_gav",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "voice:mishna_kelim",
+    "target": "prop:p_mishna_complementary",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_avir_kelim",
+    "target": "prop:p_cheres_avir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_avir_kelim",
+    "target": "prop:p_cheres_not_gav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_avir_kelim",
+    "target": "prop:p_shetef_gav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_avir_kelim",
+    "target": "prop:p_shetef_not_avir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_avir_kelim",
+    "target": "prop:p_mishna_complementary",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_tokho",
+    "target": "prop:p_cheres_avir_shelo_naga",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yonatan_ben_avtolemos",
+    "target": "prop:p_cheres_avir_shelo_naga",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yonatan",
+    "target": "prop:p_cheres_metamei_shelo_naga",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_25a",
+    "target": "prop:p_cheres_avir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_25a",
+    "target": "prop:p_shetef_not_avir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_25a",
+    "target": "prop:p_shetef_gav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_25a",
+    "target": "prop:p_cheres_not_gav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_25a",
+    "target": "prop:p_tokh_tokho_tahor",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

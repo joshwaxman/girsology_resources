@@ -346,6 +346,27 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_sof_achilat_chametz",
+   "topic": "end_of_eating_chametz_on_14",
+   "parties": [
+    "r_meir",
+    "r_yehuda"
+   ]
+  },
+  {
+   "id": "m_makor_tashbitu",
+   "topic": "source_of_tashbitu_erev_yom_tov",
+   "parties": [
+    "r_yishmael",
+    "r_akiva",
+    "r_yosi"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "split_r_akiva",
@@ -359,5 +380,452 @@
   }
  ],
  "kb": "svara/pesachim_4b_shaot_biur.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_rm_okhlin_chamesh",
+    "type": "prop",
+    "label_he": "רבי מאיר אומר: אוכלין כל חמש",
+    "label_en": "R' Meir: chametz may be eaten through the entire fifth hour",
+    "locus": "Pesachim.4b.8",
+    "daf": "4b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "deadline",
+      "args": [
+       "achilat_chametz",
+       "tchilat_shesh"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ry_okhlin_arba",
+    "type": "prop",
+    "label_he": "רבי יהודה אומר: אוכלין כל ארבע",
+    "label_en": "R' Yehuda: chametz may be eaten only through the entire fourth hour",
+    "locus": "Pesachim.4b.8",
+    "daf": "4b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "deadline",
+      "args": [
+       "achilat_chametz",
+       "sof_arba"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ry_tolin_chamesh",
+    "type": "prop",
+    "label_he": "ותולין כל חמש",
+    "label_en": "R' Yehuda: during the fifth hour one suspends -- neither eating nor burning",
+    "locus": "Pesachim.4b.8",
+    "daf": "4b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "status_during",
+      "args": [
+       "chametz",
+       "shaa_chamishit",
+       "tolin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sorfin_tchilat_shesh",
+    "type": "prop",
+    "label_he": "ושורפין בתחלת שש",
+    "label_en": "chametz is burned at the start of the sixth hour -- it may be kept only until then",
+    "locus": "Pesachim.4b.8",
+    "daf": "4b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "deadline",
+      "args": [
+       "hashhayat_chametz",
+       "tchilat_shesh"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_deoraita_chatzot",
+    "type": "prop",
+    "label_he": "דכולי עלמא מיהא חמץ משש שעות ולמעלה אסור ... ״אך״ חלק",
+    "label_en": "by Torah law chametz is forbidden from midday of the 14th onward -- 'אך' splits the day",
+    "locus": "Pesachim.4b.8",
+    "daf": "4b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "deoraita_deadline",
+      "args": [
+       "hashhayat_chametz",
+       "chatzot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ribui_arbaa_asar",
+    "type": "prop",
+    "label_he": "הא כיצד — לרבות ארבעה עשר לביעור",
+    "label_en": "the two verses are reconciled by including the 14th for biur",
+    "locus": "Pesachim.4b.9",
+    "daf": "4b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "includes",
+      "args": [
+       "yom_arbaa_asar",
+       "biur_chametz"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_makor_lo_tishchat",
+    "type": "prop",
+    "label_he": "לא תשחט על חמץ דם זבחי — לא תשחט הפסח ועדיין חמץ קיים",
+    "label_en": "the source is 'do not slaughter my offering over chametz' -- the pesach may not be slaughtered whil…",
+    "locus": "Pesachim.5a.16",
+    "daf": "5a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "source",
+      "args": [
+       "tashbitu_erev_yom_tov",
+       "lo_tishchat"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_makor_havara",
+    "type": "prop",
+    "label_he": "וכתיב כל מלאכה לא תעשו, ומצינו להבערה שהיא אב מלאכה",
+    "label_en": "the source is that burning is a primary labor, forbidden on the festival itself",
+    "locus": "Pesachim.5a.19",
+    "daf": "5a",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "source",
+      "args": [
+       "tashbitu_erev_yom_tov",
+       "havara_av_melacha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_makor_ach_chalak",
+    "type": "prop",
+    "label_he": "תלמוד לומר ״אך״, חלק",
+    "label_en": "the source is 'אך', which splits the day",
+    "locus": "Pesachim.5a.20",
+    "daf": "5a",
+    "sentenceId": 19,
+    "data": {
+     "content": {
+      "pred": "source",
+      "args": [
+       "tashbitu_erev_yom_tov",
+       "ach_chalak"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_biur_srefa",
+    "type": "prop",
+    "label_he": "אין ביעור חמץ אלא שריפה",
+    "label_en": "the removal of chametz is only by burning",
+    "locus": "Pesachim.5b.1",
+    "daf": "5b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "only_means",
+      "args": [
+       "biur_chametz",
+       "srefa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_havara_lechalek",
+    "type": "prop",
+    "label_he": "הבערה לחלק יצאת",
+    "label_en": "burning was singled out to divide the labors",
+    "locus": "Pesachim.5b.1",
+    "daf": "5b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "havara_singled_out",
+       "lechalek"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lo_hoil",
+    "type": "prop",
+    "label_he": "לא אמרינן הואיל והותרה הבערה לצורך הותרה נמי שלא לצורך",
+    "label_en": "we do not say: since burning was permitted for festival needs it is permitted also without need",
+    "locus": "Pesachim.5b.1",
+    "daf": "5b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "not_extended",
+      "args": [
+       "havara_letzorech",
+       "shelo_letzorech"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_sof_achilat_chametz",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "end of eating chametz on 14",
+    "data": {
+     "topic": "end_of_eating_chametz_on_14"
+    }
+   },
+   {
+    "id": "dispute:m_makor_tashbitu",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "source of tashbitu erev yom tov",
+    "data": {
+     "topic": "source_of_tashbitu_erev_yom_tov"
+    }
+   },
+   {
+    "id": "voice:abaye",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "abaye",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_akiva",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r akiva",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_meir",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r meir",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yishmael",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yishmael",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yosi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosi",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_pes_4b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam pes 4b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_sof_achilat_chametz",
+    "target": "voice:r_meir",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_sof_achilat_chametz",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_makor_tashbitu",
+    "target": "voice:r_yishmael",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_makor_tashbitu",
+    "target": "voice:r_akiva",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_makor_tashbitu",
+    "target": "voice:r_yosi",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_meir",
+    "target": "prop:p_rm_okhlin_chamesh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ry_okhlin_arba",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ry_tolin_chamesh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_meir",
+    "target": "prop:p_sorfin_tchilat_shesh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_sorfin_tchilat_shesh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_4b",
+    "target": "prop:p_deoraita_chatzot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_ribui_arbaa_asar",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_makor_lo_tishchat",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yishmael",
+    "target": "prop:p_makor_lo_tishchat",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_akiva",
+    "target": "prop:p_makor_havara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosi",
+    "target": "prop:p_makor_ach_chalak",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_biur_srefa",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_akiva"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_havara_lechalek",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_akiva"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_lo_hoil",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_akiva"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

@@ -317,7 +317,474 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_chatan_krishma",
+   "topic": "chatan_reciting_first_night",
+   "parties": [
+    "chachamim",
+    "rsbg"
+   ]
+  },
+  {
+   "id": "m_yuhara_resolution",
+   "topic": "resolving_the_yuhara_contradiction",
+   "parties": [
+    "r_yochanan",
+    "rav_shisha"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_yuhara_mapping",
+   "assumes": "p_rsbg_chayish",
+   "verdict": "reductio",
+   "opened_by": "stam_17b",
+   "discharge_locus": "Berakhot.17b.8",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_rabbanan_lo_chayshi",
+    "p_rsbg_chayish"
+   ],
+   "locus": "Berakhot.17b.7",
+   "daf": "17b",
+   "sentenceId": 6
+  }
+ ],
+ "challenges": [],
  "queries": [],
  "kb": "svara/ber_17b_chatan_yuhara.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chatan_rotze_kore",
+    "type": "prop",
+    "label_he": "חתן אם רצה לקרות קריאת שמע לילה הראשון קורא",
+    "label_en": "a groom who wishes to recite the Shema on the first night may recite",
+    "locus": "Berakhot.17b.6",
+    "daf": "17b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "reshut",
+      "args": [
+       "chatan",
+       "krishma_laila_rishon"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lo_kol_harotze",
+    "type": "prop",
+    "label_he": "לא כל הרוצה ליטול את השם יטול",
+    "label_en": "not everyone who wishes to assume the name may assume it -- the groom should not recite",
+    "locus": "Berakhot.17b.6",
+    "daf": "17b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "ein_reshut",
+      "args": [
+       "chatan",
+       "krishma_laila_rishon"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rsbg_chayish",
+    "type": "prop",
+    "label_he": "למימרא דרבן שמעון בן גמליאל חייש ליוהרא",
+    "label_en": "RSbG is (as a rule) concerned for presumption",
+    "locus": "Berakhot.17b.7",
+    "daf": "17b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "concerned_for",
+      "args": [
+       "rsbg",
+       "yuhara"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rabbanan_lo_chayshi",
+    "type": "prop",
+    "label_he": "ורבנן לא חיישי ליוהרא",
+    "label_en": "and the Sages are (as a rule) not concerned for presumption",
+    "locus": "Berakhot.17b.7",
+    "daf": "17b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "not_concerned_for",
+      "args": [
+       "chachamim",
+       "yuhara"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tch_betelim",
+    "type": "prop",
+    "label_he": "וכל מקום תלמידי חכמים בטלים",
+    "label_en": "everywhere, Torah scholars idle from labor on the Ninth of Av",
+    "locus": "Berakhot.17b.7",
+    "daf": "17b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "practice",
+      "args": [
+       "talmidei_chachamim",
+       "betelim_betisha_beav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kol_adam_yaase",
+    "type": "prop",
+    "label_he": "לעולם יעשה כל אדם את עצמו כתלמיד חכם",
+    "label_en": "let every man make himself as a Torah scholar (and idle on the Ninth of Av)",
+    "locus": "Berakhot.17b.7",
+    "daf": "17b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "reshut",
+      "args": [
+       "kol_adam",
+       "batala_betisha_beav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_muchlefet",
+    "type": "prop",
+    "label_he": "אמר רבי יוחנן מוחלפת השיטה",
+    "label_en": "the attributions in one of the two sources are reversed",
+    "locus": "Berakhot.17b.9",
+    "daf": "17b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mekorot_yuhara",
+       "muchlefet_hashita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lo_tachlif",
+    "type": "prop",
+    "label_he": "לעולם לא תחליף",
+    "label_en": "never reverse -- both sources stand as attributed, and are distinguished",
+    "locus": "Berakhot.17b.9",
+    "daf": "17b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mekorot_yuhara",
+       "lo_tachlif"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ks_lo_yuhara",
+    "type": "prop",
+    "label_he": "כיון דכולי עלמא קא קרו ואיהו נמי קרי לא מיחזי כיוהרא",
+    "label_en": "since everyone recites the Shema and he recites too, it does not look like presumption",
+    "locus": "Berakhot.17b.9",
+    "daf": "17b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "lo_michzei_keyuhara",
+      "args": [
+       "chatan_kore_krishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_batala_yuhara",
+    "type": "prop",
+    "label_he": "כיון דכולי עלמא עבדי מלאכה ואיהו לא קא עביד מיחזי כיוהרא",
+    "label_en": "since everyone works and he does not, his idling looks like presumption",
+    "locus": "Berakhot.17b.9",
+    "daf": "17b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "michzei_keyuhara",
+      "args": [
+       "batel_betisha_beav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kavana_anan_sahadei",
+    "type": "prop",
+    "label_he": "התם בכוונה תליא מילתא ואנן סהדי דלא מצי לכווני דעתיה",
+    "label_en": "Shema depends on intent, and we are witnesses that the groom cannot direct his mind",
+    "locus": "Berakhot.17b.10",
+    "daf": "17b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "anan_sahadei",
+      "args": [
+       "chatan_lo_matzi_lechavnei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_roeh_omer_batlan",
+    "type": "prop",
+    "label_he": "הרואה אומר מלאכה הוא דאין לו, פוק חזי כמה בטלני איכא בשוקא",
+    "label_en": "on the Ninth of Av the onlooker says: it is work he lacks -- go see how many idlers are in the mark…",
+    "locus": "Berakhot.17b.10",
+    "daf": "17b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "observer_explains",
+      "args": [
+       "batel_betisha_beav",
+       "ein_lo_melakha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_chatan_krishma",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "chatan reciting first night",
+    "data": {
+     "topic": "chatan_reciting_first_night"
+    }
+   },
+   {
+    "id": "dispute:m_yuhara_resolution",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "resolving the yuhara contradiction",
+    "data": {
+     "topic": "resolving_the_yuhara_contradiction"
+    }
+   },
+   {
+    "id": "hypothesis:h_yuhara_mapping",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: RSbG is (as a rule) concerned for presumption",
+    "locus": "Berakhot.17b.7",
+    "daf": "17b",
+    "sentenceId": 6,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_17b",
+     "discharge_locus": "Berakhot.17b.8"
+    }
+   },
+   {
+    "id": "voice:chachamim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "chachamim",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_shisha",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav shisha",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rsbg",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rsbg",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:stam_17b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 17b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_chatan_krishma",
+    "target": "voice:chachamim",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_chatan_krishma",
+    "target": "voice:rsbg",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_yuhara_resolution",
+    "target": "voice:r_yochanan",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_yuhara_resolution",
+    "target": "voice:rav_shisha",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_yuhara_mapping",
+    "target": "prop:p_rsbg_chayish",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_yuhara_mapping",
+    "target": "prop:p_rabbanan_lo_chayshi",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_17b",
+    "target": "hypothesis:h_yuhara_mapping",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_chatan_rotze_kore",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_lo_kol_harotze",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_tch_betelim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_kol_adam_yaase",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_17b",
+    "target": "prop:p_rsbg_chayish",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_yuhara_mapping)"
+   },
+   {
+    "source": "voice:stam_17b",
+    "target": "prop:p_rabbanan_lo_chayshi",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_yuhara_mapping)"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_muchlefet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_shisha",
+    "target": "prop:p_lo_tachlif",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_shisha",
+    "target": "prop:p_ks_lo_yuhara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_shisha",
+    "target": "prop:p_batala_yuhara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_shisha",
+    "target": "prop:p_kavana_anan_sahadei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_shisha",
+    "target": "prop:p_roeh_omer_batlan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

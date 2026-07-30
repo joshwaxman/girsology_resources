@@ -298,6 +298,43 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_makkot_minyan",
+   "topic": "number_of_judges_makkot",
+   "parties": [
+    "tanna_kama_makkot",
+    "r_yishmael"
+   ]
+  },
+  {
+   "id": "m_taama_r_yishmael",
+   "topic": "reason_for_twenty_three",
+   "parties": [
+    "abaye",
+    "rava"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_hitzdiku_leminyan",
+   "assumes": "p_hitzdiku_leminyan",
+   "verdict": "abandoned",
+   "opened_by": "stam_10a",
+   "discharge_locus": "Sanhedrin.10a.7",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_hitzdiku_leminyan",
+    "p_makkot_shiva"
+   ],
+   "locus": "Sanhedrin.10a.7",
+   "daf": "10a",
+   "sentenceId": 6
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_gz_rasha_rasha",
@@ -900,9 +937,465 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "makkot_beesrim_veshlosha",
+     "gloss_en": "rasha ('im bin hakot harasha') -- rasha ('asher hu rasha lamut'): as those liable to death are tried by twenty-three, so those liable to lashes"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:gz_rasha_rasha",
+      "text_en": "the gezera shava licenses makkot_beesrim_veshlosha: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/sanhedrin_10a_makkot_bishlosha.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_makkot_shlosha",
+    "type": "prop",
+    "label_he": "מכות בשלשה",
+    "label_en": "lashes are administered by a court of three",
+    "locus": "Sanhedrin.10a.6",
+    "daf": "10a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_makkot",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_makkot_esrim_veshlosha",
+    "type": "prop",
+    "label_he": "משום רבי ישמעאל אמרו בעשרים ושלשה",
+    "label_en": "lashes are administered by a court of twenty-three",
+    "locus": "Sanhedrin.10a.11",
+    "daf": "10a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_makkot",
+       "esrim_veshlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ushfatum_derivation",
+    "type": "prop",
+    "label_he": "ושפטום – שנים, ואין בית דין שקול, מוסיפין עליהם עוד אחד",
+    "label_en": "ushfatum = two; a court may not be evenly balanced, add one: three",
+    "locus": "Sanhedrin.10a.6",
+    "daf": "10a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "shlosha_makkot",
+       "ushfatum_veshakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hitzdiku_leminyan",
+    "type": "prop",
+    "label_he": "אלא מעתה, והצדיקו – שנים, והרשיעו – שנים",
+    "label_en": "(entertained) vehitzdiku and vehirshi'u also count toward the tally of judges",
+    "locus": "Sanhedrin.10a.7",
+    "daf": "10a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "counts_toward",
+      "args": [
+       "vehitzdiku_vehirshiu",
+       "minyan_dayanim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_makkot_shiva",
+    "type": "prop",
+    "label_he": "הרי כאן שבעה",
+    "label_en": "(inside the hypothesis) the tally would come to seven judges",
+    "locus": "Sanhedrin.10a.7",
+    "daf": "10a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "size_required",
+      "args": [
+       "beit_din_makkot",
+       "shiva"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hitzdiku_leulla",
+    "type": "prop",
+    "label_he": "ההוא מיבעי ליה כדעולא",
+    "label_en": "vehitzdiku/vehirshi'u is needed for Ulla's derasha, so it never enters the count",
+    "locus": "Sanhedrin.10a.7",
+    "daf": "10a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "verse_spent_on",
+      "args": [
+       "vehitzdiku_vehirshiu",
+       "malkot_edim_zomemin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ulla_remez",
+    "type": "prop",
+    "label_he": "רמז לעדים זוממין שלוקין מניין? דכתיב והצדיקו את הצדיק...",
+    "label_en": "the Torah's hint that conspiring witnesses receive lashes is 'they shall justify the righteous and…",
+    "locus": "Sanhedrin.10a.8",
+    "daf": "10a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "source_of",
+      "args": [
+       "malkot_edim_zomemin",
+       "vehitzdiku_vehirshiu"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lav_sheein_bo_maaseh",
+    "type": "prop",
+    "label_he": "כל לאו שאין בו מעשה אין לוקין עליו",
+    "label_en": "one is not lashed for a prohibition without an act -- so lo ta'aneh cannot supply the lashes of con…",
+    "locus": "Sanhedrin.10a.10",
+    "daf": "10a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "no_malkot_for",
+      "args": [
+       "lav_sheein_bo_maaseh"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taam_gezera_shava",
+    "type": "prop",
+    "label_he": "אתיא רשע רשע מחייבי מיתות",
+    "label_en": "R' Yishmael's reason is the gezera shava rasha-rasha from those liable to death",
+    "locus": "Sanhedrin.10a.11",
+    "daf": "10a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "reason",
+      "args": [
+       "makkot_esrim_veshlosha",
+       "gzera_shava_rasha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taam_bimkom_mita",
+    "type": "prop",
+    "label_he": "רבא אמר: מלקות במקום מיתה עומדת",
+    "label_en": "R' Yishmael's reason is that lashes stand in place of death, so lashes are tried as a capital case",
+    "locus": "Sanhedrin.10a.12",
+    "daf": "10a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "reason",
+      "args": [
+       "makkot_esrim_veshlosha",
+       "malkot_bimkom_mita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:gz_rasha_rasha",
+    "type": "schema",
+    "label_he": "גזרה שווה",
+    "label_en": "rasha ('im bin hakot harasha') -- rasha ('asher hu rasha lamut'): as those liable to death are trie…",
+    "locus": "Sanhedrin.10a.11",
+    "daf": "10a",
+    "sentenceId": 10,
+    "data": {
+     "kind": "gezera_shava",
+     "status": "stands",
+     "holder": "r_yishmael",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "makkot_beesrim_veshlosha"
+     }
+    }
+   },
+   {
+    "id": "concl:makkot_beesrim_veshlosha",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "rasha ('im bin hakot harasha') -- rasha ('asher hu rasha lamut'): as those liable to death are trie…",
+    "data": {
+     "term": "makkot_beesrim_veshlosha"
+    }
+   },
+   {
+    "id": "dispute:m_makkot_minyan",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "number of judges makkot",
+    "data": {
+     "topic": "number_of_judges_makkot"
+    }
+   },
+   {
+    "id": "dispute:m_taama_r_yishmael",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "reason for twenty three",
+    "data": {
+     "topic": "reason_for_twenty_three"
+    }
+   },
+   {
+    "id": "hypothesis:h_hitzdiku_leminyan",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) vehitzdiku and vehirshi'u also count toward the tally of judges",
+    "locus": "Sanhedrin.10a.7",
+    "daf": "10a",
+    "sentenceId": 6,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_10a",
+     "discharge_locus": "Sanhedrin.10a.7"
+    }
+   },
+   {
+    "id": "voice:abaye",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "abaye",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yishmael",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yishmael",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_10a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 10a",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_kama_makkot",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kama makkot",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:ulla",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ulla",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yishmael",
+    "target": "schema:gz_rasha_rasha",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:gz_rasha_rasha",
+    "target": "concl:makkot_beesrim_veshlosha",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_makkot_minyan",
+    "target": "voice:tanna_kama_makkot",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_makkot_minyan",
+    "target": "voice:r_yishmael",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_taama_r_yishmael",
+    "target": "voice:abaye",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_taama_r_yishmael",
+    "target": "voice:rava",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_hitzdiku_leminyan",
+    "target": "prop:p_hitzdiku_leminyan",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_hitzdiku_leminyan",
+    "target": "prop:p_makkot_shiva",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_10a",
+    "target": "hypothesis:h_hitzdiku_leminyan",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:tanna_kama_makkot",
+    "target": "prop:p_makkot_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yishmael",
+    "target": "prop:p_makkot_esrim_veshlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "prop:p_ushfatum_derivation",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_10a",
+    "target": "prop:p_hitzdiku_leminyan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_hitzdiku_leminyan)"
+   },
+   {
+    "source": "voice:stam_10a",
+    "target": "prop:p_makkot_shiva",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_hitzdiku_leminyan)"
+   },
+   {
+    "source": "voice:stam_10a",
+    "target": "prop:p_hitzdiku_leulla",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ulla",
+    "target": "prop:p_ulla_remez",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_10a",
+    "target": "prop:p_lav_sheein_bo_maaseh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_taam_gezera_shava",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_taam_bimkom_mita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

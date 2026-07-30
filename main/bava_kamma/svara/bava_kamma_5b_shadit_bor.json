@@ -282,6 +282,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Bava_Kamma.5b.2",
      "daf": "5b",
      "sentenceId": 1
@@ -313,6 +319,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_tzad_keren_mikulhu",
@@ -441,6 +450,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "keren_atya_min_hatzad",
+     "gloss_en": "Goring should be derivable from the common factor of two other written categories (with Pit among them)"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_muadin_mitechilatan",
+      "text_en": "blocked by the objection: what is notable about all the others? they are forewarned from their outset -- whereas Goring begins innocuous"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_muadin_mitechilatan",
+      "drop": "pircha_muadin_mitechilatan",
+      "drop_node": "ground:pircha_muadin_mitechilatan",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -815,9 +847,416 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "keren_atya_min_hatzad",
+     "gloss_en": "per the view that Goring is superior (its object is to damage), even Goring is derivable from the common factor of two"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:tzad_keren_leman_damar_adifa",
+      "text_en": "the tzad hashaveh licenses keren_atya_min_hatzad: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/bava_kamma_5b_shadit_bor.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_kulhu_atyan_mibor",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "with Pit cast among them, every category comes from the common factor of two -- except Goring",
+    "locus": "Bava_Kamma.5b.2",
+    "daf": "5b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "derivable_via_hatzad",
+      "args": [
+       "kol_avot_lebar_mikeren"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_keren_adifa",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "on the contrary, Goring is superior: its object is to cause damage",
+    "locus": "Bava_Kamma.5b.3",
+    "daf": "5b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "kavanato_lehazik",
+      "args": [
+       "keren"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kativnehu_lehilkhoteihen",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Scripture wrote all the categories for their distinctive halakhot",
+    "locus": "Bava_Kamma.5b.4",
+    "daf": "5b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "nikhtevu",
+      "args": [
+       "avot_nezikin",
+       "lehilkhoteihen"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_keren_lechalek",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Goring was written to distinguish the innocuous (half damages) from the forewarned (full damages)",
+    "locus": "Bava_Kamma.5b.5",
+    "daf": "5b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "hilkhata_meyuchedet",
+      "args": [
+       "keren",
+       "chiluk_tam_muad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shen_regel_reshut_harabim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Eating and Trampling were written to exempt them in the public domain",
+    "locus": "Bava_Kamma.5b.6",
+    "daf": "5b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "hilkhata_meyuchedet",
+      "args": [
+       "shen_veregel",
+       "ptur_reshut_harabim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bor_liftor_kelim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Pit was written to exempt vessels damaged in it",
+    "locus": "Bava_Kamma.5b.7",
+    "daf": "5b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "hilkhata_meyuchedet",
+      "args": [
+       "bor",
+       "ptur_kelim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bor_liftor_adam",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "per R. Yehuda, who holds one liable for vessels in a pit: Pit was written to exempt a person [i.e.,…",
+    "locus": "Bava_Kamma.5b.7",
+    "daf": "5b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "hilkhata_meyuchedet",
+      "args": [
+       "bor",
+       "ptur_adam"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_adam_arbaa_devarim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Man was written to obligate him in the four additional payments",
+    "locus": "Bava_Kamma.5b.8",
+    "daf": "5b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "hilkhata_meyuchedet",
+      "args": [
+       "adam",
+       "arbaa_devarim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_esh_liftor_tamun",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Fire was written to exempt concealed items",
+    "locus": "Bava_Kamma.5b.9",
+    "daf": "5b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "hilkhata_meyuchedet",
+      "args": [
+       "esh",
+       "ptur_tamun"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_esh_lichakha_niro",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "per R. Yehuda, who holds one liable for concealed items in fire: Fire was written to include scorch…",
+    "locus": "Bava_Kamma.6a.1",
+    "daf": "6a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "hilkhata_meyuchedet",
+      "args": [
+       "esh",
+       "lichakha_niro"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:tzad_keren_mikulhu",
+    "type": "schema",
+    "label_he": "הצד השווה",
+    "label_en": "Goring should be derivable from the common factor of two other written categories (with Pit among t…",
+    "locus": "Bava_Kamma.5b.2",
+    "daf": "5b",
+    "sentenceId": 1,
+    "data": {
+     "kind": "tzad_hashaveh",
+     "status": "blocked",
+     "holder": "rava",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "keren_atya_min_hatzad"
+     }
+    }
+   },
+   {
+    "id": "concl:keren_atya_min_hatzad",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "Goring should be derivable from the common factor of two other written categories (with Pit among t…",
+    "data": {
+     "term": "keren_atya_min_hatzad"
+    }
+   },
+   {
+    "id": "ground:pircha_muadin_mitechilatan",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "what is notable about all the others? they are forewarned from their outset -- whereas Goring begin…",
+    "locus": "Bava_Kamma.5b.2",
+    "daf": "5b",
+    "sentenceId": 1,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:tzad_keren_leman_damar_adifa",
+    "type": "schema",
+    "label_he": "הצד השווה",
+    "label_en": "per the view that Goring is superior (its object is to damage), even Goring is derivable from the c…",
+    "locus": "Bava_Kamma.5b.3",
+    "daf": "5b",
+    "sentenceId": 2,
+    "data": {
+     "kind": "tzad_hashaveh",
+     "status": "stands",
+     "holder": "man_damar_keren_adifa",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "keren_atya_min_hatzad"
+     }
+    }
+   },
+   {
+    "id": "voice:man_damar_keren_adifa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "man damar keren adifa",
+    "data": {
+     "kind": "unknown"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_5b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 5b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:rava",
+    "target": "schema:tzad_keren_mikulhu",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:tzad_keren_mikulhu",
+    "target": "concl:keren_atya_min_hatzad",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_muadin_mitechilatan",
+    "target": "schema:tzad_keren_mikulhu",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:man_damar_keren_adifa",
+    "target": "schema:tzad_keren_leman_damar_adifa",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:tzad_keren_leman_damar_adifa",
+    "target": "concl:keren_atya_min_hatzad",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_kulhu_atyan_mibor",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:man_damar_keren_adifa",
+    "target": "prop:p_keren_adifa",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_kativnehu_lehilkhoteihen",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_keren_lechalek",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_shen_regel_reshut_harabim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_bor_liftor_kelim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_adam_arbaa_devarim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_esh_liftor_tamun",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_bor_liftor_adam",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(r_yehuda)"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_esh_lichakha_niro",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(r_yehuda)"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

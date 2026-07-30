@@ -25,6 +25,7 @@ voice(r_yehuda, tanna).
 voice(r_yose, tanna).
 voice(rabba_bar_rav_shila, amora).
 voice(bnei_maarava, community).
+voice(chachamim_dbaraita, collective).
 voice(stam_2a, stam).
 
 % --------------------------------------------------------------------
@@ -50,21 +51,33 @@ prop(p_rg_rationale).
 gloss(p_rg_rationale, 'the Sages said midnight only as a fence, to keep a person from transgression').
 locus(p_rg_rationale, 'Berakhot.2a.5').
 content(p_rg_rationale, purpose(decree_chatzot, harchaka_min_haaveira)).
+prop(p_rabba_shila_teaching).
+gloss(p_rabba_shila_teaching, 'Rabba bar Rav Shila: had the verse meant the man\'s purification it would say veyithar; vetaher means the day clears -- so \'uva hashemesh\' is sunset').
+locus(p_rabba_shila_teaching, 'Berakhot.2b.2').
+content(p_rabba_shila_teaching, verse_teaches(vetaher, tehar_yoma)).
+prop(p_uva_biat_shimsho).
+gloss(p_uva_biat_shimsho, '\'uva hashemesh\' is the sun\'s setting (not the light\'s departure), and vetaher means the day clears -- the priests eat teruma from nightfall').
+locus(p_uva_biat_shimsho, 'Berakhot.2b.4').
+content(p_uva_biat_shimsho, verse_teaches(uva_hashemesh, biat_shimsho)).
+prop(p_siman_tzeit).
+gloss(p_siman_tzeit, 'the operative marker for nightfall (when the priests may eat teruma) is the emergence of the stars').
+locus(p_siman_tzeit, 'Berakhot.2b.8').
+content(p_siman_tzeit, marker(laila, tzeit_hakochavim)).
 prop(p_shiur_same).
 gloss(p_shiur_same, 'the poor man\'s mealtime and the priest\'s teruma-time are one and the same measure').
 locus(p_shiur_same, 'Berakhot.2b.7').
 content(p_shiur_same, same(shiur_ani, shiur_kohen)).
 prop(p_ani_bnei_adam_same).
 gloss(p_ani_bnei_adam_same, 'the poor man\'s mealtime and ordinary people\'s mealtime are one and the same measure').
-locus(p_ani_bnei_adam_same, 'Berakhot.2b.10').
+locus(p_ani_bnei_adam_same, 'Berakhot.2b.11').
 content(p_ani_bnei_adam_same, same_shiur(shiur_ani, shiur_bnei_adam)).
 prop(p_chachamim_is_rmeir).
 gloss(p_chachamim_is_rmeir, 'then the position listed as the Sages\' would simply BE R\' Meir\'s').
-locus(p_chachamim_is_rmeir, 'Berakhot.2b.10').
+locus(p_chachamim_is_rmeir, 'Berakhot.2b.11').
 content(p_chachamim_is_rmeir, collapse_of(chachamim, r_meir)).
 prop(p_shiur_distinct).
 gloss(p_shiur_distinct, 'the poor man\'s measure and the priest\'s measure are distinct').
-locus(p_shiur_distinct, 'Berakhot.2b.11').
+locus(p_shiur_distinct, 'Berakhot.2b.15').
 content(p_shiur_distinct, distinct(shiur_ani, shiur_kohen)).
 prop(p_rm_bhs_yehuda).
 gloss(p_rm_bhs_yehuda, 'R\' Meir\'s marker is twilight as R\' Yehuda defines it').
@@ -72,7 +85,7 @@ locus(p_rm_bhs_yehuda, 'Berakhot.2b.13').
 content(p_rm_bhs_yehuda, marker(krishma_arvit, bein_hashmashot_yehuda)).
 prop(p_rm_bhs_yose).
 gloss(p_rm_bhs_yose, 'R\' Meir: I was speaking of R\' Yose\'s twilight, not yours').
-locus(p_rm_bhs_yose, 'Berakhot.3a.1').
+locus(p_rm_bhs_yose, 'Berakhot.2b.19').
 content(p_rm_bhs_yose, marker(krishma_arvit, bein_hashmashot_yose)).
 
 % --------------------------------------------------------------------
@@ -90,13 +103,19 @@ commit(r_gamliel, deoraita_deadline(krishma_arvit, amud_hashachar), assert, actu
 commit(r_gamliel, purpose(decree_chatzot, harchaka_min_haaveira), assert, actual).
 % Berakhot.2b.13
 commit(r_meir, marker(krishma_arvit, bein_hashmashot_yehuda), assert, actual).
-% Berakhot.3a.1 -- superseded by R' Meir's own reinterpretation
+% Berakhot.2b.19 -- superseded by R' Meir's own reinterpretation
 commit(r_meir, marker(krishma_arvit, bein_hashmashot_yehuda), retract, actual).
-% Berakhot.3a.1
+% Berakhot.2b.19
 commit(r_meir, marker(krishma_arvit, bein_hashmashot_yose), assert, actual).
-% Berakhot.2b.10
+% Berakhot.2b.2
+commit(rabba_bar_rav_shila, verse_teaches(vetaher, tehar_yoma), assert, actual).
+% Berakhot.2b.4 -- והדר פשטו לה מברייתא -- their own resolution of the iba'ya they raised at 2b.3
+commit(bnei_maarava, verse_teaches(uva_hashemesh, biat_shimsho), assert, actual).
+% Berakhot.2b.8
+commit(chachamim_dbaraita, marker(laila, tzeit_hakochavim), assert, actual).
+% Berakhot.2b.11
 commit(stam_2a, same_shiur(shiur_ani, shiur_bnei_adam), entertain, hyp(h_ani_bnei_adam)).
-% Berakhot.2b.10
+% Berakhot.2b.11
 commit(stam_2a, collapse_of(chachamim, r_meir), assert, hyp(h_ani_bnei_adam)).
 
 % --------------------------------------------------------------------
@@ -114,7 +133,7 @@ party(m_tzeit_markers, chachamim).
 % L3: hypotheses and their discharge (reductio)
 % --------------------------------------------------------------------
 hypothesis(h_shiur, p_shiur_same).
-% Berakhot.2b.11
+% Berakhot.2b.15
 hypothesis_verdict(h_shiur, reductio).
 
 % -- reductio: assumption vs. its consequence --
@@ -122,7 +141,7 @@ same(shiur_ani, shiur_kohen) :- not distinct(shiur_ani, shiur_kohen).
 distinct(shiur_ani, shiur_kohen) :- not same(shiur_ani, shiur_kohen).
 position_identity(m_tzeit_markers, chachamim, r_meir) :- same(shiur_ani, shiur_kohen).
 hypothesis(h_ani_bnei_adam, p_ani_bnei_adam_same).
-% Berakhot.2b.11
+% Berakhot.2b.12
 hypothesis_verdict(h_ani_bnei_adam, reductio).
 
 % --------------------------------------------------------------------
@@ -146,3 +165,21 @@ heard_of(bnei_maarava, p_rabba_shila_teaching, false).
 question(q_hirhur_kedibbur).
 verdict(q_hirhur_kedibbur, teiku).
 question(q_never_discussed).
+
+% --------------------------------------------------------------------
+% L3: support edges (evidence FOR a position; never establishes)
+% --------------------------------------------------------------------
+% Berakhot.2b.4 -- והדר פשטו לה מברייתא: since the baraita gives צאת הכוכבים as the siman, 'uva hashemesh' must be the sun's setting and vetaher the clearing of the day
+support(verse_teaches(uva_hashemesh, biat_shimsho), s_pashtu_mibaraita).
+support_kind(s_pashtu_mibaraita, ta_shema).
+support_by(s_pashtu_mibaraita, bnei_maarava).
+support_source(s_pashtu_mibaraita, p_siman_tzeit).
+% Berakhot.2b.8 -- ואנחנו עושים במלאכה... מעלות השחר עד צאת הכוכבים -- the workday runs dawn to starrise, so night begins at צאת הכוכבים (זכר לדבר)
+support(marker(laila, tzeit_hakochavim), s_zekher_nechemya).
+support_kind(s_zekher_nechemya, ta_shema).
+support_by(s_zekher_nechemya, chachamim_dbaraita).
+%   deflected at Berakhot.2b.10: וכי תימא: מכי ערבא שמשא ליליא הוא, ואינהו דמחשכי ומקדמי -- perhaps night begins at sunset and they simply worked late and started early, so the verse shows nothing
+support_deflected(s_zekher_nechemya, defl_machshechei).
+deflection_by(defl_machshechei, stam_2a).
+%   deflection refuted at Berakhot.2b.10: תא שמע: והיו לנו הלילה משמר והיום מלאכה -- the day IS the workday, so its end at צאת הכוכבים is the start of night
+deflection_refuted(defl_machshechei, refut_tashma_halayla).

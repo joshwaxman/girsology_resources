@@ -94,6 +94,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Berakhot.21a.6",
      "daf": "21a",
      "sentenceId": 5
@@ -124,6 +130,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Berakhot.21a.6",
      "daf": "21a",
      "sentenceId": 5
@@ -138,6 +150,21 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [
+  {
+   "id": "ch_teyuvta_mishnah",
+   "kind": "teyuvta",
+   "against": "kv_bhm_lefaneha",
+   "by": "stam_21a",
+   "gloss_en": "ועוד תנן -- and moreover we learned: over food one blesses after it and does not bless before it; the mishnah refutes the conclusion outright -- teyuvta",
+   "effect": "refutes",
+   "locus": "Berakhot.21a.6",
+   "daf": "21a",
+   "sentenceId": 5
+  }
+ ],
  "queries": [
   {
    "id": "status_kv_bht_achareha",
@@ -266,6 +293,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "birkat_hatorah_leachareha_required",
+     "gloss_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely requires one after"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_mazon_neheneh",
+      "text_en": "blocked by the objection: מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_mazon_neheneh",
+      "drop": "pircha_mazon_neheneh",
+      "drop_node": "ground:pircha_mazon_neheneh",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -553,6 +603,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "birkat_hamazon_lefaneha_required",
+     "gloss_en": "Torah requires no blessing after yet requires one before; food, which requires one after, surely requires one before"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_torah_chayei_olam",
+      "text_en": "blocked by the objection: מה לתורה שכן חיי עולם -- what of Torah? it is eternal life, which food does not share"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_torah_chayei_olam",
+      "drop": "pircha_torah_chayei_olam",
+      "drop_node": "ground:pircha_torah_chayei_olam",
+      "outcome": "blocked",
+      "text_en": "the inference would STILL be blocked (another ground remains)"
+     }
+    ]
    }
   },
   {
@@ -571,5 +644,244 @@
   }
  ],
  "kb": "svara/ber_21a_birkot_kv.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_bhm_achar_deoraita",
+    "type": "prop",
+    "label_he": "מנין לברכת המזון לאחריה מן התורה, שנאמר ואכלת ושבעת וברכת",
+    "label_en": "the blessing after food is from the Torah -- 'and you shall eat and be satisfied and bless'",
+    "locus": "Berakhot.21a.3",
+    "daf": "21a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "deoraita",
+      "args": [
+       "birkat_hamazon_leachareha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bht_lifnei_deoraita",
+    "type": "prop",
+    "label_he": "מנין לברכת התורה לפניה מן התורה, שנאמר כי שם ה' אקרא הבו גדל לאלהינו",
+    "label_en": "the blessing before Torah study is from the Torah -- 'when I proclaim the name of the Lord, ascribe…",
+    "locus": "Berakhot.21a.4",
+    "daf": "21a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "deoraita",
+      "args": [
+       "birkat_hatorah_lefaneha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_bht_achareha",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely r…",
+    "locus": "Berakhot.21a.5",
+    "daf": "21a",
+    "sentenceId": 4,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "r_yochanan",
+     "structure": {
+      "lenient": "mazon",
+      "strict": "torah",
+      "property": "teunah_leachareha",
+      "concludes": "birkat_hatorah_leachareha_required"
+     }
+    }
+   },
+   {
+    "id": "concl:birkat_hatorah_leachareha_required",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "food requires no blessing before yet requires one after; Torah, which requires one before, surely r…",
+    "data": {
+     "term": "birkat_hatorah_leachareha_required"
+    }
+   },
+   {
+    "id": "ground:pircha_mazon_neheneh",
+    "type": "ground",
+    "label_he": "מה למזון שכן נהנה",
+    "label_en": "מה למזון שכן נהנה -- what of food? there he derives bodily benefit, which Torah study does not share",
+    "locus": "Berakhot.21a.6",
+    "daf": "21a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:kv_bhm_lefaneha",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "Torah requires no blessing after yet requires one before; food, which requires one after, surely re…",
+    "locus": "Berakhot.21a.5",
+    "daf": "21a",
+    "sentenceId": 4,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "r_yochanan",
+     "structure": {
+      "lenient": "torah",
+      "strict": "mazon",
+      "property": "teunah_lefaneha",
+      "concludes": "birkat_hamazon_lefaneha_required"
+     }
+    }
+   },
+   {
+    "id": "concl:birkat_hamazon_lefaneha_required",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "Torah requires no blessing after yet requires one before; food, which requires one after, surely re…",
+    "data": {
+     "term": "birkat_hamazon_lefaneha_required"
+    }
+   },
+   {
+    "id": "ground:pircha_torah_chayei_olam",
+    "type": "ground",
+    "label_he": "מה לתורה שכן חיי עולם",
+    "label_en": "מה לתורה שכן חיי עולם -- what of Torah? it is eternal life, which food does not share",
+    "locus": "Berakhot.21a.6",
+    "daf": "21a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "challenge:ch_teyuvta_mishnah",
+    "type": "challenge",
+    "label_he": "ועוד תנן",
+    "label_en": "ועוד תנן -- and moreover we learned: over food one blesses after it and does not bless before it; t…",
+    "locus": "Berakhot.21a.6",
+    "daf": "21a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "teyuvta",
+     "by": "stam_21a",
+     "effect": "refutes"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_21a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 21a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yochanan",
+    "target": "schema:kv_bht_achareha",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_bht_achareha",
+    "target": "concl:birkat_hatorah_leachareha_required",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_mazon_neheneh",
+    "target": "schema:kv_bht_achareha",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "schema:kv_bhm_lefaneha",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_bhm_lefaneha",
+    "target": "concl:birkat_hamazon_lefaneha_required",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_torah_chayei_olam",
+    "target": "schema:kv_bhm_lefaneha",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "challenge:ch_teyuvta_mishnah",
+    "target": "schema:kv_bhm_lefaneha",
+    "type": "challenges",
+    "regime": "attack",
+    "kind": "teyuvta",
+    "live": true
+   },
+   {
+    "source": "voice:stam_21a",
+    "target": "challenge:ch_teyuvta_mishnah",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_bhm_achar_deoraita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_bht_lifnei_deoraita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

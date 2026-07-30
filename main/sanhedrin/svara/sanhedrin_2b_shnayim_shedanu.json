@@ -338,7 +338,461 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_minimum_deoraita",
+   "topic": "minimum_judges_deoraita",
+   "parties": [
+    "rava",
+    "rav_acha_br_ika"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_shlosha_waived",
+   "assumes": "p_hodaot_no_shlosha",
+   "verdict": "reductio",
+   "opened_by": "stam_2b",
+   "discharge_locus": "Sanhedrin.2b.7",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_hodaot_no_shlosha"
+   ],
+   "locus": "Sanhedrin.2b.6",
+   "daf": "2b",
+   "sentenceId": 5
+  }
+ ],
+ "challenges": [],
  "queries": [],
  "kb": "svara/sanhedrin_2b_shnayim_shedanu.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mah_hen",
+    "type": "prop",
+    "label_he": "מה הן קתני: מה הן דיני ממונות? גזילות וחבלות",
+    "label_en": "the mishna means: WHAT are the monetary cases [that need three experts]? robbery and injury -- admi…",
+    "locus": "Sanhedrin.2b.3",
+    "daf": "2b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mishnah_dinei_mamonot",
+       "mah_hen_gezelot_vachavalot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hodaot_no_shlosha",
+    "type": "prop",
+    "label_he": "אילימא דלא בעינן שלשה",
+    "label_en": "(entertained) admissions and loans would not require three judges",
+    "locus": "Sanhedrin.2b.6",
+    "daf": "2b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "not_required",
+      "args": [
+       "hodaot_vehalvaot",
+       "shlosha_dayanim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shnayim_ein_din",
+    "type": "prop",
+    "label_he": "שנים שדנו דיני ממונות, לדברי הכל אין דיניהם דין",
+    "label_en": "two who judged monetary cases -- all agree their judgment is no judgment",
+    "locus": "Sanhedrin.2b.6",
+    "daf": "2b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "shnayim_shedanu",
+       "ein_din"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hodaot_no_mumchin",
+    "type": "prop",
+    "label_he": "אלא דלא בעינן מומחין",
+    "label_en": "admissions and loans require no expert judges",
+    "locus": "Sanhedrin.2b.7",
+    "daf": "2b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "not_required",
+      "args": [
+       "hodaot_vehalvaot",
+       "mumchin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_eruv_parashiyot",
+    "type": "prop",
+    "label_he": "לעולם קסבר עירוב פרשיות כתוב כאן",
+    "label_en": "an interleaving of passages is written here -- so by right even admissions and loans would need exp…",
+    "locus": "Sanhedrin.2b.9",
+    "daf": "2b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "eruv_parashiyot",
+      "args": [
+       "ktuv_kan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_r_chanina_takana",
+    "type": "prop",
+    "label_he": "דבר תורה אחד דיני ממונות ואחד דיני נפשות בדרישה ובחקירה... כדי שלא תנעול דלת בפני לווין",
+    "label_en": "by Torah law monetary and capital cases alike require inquiry and interrogation; the Sages waived i…",
+    "locus": "Sanhedrin.2b.9",
+    "daf": "2b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "takana",
+      "args": [
+       "waive_drisha_mamonot",
+       "neilat_delet"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rava_tarti",
+    "type": "prop",
+    "label_he": "אלא אמר רבא: תרתי קתני, משום דרבי חנינא",
+    "label_en": "the mishna teaches two rules -- admissions and loans by three laymen, robbery and injury by three e…",
+    "locus": "Sanhedrin.3a.5",
+    "daf": "3a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mishnah_dinei_mamonot",
+       "tarti_mishum_r_chanina"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chad_kasher",
+    "type": "prop",
+    "label_he": "מדאורייתא חד נמי כשר, שנאמר בצדק תשפט עמיתך",
+    "label_en": "by Torah law even a single judge is fit -- 'in righteousness shall you judge your fellow'",
+    "locus": "Sanhedrin.3a.5",
+    "daf": "3a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "yachid_shedan",
+       "kasher_mideoraita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yoshvei_kranot",
+    "type": "prop",
+    "label_he": "אלא משום יושבי קרנות",
+    "label_en": "three is a rabbinic requirement, lest judgment fall to the idlers at the corners",
+    "locus": "Sanhedrin.3a.5",
+    "daf": "3a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "takana",
+      "args": [
+       "shlosha_derabanan",
+       "yoshvei_kranot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chad_degamir",
+    "type": "prop",
+    "label_he": "אי אפשר דלית בהו חד דגמיר",
+    "label_en": "among any three it is impossible that not one has learned -- which is why three answers the idlers…",
+    "locus": "Sanhedrin.3a.6",
+    "daf": "3a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "chazaka",
+      "args": [
+       "shlosha_chad_degamir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shmuel_shnayim_din",
+    "type": "prop",
+    "label_he": "שנים שדנו דיניהן דין, אלא שנקראו בית דין חצוף",
+    "label_en": "two who judged -- their judgment is a judgment, but they are called an impudent court",
+    "locus": "Sanhedrin.3a.7",
+    "daf": "3a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "shnayim_shedanu",
+       "din_aval_chatzuf"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nafka_mina_shmuel",
+    "type": "prop",
+    "label_he": "מאי איכא בין רבא לרב אחא בריה דרב איקא? איכא בינייהו דאמר שמואל",
+    "label_en": "the practical difference between Rava and Rav Acha is Shmuel's dictum: for Rava it does not stand,…",
+    "locus": "Sanhedrin.3a.7",
+    "daf": "3a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "nafka_mina",
+      "args": [
+       "m_minimum_deoraita",
+       "shmuel_shnayim_din"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_minimum_deoraita",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "minimum judges deoraita",
+    "data": {
+     "topic": "minimum_judges_deoraita"
+    }
+   },
+   {
+    "id": "hypothesis:h_shlosha_waived",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) admissions and loans would not require three judges",
+    "locus": "Sanhedrin.2b.6",
+    "daf": "2b",
+    "sentenceId": 5,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_2b",
+     "discharge_locus": "Sanhedrin.2b.7"
+    }
+   },
+   {
+    "id": "voice:r_abahu",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r abahu",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_chanina",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r chanina",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_acha_br_ika",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav acha br ika",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_2b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 2b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_minimum_deoraita",
+    "target": "voice:rava",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_minimum_deoraita",
+    "target": "voice:rav_acha_br_ika",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_shlosha_waived",
+    "target": "prop:p_hodaot_no_shlosha",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "hypothesis:h_shlosha_waived",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_mah_hen",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_hodaot_no_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_shlosha_waived)"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_shnayim_ein_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_hodaot_no_mumchin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_eruv_parashiyot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_chanina",
+    "target": "prop:p_r_chanina_takana",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_rava_tarti",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_acha_br_ika",
+    "target": "prop:p_chad_kasher",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_acha_br_ika",
+    "target": "prop:p_yoshvei_kranot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_chad_degamir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_shmuel_shnayim_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_shmuel_shnayim_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:rav_acha_br_ika",
+    "target": "prop:p_shmuel_shnayim_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_nafka_mina_shmuel",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

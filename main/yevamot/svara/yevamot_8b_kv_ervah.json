@@ -283,6 +283,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Yevamot.8b.3",
      "daf": "8b",
      "sentenceId": 2
@@ -306,6 +312,40 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_eipuch",
+   "assumes": "p_eipuch",
+   "verdict": "reductio",
+   "opened_by": "stam_8b",
+   "discharge_locus": "Yevamot.8b.7",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_eipuch"
+   ],
+   "locus": "Yevamot.8b.7",
+   "daf": "8b",
+   "sentenceId": 6
+  },
+  {
+   "id": "h_aleha_lehetera",
+   "assumes": "p_aleha_lehetera",
+   "verdict": "reductio",
+   "opened_by": "rav_ashi",
+   "discharge_locus": "Yevamot.8b.9",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_aleha_lehetera"
+   ],
+   "locus": "Yevamot.8b.8",
+   "daf": "8b",
+   "sentenceId": 7
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_ervah_shelo_bimkom",
@@ -434,6 +474,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "ervah_asura_shelo_bimkom_mitzva",
+     "gloss_en": "if the ervah is forbidden where there is a mitzva of yibbum, a fortiori she is forbidden where there is none"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_tzara_tochiach",
+      "text_en": "blocked by the objection: צרה תוכיח -- the rival wife is forbidden where there is a mitzva yet permitted where there is none; the a-fortiori pattern is refuted by counterexample (raised by Rami bar Chama)"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_tzara_tochiach",
+      "drop": "pircha_tzara_tochiach",
+      "drop_node": "ground:pircha_tzara_tochiach",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -637,5 +700,419 @@
   }
  ],
  "kb": "svara/yevamot_8b_kv_ervah.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ein_aseh_docheh_karet",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a positive command does not override a prohibition punishable by karet",
+    "locus": "Yevamot.8a.9",
+    "daf": "8a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "lo_docheh",
+      "args": [
+       "aseh",
+       "lav_karet"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_aleha_letzara",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the verse עליה is needed not for the ervah but to prohibit the rival wife",
+    "locus": "Yevamot.8a.9",
+    "daf": "8a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "needed_for",
+      "args": [
+       "milat_aleha",
+       "isur_tzara"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ervah_asura_shelo_bimkom",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the ervah herself remains forbidden even where no mitzva of yibbum applies",
+    "locus": "Yevamot.8b.3",
+    "daf": "8b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "asura",
+      "args": [
+       "ervah",
+       "shelo_bimkom_mitzva"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bechayeha_kol_shebechayeha",
+    "type": "prop",
+    "label_he": "בחייה",
+    "label_en": "בחייה -- throughout the sister's lifetime the ervah is forbidden, mitzva or no mitzva",
+    "locus": "Yevamot.8b.3",
+    "daf": "8b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "teaches",
+      "args": [
+       "milat_bechayeha",
+       "isur_kol_shebechayeha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tzara_muteret_shelo_bimkom",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the rival wife is forbidden where there is a mitzva and permitted where there is none",
+    "locus": "Yevamot.8b.3",
+    "daf": "8b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "muteret",
+      "args": [
+       "tzara",
+       "shelo_bimkom_mitzva"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bechayeha_leachar_mita",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "objection: בחייה is needed to teach that after the wife's death her sister is permitted",
+    "locus": "Yevamot.8b.4",
+    "daf": "8b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "needed_for",
+      "args": [
+       "milat_bechayeha",
+       "heter_leachar_mita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_achar_mita_meisha_el_achota",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "answer: the after-death permission follows from אשה אל אחותה; בחייה adds that even a divorced wife'…",
+    "locus": "Yevamot.8b.5",
+    "daf": "8b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "derived_from",
+      "args": [
+       "heter_leachar_mita",
+       "isha_el_achota"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_trei_kerai",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "two verses: לצרור implies both forbidden, לגלות ערותה implies one -- הא כיצד: with a mitzva both fo…",
+    "locus": "Yevamot.8b.6",
+    "daf": "8b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "harmonisation",
+      "args": [
+       "litzror_shteihen",
+       "legalot_ervata_chada"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_eipuch",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "reverse it: with a mitzva only the ervah forbidden, without one both forbidden",
+    "locus": "Yevamot.8b.7",
+    "daf": "8b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "mapping",
+      "args": [
+       "bimkom_shteihen_asurot",
+       "shelo_bimkom_chada"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_aleha_lehetera",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "perhaps עליה comes to permit: where יבמה יבא עליה applies, both she and her rival are permitted",
+    "locus": "Yevamot.8b.8",
+    "daf": "8b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "milat_aleha",
+       "hetera"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_ervah_shelo_bimkom",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "if the ervah is forbidden where there is a mitzva of yibbum, a fortiori she is forbidden where ther…",
+    "locus": "Yevamot.8b.2",
+    "daf": "8b",
+    "sentenceId": 1,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "rava",
+     "structure": {
+      "lenient": "bimkom_mitzva",
+      "strict": "shelo_bimkom_mitzva",
+      "property": "isur_ervah",
+      "concludes": "ervah_asura_shelo_bimkom_mitzva"
+     }
+    }
+   },
+   {
+    "id": "concl:ervah_asura_shelo_bimkom_mitzva",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "if the ervah is forbidden where there is a mitzva of yibbum, a fortiori she is forbidden where ther…",
+    "data": {
+     "term": "ervah_asura_shelo_bimkom_mitzva"
+    }
+   },
+   {
+    "id": "ground:pircha_tzara_tochiach",
+    "type": "ground",
+    "label_he": "צרה תוכיח",
+    "label_en": "צרה תוכיח -- the rival wife is forbidden where there is a mitzva yet permitted where there is none;…",
+    "locus": "Yevamot.8b.3",
+    "daf": "8b",
+    "sentenceId": 2,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "hypothesis:h_eipuch",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: reverse it: with a mitzva only the ervah forbidden, without one both forbidden",
+    "locus": "Yevamot.8b.7",
+    "daf": "8b",
+    "sentenceId": 6,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_8b",
+     "discharge_locus": "Yevamot.8b.7"
+    }
+   },
+   {
+    "id": "hypothesis:h_aleha_lehetera",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: perhaps עליה comes to permit: where יבמה יבא עליה applies, both she and her rival are perm…",
+    "locus": "Yevamot.8b.8",
+    "daf": "8b",
+    "sentenceId": 7,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "rav_ashi",
+     "discharge_locus": "Yevamot.8b.9"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_huna_bar_tachlifa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna bar tachlifa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_8b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 8b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:rava",
+    "target": "schema:kv_ervah_shelo_bimkom",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_ervah_shelo_bimkom",
+    "target": "concl:ervah_asura_shelo_bimkom_mitzva",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_tzara_tochiach",
+    "target": "schema:kv_ervah_shelo_bimkom",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "hypothesis:h_eipuch",
+    "target": "prop:p_eipuch",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "hypothesis:h_eipuch",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_aleha_lehetera",
+    "target": "prop:p_aleha_lehetera",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "hypothesis:h_aleha_lehetera",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_ein_aseh_docheh_karet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_aleha_letzara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_tzara_muteret_shelo_bimkom",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_bechayeha_kol_shebechayeha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_ervah_asura_shelo_bimkom",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_bechayeha_leachar_mita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_achar_mita_meisha_el_achota",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_8b",
+    "target": "prop:p_eipuch",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_eipuch)"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_aleha_lehetera",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_aleha_lehetera)"
+   },
+   {
+    "source": "voice:rav_huna_bar_tachlifa",
+    "target": "prop:p_trei_kerai",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rava"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

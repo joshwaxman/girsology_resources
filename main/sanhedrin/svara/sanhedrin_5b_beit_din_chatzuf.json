@@ -719,7 +719,1017 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_shnayim_shedanu",
+   "topic": "validity_of_two_judge_din",
+   "parties": [
+    "shmuel",
+    "r_abahu"
+   ]
+  },
+  {
+   "id": "m_pshara_minyan",
+   "topic": "size_of_pshara_panel",
+   "parties": [
+    "r_meir",
+    "chachamim"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_dvar_mishna",
+   "assumes": "p_okimta_dvar_mishna",
+   "verdict": "reductio",
+   "opened_by": "rav_safra",
+   "discharge_locus": "Sanhedrin.6a.4",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_okimta_dvar_mishna"
+   ],
+   "locus": "Sanhedrin.6a.4",
+   "daf": "6a",
+   "sentenceId": 3
+  },
+  {
+   "id": "h_minyan_din",
+   "assumes": "p_mipalgei_minyan_din",
+   "verdict": "abandoned",
+   "opened_by": "stam_5b",
+   "discharge_locus": "Sanhedrin.6a.7",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_din_bishnayim",
+    "p_mipalgei_minyan_din"
+   ],
+   "locus": "Sanhedrin.6a.6",
+   "daf": "6a",
+   "sentenceId": 5
+  },
+  {
+   "id": "h_tlata_tannaei",
+   "assumes": "p_shnayim_davka",
+   "verdict": "abandoned",
+   "opened_by": "stam_5b",
+   "discharge_locus": "Sanhedrin.6a.8",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_shnayim_davka"
+   ],
+   "locus": "Sanhedrin.6a.8",
+   "daf": "6a",
+   "sentenceId": 7
+  }
+ ],
+ "challenges": [],
  "queries": [],
  "kb": "svara/sanhedrin_5b_beit_din_chatzuf.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_shmuel_shnayim_din",
+    "type": "prop",
+    "label_he": "שנים שדנו – דיניהם דין, אלא שנקרא בית דין חצוף",
+    "label_en": "two who judged -- their judgment is a judgment, but they are called an impudent court",
+    "locus": "Sanhedrin.5b.12",
+    "daf": "5b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "shnayim_shedanu",
+       "din_aval_chatzuf"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yosifu",
+    "type": "prop",
+    "label_he": "אפילו שנים מזכין או שנים מחייבין ואחד אומר איני יודע – יוסיפו הדיינין",
+    "label_en": "even when two acquit or two convict and one says 'I do not know', the judges are added",
+    "locus": "Sanhedrin.5b.12",
+    "daf": "5b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "shnayim_mezakin_veeini_yodea",
+       "yosifu_hadayanin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yosifu_objection",
+    "type": "prop",
+    "label_he": "ואי איתא, להוו כשנים שדנו",
+    "label_en": "Rava's objection: if Shmuel's dictum held, the two agreeing judges should count as two-who-judged a…",
+    "locus": "Sanhedrin.5b.12",
+    "daf": "5b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "objection",
+      "args": [
+       "shmuel_shnayim_din",
+       "mishnat_yosifu"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shani_hatam",
+    "type": "prop",
+    "label_he": "שאני התם, דמעיקרא אדעתא דתלתא יתיבי",
+    "label_en": "there it is different: from the outset they convened with intent of three, so the judgment must iss…",
+    "locus": "Sanhedrin.5b.13",
+    "daf": "5b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "distinguishes",
+      "args": [
+       "mishnat_yosifu",
+       "adaata_ditlata"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_din_bishlosha",
+    "type": "prop",
+    "label_he": "הדין בשלשה",
+    "label_en": "monetary din is judged by three",
+    "locus": "Sanhedrin.5b.14",
+    "daf": "5b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_mamonot",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_pshara_clause",
+    "type": "prop",
+    "label_he": "ופשרה בשנים",
+    "label_en": "RSbG's clause 'and pshara by two' -- whose force (a substantive minimum, or not) is fixed only at 6…",
+    "locus": "Sanhedrin.5b.14",
+    "daf": "5b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "said_clause",
+      "args": [
+       "pshara_bishnayim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shnayim_chozrin",
+    "type": "prop",
+    "label_he": "ששנים שדנו – בעלי דינין יכולין לחזור בהן",
+    "label_en": "from a two-judge din the litigants can retract -- so for RSbG a two-judge din does not bind",
+    "locus": "Sanhedrin.5b.14",
+    "daf": "5b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "shnayim_shedanu",
+       "baalei_din_chozrin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_pshara_ein_chozrin",
+    "type": "prop",
+    "label_he": "ושנים שעשו פשרה – אין בעלי דינין יכולין לחזור בהן",
+    "label_en": "from a two-judge pshara the litigants cannot retract -- the greater power of pshara",
+    "locus": "Sanhedrin.5b.14",
+    "daf": "5b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "shnayim_sheasu_pshara",
+       "ein_chozrin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shmuel_kerabbanan",
+    "type": "prop",
+    "label_he": "וכי תימא פליגי רבנן עליה דרבן שמעון בן גמליאל... גברא אגברא קא רמית",
+    "label_en": "Shmuel's dictum does not follow RSbG -- he follows the Rabbanan who dispute RSbG; R' Abahu's claim…",
+    "locus": "Sanhedrin.6a.1",
+    "daf": "6a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "not_aligned",
+      "args": [
+       "shmuel_shnayim_din",
+       "rsbg"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shnayim_ein_din",
+    "type": "prop",
+    "label_he": "שנים שדנו דיני ממונות – לדברי הכל אין דיניהם דין",
+    "label_en": "two who judged monetary cases -- all agree their judgment is no judgment",
+    "locus": "Sanhedrin.6a.1",
+    "daf": "6a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "shnayim_shedanu",
+       "ein_din"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_dan_hadin",
+    "type": "prop",
+    "label_he": "דן את הדין... מה שעשה עשוי ומשלם מביתו",
+    "label_en": "one who judged a case [alone] and erred -- what he did is done, and he pays from his own home (so a…",
+    "locus": "Sanhedrin.6a.2",
+    "daf": "6a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "yachid_shedan",
+       "ma_sheasa_asuy"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_okimta_kibluhu",
+    "type": "prop",
+    "label_he": "הכא במאי עסקינן – דקיבלוהו עלייהו",
+    "label_en": "the erring-judge mishna speaks of litigants who accepted the judge upon themselves",
+    "locus": "Sanhedrin.6a.3",
+    "daf": "6a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "mishnat_dan_hadin",
+       "kibluhu_alaihu"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_okimta_din_torah",
+    "type": "prop",
+    "label_he": "דאמרו ליה: דיינת לן דין תורה",
+    "label_en": "he pays from his home because they told him 'judge Torah law for us', and having erred he did not",
+    "locus": "Sanhedrin.6a.3",
+    "daf": "6a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "mishnat_dan_hadin",
+       "amru_dayenat_din_torah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_okimta_dvar_mishna",
+    "type": "prop",
+    "label_he": "אילימא דטעה בדבר משנה",
+    "label_en": "(entertained) the erring judge of the mishna erred in a matter of mishna",
+    "locus": "Sanhedrin.6a.4",
+    "daf": "6a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "mishnat_dan_hadin",
+       "taah_bidvar_mishna"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_dvar_mishna_chozer",
+    "type": "prop",
+    "label_he": "טעה בדבר משנה – חוזר",
+    "label_en": "a ruling erroneous in a matter of mishna reverses (so 'what he did is done' could not have been sai…",
+    "locus": "Sanhedrin.6a.4",
+    "daf": "6a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "din_status",
+      "args": [
+       "taah_bidvar_mishna",
+       "chozer"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_okimta_shikul",
+    "type": "prop",
+    "label_he": "אלא דטעה בשיקול הדעת",
+    "label_en": "rather, the mishna's judge erred in weighing discretion (shikul hada'at)",
+    "locus": "Sanhedrin.6a.4",
+    "daf": "6a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "mishnat_dan_hadin",
+       "taah_beshikul_hadaat"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shikul_def",
+    "type": "prop",
+    "label_he": "כגון תרי תנאי ותרי אמוראי דפליגי... וסוגיין דעלמא אליבא דחד מינייהו, ואזל איהו ועבד כאידך",
+    "label_en": "shikul hada'at defined: an undecided dispute of two tannaim or amoraim where general practice follo…",
+    "locus": "Sanhedrin.6a.5",
+    "daf": "6a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "shikul_hadaat",
+       "keneged_sugyan_dealma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bitzua_shlosha",
+    "type": "prop",
+    "label_he": "ביצוע בשלשה, דברי רבי מאיר",
+    "label_en": "bitzua (compromise) is by three",
+    "locus": "Sanhedrin.6a.6",
+    "daf": "6a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "pshara",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_pshara_beyachid",
+    "type": "prop",
+    "label_he": "וחכמים אומרים: פשרה ביחיד",
+    "label_en": "pshara is by a single judge",
+    "locus": "Sanhedrin.6a.6",
+    "daf": "6a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "pshara",
+       "echad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mipalgei_minyan_din",
+    "type": "prop",
+    "label_he": "מאי לאו בהא קמיפלגי, דמר סבר דין בשלשה ומר סבר דין בשנים",
+    "label_en": "(entertained) the pshara dispute turns on the size of the DIN bench itself",
+    "locus": "Sanhedrin.6a.7",
+    "daf": "6a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "hinges_on",
+      "args": [
+       "m_pshara_minyan",
+       "minyan_din"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_din_bishnayim",
+    "type": "prop",
+    "label_he": "ומר סבר דין בשנים",
+    "label_en": "(inside the hypothesis) the Chachamim would hold din itself is by two",
+    "locus": "Sanhedrin.6a.7",
+    "daf": "6a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_mamonot",
+       "shnayim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mipalgei_makshinan",
+    "type": "prop",
+    "label_he": "והכא בהא קמיפלגי: דמר סבר מקשינן פשרה לדין, ומר סבר לא מקשינן פשרה לדין",
+    "label_en": "the real crux: whether pshara is assimilated to din",
+    "locus": "Sanhedrin.6a.7",
+    "daf": "6a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "hinges_on",
+      "args": [
+       "m_pshara_minyan",
+       "makshinan_pshara_ledin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shnayim_davka",
+    "type": "prop",
+    "label_he": "לימא תלתא תנאי בפשרה",
+    "label_en": "(entertained) RSbG's 'pshara by two' is a substantive minimum -- yielding three distinct tannaitic…",
+    "locus": "Sanhedrin.6a.8",
+    "daf": "6a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "pshara_bishnayim",
+       "shnayim_davka"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_afilu_chad",
+    "type": "prop",
+    "label_he": "מאן דאמר תרי – אפילו חד נמי, והאי דקאמר תרי – כי היכי דליהוו עליה סהדי",
+    "label_en": "he who said two holds even one suffices; two was said only so that there be witnesses on him -- so…",
+    "locus": "Sanhedrin.6a.8",
+    "daf": "6a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "pshara_bishnayim",
+       "afilu_chad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_pshara_lo_kinyan",
+    "type": "prop",
+    "label_he": "שמע מינה פשרה אינה צריכה קנין, דאי סלקא דעתך צריכה קנין, למאן דאמר צריכה תלתא למה לי",
+    "label_en": "pshara requires no kinyan -- else the three-sayer should suffice with two judges plus a kinyan",
+    "locus": "Sanhedrin.6a.9",
+    "daf": "6a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "not_required",
+      "args": [
+       "pshara",
+       "kinyan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_shnayim_shedanu",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "validity of two judge din",
+    "data": {
+     "topic": "validity_of_two_judge_din"
+    }
+   },
+   {
+    "id": "dispute:m_pshara_minyan",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "size of pshara panel",
+    "data": {
+     "topic": "size_of_pshara_panel"
+    }
+   },
+   {
+    "id": "hypothesis:h_dvar_mishna",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the erring judge of the mishna erred in a matter of mishna",
+    "locus": "Sanhedrin.6a.4",
+    "daf": "6a",
+    "sentenceId": 3,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "rav_safra",
+     "discharge_locus": "Sanhedrin.6a.4"
+    }
+   },
+   {
+    "id": "hypothesis:h_minyan_din",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the pshara dispute turns on the size of the DIN bench itself",
+    "locus": "Sanhedrin.6a.6",
+    "daf": "6a",
+    "sentenceId": 5,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_5b",
+     "discharge_locus": "Sanhedrin.6a.7"
+    }
+   },
+   {
+    "id": "hypothesis:h_tlata_tannaei",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) RSbG's 'pshara by two' is a substantive minimum -- yielding three distinct t…",
+    "locus": "Sanhedrin.6a.8",
+    "daf": "6a",
+    "sentenceId": 7,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_5b",
+     "discharge_locus": "Sanhedrin.6a.8"
+    }
+   },
+   {
+    "id": "voice:chachamim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "chachamim",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:mishnah_dan_hadin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah dan hadin",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:mishnah_rov",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah rov",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:r_abahu",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r abahu",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_ami",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r ami",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_meir",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r meir",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_acha_br_ika",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav acha br ika",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_nachman",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav nachman",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_papa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav papa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_safra",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav safra",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rsbg",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rsbg",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_5b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 5b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_shnayim_shedanu",
+    "target": "voice:shmuel",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_shnayim_shedanu",
+    "target": "voice:r_abahu",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_pshara_minyan",
+    "target": "voice:r_meir",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_pshara_minyan",
+    "target": "voice:chachamim",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_dvar_mishna",
+    "target": "prop:p_okimta_dvar_mishna",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_safra",
+    "target": "hypothesis:h_dvar_mishna",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_minyan_din",
+    "target": "prop:p_mipalgei_minyan_din",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_minyan_din",
+    "target": "prop:p_din_bishnayim",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "hypothesis:h_minyan_din",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_tlata_tannaei",
+    "target": "prop:p_shnayim_davka",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "hypothesis:h_tlata_tannaei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_shmuel_shnayim_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_nachman",
+    "target": "prop:p_shmuel_shnayim_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishnah_rov",
+    "target": "prop:p_yosifu",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_yosifu_objection",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_shani_hatam",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_din_bishlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_pshara_clause",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_shnayim_chozrin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_pshara_ein_chozrin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_shmuel_kerabbanan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_shmuel_shnayim_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_shnayim_ein_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_shnayim_ein_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:mishnah_dan_hadin",
+    "target": "prop:p_dan_hadin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_okimta_kibluhu",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_okimta_din_torah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_safra",
+    "target": "prop:p_okimta_dvar_mishna",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_dvar_mishna)"
+   },
+   {
+    "source": "voice:r_ami",
+    "target": "prop:p_dvar_mishna_chozer",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_safra",
+    "target": "prop:p_okimta_shikul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_papa",
+    "target": "prop:p_shikul_def",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_meir",
+    "target": "prop:p_bitzua_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_pshara_beyachid",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_mipalgei_minyan_din",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_minyan_din)"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_din_bishnayim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_minyan_din)"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_mipalgei_makshinan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_meir",
+    "target": "prop:p_din_bishlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_din_bishlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_shnayim_davka",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_tlata_tannaei)"
+   },
+   {
+    "source": "voice:rav_acha_br_ika",
+    "target": "prop:p_afilu_chad",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_pshara_lo_kinyan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5b",
+    "target": "prop:p_pshara_lo_kinyan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

@@ -146,6 +146,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_q_akhbar_nichnas_veyotze",
@@ -919,5 +922,162 @@
   }
  ],
  "kb": "svara/pesachim_10b_akhbar_teiku.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_akhbar_perurin",
+    "type": "prop",
+    "label_he": "עכבר נכנס וככר בפיו ונכנס אחריו ומצא פירורין — צריך בדיקה",
+    "label_en": "a mouse entered with a loaf and crumbs were found: bedika is still required, for a mouse does not c…",
+    "locus": "Pesachim.10b.4",
+    "daf": "10b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "requires",
+      "args": [
+       "bayit_akhbar_perurin",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tinok_perurin",
+    "type": "prop",
+    "label_he": "תינוק נכנס וככר בידו ... ומצא פירורין — אין צריך בדיקה",
+    "label_en": "a child entered with a loaf and crumbs were found: no bedika is required, for a child's way is to c…",
+    "locus": "Pesachim.10b.4",
+    "daf": "10b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "exempt",
+      "args": [
+       "bayit_tinok_perurin",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "question:q_akhbar_nichnas_veyotze",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "a mouse entered with a loaf and a mouse left with a loaf: the same mouse, or another?",
+    "locus": "Pesachim.10b.5",
+    "daf": "10b",
+    "sentenceId": 4,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "question:q_lavan_shachor",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "a white mouse entered with a loaf and a black mouse left with a loaf: surely another loaf, or did i…",
+    "locus": "Pesachim.10b.6",
+    "daf": "10b",
+    "sentenceId": 5,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "question:q_chulda_yotzet",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "a mouse entered with a loaf and a marten left with a loaf: did the marten take it from the mouse, o…",
+    "locus": "Pesachim.10b.7",
+    "daf": "10b",
+    "sentenceId": 6,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "question:q_chulda_veakhbar_befiha",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "a marten left with a loaf and the mouse itself in its mouth: is it the same loaf, or should the loa…",
+    "locus": "Pesachim.10b.8",
+    "daf": "10b",
+    "sentenceId": 7,
+    "data": {
+     "status": "teiku",
+     "recordedVerdict": "teiku"
+    }
+   },
+   {
+    "id": "question:q_kikar_bishmei_kora",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "a loaf on a roof-beam: must one bring a ladder to take it down?",
+    "locus": "Pesachim.10b.9",
+    "daf": "10b",
+    "sentenceId": 8,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "question:q_kikar_bevor",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "a loaf in a pit: must one bring a ladder to bring it up?",
+    "locus": "Pesachim.10b.10",
+    "daf": "10b",
+    "sentenceId": 9,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "question:q_kikar_befi_nachash",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "a loaf in a snake's mouth: must one hire a charmer to take it out -- the Sages burdened his person…",
+    "locus": "Pesachim.10b.11",
+    "daf": "10b",
+    "sentenceId": 10,
+    "data": {
+     "status": "teiku",
+     "recordedVerdict": "teiku"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:rava",
+    "target": "prop:p_akhbar_perurin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_tinok_perurin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

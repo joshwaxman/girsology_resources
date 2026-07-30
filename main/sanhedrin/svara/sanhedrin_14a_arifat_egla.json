@@ -157,7 +157,201 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_smicha_size",
+   "topic": "size_of_smicha_court",
+   "parties": [
+    "r_shimon",
+    "r_yehuda"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [],
  "kb": "svara/sanhedrin_14a_arifat_egla.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_egla_chamisha",
+    "type": "prop",
+    "label_he": "זקניך – שנים, ושפטיך – שנים, ואין בית דין שקול מוסיפין עליהן עוד אחד, הרי כאן חמשה",
+    "label_en": "the heifer-rite panel (the smicha-and-egla clause court) is five",
+    "locus": "Sanhedrin.14a.13",
+    "daf": "14a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_smicha",
+       "chamisha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_egla_shlosha",
+    "type": "prop",
+    "label_he": "רבי שמעון אומר: זקניך – שנים... הרי כאן שלשה",
+    "label_en": "the heifer-rite panel (the smicha-and-egla clause court) is three",
+    "locus": "Sanhedrin.14a.13",
+    "daf": "14a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_smicha",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_egla_derivation_yehuda",
+    "type": "prop",
+    "label_he": "זקניך – שנים, ושפטיך – שנים, ואין בית דין שקול, מוסיפין עליהן עוד אחד",
+    "label_en": "R' Yehuda's five for the heifer rite: zekenecha = two, shoftecha = two, plus one because a court ma…",
+    "locus": "Sanhedrin.14a.13",
+    "daf": "14a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "chamisha_egla",
+       "shtei_milim_veshakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_egla_derivation_shimon",
+    "type": "prop",
+    "label_he": "זקניך – שנים, ואין בית דין שקול מוסיפין עליהם עוד אחד, הרי כאן שלשה",
+    "label_en": "R' Shimon's three for the heifer rite: zekenecha = two, plus one because a court may not be evenly…",
+    "locus": "Sanhedrin.14a.13",
+    "daf": "14a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "shlosha_egla",
+       "milah_achat_veshakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_beit_din_shakul",
+    "type": "prop",
+    "label_he": "ואין בית דין שקול",
+    "label_en": "a court may not be evenly balanced -- one judge is added to any even count",
+    "locus": "Sanhedrin.14a.13",
+    "daf": "14a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "principle",
+      "args": [
+       "ein_beit_din_shakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_smicha_size",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "size of smicha court",
+    "data": {
+     "topic": "size_of_smicha_court"
+    }
+   },
+   {
+    "id": "voice:r_shimon",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r shimon",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_smicha_size",
+    "target": "voice:r_shimon",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_smicha_size",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_egla_chamisha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_egla_derivation_yehuda",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_egla_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_egla_derivation_shimon",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ein_beit_din_shakul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_ein_beit_din_shakul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

@@ -772,6 +772,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Bava_Metzia.6b.8",
      "daf": "6b",
      "sentenceId": 7
@@ -837,6 +843,57 @@
   }
  ],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_baraita_is_tekafah",
+   "assumes": "p_read_baraita_tekafah",
+   "verdict": "abandoned",
+   "opened_by": "stam_6a",
+   "discharge_locus": "Bava_Metzia.6a.15",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_read_baraita_tekafah"
+   ],
+   "locus": "Bava_Metzia.6a.13",
+   "daf": "6a",
+   "sentenceId": 12
+  },
+  {
+   "id": "h_itl_motziin",
+   "assumes": "p_itl_motziin",
+   "verdict": "open",
+   "opened_by": "stam_6a",
+   "discharge_locus": null,
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_hikdisha_invalid",
+    "p_itl_motziin"
+   ],
+   "locus": "Bava_Metzia.6a.16",
+   "daf": "6a",
+   "sentenceId": 15
+  },
+  {
+   "id": "h_itl_ein_motziin",
+   "assumes": "p_itl_ein_motziin",
+   "verdict": "open",
+   "opened_by": "stam_6a",
+   "discharge_locus": null,
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_itl_ein_motziin",
+    "p_q_hikdisha"
+   ],
+   "locus": "Bava_Metzia.6a.16",
+   "daf": "6a",
+   "sentenceId": 15
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_mn_nine_exempt",
@@ -965,6 +1022,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "dir_baraita_no_support_for_rabba",
+     "gloss_en": "owner of nine plus the doubtful animal is exempt whichever way: if it is his, he tithed well; if the priest's, nine are not subject to tithe"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_asiri_vadai",
+      "text_en": "blocked by the objection: לאו מילתא היא דאמרי -- an animal of uncertain status is excluded from the tithe count entirely (עשירי ודאי ולא עשירי ספק), so the nine-plus-safek framing cannot be what the baraita means"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_asiri_vadai",
+      "drop": "pircha_asiri_vadai",
+      "drop_node": "ground:pircha_asiri_vadai",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -1398,8 +1478,1146 @@
      }
     ]
    }
+  },
+  {
+   "id": "cf_drop_refut_asiri_vadai",
+   "kind": "counterfactual",
+   "subject": "p_tekafo_kohen_motziin",
+   "label_en": "Had the deflection's refutation not stood, would this support still stand?",
+   "delta": {
+    "drop_ground": "refut_asiri_vadai"
+   },
+   "goal_display": "live_support(motziin_miyado(safek_bechor_seized_by_kohen), s_mesaya_dir)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null,
+   "note": "counterfactual — affects only the evidentiary record; no verdict changes (support never establishes)"
   }
  ],
  "kb": "svara/bm_6a_tekafah_echad.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_case_shatik_tzavach",
+    "type": "prop",
+    "label_he": "לא צריכא דשתיק מעיקרא והדר צווח",
+    "label_en": "the operative case: he was silent when the other seized it before the court, and only later shouted",
+    "locus": "Bava_Metzia.6a.12",
+    "daf": "6a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "q_tekafah",
+       "silent_then_shouted"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_q_tekafah",
+    "type": "prop",
+    "label_he": "תקפה אחד בפנינו מהו",
+    "label_en": "does the court take the garment back from one who seized all of it in its presence?",
+    "locus": "Bava_Metzia.6a.10",
+    "daf": "6a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "motziin_miyado",
+      "args": [
+       "talit_tekufa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bda_baraita",
+    "type": "prop",
+    "label_he": "במה דברים אמורים ששניהם אדוקין בה, אבל היתה טלית יוצאת מתחת ידו של אחד מהן המוציא מחבירו עליו הראיה",
+    "label_en": "baraita: the mishna's oath-and-division applies only while both grasp it; if it emerges from under…",
+    "locus": "Bava_Metzia.6a.13",
+    "daf": "6a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "talit_under_one_hand",
+       "hamotzi_alav_haraaya"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_read_baraita_tekafah",
+    "type": "prop",
+    "label_he": "אלא שתקפה אחד בפנינו",
+    "label_en": "(entertained) the baraita's case must be one who seized it in our presence -- which would resolve t…",
+    "locus": "Bava_Metzia.6a.13",
+    "daf": "6a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "bda_baraita_case",
+       "tekafah_befaneinu"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_read_zilu_plugu",
+    "type": "prop",
+    "label_he": "כגון דאתו לקמן כדתפיסו לה תרוייהו... והדר אתו כי תפיס לה חד מינייהו",
+    "label_en": "deflection 1: they left the court holding it jointly and returned with one holding it, the other cl…",
+    "locus": "Bava_Metzia.6a.14",
+    "daf": "6a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "bda_baraita_case",
+       "returned_after_division_order"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_read_sarich",
+    "type": "prop",
+    "label_he": "ואיבעית אימא... ואידך מסרך בה סרוכי, מודה סומכוס דסרכא לאו כלום היא",
+    "label_en": "deflection 2: one holds it and the other merely hangs on the fringe -- even Sumchos concedes hangin…",
+    "locus": "Bava_Metzia.6a.15",
+    "daf": "6a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "bda_baraita_case",
+       "one_holds_one_hangs"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_itl_motziin",
+    "type": "prop",
+    "label_he": "אם תמצי לומר תקפה אחד בפנינו מוציאין אותה מידו",
+    "label_en": "(ITL branch A) the court removes seized property from the seizer's hand",
+    "locus": "Bava_Metzia.6a.16",
+    "daf": "6a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "itl_motziin",
+      "args": [
+       "talit_tekufa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hikdisha_invalid",
+    "type": "prop",
+    "label_he": "הקדישה אינה מקודשת",
+    "label_en": "(inside branch A) then if either consecrated it, the consecration fails -- it is not his",
+    "locus": "Bava_Metzia.6a.16",
+    "daf": "6a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "hekdesh_status",
+      "args": [
+       "talit_seized_consecrated",
+       "invalid"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_itl_ein_motziin",
+    "type": "prop",
+    "label_he": "אם תמצי לומר תקפה אחד בפנינו אין מוציאין אותה מידו",
+    "label_en": "(ITL branch B) the court does NOT remove seized property",
+    "locus": "Bava_Metzia.6a.16",
+    "daf": "6a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "itl_ein_motziin",
+      "args": [
+       "talit_tekufa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_q_hikdisha",
+    "type": "prop",
+    "label_he": "הקדישה בלא תקפה מהו",
+    "label_en": "(inside branch B) if one consecrated it WITHOUT seizing: is saying-to-Heaven like handing-to-a-pers…",
+    "locus": "Bava_Metzia.6a.16",
+    "daf": "6a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "hekdesh_status_q",
+      "args": [
+       "talit_consecrated_unseized"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bechor_mishna",
+    "type": "prop",
+    "label_he": "ספק בכורות... המוציא מחבירו עליו הראיה, ותני עלה אסורים בגיזה ובעבודה",
+    "label_en": "mishna+baraita: for uncertain firstborns the burden of proof is on the claimant, yet they remain fo…",
+    "locus": "Bava_Metzia.6b.2",
+    "daf": "6b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "safek_bechor",
+       "assur_begiza_uvaavoda"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hamnuna_proof",
+    "type": "prop",
+    "label_he": "והא הכא דאמר תקפו כהן אין מוציאין אותו מידו... וכי לא תקפו אסורין בגיזה ובעבודה",
+    "label_en": "Rav Hamnuna: since the priest would keep a seized safek-firstborn yet it is holy even unseized, the…",
+    "locus": "Bava_Metzia.6b.3",
+    "daf": "6b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "proof",
+      "args": [
+       "masuta_hekdesh_valid",
+       "from_safek_bechor"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kedusha_meeleha",
+    "type": "prop",
+    "label_he": "קדושה הבאה מאליה שאני",
+    "label_en": "Rabba: no proof -- a firstborn's sanctity arises by itself; consecration by declaration still needs…",
+    "locus": "Bava_Metzia.6b.4",
+    "daf": "6b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "safek_bechor",
+       "kedusha_haba_meeleha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tekafo_kohen_motziin",
+    "type": "prop",
+    "label_he": "לעולם אימא לך תקפו כהן מוציאין אותו מידו",
+    "label_en": "Rabba: if a priest seizes an uncertain firstborn, the court removes it from his hand",
+    "locus": "Bava_Metzia.6b.4",
+    "daf": "6b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "motziin_miyado",
+      "args": [
+       "safek_bechor_seized_by_kohen"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_dir_baraita",
+    "type": "prop",
+    "label_he": "הספיקות נכנסין לדיר להתעשר",
+    "label_en": "baraita: animals of uncertain status enter the pen to be tithed",
+    "locus": "Bava_Metzia.6b.5",
+    "daf": "6b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "sfeikot",
+       "nichnasin_ladir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_oqimta_nine",
+    "type": "prop",
+    "label_he": "הכא במאי עסקינן כגון דלית ליה אלא תשעה והוא",
+    "label_en": "Abaye's deflection: the pen-baraita is a case of nine animals plus the doubtful one, where the owne…",
+    "locus": "Bava_Metzia.6b.7",
+    "daf": "6b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "dir_baraita",
+       "nine_plus_safek"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_asiri_vadai",
+    "type": "prop",
+    "label_he": "עשירי ודאי אמר רחמנא ולא עשירי ספק",
+    "label_en": "the Torah requires a CERTAIN tenth; an animal of uncertain status never enters the tithe count at a…",
+    "locus": "Bava_Metzia.7a.1",
+    "daf": "7a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "maasar_behema",
+       "asiri_vadai_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sfeikot_pidyon",
+    "type": "prop",
+    "label_he": "אלא ספק פדיון פטר חמור",
+    "label_en": "Rav Acha of Difti: the 'sfeikot' of the pen-baraita are lambs set aside for doubtful firstborn donk…",
+    "locus": "Bava_Metzia.7a.3",
+    "daf": "7a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "dir_baraita_sfeikot",
+       "pidyon_peter_chamor"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ten_donkeys",
+    "type": "prop",
+    "label_he": "ישראל שיש לו עשרה ספק פטרי חמור בתוך ביתו מפריש עליהן עשרה שיין ומעשרן והן שלו",
+    "label_en": "Rabba bar Avuha: one with ten doubtful firstborn donkeys separates ten lambs, tithes them, and they…",
+    "locus": "Bava_Metzia.7a.3",
+    "daf": "7a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "safek_pitrei_chamor",
+       "lambs_tithed_and_his"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rn_principle",
+    "type": "prop",
+    "label_he": "כל ממון שאין יכול להוציאו בדיינין, הקדישו אינו קדוש",
+    "label_en": "Rav Nachman: property one cannot recover by legal process -- consecrating it is invalid",
+    "locus": "Bava_Metzia.7a.4",
+    "daf": "7a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "hekdesh",
+       "requires_recoverability_in_court"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_masuta_lo_kadosh",
+    "type": "prop",
+    "label_he": "ופשטה מהא דאמר רב נחמן",
+    "label_en": "the masuta case was resolved by that principle: the disputed bathhouse's consecration did not take…",
+    "locus": "Bava_Metzia.7a.4",
+    "daf": "7a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "hekdesh_status",
+      "args": [
+       "masuta",
+       "invalid"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_gazal_lo_makdish",
+    "type": "prop",
+    "label_he": "גזל ולא נתייאשו הבעלים שניהם אינם יכולין להקדישו",
+    "label_en": "R' Yochanan: a robbed item before the owner's despair -- neither robber nor owner can consecrate it…",
+    "locus": "Bava_Metzia.7a.5",
+    "daf": "7a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "gezel_before_yeush",
+       "neither_can_consecrate"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_masuta_karka",
+    "type": "prop",
+    "label_he": "במסותא מקרקעי עסקינן, דכי יכול להוציאה בדיינין ברשותיה קיימא",
+    "label_en": "answer: the masuta is land -- land recoverable in court already stands in its owner's possession, s…",
+    "locus": "Bava_Metzia.7a.6",
+    "daf": "7a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "masuta",
+       "karka"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ad_makom_yado",
+    "type": "prop",
+    "label_he": "זה נוטל עד מקום שידו מגעת... והשאר חולקין בשוה",
+    "label_en": "baraita: each takes as far as his hand reaches; the remainder is divided equally",
+    "locus": "Bava_Metzia.7a.7",
+    "daf": "7a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "adukin_batalit",
+       "ad_makom_yado"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_uvishvua",
+    "type": "prop",
+    "label_he": "מחוי ליה רבי אבהו: ובשבועה",
+    "label_en": "R' Abbahu (by gesture): add -- and with an oath",
+    "locus": "Bava_Metzia.7a.7",
+    "daf": "7a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "adukin_batalit",
+       "im_shevua"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_karkashta",
+    "type": "prop",
+    "label_he": "דתפיסי בכרכשתא",
+    "label_en": "Rav Pappa: the mishna's plain even division is where both hold only the fringes, neither grasping t…",
+    "locus": "Bava_Metzia.7a.8",
+    "daf": "7a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "matnitin_chaluka",
+       "both_hold_fringes"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_muzhevet",
+    "type": "prop",
+    "label_he": "אם היתה טלית מוזהבת חולקין",
+    "label_en": "Rava: a gold-embroidered garment is also divided equally",
+    "locus": "Bava_Metzia.7a.13",
+    "daf": "7a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "talit_muzhevet",
+       "chaluka_beshave"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_frame_gold_middle",
+    "type": "prop",
+    "label_he": "לא צריכא דקאי דהבא בי מצעי",
+    "label_en": "case framing 1: the gold lies in the middle of the garment",
+    "locus": "Bava_Metzia.7a.13",
+    "daf": "7a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "talit_muzhevet",
+       "gold_in_middle"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_frame_gold_near_one",
+    "type": "prop",
+    "label_he": "לא צריכא דמיקרב לגבי דחד",
+    "label_en": "case framing 2 (final): the gold is nearer to one side -- and still the other can say 'who says we…",
+    "locus": "Bava_Metzia.7a.14",
+    "daf": "7a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "talit_muzhevet",
+       "gold_nearer_one_side"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:mn_nine_exempt",
+    "type": "schema",
+    "label_he": "מה נפשך",
+    "label_en": "owner of nine plus the doubtful animal is exempt whichever way: if it is his, he tithed well; if th…",
+    "locus": "Bava_Metzia.6b.7",
+    "daf": "6b",
+    "sentenceId": 6,
+    "data": {
+     "kind": "mah_nafshach",
+     "status": "blocked",
+     "holder": "abaye",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "dir_baraita_no_support_for_rabba"
+     }
+    }
+   },
+   {
+    "id": "concl:dir_baraita_no_support_for_rabba",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "owner of nine plus the doubtful animal is exempt whichever way: if it is his, he tithed well; if th…",
+    "data": {
+     "term": "dir_baraita_no_support_for_rabba"
+    }
+   },
+   {
+    "id": "ground:pircha_asiri_vadai",
+    "type": "ground",
+    "label_he": "לאו מילתא היא דאמרי",
+    "label_en": "לאו מילתא היא דאמרי -- an animal of uncertain status is excluded from the tithe count entirely (עשי…",
+    "locus": "Bava_Metzia.6b.8",
+    "daf": "6b",
+    "sentenceId": 7,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "question:q_tekafah",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "seized in the court's presence, owner silent then protesting: does the court take it back? Raised,…",
+    "locus": "Bava_Metzia.6a.10",
+    "daf": "6a",
+    "sentenceId": 9,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "hypothesis:h_baraita_is_tekafah",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the baraita's case must be one who seized it in our presence -- which would…",
+    "locus": "Bava_Metzia.6a.13",
+    "daf": "6a",
+    "sentenceId": 12,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_6a",
+     "discharge_locus": "Bava_Metzia.6a.15"
+    }
+   },
+   {
+    "id": "hypothesis:h_itl_motziin",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (ITL branch A) the court removes seized property from the seizer's hand",
+    "locus": "Bava_Metzia.6a.16",
+    "daf": "6a",
+    "sentenceId": 15,
+    "data": {
+     "verdict": "open",
+     "opened_by": "stam_6a"
+    }
+   },
+   {
+    "id": "hypothesis:h_itl_ein_motziin",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (ITL branch B) the court does NOT remove seized property",
+    "locus": "Bava_Metzia.6a.16",
+    "daf": "6a",
+    "sentenceId": 15,
+    "data": {
+     "verdict": "open",
+     "opened_by": "stam_6a"
+    }
+   },
+   {
+    "id": "support:s_mesaya_dir",
+    "type": "support",
+    "label_he": "תניא דמסייע לך",
+    "label_en": "תניא דמסייע לך -- the pen-baraita (הספיקות נכנסין לדיר להתעשר) supports Rabba's tekafo-kohen ruling…",
+    "locus": "Bava_Metzia.6b.5",
+    "daf": "6b",
+    "sentenceId": 4,
+    "data": {
+     "kind": "mesaya",
+     "status": "live",
+     "by": "rav_chananya",
+     "source": "p_dir_baraita"
+    }
+   },
+   {
+    "id": "deflection:defl_nine_plus_safek",
+    "type": "deflection",
+    "label_he": "אי משום הא לא תסייעיה למר",
+    "label_en": "אי משום הא לא תסייעיה למר -- read the baraita as nine animals plus the safek, where the owner is ex…",
+    "locus": "Bava_Metzia.6b.7",
+    "daf": "6b",
+    "sentenceId": 6,
+    "data": {
+     "by": "abaye",
+     "refuted": true
+    }
+   },
+   {
+    "id": "refutation:refut_asiri_vadai",
+    "type": "refutation",
+    "label_he": "הדר אמר אביי לאו מילתא היא דאמרי",
+    "label_en": "הדר אמר אביי לאו מילתא היא דאמרי -- a safek never enters the tithe count at all (עשירי ודאי ולא עשי…",
+    "locus": "Bava_Metzia.7a.1",
+    "daf": "7a",
+    "sentenceId": 0,
+    "data": {
+     "engine_fact": "deflection_refuted"
+    }
+   },
+   {
+    "id": "voice:abaye",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "abaye",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_abbahu",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r abbahu",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_zeira",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r zeira",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rabba",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabba",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rabba_bar_avuha",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabba bar avuha",
+    "data": {}
+   },
+   {
+    "id": "voice:rav_acha_midifti",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav acha midifti",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_chananya",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav chananya",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_hamnuna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav hamnuna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_nachman_bm6",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav nachman bm6",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_pappa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav pappa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_tachlifa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav tachlifa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_6a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 6a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:abaye",
+    "target": "schema:mn_nine_exempt",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:mn_nine_exempt",
+    "target": "concl:dir_baraita_no_support_for_rabba",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_asiri_vadai",
+    "target": "schema:mn_nine_exempt",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "hypothesis:h_baraita_is_tekafah",
+    "target": "prop:p_read_baraita_tekafah",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "hypothesis:h_baraita_is_tekafah",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_itl_motziin",
+    "target": "prop:p_itl_motziin",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_itl_motziin",
+    "target": "prop:p_hikdisha_invalid",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "hypothesis:h_itl_motziin",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_itl_ein_motziin",
+    "target": "prop:p_itl_ein_motziin",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_itl_ein_motziin",
+    "target": "prop:p_q_hikdisha",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "hypothesis:h_itl_ein_motziin",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_zeira",
+    "target": "prop:p_q_tekafah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_case_shatik_tzavach",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_nachman_bm6",
+    "target": "prop:p_bda_baraita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_read_baraita_tekafah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_baraita_is_tekafah)"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_read_zilu_plugu",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_read_sarich",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_itl_motziin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_itl_motziin)"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_hikdisha_invalid",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_itl_motziin)"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_itl_ein_motziin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_itl_ein_motziin)"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_q_hikdisha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query",
+    "ctx": "hyp(h_itl_ein_motziin)"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_bechor_mishna",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_hamnuna",
+    "target": "prop:p_hamnuna_proof",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabba",
+    "target": "prop:p_hamnuna_proof",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:rabba",
+    "target": "prop:p_kedusha_meeleha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabba",
+    "target": "prop:p_tekafo_kohen_motziin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_chananya",
+    "target": "prop:p_dir_baraita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_oqimta_nine",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_oqimta_nine",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_asiri_vadai",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_acha_midifti",
+    "target": "prop:p_sfeikot_pidyon",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_nachman_bm6",
+    "target": "prop:p_rn_principle",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_masuta_lo_kadosh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_gazal_lo_makdish",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_masuta_karka",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_tachlifa",
+    "target": "prop:p_ad_makom_yado",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_abbahu",
+    "target": "prop:p_uvishvua",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_pappa",
+    "target": "prop:p_karkashta",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_muzhevet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_frame_gold_middle",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_frame_gold_middle",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:stam_6a",
+    "target": "prop:p_frame_gold_near_one",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_nachman_bm6",
+    "target": "prop:p_ten_donkeys",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rabba_bar_avuha"
+   },
+   {
+    "source": "support:s_mesaya_dir",
+    "target": "prop:p_tekafo_kohen_motziin",
+    "type": "supports",
+    "regime": "evidence",
+    "status": "live"
+   },
+   {
+    "source": "voice:rav_chananya",
+    "target": "support:s_mesaya_dir",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "support:s_mesaya_dir",
+    "target": "prop:p_dir_baraita",
+    "type": "cites",
+    "regime": "structural"
+   },
+   {
+    "source": "deflection:defl_nine_plus_safek",
+    "target": "support:s_mesaya_dir",
+    "type": "deflects",
+    "regime": "attack",
+    "live": false,
+    "neutralized_by": "refuted"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "deflection:defl_nine_plus_safek",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "refutation:refut_asiri_vadai",
+    "target": "deflection:defl_nine_plus_safek",
+    "type": "refutes",
+    "regime": "attack",
+    "live": true
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

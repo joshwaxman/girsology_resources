@@ -284,6 +284,14 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": "rabbanan",
+     "state": "scoped",
+     "live_for": [
+      "rabbanan"
+     ],
+     "lifted_for": [],
      "locus": "Sanhedrin.4a.1",
      "daf": "4a",
      "sentenceId": 0
@@ -298,6 +306,36 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_mamonot_minyan",
+   "topic": "number_of_judges_mamonot",
+   "parties": [
+    "rabbi",
+    "rabbanan"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_taam_gmar_din",
+   "assumes": "p_tlata_bigmar",
+   "verdict": "reductio",
+   "opened_by": "stam_3b",
+   "discharge_locus": "Sanhedrin.3b.16",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_gedola_141",
+    "p_ketana_45",
+    "p_tlata_bigmar"
+   ],
+   "locus": "Sanhedrin.3b.14",
+   "daf": "3b",
+   "sentenceId": 13
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_gz_elohim_lemaala",
@@ -717,405 +755,453 @@
       ]
      }
     ]
-   }
-  },
-  {
-   "id": "cf_drop_g_yarshiun_ktiv",
-   "kind": "counterfactual",
-   "subject": "gz_elohim_lemaala",
-   "label_en": "Had this objection not stood, what would follow?",
-   "delta": {
-    "drop_ground": "g_yarshiun_ktiv"
    },
-   "goal_display": "concluded(gz_elohim_lemaala, chamisha_bemamonot)",
-   "verdict": "answers",
-   "answers": [
-    {}
-   ],
-   "tree": {
-    "node": "query",
-    "children": [
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "chamisha_bemamonot",
+     "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges"
+    },
+    "because": [
      {
-      "node": "concluded(gz_elohim_lemaala,chamisha_bemamonot)",
-      "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-      "sentenceRef": {
-       "daf": "3b",
-       "sentenceId": 16
-      },
-      "children": [
-       {
-        "node": "schema_instance(gz_elohim_lemaala,gezera_shava,chamisha_bemamonot)",
-        "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-        "sentenceRef": {
-         "daf": "3b",
-         "sentenceId": 16
-        }
-       },
-       {
-        "node": "not defeated(gz_elohim_lemaala)",
-        "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-        "sentenceRef": {
-         "daf": "3b",
-         "sentenceId": 16
-        },
-        "children": [
-         {
-          "node": "not pircha(gz_elohim_lemaala,V)",
-          "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-          "sentenceRef": {
-           "daf": "3b",
-           "sentenceId": 16
-          }
-         },
-         {
-          "node": "not defeated_regardless(gz_elohim_lemaala)",
-          "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-          "sentenceRef": {
-           "daf": "3b",
-           "sentenceId": 16
-          },
-          "children": [
-           {
-            "node": "not schema_instance(gz_elohim_lemaala,D1 | {D1 ∉ [gezera_shava]},E1)",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           },
-           {
-            "node": "not schema_instance(gz_elohim_lemaala,gezera_shava,F1 | {F1 ∉ [chamisha_bemamonot]})",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           },
-           {
-            "node": "proved(schema_instance(gz_elohim_lemaala,gezera_shava,chamisha_bemamonot))",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           },
-           {
-            "node": "not rejects_middah(W | {W ∉ [ctl_voice_never]},gezera_shava)"
-           },
-           {
-            "node": "proved(schema_instance(gz_elohim_lemaala,gezera_shava,chamisha_bemamonot))",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           },
-           {
-            "node": "not rejects_middah(ctl_voice_never,gezera_shava)"
-           },
-           {
-            "node": "not challenge(Z | {Z ∉ [ctl_challenge_never]},teyuvta,gz_elohim_lemaala)",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           },
-           {
-            "node": "not challenge(ctl_challenge_never,teyuvta,gz_elohim_lemaala)",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           },
-           {
-            "node": "not scriptural_exclusion(gz_elohim_lemaala,Y)",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           },
-           {
-            "node": "not restricted_by(gz_elohim_lemaala,X)",
-            "gloss_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be even -- add one: five judges",
-            "sentenceRef": {
-             "daf": "3b",
-             "sentenceId": 16
-            }
-           }
-          ]
-         }
-        ]
-       }
-      ]
+      "role": "license",
+      "node": "schema:gz_elohim_lemaala",
+      "text_en": "the gezera shava licenses chamisha_bemamonot: no live objection, verse, or restriction defeats it"
      },
      {
-      "node": "o_nmr_check",
-      "children": [
-       {
-        "node": "not o_chk_1",
-        "children": [
-         {
-          "node": "not collapses(B | {B ∉ [m_mamonot_minyan]},A1,B1)",
-          "children": [
-           {
-            "node": "not dispute(B | {B ∉ [m_mamonot_minyan]},C)"
-           },
-           {
-            "node": "not dispute(B | {B ∉ [m_mamonot_minyan]},D)"
-           }
-          ]
-         },
-         {
-          "node": "not collapses(m_mamonot_minyan,S | {S ∉ [rabbanan,rabbi]},C1)",
-          "children": [
-           {
-            "node": "not dispute(m_mamonot_minyan,E | {E ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "dispute(m_mamonot_minyan,number_of_judges_mamonot)"
-           },
-           {
-            "node": "not party(m_mamonot_minyan,S | {S ∉ [rabbanan,rabbi]})"
-           },
-           {
-            "node": "not dispute(m_mamonot_minyan,F | {F ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "not party(m_mamonot_minyan,S | {S ∉ [rabbanan,rabbi]})"
-           }
-          ]
-         },
-         {
-          "node": "not collapses(m_mamonot_minyan,rabbanan,T | {T ∉ [rabbanan,rabbi]})",
-          "children": [
-           {
-            "node": "not dispute(m_mamonot_minyan,G | {G ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "party(m_mamonot_minyan,rabbanan)"
-           },
-           {
-            "node": "not party(m_mamonot_minyan,T | {T ∉ [rabbanan,rabbi]})"
-           },
-           {
-            "node": "not dispute(m_mamonot_minyan,H | {H ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "not party(m_mamonot_minyan,T | {T ∉ [rabbanan,rabbi]})"
-           }
-          ]
-         },
-         {
-          "node": "not collapses(m_mamonot_minyan,rabbanan,rabbanan)",
-          "children": [
-           {
-            "node": "not dispute(m_mamonot_minyan,I | {I ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "not dispute(m_mamonot_minyan,J | {J ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           }
-          ]
-         },
-         {
-          "node": "not collapses(m_mamonot_minyan,rabbanan,rabbi)",
-          "children": [
-           {
-            "node": "not dispute(m_mamonot_minyan,K | {K ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "party(m_mamonot_minyan,rabbi)"
-           },
-           {
-            "node": "not position_identity(m_mamonot_minyan,rabbanan,rabbi)"
-           },
-           {
-            "node": "not dispute(m_mamonot_minyan,L | {L ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "not position_identity(m_mamonot_minyan,rabbi,rabbanan)"
-           }
-          ]
-         },
-         {
-          "node": "not collapses(m_mamonot_minyan,rabbi,U | {U ∉ [rabbanan,rabbi]})",
-          "children": [
-           {
-            "node": "not dispute(m_mamonot_minyan,M | {M ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "not party(m_mamonot_minyan,U | {U ∉ [rabbanan,rabbi]})"
-           },
-           {
-            "node": "not dispute(m_mamonot_minyan,N | {N ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "not party(m_mamonot_minyan,U | {U ∉ [rabbanan,rabbi]})"
-           }
-          ]
-         },
-         {
-          "node": "not collapses(m_mamonot_minyan,rabbi,rabbanan)",
-          "children": [
-           {
-            "node": "not dispute(m_mamonot_minyan,O | {O ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "proved(not position_identity(m_mamonot_minyan,rabbi,rabbanan))"
-           },
-           {
-            "node": "not dispute(m_mamonot_minyan,P | {P ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbanan))"
-           },
-           {
-            "node": "proved(not position_identity(m_mamonot_minyan,rabbanan,rabbi))"
-           }
-          ]
-         },
-         {
-          "node": "not collapses(m_mamonot_minyan,rabbi,rabbi)",
-          "children": [
-           {
-            "node": "not dispute(m_mamonot_minyan,Q | {Q ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "not dispute(m_mamonot_minyan,R | {R ∉ [number_of_judges_mamonot]})"
-           },
-           {
-            "node": "proved(dispute(m_mamonot_minyan,number_of_judges_mamonot))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           },
-           {
-            "node": "proved(party(m_mamonot_minyan,rabbi))"
-           }
-          ]
-         }
-        ]
-       },
-       {
-        "node": "not o_chk_2",
-        "children": [
-         {
-          "node": "not verdict(J1,teiku)"
-         }
-        ]
-       },
-       {
-        "node": "not o_chk_3",
-        "children": [
-         {
-          "node": "not verdict(H1,teiku)"
-         }
-        ]
-       },
-       {
-        "node": "not o_chk_4",
-        "children": [
-         {
-          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
-         },
-         {
-          "node": "¬ permitted(ctl_q_no)"
-         },
-         {
-          "node": "not permitted(ctl_q_no)."
-         }
-        ]
-       }
-      ]
+      "role": "ground_scoped",
+      "node": "ground:g_yarshiun_ktiv",
+      "text_en": "the objection (ירשיען כתיב -- the consonantal text is singular; the Rabbanan follow the ktiv, so the two-below premise fails and the derivation is blocked within their framework only) binds only inside rabbanan's framework; it does not defeat globally"
      }
-    ]
-   },
-   "note": "counterfactual — NOT the sugya's conclusion"
+    ],
+    "would_change_if": []
+   }
   }
  ],
  "kb": "svara/sanhedrin_3b_rabbi_bachamisha.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mamonot_shlosha",
+    "type": "prop",
+    "label_he": "דיני ממונות בשלשה",
+    "label_en": "monetary cases are judged by three",
+    "locus": "Sanhedrin.3b.14",
+    "daf": "3b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_mamonot",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mamonot_chamisha",
+    "type": "prop",
+    "label_he": "רבי אומר בחמשה",
+    "label_en": "monetary cases are judged by five",
+    "locus": "Sanhedrin.3b.14",
+    "daf": "3b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_mamonot",
+       "chamisha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tlata_bigmar",
+    "type": "prop",
+    "label_he": "תלתא כי כתיבי – בגמר דינא כתיבי",
+    "label_en": "(entertained) the written 'three' refers to the verdict stage, so five must sit that three conclude…",
+    "locus": "Sanhedrin.3b.14",
+    "daf": "3b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "written_at_stage",
+      "args": [
+       "shlosha_dayanim",
+       "gmar_din"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_gedola_141",
+    "type": "prop",
+    "label_he": "תהא סנהדרי גדולה צריכה מאה וארבעים ואחד",
+    "label_en": "(inside the hypothesis) the great Sanhedrin would need 141 so that the verdict is concluded by 71",
+    "locus": "Sanhedrin.3b.15",
+    "daf": "3b",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "size_required",
+      "args": [
+       "sanhedri_gedola",
+       "meah_arbaim_veechad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ketana_45",
+    "type": "prop",
+    "label_he": "ותהא סנהדרי קטנה צריכה ארבעים וחמשה",
+    "label_en": "(inside the hypothesis) the small Sanhedrin would need 45 so that the verdict is concluded by 23",
+    "locus": "Sanhedrin.3b.15",
+    "daf": "3b",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "size_required",
+      "args": [
+       "sanhedri_ketana",
+       "arbaim_vechamisha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mishat_asifa",
+    "type": "prop",
+    "label_he": "אספה לי שבעים איש – משעת אסיפה שבעים... משעת קריבה שלשה",
+    "label_en": "the counts are anchored at the start: seventy from the moment of gathering, and likewise three from…",
+    "locus": "Sanhedrin.3b.16",
+    "daf": "3b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "written_at_stage",
+      "args": [
+       "shlosha_dayanim",
+       "techilat_din"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yarshiun_plural",
+    "type": "prop",
+    "label_he": "אשר ירשיען אלהים – תרי",
+    "label_en": "yarshi'un is read as a plural: the verse's lower mention speaks of two judges",
+    "locus": "Sanhedrin.3b.17",
+    "daf": "3b",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "yarshiun",
+       "lashon_rabim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yarshiun_ktiv",
+    "type": "prop",
+    "label_he": "ורבנן: ירשיען כתיב",
+    "label_en": "yarshi'un is written defectively -- the Rabbanan follow the consonantal text, which is singular",
+    "locus": "Sanhedrin.4a.1",
+    "daf": "4a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "yarshiun",
+       "ktiv_yachid"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_beit_din_shakul",
+    "type": "prop",
+    "label_he": "ואין בית דין שקול – מוסיפין עליהם עוד אחד",
+    "label_en": "a court may not be evenly balanced -- one judge is added to the four",
+    "locus": "Sanhedrin.3b.17",
+    "daf": "3b",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "principle",
+      "args": [
+       "ein_beit_din_shakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:gz_elohim_lemaala",
+    "type": "schema",
+    "label_he": "גזרה שווה",
+    "label_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be eve…",
+    "locus": "Sanhedrin.3b.17",
+    "daf": "3b",
+    "sentenceId": 16,
+    "data": {
+     "kind": "gezera_shava",
+     "status": "stands",
+     "holder": "rabbi",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "chamisha_bemamonot"
+     }
+    }
+   },
+   {
+    "id": "concl:chamisha_bemamonot",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "Elohim below (yarshi'un = two) and Elohim above: as below two, so above two; a court may not be eve…",
+    "data": {
+     "term": "chamisha_bemamonot"
+    }
+   },
+   {
+    "id": "ground:g_yarshiun_ktiv",
+    "type": "ground",
+    "label_he": "ירשיען כתיב",
+    "label_en": "ירשיען כתיב -- the consonantal text is singular; the Rabbanan follow the ktiv, so the two-below pre…",
+    "locus": "Sanhedrin.4a.1",
+    "daf": "4a",
+    "sentenceId": 0,
+    "data": {
+     "kind": "objection",
+     "state": "scoped",
+     "aliba": "rabbanan"
+    }
+   },
+   {
+    "id": "dispute:m_mamonot_minyan",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "number of judges mamonot",
+    "data": {
+     "topic": "number_of_judges_mamonot"
+    }
+   },
+   {
+    "id": "hypothesis:h_taam_gmar_din",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the written 'three' refers to the verdict stage, so five must sit that three…",
+    "locus": "Sanhedrin.3b.14",
+    "daf": "3b",
+    "sentenceId": 13,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_3b",
+     "discharge_locus": "Sanhedrin.3b.16"
+    }
+   },
+   {
+    "id": "voice:r_abahu",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r abahu",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rabbanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabbanan",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:rabbi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabbi",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:stam_3b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 3b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_kama_baraita",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kama baraita",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:rabbi",
+    "target": "schema:gz_elohim_lemaala",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:gz_elohim_lemaala",
+    "target": "concl:chamisha_bemamonot",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:g_yarshiun_ktiv",
+    "target": "schema:gz_elohim_lemaala",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": false,
+    "aliba": "rabbanan",
+    "live_for": [
+     "rabbanan"
+    ]
+   },
+   {
+    "source": "dispute:m_mamonot_minyan",
+    "target": "voice:rabbi",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_mamonot_minyan",
+    "target": "voice:rabbanan",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_taam_gmar_din",
+    "target": "prop:p_tlata_bigmar",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_taam_gmar_din",
+    "target": "prop:p_gedola_141",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_taam_gmar_din",
+    "target": "prop:p_ketana_45",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "hypothesis:h_taam_gmar_din",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:tanna_kama_baraita",
+    "target": "prop:p_mamonot_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbanan",
+    "target": "prop:p_mamonot_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbi",
+    "target": "prop:p_mamonot_chamisha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "prop:p_tlata_bigmar",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_taam_gmar_din)"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_gedola_141",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_taam_gmar_din)"
+   },
+   {
+    "source": "voice:r_abahu",
+    "target": "prop:p_ketana_45",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_taam_gmar_din)"
+   },
+   {
+    "source": "voice:stam_3b",
+    "target": "prop:p_mishat_asifa",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbi",
+    "target": "prop:p_yarshiun_plural",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbi",
+    "target": "prop:p_ein_beit_din_shakul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbanan",
+    "target": "prop:p_yarshiun_plural",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:rabbanan",
+    "target": "prop:p_yarshiun_ktiv",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

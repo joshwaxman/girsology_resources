@@ -354,6 +354,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_olei_regel",
@@ -538,9 +541,429 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "olei_regel_einan_nizokin",
+     "gloss_en": "if animals, prone to harm, are unharmed during the pilgrimage, people, not prone to harm, all the more so"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:kv_olei_regel",
+      "text_en": "the kal vachomer licenses olei_regel_einan_nizokin: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/pesachim_8a_chorin_sakana.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chorin_kitzoniyim",
+    "type": "prop",
+    "label_he": "הא בעילאי ובתתאי",
+    "label_en": "upper and lower wall-holes need no bedika",
+    "locus": "Pesachim.8a.9",
+    "daf": "8a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "exempt",
+      "args": [
+       "chorin_ilaei_tataei",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chorin_metzaei",
+    "type": "prop",
+    "label_he": "והא במיצעי",
+    "label_en": "middle wall-holes between neighbors need bedika, each as far as his hand reaches",
+    "locus": "Pesachim.8a.9",
+    "daf": "8a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "requires",
+      "args": [
+       "chorin_metzaei",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mita_midalya",
+    "type": "prop",
+    "label_he": "הא דמידליא",
+    "label_en": "a raised partitioning bed needs bedika beneath it",
+    "locus": "Pesachim.8a.9",
+    "daf": "8a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "requires",
+      "args": [
+       "mita_midalya",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mita_mitataei",
+    "type": "prop",
+    "label_he": "הא דמיתתאי",
+    "label_en": "a low bed packed beneath with wood and stones needs no bedika",
+    "locus": "Pesachim.8a.9",
+    "daf": "8a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "exempt",
+      "args": [
+       "mita_mitataei",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_otzar_yayin",
+    "type": "prop",
+    "label_he": "אוצרות יין צריך בדיקה ... במסתפק ... אין קבע לשתיה",
+    "label_en": "a wine store one draws from needs bedika -- drinking has no fixed measure",
+    "locus": "Pesachim.8a.11",
+    "daf": "8a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "requires",
+      "args": [
+       "otzar_yayin_mistapek",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_otzar_shemen",
+    "type": "prop",
+    "label_he": "שמן יש קבע לאכילה",
+    "label_en": "an oil store needs no bedika even when drawn from -- eating has a fixed measure",
+    "locus": "Pesachim.8a.11",
+    "daf": "8a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "exempt",
+      "args": [
+       "otzar_shemen_mistapek",
+       "bedika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_mechayvin",
+    "type": "prop",
+    "label_he": "אין מחייבין אותו להכניס ידו לחורין ולסדקין לבדוק מפני הסכנה",
+    "label_en": "one is not obligated to thrust his hand into holes and cracks to check, because of the danger",
+    "locus": "Pesachim.8a.15",
+    "daf": "8a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "exempt_due",
+      "args": [
+       "bedikat_chorin_sedakin",
+       "sakana"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sakanat_akrav",
+    "type": "prop",
+    "label_he": "מפני סכנת עקרב ... דנפל",
+    "label_en": "the danger is a scorpion, in a wall that collapsed",
+    "locus": "Pesachim.8a.15",
+    "daf": "8a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "identifies",
+      "args": [
+       "sakana_chorin",
+       "akrav_binfal"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sakanat_goyim",
+    "type": "prop",
+    "label_he": "משום סכנת הגוים, ופלימו היא",
+    "label_en": "the danger is from the gentiles (suspicion of sorcery), and the tanna is Plimo",
+    "locus": "Pesachim.8b.2",
+    "daf": "8b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "identifies",
+      "args": [
+       "sakana_chorin",
+       "sakanat_goyim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shakhiach_hezeika",
+    "type": "prop",
+    "label_he": "היכא דשכיח היזיקא שאני",
+    "label_en": "where harm is common, the protection of mitzva-agents does not apply",
+    "locus": "Pesachim.8b.4",
+    "daf": "8b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "exception",
+      "args": [
+       "shluchei_mitzva_protection",
+       "shakhiach_hezeika"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_protected_halikha",
+    "type": "prop",
+    "label_he": "שלוחי מצוה אינן ניזוקין בהליכתן",
+    "label_en": "agents of a mitzva are not harmed on their way there",
+    "locus": "Pesachim.8b.6",
+    "daf": "8b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "protected",
+      "args": [
+       "shluchei_mitzva",
+       "halikha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_protected_chazara",
+    "type": "prop",
+    "label_he": "ולא בחזירתן",
+    "label_en": "agents of a mitzva are not harmed on their way back",
+    "locus": "Pesachim.8b.6",
+    "daf": "8b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "protected",
+      "args": [
+       "shluchei_mitzva",
+       "chazara"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_olei_regel",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "if animals, prone to harm, are unharmed during the pilgrimage, people, not prone to harm, all the m…",
+    "locus": "Pesachim.8b.8",
+    "daf": "8b",
+    "sentenceId": 7,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "stands",
+     "holder": "isi_ben_yehuda",
+     "structure": {
+      "lenient": "behemot",
+      "strict": "bnei_adam",
+      "property": "einan_nizokin",
+      "concludes": "olei_regel_einan_nizokin"
+     }
+    }
+   },
+   {
+    "id": "concl:olei_regel_einan_nizokin",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "if animals, prone to harm, are unharmed during the pilgrimage, people, not prone to harm, all the m…",
+    "data": {
+     "term": "olei_regel_einan_nizokin"
+    }
+   },
+   {
+    "id": "voice:bnei_bei_rav",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "bnei bei rav",
+    "data": {
+     "kind": "community"
+    }
+   },
+   {
+    "id": "voice:isi_ben_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "isi ben yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_elazar",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r elazar",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_nachman_bar_yitzchak",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav nachman bar yitzchak",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_pes_8a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam pes 8a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:isi_ben_yehuda",
+    "target": "schema:kv_olei_regel",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_olei_regel",
+    "target": "concl:olei_regel_einan_nizokin",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_chorin_kitzoniyim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_chorin_metzaei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_mita_midalya",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_mita_mitataei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_otzar_yayin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_otzar_shemen",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_ein_mechayvin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_sakanat_akrav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_nachman_bar_yitzchak",
+    "target": "prop:p_sakanat_goyim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_8a",
+    "target": "prop:p_shakhiach_hezeika",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:bnei_bei_rav",
+    "target": "prop:p_protected_chazara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:r_elazar",
+    "target": "prop:p_protected_halikha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_elazar",
+    "target": "prop:p_protected_chazara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

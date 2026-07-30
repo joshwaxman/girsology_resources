@@ -217,6 +217,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Yevamot.5a.4",
      "daf": "5a",
      "sentenceId": 3
@@ -247,6 +253,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Yevamot.5a.7",
      "daf": "5a",
      "sentenceId": 6
@@ -277,6 +289,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Yevamot.5a.9",
      "daf": "5a",
      "sentenceId": 8
@@ -308,6 +326,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_bav_rosho_hakafa",
@@ -436,6 +457,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "aseh_docheh_lav",
+     "gloss_en": "as the metzora's shaving overrides the hakafa prohibition, so any aseh overrides a lav"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_hakafa_ein_shaveh_bakol",
+      "text_en": "blocked by the objection: מה ללאו דהקפה שכן לאו שאין שוה בכל -- the hakafa prohibition does not bind women, so nothing follows for prohibitions binding everyone"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_hakafa_ein_shaveh_bakol",
+      "drop": "pircha_hakafa_ein_shaveh_bakol",
+      "drop_node": "ground:pircha_hakafa_ein_shaveh_bakol",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -756,6 +800,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "aseh_docheh_lav",
+     "gloss_en": "if 'זקנו' is not needed for a lav not equally binding, refer it to a lav equally binding -- so an aseh overrides even a lav binding on all"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_zekano_lo_mufneh",
+      "text_en": "blocked by the objection: ואכתי איצטריך -- the word is not free: it must teach that even for priests, laden with extra mitzvot, the aseh overrides; no אם אינו ענין transfer is possible"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_zekano_lo_mufneh",
+      "drop": "pircha_zekano_lo_mufneh",
+      "drop_node": "ground:pircha_zekano_lo_mufneh",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -1072,6 +1139,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "aseh_docheh_lav",
+     "gloss_en": "as the metzora's shaving overrides the nazirite razor prohibition, so any aseh overrides a lav"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_nazir_yeshno_bisheila",
+      "text_en": "blocked by the objection: מה לנזיר שכן ישנו בשאלה -- the nazirite's prohibition can be dissolved by a Sage, so it is weak and nothing follows for ordinary prohibitions"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_nazir_yeshno_bisheila",
+      "drop": "pircha_nazir_yeshno_bisheila",
+      "drop_node": "ground:pircha_nazir_yeshno_bisheila",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -1446,9 +1536,445 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "aseh_docheh_lav",
+     "gloss_en": "לא תלבש שעטנז is juxtaposed to גדילים תעשה לך: in the place of the mitzva of tzitzit, the kilayim prohibition yields -- an aseh overrides a lav"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:semuchin_tzitzit_kilayim",
+      "text_en": "the semuchin licenses aseh_docheh_lav: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/yevamot_5a_makor_aseh_docheh.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_metzora_shaves_hakafa",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the metzora's purification shaving overrides the prohibition of rounding the head",
+    "locus": "Yevamot.5a.2",
+    "daf": "5a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "docheh",
+      "args": [
+       "tiglachat_metzora",
+       "lav_hakafa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kohen_metzora_shaves",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "even a priest who is a metzora shaves his beard, against the priests' beard prohibition",
+    "locus": "Yevamot.5a.5",
+    "daf": "5a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "docheh",
+      "args": [
+       "tiglachat_metzora",
+       "lav_hashchatat_zakan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_metzora_nazir_shaves",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "even a metzora who is a nazir shaves, against the nazirite razor prohibition",
+    "locus": "Yevamot.5a.8",
+    "daf": "5a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "docheh",
+      "args": [
+       "tiglachat_metzora",
+       "lav_taar_nazir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_zekano_teaches_kohanim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "'זקנו' is needed to teach that even for priests, given their extra mitzvot, the aseh overrides a la…",
+    "locus": "Yevamot.5a.7",
+    "daf": "5a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "needed_for",
+      "args": [
+       "milat_zekano",
+       "dechiya_bekohanim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_aseh_docheh_lav",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a positive command overrides a plain negative command (the accepted rule)",
+    "locus": "Yevamot.5b.1",
+    "daf": "5b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "docheh",
+      "args": [
+       "aseh",
+       "lav_gerida"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_gedilim_mufneh",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "'גדילים' is superfluous (לאפנויי): had the verse meant only the mitzva it could have said ציצית תעש…",
+    "locus": "Yevamot.5b.1",
+    "daf": "5b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "mufneh",
+      "args": [
+       "milat_gedilim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kula_mishaatnez",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "all the needed teachings (two-cord/four-cord shiur, tokhef, shua-tavui-venuz) issue from שעטנז alon…",
+    "locus": "Yevamot.5b.5",
+    "daf": "5b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "mufneh",
+      "args": [
+       "milat_tzemer_ufishtim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:bav_rosho_hakafa",
+    "type": "schema",
+    "label_he": "בניין אב",
+    "label_en": "as the metzora's shaving overrides the hakafa prohibition, so any aseh overrides a lav",
+    "locus": "Yevamot.5a.2",
+    "daf": "5a",
+    "sentenceId": 1,
+    "data": {
+     "kind": "binyan_av",
+     "status": "blocked",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "aseh_docheh_lav"
+     }
+    }
+   },
+   {
+    "id": "concl:aseh_docheh_lav",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "as the metzora's shaving overrides the hakafa prohibition, so any aseh overrides a lav",
+    "data": {
+     "term": "aseh_docheh_lav"
+    }
+   },
+   {
+    "id": "ground:pircha_hakafa_ein_shaveh_bakol",
+    "type": "ground",
+    "label_he": "מה ללאו דהקפה שכן לאו שאין שוה בכל",
+    "label_en": "מה ללאו דהקפה שכן לאו שאין שוה בכל -- the hakafa prohibition does not bind women, so nothing follow…",
+    "locus": "Yevamot.5a.4",
+    "daf": "5a",
+    "sentenceId": 3,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:bav_zekano_im_eino_inyan",
+    "type": "schema",
+    "label_he": "בניין אב",
+    "label_en": "if 'זקנו' is not needed for a lav not equally binding, refer it to a lav equally binding -- so an a…",
+    "locus": "Yevamot.5a.5",
+    "daf": "5a",
+    "sentenceId": 4,
+    "data": {
+     "kind": "binyan_av",
+     "status": "blocked",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "aseh_docheh_lav"
+     }
+    }
+   },
+   {
+    "id": "ground:pircha_zekano_lo_mufneh",
+    "type": "ground",
+    "label_he": "ואכתי איצטריך",
+    "label_en": "ואכתי איצטריך -- the word is not free: it must teach that even for priests, laden with extra mitzvo…",
+    "locus": "Yevamot.5a.7",
+    "daf": "5a",
+    "sentenceId": 6,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:bav_rosho_nazir",
+    "type": "schema",
+    "label_he": "בניין אב",
+    "label_en": "as the metzora's shaving overrides the nazirite razor prohibition, so any aseh overrides a lav",
+    "locus": "Yevamot.5a.8",
+    "daf": "5a",
+    "sentenceId": 7,
+    "data": {
+     "kind": "binyan_av",
+     "status": "blocked",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "aseh_docheh_lav"
+     }
+    }
+   },
+   {
+    "id": "ground:pircha_nazir_yeshno_bisheila",
+    "type": "ground",
+    "label_he": "מה לנזיר שכן ישנו בשאלה",
+    "label_en": "מה לנזיר שכן ישנו בשאלה -- the nazirite's prohibition can be dissolved by a Sage, so it is weak and…",
+    "locus": "Yevamot.5a.9",
+    "daf": "5a",
+    "sentenceId": 8,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:semuchin_tzitzit_kilayim",
+    "type": "schema",
+    "label_he": "סמוכין",
+    "label_en": "לא תלבש שעטנז is juxtaposed to גדילים תעשה לך: in the place of the mitzva of tzitzit, the kilayim p…",
+    "locus": "Yevamot.5b.1",
+    "daf": "5b",
+    "sentenceId": 0,
+    "data": {
+     "kind": "semuchin",
+     "status": "stands",
+     "holder": "stam_5a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "aseh_docheh_lav"
+     }
+    }
+   },
+   {
+    "id": "voice:baraita_rosho_hakafa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita rosho hakafa",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_rosho_nazir",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita rosho nazir",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_zekano",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita zekano",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:stam_5a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 5a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:bav_rosho_hakafa",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:bav_rosho_hakafa",
+    "target": "concl:aseh_docheh_lav",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_hakafa_ein_shaveh_bakol",
+    "target": "schema:bav_rosho_hakafa",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:bav_zekano_im_eino_inyan",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:bav_zekano_im_eino_inyan",
+    "target": "concl:aseh_docheh_lav",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_zekano_lo_mufneh",
+    "target": "schema:bav_zekano_im_eino_inyan",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:bav_rosho_nazir",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:bav_rosho_nazir",
+    "target": "concl:aseh_docheh_lav",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_nazir_yeshno_bisheila",
+    "target": "schema:bav_rosho_nazir",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "schema:semuchin_tzitzit_kilayim",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:semuchin_tzitzit_kilayim",
+    "target": "concl:aseh_docheh_lav",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:baraita_rosho_hakafa",
+    "target": "prop:p_metzora_shaves_hakafa",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_zekano",
+    "target": "prop:p_kohen_metzora_shaves",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_rosho_nazir",
+    "target": "prop:p_metzora_nazir_shaves",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "prop:p_zekano_teaches_kohanim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "prop:p_aseh_docheh_lav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "prop:p_gedilim_mufneh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_5a",
+    "target": "prop:p_kula_mishaatnez",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

@@ -138,6 +138,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.24a.5",
      "daf": "24a",
      "sentenceId": 4
@@ -182,6 +188,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.24a.6",
      "daf": "24a",
      "sentenceId": 5
@@ -212,6 +224,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.24a.3",
      "daf": "24a",
      "sentenceId": 2
@@ -226,6 +244,9 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_para_arifa",
@@ -354,6 +375,34 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "para_fit_by_arifa",
+     "gloss_en": "the red heifer should be fit by breaking the neck too"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_zot_arifa",
+      "text_en": "blocked by the verse: 'זאת' -- THIS heifer is killed by breaking the neck, and no other"
+     },
+     {
+      "role": "restriction_refuted",
+      "node": "restriction:r_chukka_bars_kv",
+      "text_en": "the proposed rule against this middah (where the Torah writes חוקה, we do not derive a kal vachomer) was refuted, so it does not block"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_zot_arifa",
+      "drop": "miut_zot_arifa",
+      "drop_node": "ground:miut_zot_arifa",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -704,6 +753,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "egla_fit_by_shechita",
+     "gloss_en": "the broken-necked heifer should be fit by slaughter too"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_veorfu",
+      "text_en": "blocked by the verse: 'וערפו העגלה' -- by breaking the neck yes, by slaughter no"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_veorfu",
+      "drop": "miut_veorfu",
+      "drop_node": "ground:miut_veorfu",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -1022,6 +1094,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "shem_oseh_chatat",
+     "gloss_en": "verbal designation should render the goat a sin offering, a fortiori from the case where the lottery does not sanctify"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_veasahu_chatat",
+      "text_en": "blocked by the verse: 'ועשהו חטאת' -- the lottery renders it a sin offering, a verbal designation does not"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_veasahu_chatat",
+      "drop": "miut_veasahu_chatat",
+      "drop_node": "ground:miut_veasahu_chatat",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -1213,5 +1308,360 @@
   }
  ],
  "kb": "svara/chullin_24a_para_egla.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_para_shechita_kesherah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the red heifer is fit with slaughter",
+    "locus": "Chullin.23b.12",
+    "daf": "23b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "fit_by",
+      "args": [
+       "para",
+       "shechita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_para_arifa_pesulah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the red heifer is unfit with breaking the neck",
+    "locus": "Chullin.23b.12",
+    "daf": "23b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "unfit_by",
+      "args": [
+       "para",
+       "arifa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_egla_arifa_kesherah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the broken-necked heifer is fit with breaking the neck",
+    "locus": "Chullin.23b.12",
+    "daf": "23b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "fit_by",
+      "args": [
+       "egla",
+       "arifa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_egla_shechita_pesulah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the broken-necked heifer is unfit with slaughter",
+    "locus": "Chullin.23b.12",
+    "daf": "23b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "unfit_by",
+      "args": [
+       "egla",
+       "shechita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_para_arifa",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "the red heifer should be fit by breaking the neck too",
+    "locus": "Chullin.23b.13",
+    "daf": "23b",
+    "sentenceId": 12,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "stam_24a",
+     "structure": {
+      "lenient": "egla",
+      "strict": "para",
+      "property": "fit_by_arifa",
+      "concludes": "para_fit_by_arifa"
+     }
+    }
+   },
+   {
+    "id": "concl:para_fit_by_arifa",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "the red heifer should be fit by breaking the neck too",
+    "data": {
+     "term": "para_fit_by_arifa"
+    }
+   },
+   {
+    "id": "ground:miut_zot_arifa",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'זאת' -- THIS heifer is killed by breaking the neck, and no other",
+    "locus": "Chullin.24a.5",
+    "daf": "24a",
+    "sentenceId": 4,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "דברים כא,ו"
+    }
+   },
+   {
+    "id": "restriction:r_chukka_bars_kv",
+    "type": "restriction",
+    "label_he": "כלל במידות",
+    "label_en": "where the Torah writes חוקה, we do not derive a kal vachomer",
+    "data": {
+     "status": "withdrawn"
+    }
+   },
+   {
+    "id": "refutation:yom_kippur_counterexample",
+    "type": "refutation",
+    "label_he": "סתירה",
+    "label_en": "Yom Kippur has חוקה, yet the baraita entertains a KV and needs 'ועשהו חטאת' to block it -- so absen…",
+    "locus": "Chullin.24a.4",
+    "daf": "24a",
+    "sentenceId": 3,
+    "data": {
+     "engine_fact": "restriction_refuted"
+    }
+   },
+   {
+    "id": "schema:kv_egla_shechita",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "the broken-necked heifer should be fit by slaughter too",
+    "locus": "Chullin.24a.6",
+    "daf": "24a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "stam_24a",
+     "structure": {
+      "lenient": "para",
+      "strict": "egla",
+      "property": "fit_by_shechita",
+      "concludes": "egla_fit_by_shechita"
+     }
+    }
+   },
+   {
+    "id": "concl:egla_fit_by_shechita",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "the broken-necked heifer should be fit by slaughter too",
+    "data": {
+     "term": "egla_fit_by_shechita"
+    }
+   },
+   {
+    "id": "ground:miut_veorfu",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'וערפו העגלה' -- by breaking the neck yes, by slaughter no",
+    "locus": "Chullin.24a.6",
+    "daf": "24a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "דברים כא,ד"
+    }
+   },
+   {
+    "id": "schema:kv_shem_oseh_chatat",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "verbal designation should render the goat a sin offering, a fortiori from the case where the lotter…",
+    "locus": "Chullin.24a.3",
+    "daf": "24a",
+    "sentenceId": 2,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "baraita_yom_kippur",
+     "structure": {
+      "lenient": "kinei_yoledet",
+      "strict": "seir_yom_kippur",
+      "property": "shem_mekadesh",
+      "concludes": "shem_oseh_chatat"
+     }
+    }
+   },
+   {
+    "id": "concl:shem_oseh_chatat",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "verbal designation should render the goat a sin offering, a fortiori from the case where the lotter…",
+    "data": {
+     "term": "shem_oseh_chatat"
+    }
+   },
+   {
+    "id": "ground:miut_veasahu_chatat",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'ועשהו חטאת' -- the lottery renders it a sin offering, a verbal designation does not",
+    "locus": "Chullin.24a.3",
+    "daf": "24a",
+    "sentenceId": 2,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "ויקרא טז,ט"
+    }
+   },
+   {
+    "id": "voice:baraita_yom_kippur",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita yom kippur",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:stam_24a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 24a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_24a",
+    "target": "schema:kv_para_arifa",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_para_arifa",
+    "target": "concl:para_fit_by_arifa",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_zot_arifa",
+    "target": "schema:kv_para_arifa",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "restriction:r_chukka_bars_kv",
+    "target": "schema:kv_para_arifa",
+    "type": "restricts",
+    "regime": "attack",
+    "live": false,
+    "neutralized_by": "refuted"
+   },
+   {
+    "source": "refutation:yom_kippur_counterexample",
+    "target": "restriction:r_chukka_bars_kv",
+    "type": "refutes",
+    "regime": "attack",
+    "live": true
+   },
+   {
+    "source": "voice:stam_24a",
+    "target": "schema:kv_egla_shechita",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_egla_shechita",
+    "target": "concl:egla_fit_by_shechita",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_veorfu",
+    "target": "schema:kv_egla_shechita",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "voice:baraita_yom_kippur",
+    "target": "schema:kv_shem_oseh_chatat",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_shem_oseh_chatat",
+    "target": "concl:shem_oseh_chatat",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_veasahu_chatat",
+    "target": "schema:kv_shem_oseh_chatat",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "voice:stam_24a",
+    "target": "prop:p_para_shechita_kesherah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_24a",
+    "target": "prop:p_para_arifa_pesulah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_24a",
+    "target": "prop:p_egla_arifa_kesherah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_24a",
+    "target": "prop:p_egla_shechita_pesulah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

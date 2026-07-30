@@ -201,10 +201,21 @@
        "aliba": null,
        "withdrawn": false,
        "live": true,
+       "live_for": [],
        "rebuffed_by": {
         "id": "rb_hava_amina_biskila",
         "gloss_en": "אי כתב רחמנא הכי הוה אמינא בסקילה -- the short form would be misread as stoning, so יומת is needed even literally",
-        "refuted": true
+        "refuted": true,
+        "refuted_by": {
+         "id": "rr_biskila_salka_datach",
+         "gloss_en": "בסקילה סלקא דעתך? קטל איהו בסייף, ממונו בסקילה? -- stoning could never enter your mind, so the rebuff fails and the elimination stands",
+         "locus": "Sanhedrin.15b.2",
+         "daf": "15b",
+         "sentenceId": 1
+        },
+        "locus": "Sanhedrin.15b.2",
+        "daf": "15b",
+        "sentenceId": 1
        },
        "locus": "Sanhedrin.15b.1",
        "daf": "15b",
@@ -217,10 +228,15 @@
        "aliba": null,
        "withdrawn": false,
        "live": false,
+       "live_for": [],
        "rebuffed_by": {
         "id": "rb_adrabbah",
         "gloss_en": "אדרבה, משום היא גופה: he killed -- money cannot suffice; his ox killed -- let him redeem himself. The kofer verse fits the literal reading, so this elimination dies",
-        "refuted": false
+        "refuted": false,
+        "refuted_by": null,
+        "locus": "Sanhedrin.15b.5",
+        "daf": "15b",
+        "sentenceId": 4
        },
        "locus": "Sanhedrin.15b.4",
        "daf": "15b",
@@ -233,6 +249,7 @@
        "aliba": null,
        "withdrawn": false,
        "live": true,
+       "live_for": [],
        "rebuffed_by": null,
        "locus": "Sanhedrin.15b.5",
        "daf": "15b",
@@ -252,6 +269,9 @@
        "aliba": "md_chenek_chamur",
        "withdrawn": false,
        "live": false,
+       "live_for": [
+        "md_chenek_chamur"
+       ],
        "rebuffed_by": null,
        "locus": "Sanhedrin.15b.3",
        "daf": "15b",
@@ -264,17 +284,22 @@
        "aliba": null,
        "withdrawn": false,
        "live": true,
+       "live_for": [],
        "rebuffed_by": null
       }
      ]
     }
    ],
-   "established": "purpose(vegam_bealav_yumat,kemitat_bealim_kach_mitat_hashor)",
+   "established": "purpose(vegam_bealav_yumat, kemitat_bealim_kach_mitat_hashor)",
+   "established_prop": "p_kemitat_bealim",
    "locus": "Sanhedrin.15a.15",
    "daf": "15a",
    "sentenceId": 14
   }
  ],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_m_hekesh_kemitat_bealim",
@@ -459,6 +484,21 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "shor_haniskal_beesrim_veshlosha",
+     "gloss_en": "השור יסקל וגם בעליו יומת -- as the owner's death (a court of twenty-three), so the ox's death"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:m_hekesh_kemitat_bealim",
+      "text_en": "the hekesh licenses shor_haniskal_beesrim_veshlosha: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   },
   {
@@ -470,7 +510,7 @@
    "verdict": "answers",
    "answers": [
     {
-     "R": "purpose(vegam_bealav_yumat,kemitat_bealim_kach_mitat_hashor)"
+     "R": "purpose(vegam_bealav_yumat, kemitat_bealim_kach_mitat_hashor)"
     }
    ],
    "tree": {
@@ -779,6 +819,59 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "establishes",
+    "conclusion": {
+     "term": "purpose(vegam_bealav_yumat, kemitat_bealim_kach_mitat_hashor)",
+     "gloss_en": "what does וגם בעליו יומת come to teach?"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "frame:f_vegam_bealav_yumat",
+      "text_en": "the candidate readings are exhaustive: the phrase must come for one of the raised construals -- Abaye's ממאי presupposes the space and the stam's אלא closes it"
+     },
+     {
+      "role": "alternative_survives",
+      "node": "prop:p_kemitat_bealim",
+      "text_en": "the reading (procedural: the ox's trial is like the owner's -- the survivor) survives every elimination"
+     },
+     {
+      "role": "alternative_eliminated",
+      "node": "prop:p_liktala",
+      "elimination": "elimination:e_im_ken_lichtov",
+      "text_en": "the reading (plain-literal: the owner is condemned to death) is ruled out: אם כן ליכתוב וגם בעליו ולישתוק -- were it literal, יומת is superfluous"
+     },
+     {
+      "role": "alternative_eliminated",
+      "node": "prop:p_liktala",
+      "elimination": "elimination:e_chizkiya",
+      "text_en": "the reading (plain-literal: the owner is condemned to death) is ruled out: אלא אמר חזקיה: מות יומת המכה רצח הוא -- על רציחתו אתה הורגו ואי אתה הורגו על רציחת שורו"
+     },
+     {
+      "role": "alternative_eliminated",
+      "node": "prop:p_chenek_lekula",
+      "elimination": "elimination:e_chizkiya",
+      "text_en": "the reading (literal-with-a-role-for-יומת: an actual chenek execution, as a kula) is ruled out: אלא אמר חזקיה: מות יומת המכה רצח הוא -- על רציחתו אתה הורגו ואי אתה הורגו על רציחת שורו"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_e_chizkiya",
+      "drop": "e_chizkiya",
+      "drop_node": "elimination:e_chizkiya",
+      "outcome": "nothing_established",
+      "text_en": "no reading would be established -- while every position the frame supports stands untouched (support never establishes)"
+     },
+     {
+      "counterfactual": "cf_drop_e_im_ken_lichtov",
+      "drop": "e_im_ken_lichtov",
+      "drop_node": "elimination:e_im_ken_lichtov",
+      "outcome": "establishes",
+      "text_en": "a reading would still be established"
+     }
+    ]
    }
   },
   {
@@ -807,7 +900,7 @@
    "verdict": "answers",
    "answers": [
     {
-     "R": "purpose(vegam_bealav_yumat,kemitat_bealim_kach_mitat_hashor)"
+     "R": "purpose(vegam_bealav_yumat, kemitat_bealim_kach_mitat_hashor)"
     }
    ],
    "tree": {
@@ -1043,5 +1136,410 @@
   }
  ],
  "kb": "svara/sanhedrin_15a_shor_haniskal.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_shor_haniskal_23",
+    "type": "prop",
+    "label_he": "שור הנסקל בעשרים ושלשה",
+    "label_en": "the ox to be stoned is judged by twenty-three",
+    "locus": "Sanhedrin.15a.15",
+    "daf": "15a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_shor_haniskal",
+       "esrim_veshlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kemitat_bealim",
+    "type": "prop",
+    "label_he": "כמיתת הבעלים כך מיתת השור",
+    "label_en": "the surviving (procedural) reading: וגם בעליו יומת teaches that as the owner's death would require…",
+    "locus": "Sanhedrin.15a.15",
+    "daf": "15a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "vegam_bealav_yumat",
+       "kemitat_bealim_kach_mitat_hashor"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_liktala",
+    "type": "prop",
+    "label_he": "אימא לקטלא הוא דאתא",
+    "label_en": "the plain-literal reading: the phrase condemns the ox's owner to death",
+    "locus": "Sanhedrin.15b.1",
+    "daf": "15b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "vegam_bealav_yumat",
+       "ktala_debealim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chenek_lekula",
+    "type": "prop",
+    "label_he": "ודילמא האי דכתב רחמנא יומת לאקולי עילויה, לאפוקי מסייף לחנק",
+    "label_en": "the literal branch's comeback: יומת teaches an actual chenek execution for the owner, as a leniency…",
+    "locus": "Sanhedrin.15b.3",
+    "daf": "15b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "vegam_bealav_yumat",
+       "mitat_chenek_lekula"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chizkiya_derasha",
+    "type": "prop",
+    "label_he": "מות יומת המכה רצח הוא -- על רציחתו אתה הורגו, ואי אתה הורגו על רציחת שורו",
+    "label_en": "Chizkiya's derasha: a man is executed for his own act of murder, never for his ox's -- no owner-exe…",
+    "locus": "Sanhedrin.15b.5",
+    "daf": "15b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "klal",
+      "args": [
+       "mitat_bealim",
+       "al_retzichato_velo_al_retzichat_shoro"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:m_hekesh_kemitat_bealim",
+    "type": "schema",
+    "label_he": "היקש",
+    "label_en": "השור יסקל וגם בעליו יומת -- as the owner's death (a court of twenty-three), so the ox's death",
+    "locus": "Sanhedrin.15a.15",
+    "daf": "15a",
+    "sentenceId": 14,
+    "data": {
+     "kind": "hekesh",
+     "status": "stands",
+     "holder": "mishnah_sanhedrin",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "shor_haniskal_beesrim_veshlosha"
+     }
+    }
+   },
+   {
+    "id": "concl:shor_haniskal_beesrim_veshlosha",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "השור יסקל וגם בעליו יומת -- as the owner's death (a court of twenty-three), so the ox's death",
+    "data": {
+     "term": "shor_haniskal_beesrim_veshlosha"
+    }
+   },
+   {
+    "id": "frame:f_vegam_bealav_yumat",
+    "type": "frame",
+    "label_he": "למאי אתא",
+    "label_en": "what does וגם בעליו יומת come to teach?",
+    "locus": "Sanhedrin.15a.15",
+    "daf": "15a",
+    "sentenceId": 14,
+    "data": {
+     "about": "vegam_bealav_yumat",
+     "exhaustive": true,
+     "established": "purpose(vegam_bealav_yumat, kemitat_bealim_kach_mitat_hashor)",
+     "established_prop": "p_kemitat_bealim"
+    }
+   },
+   {
+    "id": "elimination:e_im_ken_lichtov",
+    "type": "elimination",
+    "label_he": "אם כן ליכתוב וגם בעליו ולישתוק",
+    "label_en": "אם כן ליכתוב וגם בעליו ולישתוק -- were it literal, יומת is superfluous",
+    "locus": "Sanhedrin.15b.1",
+    "daf": "15b",
+    "sentenceId": 0,
+    "data": {}
+   },
+   {
+    "id": "rebuff:rb_hava_amina_biskila",
+    "type": "rebuff",
+    "label_he": "אי כתב רחמנא הכי הוה אמינא בסקילה",
+    "label_en": "אי כתב רחמנא הכי הוה אמינא בסקילה -- the short form would be misread as stoning, so יומת is needed…",
+    "locus": "Sanhedrin.15b.2",
+    "daf": "15b",
+    "sentenceId": 1,
+    "data": {
+     "refuted": true
+    }
+   },
+   {
+    "id": "refutation:rr_biskila_salka_datach",
+    "type": "refutation",
+    "label_he": "בסקילה סלקא דעתך? קטל איהו בסייף, ממונו בסקילה",
+    "label_en": "בסקילה סלקא דעתך? קטל איהו בסייף, ממונו בסקילה? -- stoning could never enter your mind, so the rebu…",
+    "locus": "Sanhedrin.15b.2",
+    "daf": "15b",
+    "sentenceId": 1,
+    "data": {
+     "engine_fact": "elimination_rebuttal_refuted"
+    }
+   },
+   {
+    "id": "elimination:e_kofer",
+    "type": "elimination",
+    "label_he": "לא סלקא דעתך: אם כפר יושת עליו",
+    "label_en": "לא סלקא דעתך: אם כפר יושת עליו presupposes ransom, and לא תקחו כפר לנפש רצח forbids ransom for one…",
+    "locus": "Sanhedrin.15b.4",
+    "daf": "15b",
+    "sentenceId": 3,
+    "data": {}
+   },
+   {
+    "id": "rebuff:rb_adrabbah",
+    "type": "rebuff",
+    "label_he": "אדרבה, משום היא גופה",
+    "label_en": "אדרבה, משום היא גופה: he killed -- money cannot suffice; his ox killed -- let him redeem himself. T…",
+    "locus": "Sanhedrin.15b.5",
+    "daf": "15b",
+    "sentenceId": 4,
+    "data": {
+     "refuted": false
+    }
+   },
+   {
+    "id": "elimination:e_chizkiya",
+    "type": "elimination",
+    "label_he": "אלא אמר חזקיה: מות יומת המכה רצח הוא",
+    "label_en": "אלא אמר חזקיה: מות יומת המכה רצח הוא -- על רציחתו אתה הורגו ואי אתה הורגו על רציחת שורו",
+    "locus": "Sanhedrin.15b.5",
+    "daf": "15b",
+    "sentenceId": 4,
+    "data": {
+     "by": "chizkiya"
+    }
+   },
+   {
+    "id": "elimination:e_hanicha_chenek_chamur",
+    "type": "elimination",
+    "label_he": "שלילת קריאה",
+    "label_en": "coherent only where chenek is the lighter death; per חנק חמור one objects קטל איהו בסייף קטל שורו ב…",
+    "locus": "Sanhedrin.15b.3",
+    "daf": "15b",
+    "sentenceId": 2,
+    "data": {
+     "aliba": "md_chenek_chamur"
+    }
+   },
+   {
+    "id": "voice:abaye",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "abaye",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:chizkiya",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "chizkiya",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:md_chenek_chamur",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "md chenek chamur",
+    "data": {
+     "kind": "shita"
+    }
+   },
+   {
+    "id": "voice:mishnah_sanhedrin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah sanhedrin",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishnah_sanhedrin",
+    "target": "schema:m_hekesh_kemitat_bealim",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:m_hekesh_kemitat_bealim",
+    "target": "concl:shor_haniskal_beesrim_veshlosha",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:mishnah_sanhedrin",
+    "target": "prop:p_shor_haniskal_23",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishnah_sanhedrin",
+    "target": "prop:p_kemitat_bealim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_kemitat_bealim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:chizkiya",
+    "target": "prop:p_chizkiya_derasha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "frame:f_vegam_bealav_yumat",
+    "target": "schema:m_hekesh_kemitat_bealim",
+    "type": "frame_supports",
+    "regime": "evidence",
+    "status": "established"
+   },
+   {
+    "source": "frame:f_vegam_bealav_yumat",
+    "target": "prop:p_kemitat_bealim",
+    "type": "has_alternative",
+    "regime": "structural",
+    "status": "live"
+   },
+   {
+    "source": "frame:f_vegam_bealav_yumat",
+    "target": "prop:p_liktala",
+    "type": "has_alternative",
+    "regime": "structural",
+    "status": "eliminated"
+   },
+   {
+    "source": "elimination:e_im_ken_lichtov",
+    "target": "prop:p_liktala",
+    "type": "eliminates",
+    "regime": "attack",
+    "live": true
+   },
+   {
+    "source": "rebuff:rb_hava_amina_biskila",
+    "target": "elimination:e_im_ken_lichtov",
+    "type": "rebuts",
+    "regime": "attack",
+    "live": false,
+    "neutralized_by": "refuted"
+   },
+   {
+    "source": "refutation:rr_biskila_salka_datach",
+    "target": "rebuff:rb_hava_amina_biskila",
+    "type": "refutes",
+    "regime": "attack",
+    "live": true
+   },
+   {
+    "source": "elimination:e_kofer",
+    "target": "prop:p_liktala",
+    "type": "eliminates",
+    "regime": "attack",
+    "live": false,
+    "neutralized_by": "rebuffed"
+   },
+   {
+    "source": "rebuff:rb_adrabbah",
+    "target": "elimination:e_kofer",
+    "type": "rebuts",
+    "regime": "attack",
+    "live": true
+   },
+   {
+    "source": "elimination:e_chizkiya",
+    "target": "prop:p_liktala",
+    "type": "eliminates",
+    "regime": "attack",
+    "live": true
+   },
+   {
+    "source": "voice:chizkiya",
+    "target": "elimination:e_chizkiya",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "frame:f_vegam_bealav_yumat",
+    "target": "prop:p_chenek_lekula",
+    "type": "has_alternative",
+    "regime": "structural",
+    "status": "eliminated"
+   },
+   {
+    "source": "elimination:e_hanicha_chenek_chamur",
+    "target": "prop:p_chenek_lekula",
+    "type": "eliminates",
+    "regime": "attack",
+    "live": false,
+    "aliba": "md_chenek_chamur",
+    "live_for": [
+     "md_chenek_chamur"
+    ]
+   },
+   {
+    "source": "elimination:e_chizkiya",
+    "target": "prop:p_chenek_lekula",
+    "type": "eliminates",
+    "regime": "attack",
+    "live": true
+   },
+   {
+    "source": "frame:f_vegam_bealav_yumat",
+    "target": "prop:p_kemitat_bealim",
+    "type": "establishes_reading",
+    "regime": "evidence",
+    "status": "established"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

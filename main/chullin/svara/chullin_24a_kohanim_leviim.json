@@ -487,6 +487,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.24a.9",
      "daf": "24a",
      "sentenceId": 8
@@ -517,6 +523,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Chullin.24a.10",
      "daf": "24a",
      "sentenceId": 9
@@ -548,6 +560,18 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_siman_yafe",
+   "topic": "siman_yafe_cutoff",
+   "parties": [
+    "tanna_kamma_siman",
+    "r_yosei"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_mumin_leviim",
@@ -885,6 +909,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "mumin_poslin_beleviim",
+     "gloss_en": "blemishes should disqualify Levites too, a fortiori from priests"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_zot_laleviim",
+      "text_en": "blocked by the verse: 'zot asher la-leviim' -- THIS (the passage of years) pertains to the Levites, and no other disqualification pertains to the Levites"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_zot_laleviim",
+      "drop": "miut_zot_laleviim",
+      "drop_node": "ground:miut_zot_laleviim",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -1623,6 +1670,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "shanim_poslin_bekohanim",
+     "gloss_en": "the passage of years should disqualify priests too, a fortiori from Levites"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_velo_lakohanim",
+      "text_en": "blocked by the verse: 'asher la-leviim' -- and not 'asher la-kohanim': the age disqualification is the Levites', not the priests'"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_velo_lakohanim",
+      "drop": "miut_velo_lakohanim",
+      "drop_node": "ground:miut_velo_lakohanim",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -2033,5 +2103,704 @@
   }
  ],
  "kb": "svara/chullin_24a_kohanim_leviim.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_kasher_bakohanim_pasul_baleviim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "there is an element with which priests remain fit and Levites are unfit",
+    "locus": "Chullin.24a.7",
+    "daf": "24a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "exists_fit_unfit",
+      "args": [
+       "kohanim",
+       "leviim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kasher_baleviim_pasul_bakohanim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "there is an element with which Levites remain fit and priests are unfit",
+    "locus": "Chullin.24a.7",
+    "daf": "24a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "exists_fit_unfit",
+      "args": [
+       "leviim",
+       "kohanim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kohanim_mumin_pesulim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "priests are disqualified by blemishes",
+    "locus": "Chullin.24a.8",
+    "daf": "24a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "disqualified_by",
+      "args": [
+       "kohanim",
+       "mumin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kohanim_shanim_kesherim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "priests are NOT disqualified by the passage of years",
+    "locus": "Chullin.24a.8",
+    "daf": "24a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "not_disqualified_by",
+      "args": [
+       "kohanim",
+       "shanim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_leviim_mumin_kesherim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Levites are NOT disqualified by blemishes",
+    "locus": "Chullin.24a.8",
+    "daf": "24a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "not_disqualified_by",
+      "args": [
+       "leviim",
+       "mumin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_leviim_shanim_pesulim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Levites are disqualified by the passage of years",
+    "locus": "Chullin.24a.8",
+    "daf": "24a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "disqualified_by",
+      "args": [
+       "leviim",
+       "shanim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shanim_only_bakatef",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the age disqualification of Levites applies only while the service is carrying on the shoulder (the…",
+    "locus": "Chullin.24a.11",
+    "daf": "24a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "scope_limited_to",
+      "args": [
+       "shanim_disqualify_leviim",
+       "avoda_bakatef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_verse_25_service",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "one verse states 'from twenty-five years old and upward' (Num 8:24) -- prima facie, Levite service…",
+    "locus": "Chullin.24a.12",
+    "daf": "24a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "marker",
+      "args": [
+       "levi_service_start",
+       "age_twenty_five"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_verse_30_service",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "one verse states 'from thirty years old and upward' (Num 4:47) -- prima facie, Levite service start…",
+    "locus": "Chullin.24a.12",
+    "daf": "24a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "marker",
+      "args": [
+       "levi_service_start",
+       "age_thirty"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_harmonize_25_training",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "twenty-five is for apprenticeship (talmud)",
+    "locus": "Chullin.24a.12",
+    "daf": "24a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "marker",
+      "args": [
+       "levi_training_start",
+       "age_twenty_five"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_harmonize_30_service",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "thirty is for service (avodah)",
+    "locus": "Chullin.24a.12",
+    "daf": "24a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "marker",
+      "args": [
+       "levi_service_start",
+       "age_thirty"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_siman_five_years",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a student who saw no positive sign in his studies in five years will not see one",
+    "locus": "Chullin.24a.13",
+    "daf": "24a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "marker",
+      "args": [
+       "siman_yafe_cutoff",
+       "five_years"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_siman_three_years",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "R. Yosei: three years, as with Daniel -- 'and they should be raised three years... and be taught th…",
+    "locus": "Chullin.24a.13",
+    "daf": "24a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "marker",
+      "args": [
+       "siman_yafe_cutoff",
+       "three_years"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kasdim_kalil",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the language of the Chaldeans is different -- it is easy (so Daniel's three years prove nothing abo…",
+    "locus": "Chullin.24a.14",
+    "daf": "24a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "distinguishes",
+      "args": [
+       "leshon_kasdim",
+       "kalil"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_avoda_takifin",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the halakhot of Temple service are different -- they are difficult (so the Levites' five years prov…",
+    "locus": "Chullin.24a.14",
+    "daf": "24a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "distinguishes",
+      "args": [
+       "hilchot_avoda",
+       "takifin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kohen_fit_range",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a priest is fit for service from two pubic hairs until he ages, and blemishes disqualify him",
+    "locus": "Chullin.24a.15",
+    "daf": "24a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "fit_between",
+      "args": [
+       "kohen",
+       "shtei_searot",
+       "ziknah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_levi_fit_range",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a Levite is fit for service from thirty until fifty, and years disqualify him",
+    "locus": "Chullin.24a.15",
+    "daf": "24a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "fit_between",
+      "args": [
+       "levi",
+       "age_thirty",
+       "age_fifty"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shiloh_only_kol",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "in Shiloh and in the eternal Temple, Levites are disqualified only by (a change in) voice",
+    "locus": "Chullin.24a.15",
+    "daf": "24a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "disqualified_only_by",
+      "args": [
+       "leviim_beshiloh_umikdash",
+       "kol"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kol_echad",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "'when the trumpeters and singers were as one, to make one sound heard' (II Chron 5:13) -- the Levit…",
+    "locus": "Chullin.24b.1",
+    "daf": "24b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "requires",
+      "args": [
+       "shir_haleviim",
+       "kol_echad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_mumin_leviim",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "blemishes should disqualify Levites too, a fortiori from priests",
+    "locus": "Chullin.24a.9",
+    "daf": "24a",
+    "sentenceId": 8,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "baraita_zot_asher_laleviim",
+     "structure": {
+      "lenient": "kohanim",
+      "strict": "leviim",
+      "property": "mumin_poslin",
+      "concludes": "mumin_poslin_beleviim"
+     }
+    }
+   },
+   {
+    "id": "concl:mumin_poslin_beleviim",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "blemishes should disqualify Levites too, a fortiori from priests",
+    "data": {
+     "term": "mumin_poslin_beleviim"
+    }
+   },
+   {
+    "id": "ground:miut_zot_laleviim",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'zot asher la-leviim' -- THIS (the passage of years) pertains to the Levites, and no other disquali…",
+    "locus": "Chullin.24a.9",
+    "daf": "24a",
+    "sentenceId": 8,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "במדבר ח,כד"
+    }
+   },
+   {
+    "id": "schema:kv_shanim_kohanim",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+    "locus": "Chullin.24a.10",
+    "daf": "24a",
+    "sentenceId": 9,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "baraita_zot_asher_laleviim",
+     "structure": {
+      "lenient": "leviim",
+      "strict": "kohanim",
+      "property": "shanim_poslin",
+      "concludes": "shanim_poslin_bekohanim"
+     }
+    }
+   },
+   {
+    "id": "concl:shanim_poslin_bekohanim",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "the passage of years should disqualify priests too, a fortiori from Levites",
+    "data": {
+     "term": "shanim_poslin_bekohanim"
+    }
+   },
+   {
+    "id": "ground:miut_velo_lakohanim",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'asher la-leviim' -- and not 'asher la-kohanim': the age disqualification is the Levites', not the…",
+    "locus": "Chullin.24a.10",
+    "daf": "24a",
+    "sentenceId": 9,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "במדבר ח,כד"
+    }
+   },
+   {
+    "id": "dispute:frame_siman_yafe",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "siman yafe cutoff",
+    "data": {
+     "topic": "siman_yafe_cutoff"
+    }
+   },
+   {
+    "id": "voice:baraita_kohen_levi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita kohen levi",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_mumin_shanim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita mumin shanim",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_zot_asher_laleviim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita zot asher laleviim",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:mishna_24a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna 24a",
+    "data": {
+     "kind": "mishna"
+    }
+   },
+   {
+    "id": "voice:r_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:stam_24a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 24a",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_kamma_siman",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kamma siman",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:baraita_zot_asher_laleviim",
+    "target": "schema:kv_mumin_leviim",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_mumin_leviim",
+    "target": "concl:mumin_poslin_beleviim",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_zot_laleviim",
+    "target": "schema:kv_mumin_leviim",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "voice:baraita_zot_asher_laleviim",
+    "target": "schema:kv_shanim_kohanim",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_shanim_kohanim",
+    "target": "concl:shanim_poslin_bekohanim",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_velo_lakohanim",
+    "target": "schema:kv_shanim_kohanim",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "dispute:frame_siman_yafe",
+    "target": "voice:tanna_kamma_siman",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_siman_yafe",
+    "target": "voice:r_yosei",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:mishna_24a",
+    "target": "prop:p_kasher_bakohanim_pasul_baleviim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_24a",
+    "target": "prop:p_kasher_baleviim_pasul_bakohanim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_mumin_shanim",
+    "target": "prop:p_kohanim_mumin_pesulim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_mumin_shanim",
+    "target": "prop:p_kohanim_shanim_kesherim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_mumin_shanim",
+    "target": "prop:p_leviim_mumin_kesherim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_mumin_shanim",
+    "target": "prop:p_leviim_shanim_pesulim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_zot_asher_laleviim",
+    "target": "prop:p_shanim_only_bakatef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_zot_asher_laleviim",
+    "target": "prop:p_verse_25_service",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "report"
+   },
+   {
+    "source": "voice:baraita_zot_asher_laleviim",
+    "target": "prop:p_verse_30_service",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "report"
+   },
+   {
+    "source": "voice:baraita_zot_asher_laleviim",
+    "target": "prop:p_harmonize_25_training",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_zot_asher_laleviim",
+    "target": "prop:p_harmonize_30_service",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_kamma_siman",
+    "target": "prop:p_siman_five_years",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_siman_three_years",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_kohen_levi",
+    "target": "prop:p_kohen_fit_range",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_kohen_levi",
+    "target": "prop:p_levi_fit_range",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_kohen_levi",
+    "target": "prop:p_shiloh_only_kol",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_kol_echad",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_24a",
+    "target": "prop:p_kasdim_kalil",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "tanna_kamma_siman"
+   },
+   {
+    "source": "voice:stam_24a",
+    "target": "prop:p_avoda_takifin",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

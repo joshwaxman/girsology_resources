@@ -560,6 +560,18 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_mechtza",
+   "topic": "mechtza_al_mechtza",
+   "parties": [
+    "rav",
+    "rav_kahana"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_mn_chatzi_gargeret_beof",
@@ -953,6 +965,21 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "chatzi_gargeret_beof_kesheira",
+     "gloss_en": "in a bird: if half is like a majority, the majority was already cut before the pause; if it is not, the half-cut was nothing and no tereifa arose -- either way the slaughter is valid"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:mn_chatzi_gargeret_beof",
+      "text_en": "the mah nafshach licenses chatzi_gargeret_beof_kesheira: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   },
   {
@@ -1347,9 +1374,713 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "shechita_requires_rov_nireh",
+     "gloss_en": "if tereifa, triggered by any minuscule deficiency, requires a conspicuous majority where a majority is required, then shechita, valid only once a majority is cut, surely requires a conspicuous majority"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:kv_rov_nireh_lishchita",
+      "text_en": "the kal vachomer licenses shechita_requires_rov_nireh: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/chullin_29a_mechetza_kerov.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_framing_shechita",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the Rav / Rav Kahana dispute concerns whether an exactly-half-cut siman counts as a majority for sl…",
+    "locus": "Chullin.28b.12",
+    "daf": "28b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "itmar_mechtza",
+       "hilchot_shechita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_framing_pesach",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the Rav / Rav Kahana dispute was stated about the Paschal offering, where half the people were impu…",
+    "locus": "Chullin.29a.6",
+    "daf": "29a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "itmar_mechtza",
+       "pesach_betumah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kerov_shechita",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "for slaughter, a siman of which exactly half was cut is treated like one of which the majority was…",
+    "locus": "Chullin.28b.12",
+    "daf": "28b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "half_status",
+      "args": [
+       "shechita",
+       "kerov"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_eino_kerov_shechita",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "for slaughter, a siman of which exactly half was cut is NOT treated like one of which the majority…",
+    "locus": "Chullin.28b.12",
+    "daf": "28b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "half_status",
+      "args": [
+       "shechita",
+       "eino_kerov"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kerov_pesach",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "when exactly half the people are impure on the fourteenth of Nisan, their status is that of a major…",
+    "locus": "Chullin.29a.7",
+    "daf": "29a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "half_status",
+      "args": [
+       "pesach_betumah",
+       "kerov"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_eino_kerov_pesach",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "when exactly half the people are impure their status is NOT that of a majority: the pure sacrifice…",
+    "locus": "Chullin.29a.7",
+    "daf": "29a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "half_status",
+      "args": [
+       "pesach_betumah",
+       "eino_kerov"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taama_rav_shechita",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Rav's stated ground for the shechita-version: the Merciful One said to Moses 'do not leave a majori…",
+    "locus": "Chullin.28b.13",
+    "daf": "28b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "grounded_in",
+      "args": [
+       "kerov_shechita",
+       "lo_teshayer_ruba"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taama_kahana_shechita",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Rav Kahana's stated ground for the shechita-version: the Merciful One said to Moses 'cut a majority'",
+    "locus": "Chullin.28b.13",
+    "daf": "28b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "grounded_in",
+      "args": [
+       "eino_kerov_shechita",
+       "shechot_ruba"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taama_rav_pesach",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Rav's ground in the Pesach case: 'any man who shall be impure' (Num 9:10) -- an individual is defer…",
+    "locus": "Chullin.29a.8",
+    "daf": "29a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "grounded_in",
+      "args": [
+       "kerov_pesach",
+       "ish_nidcheh_veein_tzibbur_nidchin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mishna_chatzi_pasul",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "our mishna: if one cut half of one siman in a bird, or one and a half simanim in an animal, his sla…",
+    "locus": "Chullin.28b.15",
+    "daf": "28b",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "pasul",
+      "args": [
+       "chatzi_siman_beof"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_pasul_midrabanan",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the mishna's disqualification is rabbinic, lest he not come to cut even half -- so it does not refu…",
+    "locus": "Chullin.28b.15",
+    "daf": "28b",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "pasul_midrabanan",
+      "args": [
+       "chatzi_siman_beof"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kli_shavin_temeiin",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "an impure earthenware vessel divided into two seemingly equal halves -- both remain impure, because…",
+    "locus": "Chullin.28b.16",
+    "daf": "28b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "temeiim",
+      "args": [
+       "shnei_chatzayei_kli"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_trei_rubei_leika",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "there are no two majorities in one vessel -- so exactly-half cannot count as a majority there, whil…",
+    "locus": "Chullin.28b.18",
+    "daf": "28b",
+    "sentenceId": 17,
+    "data": {
+     "content": {
+      "pred": "no_two_majorities",
+      "args": [
+       "kli_echad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_baraita_chatzi_gargeret",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "one cut half the windpipe, paused the measure of another slaughter, and completed it -- his slaught…",
+    "locus": "Chullin.28b.19",
+    "daf": "28b",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "kesheira",
+      "args": [
+       "chatzi_gargeret_case"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_baraita_beof",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "that baraita concerns a bird, which requires the cutting of only one siman -- which is what makes t…",
+    "locus": "Chullin.29a.2",
+    "daf": "29a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "case_domain",
+      "args": [
+       "chatzi_gargeret_case",
+       "of"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_baraita_chatzi_kaneh",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "half the windpipe was deficient before slaughter, and the slaughterer added an incision of any size…",
+    "locus": "Chullin.29a.3",
+    "daf": "29a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "kesheira",
+      "args": [
+       "chatzi_kaneh_case"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tereifa_rov_nireh",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Rava: for rendering an animal a tereifa, where a majority is required it must be a conspicuous majo…",
+    "locus": "Chullin.29a.4",
+    "daf": "29a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "requires_visible_majority",
+      "args": [
+       "tereifa"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shechita_rov_nireh",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "for slaughter too a conspicuous majority is required -- Abaye's a-fortiori conclusion, incompatible…",
+    "locus": "Chullin.29a.5",
+    "daf": "29a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "requires_visible_majority",
+      "args": [
+       "shechita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:mn_chatzi_gargeret_beof",
+    "type": "schema",
+    "label_he": "מה נפשך",
+    "label_en": "in a bird: if half is like a majority, the majority was already cut before the pause; if it is not,…",
+    "locus": "Chullin.29a.2",
+    "daf": "29a",
+    "sentenceId": 1,
+    "data": {
+     "kind": "mah_nafshach",
+     "status": "stands",
+     "holder": "stam_29a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "chatzi_gargeret_beof_kesheira"
+     }
+    }
+   },
+   {
+    "id": "concl:chatzi_gargeret_beof_kesheira",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "in a bird: if half is like a majority, the majority was already cut before the pause; if it is not,…",
+    "data": {
+     "term": "chatzi_gargeret_beof_kesheira"
+    }
+   },
+   {
+    "id": "schema:kv_rov_nireh_lishchita",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "if tereifa, triggered by any minuscule deficiency, requires a conspicuous majority where a majority…",
+    "locus": "Chullin.29a.5",
+    "daf": "29a",
+    "sentenceId": 4,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "stands",
+     "holder": "abaye",
+     "structure": {
+      "lenient": "tereifa",
+      "strict": "shechita",
+      "property": "rov_hanireh_laeinayim",
+      "concludes": "shechita_requires_rov_nireh"
+     }
+    }
+   },
+   {
+    "id": "concl:shechita_requires_rov_nireh",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "if tereifa, triggered by any minuscule deficiency, requires a conspicuous majority where a majority…",
+    "data": {
+     "term": "shechita_requires_rov_nireh"
+    }
+   },
+   {
+    "id": "dispute:frame_mechtza",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "mechtza al mechtza",
+    "data": {
+     "topic": "mechtza_al_mechtza"
+    }
+   },
+   {
+    "id": "voice:abaye",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "abaye",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:baraita_chatzi_gargeret",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita chatzi gargeret",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_chatzi_kaneh",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita chatzi kaneh",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_kli_cheres",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita kli cheres",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:mishna_hashochet",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna hashochet",
+    "data": {
+     "kind": "mishna"
+    }
+   },
+   {
+    "id": "voice:rav",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_kahana",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav kahana",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_papa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav papa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_29a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 29a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_29a",
+    "target": "schema:mn_chatzi_gargeret_beof",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:mn_chatzi_gargeret_beof",
+    "target": "concl:chatzi_gargeret_beof_kesheira",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "schema:kv_rov_nireh_lishchita",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_rov_nireh_lishchita",
+    "target": "concl:shechita_requires_rov_nireh",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_mechtza",
+    "target": "voice:rav",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_mechtza",
+    "target": "voice:rav_kahana",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_29a",
+    "target": "prop:p_framing_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_29a",
+    "target": "prop:p_framing_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:stam_29a",
+    "target": "prop:p_framing_pesach",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_kerov_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_kerov_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_taama_rav_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_taama_rav_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:rav_kahana",
+    "target": "prop:p_eino_kerov_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_kahana",
+    "target": "prop:p_taama_kahana_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_kahana",
+    "target": "prop:p_taama_kahana_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:stam_29a",
+    "target": "prop:p_eino_kerov_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_eino_kerov_shechita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_kerov_pesach",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_kahana",
+    "target": "prop:p_eino_kerov_pesach",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_29a",
+    "target": "prop:p_taama_rav_pesach",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_hashochet",
+    "target": "prop:p_mishna_chatzi_pasul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_29a",
+    "target": "prop:p_pasul_midrabanan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_kli_cheres",
+    "target": "prop:p_kli_shavin_temeiin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_papa",
+    "target": "prop:p_trei_rubei_leika",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_chatzi_gargeret",
+    "target": "prop:p_baraita_chatzi_gargeret",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_29a",
+    "target": "prop:p_baraita_beof",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_chatzi_kaneh",
+    "target": "prop:p_baraita_chatzi_kaneh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_tereifa_rov_nireh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_shechita_rov_nireh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

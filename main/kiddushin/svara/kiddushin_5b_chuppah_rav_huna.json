@@ -133,6 +133,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Kiddushin.5a.17",
      "daf": "5a",
      "sentenceId": 16
@@ -164,6 +170,18 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "disp_chuppah_konah",
+   "topic": "chuppah_konah",
+   "parties": [
+    "rav_huna",
+    "rava"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_chuppah_maakhil",
@@ -501,6 +519,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "chuppah_konah",
+     "gloss_en": "(first formulation) if money, which does not entitle her to eat teruma, betroths, then chuppah, which entitles her to eat, surely should betroth"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:pircha_kesef_maakhil",
+      "text_en": "blocked by the objection: the premise fails (Ulla): by Torah law betrothal money DOES entitle an arusa to eat teruma; her refraining is only a rabbinic decree"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_pircha_kesef_maakhil",
+      "drop": "pircha_kesef_maakhil",
+      "drop_node": "ground:pircha_kesef_maakhil",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -1293,9 +1334,257 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "chuppah_konah",
+     "gloss_en": "(restated) if money, which does not complete a marriage after money, acquires, then chuppah, which completes a marriage after money, surely should acquire"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:kv_chuppah_gomeret",
+      "text_en": "the kal vachomer licenses chuppah_konah: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/kiddushin_5b_chuppah_rav_huna.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chuppah_konah",
+    "type": "prop",
+    "label_he": "חופה קונה מקל וחומר",
+    "label_en": "chuppah effects betrothal (by the kal vachomer)",
+    "locus": "Kiddushin.5a.16",
+    "daf": "5a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "konah",
+      "args": [
+       "chuppah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_arusah_okhelet_deoraita",
+    "type": "prop",
+    "label_he": "דבר תורה ארוסה בת ישראל אוכלת בתרומה, שנאמר וכהן כי יקנה נפש קנין כספו",
+    "label_en": "by Torah law a betrothed bat yisrael eats teruma -- she is 'the acquisition of his money'",
+    "locus": "Kiddushin.5a.17",
+    "daf": "5a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "okhelet_terumah_deoraita",
+      "args": [
+       "arusah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_arusah_lo_okhelet_derabanan",
+    "type": "prop",
+    "label_he": "גזירה שמא ימזגו לה כוס בבית אביה ותשקנו לאחיה ולאחותיה",
+    "label_en": "the Sages decreed she not eat -- lest a cup be poured for her in her father's house and she give he…",
+    "locus": "Kiddushin.5a.18",
+    "daf": "5a",
+    "sentenceId": 17,
+    "data": {
+     "content": {
+      "pred": "lo_okhelet_terumah_derabanan",
+      "args": [
+       "arusah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_chuppah_maakhil",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "(first formulation) if money, which does not entitle her to eat teruma, betroths, then chuppah, whi…",
+    "locus": "Kiddushin.5a.16",
+    "daf": "5a",
+    "sentenceId": 15,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "blocked",
+     "holder": "rav_huna",
+     "structure": {
+      "lenient": "kesef",
+      "strict": "chuppah",
+      "property": "konah",
+      "concludes": "chuppah_konah"
+     }
+    }
+   },
+   {
+    "id": "concl:chuppah_konah",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "(first formulation) if money, which does not entitle her to eat teruma, betroths, then chuppah, whi…",
+    "data": {
+     "term": "chuppah_konah"
+    }
+   },
+   {
+    "id": "ground:pircha_kesef_maakhil",
+    "type": "ground",
+    "label_he": "פירכא",
+    "label_en": "the premise fails (Ulla): by Torah law betrothal money DOES entitle an arusa to eat teruma; her ref…",
+    "locus": "Kiddushin.5a.17",
+    "daf": "5a",
+    "sentenceId": 16,
+    "data": {
+     "kind": "objection",
+     "state": "live"
+    }
+   },
+   {
+    "id": "schema:kv_chuppah_gomeret",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "(restated) if money, which does not complete a marriage after money, acquires, then chuppah, which…",
+    "locus": "Kiddushin.5a.19",
+    "daf": "5a",
+    "sentenceId": 18,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "stands",
+     "holder": "rav_huna",
+     "structure": {
+      "lenient": "kesef",
+      "strict": "chuppah",
+      "property": "konah",
+      "concludes": "chuppah_konah"
+     }
+    }
+   },
+   {
+    "id": "dispute:disp_chuppah_konah",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "chuppah konah",
+    "data": {
+     "topic": "chuppah_konah"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:ulla",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ulla",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:rav_huna",
+    "target": "schema:kv_chuppah_maakhil",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_chuppah_maakhil",
+    "target": "concl:chuppah_konah",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:pircha_kesef_maakhil",
+    "target": "schema:kv_chuppah_maakhil",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "objection",
+    "live": true
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "schema:kv_chuppah_gomeret",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_chuppah_gomeret",
+    "target": "concl:chuppah_konah",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:disp_chuppah_konah",
+    "target": "voice:rav_huna",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:disp_chuppah_konah",
+    "target": "voice:rava",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "prop:p_chuppah_konah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ulla",
+    "target": "prop:p_arusah_okhelet_deoraita",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ulla",
+    "target": "prop:p_arusah_lo_okhelet_derabanan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_chuppah_konah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

@@ -212,6 +212,18 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "disp_shiur_kesef",
+   "topic": "shiur_kesef_kiddushin",
+   "parties": [
+    "beit_shammai",
+    "beit_hillel"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_gs_kicha_kicha",
@@ -605,9 +617,305 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "isha_niknet_bekesef",
+     "gloss_en": "kicha/kicha from the field of Ephron: as Ephron's field was 'taken' with money, a woman's betrothal-'taking' is with money"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:gs_kicha_kicha",
+      "text_en": "the gezera shava licenses isha_niknet_bekesef: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/kiddushin_2a_kicha_kicha.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_isha_niknet_bekesef",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a woman is acquired (betrothed) with money",
+    "locus": "Kiddushin.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "isha",
+       "kesef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_isha_niknet_bishtar",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a woman is acquired (betrothed) with a document",
+    "locus": "Kiddushin.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "isha",
+       "shtar"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_isha_niknet_beviah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a woman is acquired (betrothed) with intercourse",
+    "locus": "Kiddushin.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "niknet_be",
+      "args": [
+       "isha",
+       "biah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shiur_dinar",
+    "type": "prop",
+    "label_he": "בית שמאי אומרים בדינר ובשוה דינר",
+    "label_en": "the minimum for betrothal money is a dinar or its worth",
+    "locus": "Kiddushin.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "shiur_kesef_kiddushin",
+      "args": [
+       "dinar"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shiur_perutah",
+    "type": "prop",
+    "label_he": "ובית הלל אומרים בפרוטה ובשוה פרוטה",
+    "label_en": "the minimum for betrothal money is a peruta or its worth",
+    "locus": "Kiddushin.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "shiur_kesef_kiddushin",
+      "args": [
+       "perutah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kicha_bekesef",
+    "type": "prop",
+    "label_he": "גמר קיחה קיחה משדה עפרון",
+    "label_en": "'taking' (ki yikach ish isha) means taking with money, learned from 'natati kesef hasadeh kach mime…",
+    "locus": "Kiddushin.2a.4",
+    "daf": "2a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "kicha_means",
+      "args": [
+       "kesef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kicha_ikri_kinyan",
+    "type": "prop",
+    "label_he": "וקיחה איקרי קנין, דכתיב השדה אשר קנה אברהם",
+    "label_en": "'taking' is called 'acquisition', as the field Abraham took is described as 'the field which Abraha…",
+    "locus": "Kiddushin.2a.5",
+    "daf": "2a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "kicha_ikri",
+      "args": [
+       "kinyan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:gs_kicha_kicha",
+    "type": "schema",
+    "label_he": "גזרה שווה",
+    "label_en": "kicha/kicha from the field of Ephron: as Ephron's field was 'taken' with money, a woman's betrothal…",
+    "locus": "Kiddushin.2a.4",
+    "daf": "2a",
+    "sentenceId": 3,
+    "data": {
+     "kind": "gezera_shava",
+     "status": "stands",
+     "holder": "stam_2a",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "isha_niknet_bekesef"
+     }
+    }
+   },
+   {
+    "id": "concl:isha_niknet_bekesef",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "kicha/kicha from the field of Ephron: as Ephron's field was 'taken' with money, a woman's betrothal…",
+    "data": {
+     "term": "isha_niknet_bekesef"
+    }
+   },
+   {
+    "id": "dispute:disp_shiur_kesef",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "shiur kesef kiddushin",
+    "data": {
+     "topic": "shiur_kesef_kiddushin"
+    }
+   },
+   {
+    "id": "voice:beit_hillel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "beit hillel",
+    "data": {
+     "kind": "school"
+    }
+   },
+   {
+    "id": "voice:beit_shammai",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "beit shammai",
+    "data": {
+     "kind": "school"
+    }
+   },
+   {
+    "id": "voice:mishna_haisha",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna haisha",
+    "data": {
+     "kind": "mishna"
+    }
+   },
+   {
+    "id": "voice:stam_2a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 2a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_2a",
+    "target": "schema:gs_kicha_kicha",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:gs_kicha_kicha",
+    "target": "concl:isha_niknet_bekesef",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:disp_shiur_kesef",
+    "target": "voice:beit_shammai",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:disp_shiur_kesef",
+    "target": "voice:beit_hillel",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:mishna_haisha",
+    "target": "prop:p_isha_niknet_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_haisha",
+    "target": "prop:p_isha_niknet_bishtar",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_haisha",
+    "target": "prop:p_isha_niknet_beviah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:beit_shammai",
+    "target": "prop:p_shiur_dinar",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:beit_hillel",
+    "target": "prop:p_shiur_perutah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2a",
+    "target": "prop:p_kicha_bekesef",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2a",
+    "target": "prop:p_kicha_ikri_kinyan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

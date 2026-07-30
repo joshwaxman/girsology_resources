@@ -329,6 +329,18 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_shiur_shehiyya",
+   "topic": "shiur_shehiyya",
+   "parties": [
+    "rav",
+    "shmuel"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_q_shehiyot_mitztarfot",
@@ -956,5 +968,417 @@
   }
  ],
  "kb": "svara/chullin_32a_shehiyot.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_shiur_behema_acheret",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "'the measure of a slaughter' means an interval in which one can slaughter another animal",
+    "locus": "Chullin.32a.5",
+    "daf": "32a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "shiur_shehiyya",
+      "args": [
+       "shechitat_behema_acheret"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rav_min_lemino",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the measure is by kind: an animal's slaughter-time for an animal, a bird's slaughter-time for a bird",
+    "locus": "Chullin.32a.8",
+    "daf": "32a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "shiur_shehiyya",
+      "args": [
+       "min_lemino"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_af_behema_leof",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "even for a bird the measure is the slaughter-time of an animal",
+    "locus": "Chullin.32a.8",
+    "daf": "32a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "shiur_shehiyya",
+      "args": [
+       "af_behema_leof"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chananya_broad",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the measure is an interval in which one can bring another animal and slaughter it -- read broadly,…",
+    "locus": "Chullin.32a.9",
+    "daf": "32a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "shiur_shehiyya",
+      "args": [
+       "yavi_veyishchot_broad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chananya_omedet",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "R' Chananya as construed by Rav Pappa: the added time is only that of casting to the ground an anim…",
+    "locus": "Chullin.32a.10",
+    "daf": "32a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "shiur_shehiyya",
+      "args": [
+       "omedet_lehatil"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nafka_mina_omedet",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the practical difference between R' Chananya and the Rabbis is an animal standing ready that must b…",
+    "locus": "Chullin.32a.10",
+    "daf": "32a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "nafka_mina",
+      "args": [
+       "frame_shiur_shehiyya",
+       "omedet_lehatil"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_maarava_shiur",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the measure is an interval in which one can lift the animal, lay it down, and slaughter -- a small…",
+    "locus": "Chullin.32a.11",
+    "daf": "32a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "shiur_shehiyya",
+      "args": [
+       "yagbihena_veyarbitzena"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sakin_raah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "one who slaughters with a dull knife, even all day long -- the slaughter is valid",
+    "locus": "Chullin.32a.12",
+    "daf": "32a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "kesheira",
+      "args": [
+       "shechita_besakin_raah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hatam_dela_shaha",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the dull-knife ruling concerns continuous drawing of the knife with no pause at all, so it does not…",
+    "locus": "Chullin.32a.14",
+    "daf": "32a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "case_restriction",
+      "args": [
+       "sakin_raah_ruling",
+       "lo_shaha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "question:q_shehiyot_mitztarfot",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "do multiple pauses, each shorter than the measure, combine to disqualify the slaughter? (raised by…",
+    "locus": "Chullin.32a.13",
+    "daf": "32a",
+    "sentenceId": 12,
+    "data": {
+     "status": "unresolved_silent"
+    }
+   },
+   {
+    "id": "question:q_shaha_bemiut_simanim",
+    "type": "question",
+    "label_he": "איבעיא",
+    "label_en": "one who paused during the cutting of the final minority of the simanim -- what is the halakha?",
+    "locus": "Chullin.32a.15",
+    "daf": "32a",
+    "sentenceId": 14,
+    "data": {
+     "status": "teiku",
+     "recordedVerdict": "teiku"
+    }
+   },
+   {
+    "id": "dispute:frame_shiur_shehiyya",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "shiur shehiyya",
+    "data": {
+     "topic": "shiur_shehiyya"
+    }
+   },
+   {
+    "id": "voice:amrei_bemaarava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "amrei bemaarava",
+    "data": {
+     "kind": "school"
+    }
+   },
+   {
+    "id": "voice:r_chananya",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r chananya",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yosei_bar_chanina",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei bar chanina",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_asi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav asi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_kahana",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav kahana",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_papa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav papa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:ravin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ravin",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_32a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 32a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:frame_shiur_shehiyya",
+    "target": "voice:rav",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_shiur_shehiyya",
+    "target": "voice:shmuel",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_shiur_behema_acheret",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_kahana",
+    "target": "prop:p_rav_min_lemino",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:rav_asi",
+    "target": "prop:p_rav_min_lemino",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_rav_min_lemino",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_af_behema_leof",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_chananya",
+    "target": "prop:p_chananya_broad",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_chananya",
+    "target": "prop:p_chananya_broad",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:rav_papa",
+    "target": "prop:p_nafka_mina_omedet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_sakin_raah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_32a",
+    "target": "prop:p_hatam_dela_shaha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ravin",
+    "target": "prop:p_af_behema_leof",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yochanan"
+   },
+   {
+    "source": "voice:rav_papa",
+    "target": "prop:p_chananya_omedet",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_chananya"
+   },
+   {
+    "source": "voice:amrei_bemaarava",
+    "target": "prop:p_maarava_shiur",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei_bar_chanina"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

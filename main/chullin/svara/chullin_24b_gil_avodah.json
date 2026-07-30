@@ -290,6 +290,18 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_gil_avodah",
+   "topic": "fit_from_age",
+   "parties": [
+    "tanna_kamma_gil",
+    "rabbi"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "split_r_elazar",
@@ -600,5 +612,360 @@
   }
  ],
  "kb": "svara/chullin_24b_gil_avodah.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_zaken_ad_sheyartet",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a priest is fit until he ages, i.e. until he trembles",
+    "locus": "Chullin.24b.2",
+    "daf": "24b",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "unfit_when",
+      "args": [
+       "kohen",
+       "mertatet"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kasher_mishtei_searot",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a priest is fit for service from when he grows two pubic hairs",
+    "locus": "Chullin.24b.5",
+    "daf": "24b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "fit_from",
+      "args": [
+       "kohen",
+       "shtei_searot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kasher_ben_esrim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a priest is not fit for service until he is twenty years old",
+    "locus": "Chullin.24b.5",
+    "daf": "24b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "fit_from",
+      "args": [
+       "kohen",
+       "ben_esrim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_taama_derabbi",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "Rabbi's reason is Ezra 3:8, 'they appointed the Levites from twenty years old and upward to oversee…",
+    "locus": "Chullin.24b.6",
+    "daf": "24b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "grounded_in",
+      "args": [
+       "fit_from_twenty",
+       "pasuk_ezra_shalosh_ches"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lanetzach_shani",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the other side answers that 'lanetzach' (to oversee) is a different function, so the verse does not…",
+    "locus": "Chullin.24b.6",
+    "daf": "24b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "distinguishes",
+      "args": [
+       "lanetzach",
+       "avodah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kohanim_nikreu_leviim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "priests are called 'Levites' in twenty-four places in Scripture, so a verse about Levites can groun…",
+    "locus": "Chullin.24b.7",
+    "daf": "24b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "coreferent_in_scripture",
+      "args": [
+       "kohanim",
+       "leviim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_katan_pasul",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "a minor is unfit for Temple service even if he is unblemished ('any man of your descendants')",
+    "locus": "Chullin.24b.8",
+    "daf": "24b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "unfit_while",
+      "args": [
+       "kohen",
+       "katan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_achiv_ein_manichin",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "though fit from two hairs, his fellow priests do not let him serve until he is twenty",
+    "locus": "Chullin.24b.8",
+    "daf": "24b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "barred_by_practice_until",
+      "args": [
+       "kohen",
+       "ben_esrim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_reading_rabbi_no_rabbinic",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the clause is Rabbi's view, and he holds there is no rabbinic disqualification at all between puber…",
+    "locus": "Chullin.24b.9",
+    "daf": "24b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "clause_achiv",
+       "rabbi_no_rabbinic"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_reading_rabbanan_bedieved",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the clause is the Rabbis' view: only ab initio is he barred, but after the fact his service is valid",
+    "locus": "Chullin.24b.9",
+    "daf": "24b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "clause_achiv",
+       "rabbanan_bedieved"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:frame_gil_avodah",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "fit from age",
+    "data": {
+     "topic": "fit_from_age"
+    }
+   },
+   {
+    "id": "voice:ika_damri",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ika damri",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:lishna_kamma",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "lishna kamma",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:r_chanina",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r chanina",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_elazar",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r elazar",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yehoshua_ben_levi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehoshua ben levi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rabbi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabbi",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_chisda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav chisda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:tanna_kamma_gil",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kamma gil",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:frame_gil_avodah",
+    "target": "voice:tanna_kamma_gil",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_gil_avodah",
+    "target": "voice:rabbi",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_chanina",
+    "target": "prop:p_zaken_ad_sheyartet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_kamma_gil",
+    "target": "prop:p_kasher_mishtei_searot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbi",
+    "target": "prop:p_kasher_ben_esrim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_chisda",
+    "target": "prop:p_taama_derabbi",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_kamma_gil",
+    "target": "prop:p_lanetzach_shani",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehoshua_ben_levi",
+    "target": "prop:p_kohanim_nikreu_leviim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_elazar",
+    "target": "prop:p_katan_pasul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_elazar",
+    "target": "prop:p_achiv_ein_manichin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:lishna_kamma",
+    "target": "prop:p_reading_rabbi_no_rabbinic",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_elazar"
+   },
+   {
+    "source": "voice:ika_damri",
+    "target": "prop:p_reading_rabbanan_bedieved",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_elazar"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

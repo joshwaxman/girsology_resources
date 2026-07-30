@@ -338,6 +338,19 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_shechita_lenochri",
+   "topic": "shechita_lenochri",
+   "parties": [
+    "tanna_kamma_nochri",
+    "r_eliezer",
+    "r_yosei"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_achar_hashochet",
@@ -929,6 +942,21 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "bechullin_hakol_achar_hashochet",
+     "gloss_en": "if where intent invalidates -- sacrificial animals -- everything follows only the performer of the rite, then where intent does not invalidate -- non-sacred animals -- surely everything follows only the slaughterer"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:kv_achar_hashochet",
+      "text_en": "the kal vachomer licenses bechullin_hakol_achar_hashochet: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   },
   {
@@ -1438,5 +1466,435 @@
   }
  ],
  "kb": "svara/chullin_38b_machshevet_nochri.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_lenochri_kesheira",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "one who slaughters for a gentile -- his slaughter is valid",
+    "locus": "Chullin.38b.7",
+    "daf": "38b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "kasher",
+      "args": [
+       "shechita_lenochri"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lenochri_pesulah",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "R' Eliezer disqualifies a slaughter for a gentile, even for him to eat a sliver of the liver",
+    "locus": "Chullin.38b.7",
+    "daf": "38b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "pasul",
+      "args": [
+       "shechita_lenochri"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_stam_machshevet_nochri",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the unspecified intent of a gentile is for idol worship",
+    "locus": "Chullin.38b.7",
+    "daf": "38b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "stam_machshevet_nochri",
+      "args": [
+       "avoda_zara"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hakol_achar_hashochet",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "in non-sacred slaughter everything follows only the slaughterer -- another person's intent cannot i…",
+    "locus": "Chullin.38b.8",
+    "daf": "38b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "hakol_achar",
+      "args": [
+       "chullin",
+       "shochet"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bealim_mefaglin",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "'I heard that the owners render an offering piggul' -- one person's intent attaches to another's act",
+    "locus": "Chullin.38b.9",
+    "daf": "38b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "bealim_mefaglin",
+      "args": [
+       "korban"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tk_re_zeh_mechashev",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the first tanna and R' Eliezer both hold like R' Eliezer son of R' Yosei: the principle 'this one i…",
+    "locus": "Chullin.38b.9",
+    "daf": "38b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "adopts_principle",
+      "args": [
+       "tk_and_re",
+       "zeh_mechashev_vezeh_oved"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tk_stam_lo_amrinan",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "first reading of the first tanna: if we heard the gentile voice idolatrous intent his intent invali…",
+    "locus": "Chullin.38b.10",
+    "daf": "38b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_tanna_kamma",
+       "stam_machshevet_lo_amrinan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_re_stam_amrinan",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "first reading of R' Eliezer: even unheard, unspecified gentile intent IS presumed idolatrous",
+    "locus": "Chullin.38b.10",
+    "daf": "38b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_r_eliezer",
+       "stam_machshevet_amrinan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ry_zeh_mechashev_lo",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "first reading of R' Yosei: even if we heard the gentile voice his intent, 'this one intends and tha…",
+    "locus": "Chullin.38b.10",
+    "daf": "38b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_r_yosei",
+       "zeh_mechashev_lo_amrinan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tk_chutz_lo_yalfinan",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "second reading of the first tanna: 'this one intends and that one performs' holds inside (sacrifici…",
+    "locus": "Chullin.38b.11",
+    "daf": "38b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_tanna_kamma",
+       "chutz_mipnim_lo_yalfinan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_re_yalfinan_chutz",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "second reading of R' Eliezer: chutz IS learned from pnim, so the heard intent of the gentile owner…",
+    "locus": "Chullin.39a.1",
+    "daf": "39a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_r_eliezer",
+       "yalfinan_chutz_mipnim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ry_afilu_bifnim",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "second reading of R' Yosei: even inside, 'this one intends and that one performs' is not said",
+    "locus": "Chullin.39a.1",
+    "daf": "39a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_r_yosei",
+       "afilu_bifnim_lo_amrinan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_achar_hashochet",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "if where intent invalidates -- sacrificial animals -- everything follows only the performer of the…",
+    "locus": "Chullin.38b.8",
+    "daf": "38b",
+    "sentenceId": 7,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "stands",
+     "holder": "r_yosei",
+     "structure": {
+      "lenient": "chullin",
+      "strict": "mukdashin",
+      "property": "hakol_achar_haoved",
+      "concludes": "bechullin_hakol_achar_hashochet"
+     }
+    }
+   },
+   {
+    "id": "concl:bechullin_hakol_achar_hashochet",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "if where intent invalidates -- sacrificial animals -- everything follows only the performer of the…",
+    "data": {
+     "term": "bechullin_hakol_achar_hashochet"
+    }
+   },
+   {
+    "id": "dispute:frame_shechita_lenochri",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "shechita lenochri",
+    "data": {
+     "topic": "shechita_lenochri"
+    }
+   },
+   {
+    "id": "voice:ika_damri",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ika damri",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:lishna_kamma",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "lishna kamma",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:r_eliezer",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r eliezer",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_eliezer_beribi_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r eliezer beribi yosei",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:tanna_kamma_nochri",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kamma nochri",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yosei",
+    "target": "schema:kv_achar_hashochet",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_achar_hashochet",
+    "target": "concl:bechullin_hakol_achar_hashochet",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_shechita_lenochri",
+    "target": "voice:tanna_kamma_nochri",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_shechita_lenochri",
+    "target": "voice:r_eliezer",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_shechita_lenochri",
+    "target": "voice:r_yosei",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:tanna_kamma_nochri",
+    "target": "prop:p_lenochri_kesheira",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_eliezer",
+    "target": "prop:p_lenochri_pesulah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_eliezer",
+    "target": "prop:p_stam_machshevet_nochri",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_hakol_achar_hashochet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_eliezer_beribi_yosei",
+    "target": "prop:p_bealim_mefaglin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:lishna_kamma",
+    "target": "prop:p_tk_re_zeh_mechashev",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:lishna_kamma",
+    "target": "prop:p_tk_stam_lo_amrinan",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "tanna_kamma_nochri"
+   },
+   {
+    "source": "voice:lishna_kamma",
+    "target": "prop:p_re_stam_amrinan",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_eliezer"
+   },
+   {
+    "source": "voice:lishna_kamma",
+    "target": "prop:p_ry_zeh_mechashev_lo",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei"
+   },
+   {
+    "source": "voice:ika_damri",
+    "target": "prop:p_tk_chutz_lo_yalfinan",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "tanna_kamma_nochri"
+   },
+   {
+    "source": "voice:ika_damri",
+    "target": "prop:p_re_yalfinan_chutz",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_eliezer"
+   },
+   {
+    "source": "voice:ika_damri",
+    "target": "prop:p_ry_afilu_bifnim",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yosei"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

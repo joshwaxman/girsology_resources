@@ -477,7 +477,700 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_smicha_size",
+   "topic": "size_of_smicha_court",
+   "parties": [
+    "r_shimon",
+    "r_yehuda"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_vayismoch",
+   "assumes": "p_source_vayismoch",
+   "verdict": "reductio",
+   "opened_by": "abaye",
+   "discharge_locus": "Sanhedrin.13b.10",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_source_vayismoch",
+    "p_tisgei_bechad"
+   ],
+   "locus": "Sanhedrin.13b.10",
+   "daf": "13b",
+   "sentenceId": 9
+  },
+  {
+   "id": "h_moshe_71",
+   "assumes": "p_moshe_71",
+   "verdict": "reductio",
+   "opened_by": "abaye",
+   "discharge_locus": "Sanhedrin.13b.10",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_libei_71",
+    "p_moshe_71"
+   ],
+   "locus": "Sanhedrin.13b.10",
+   "daf": "13b",
+   "sentenceId": 9
+  }
+ ],
+ "challenges": [
+  {
+   "id": "ch_kashya_misamach",
+   "kind": "kashya",
+   "against": "p_misamach_shlosha",
+   "by": "abaye",
+   "gloss_en": "whence three for ordination? both proposed sources fail; closed kashya -- unanswered but not fatal",
+   "effect": "difficulty",
+   "locus": "Sanhedrin.13b.10",
+   "daf": "13b",
+   "sentenceId": 9
+  }
+ ],
  "queries": [],
  "kb": "svara/sanhedrin_13b_misamach_savei.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_lo_ziknei_hashuk",
+    "type": "prop",
+    "label_he": "יכול זקני השוק? תלמוד לומר עדה",
+    "label_en": "'eda' teaches that the elders are not elders of the market",
+    "locus": "Sanhedrin.13b.5",
+    "daf": "13b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "teaches",
+      "args": [
+       "eda",
+       "lo_ziknei_hashuk"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_meyuchadin",
+    "type": "prop",
+    "label_he": "תלמוד לומר העדה – מיוחדין שבעדה",
+    "label_en": "'HA-eda' teaches that the distinguished of the congregation lay on hands, not its minor members",
+    "locus": "Sanhedrin.13b.6",
+    "daf": "13b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "teaches",
+      "args": [
+       "ha_eda",
+       "meyuchadin_shebaeda"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_smicha_chamisha",
+    "type": "prop",
+    "label_he": "וסמכו – שנים, זקני – שנים, ואין בית דין שקול מוסיפין עליהם עוד אחד, הרי כאן חמשה",
+    "label_en": "laying on of the elders' hands is by five",
+    "locus": "Sanhedrin.13b.6",
+    "daf": "13b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_smicha",
+       "chamisha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_smicha_shlosha",
+    "type": "prop",
+    "label_he": "רבי שמעון אומר: זקני – שנים... הרי כאן שלשה",
+    "label_en": "laying on of the elders' hands is by three",
+    "locus": "Sanhedrin.13b.6",
+    "daf": "13b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "beit_din_smicha",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_smicha_derivation",
+    "type": "prop",
+    "label_he": "וסמכו – שנים, זקני – שנים, ואין בית דין שקול, מוסיפין עליהם עוד אחד",
+    "label_en": "R' Yehuda's five: vesamchu = two, ziknei = two, plus one because a court may not be evenly balanced",
+    "locus": "Sanhedrin.13b.6",
+    "daf": "13b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "chamisha_smicha",
+       "shtei_milim_veshakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shimon_derivation",
+    "type": "prop",
+    "label_he": "זקני – שנים, ואין בית דין שקול, מוסיפין עליהם עוד אחד, הרי כאן שלשה",
+    "label_en": "R' Shimon's three: ziknei = two, plus one because a court may not be evenly balanced",
+    "locus": "Sanhedrin.13b.6",
+    "daf": "13b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "shlosha_smicha",
+       "milah_achat_veshakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_beit_din_shakul",
+    "type": "prop",
+    "label_he": "ואין בית דין שקול",
+    "label_en": "a court may not be evenly balanced -- one judge is added to any even count",
+    "locus": "Sanhedrin.13b.6",
+    "daf": "13b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "principle",
+      "args": [
+       "ein_beit_din_shakul"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_vesamchu_legufei",
+    "type": "prop",
+    "label_he": "ורבי שמעון: ההוא מיבעי ליה לגופיה",
+    "label_en": "vesamchu is needed for the rule of laying-on itself, so it cannot enter the count",
+    "locus": "Sanhedrin.13b.7",
+    "daf": "13b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "needed_for",
+      "args": [
+       "vesamchu",
+       "guf_smicha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_vesamchu_mufneh",
+    "type": "prop",
+    "label_he": "לגופיה לא צריך... ליכתוב זקני העדה ידיהם על ראש הפר",
+    "label_en": "vesamchu is free for the count -- the rule itself could have been written without it (a wording arg…",
+    "locus": "Sanhedrin.13b.7",
+    "daf": "13b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "mufneh",
+      "args": [
+       "vesamchu"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rosh_rosh",
+    "type": "prop",
+    "label_he": "ורבי יהודה גמר ראש ראש מעולה",
+    "label_en": "the hand is laid on the head itself, derived rosh-rosh from the olah",
+    "locus": "Sanhedrin.13b.8",
+    "daf": "13b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "smicha_al_harosh",
+       "gzera_shava_rosh_rosh"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_misamach_reading",
+    "type": "prop",
+    "label_he": "מאי סמיכה ומאי סמיכת זקנים? אמר רבי יוחנן: מיסמך סבי",
+    "label_en": "the tanna's 'smichat zekenim' means ordination of elders",
+    "locus": "Sanhedrin.13b.9",
+    "daf": "13b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "smichat_zekenim_clause",
+       "misamach_savei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_misamach_shlosha",
+    "type": "prop",
+    "label_he": "סמיכה וסמיכת זקנים בשלשה",
+    "label_en": "ordination of elders is by three",
+    "locus": "Sanhedrin.13b.9",
+    "daf": "13b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "size",
+      "args": [
+       "misamach_savei",
+       "shlosha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_source_vayismoch",
+    "type": "prop",
+    "label_he": "אילימא מדכתיב ויסמך את ידיו עליו",
+    "label_en": "(entertained) the source of ordination is 'and he laid his hands upon him' -- Moshe ordaining Yehos…",
+    "locus": "Sanhedrin.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "source_of",
+      "args": [
+       "misamach_savei",
+       "vayismoch_yadav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_tisgei_bechad",
+    "type": "prop",
+    "label_he": "אי הכי תיסגי בחד",
+    "label_en": "(inside the hypothesis) one ordainer would suffice, as Moshe acted alone -- against the given three",
+    "locus": "Sanhedrin.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "size_required",
+      "args": [
+       "misamach_savei",
+       "echad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_moshe_71",
+    "type": "prop",
+    "label_he": "וכי תימא משה במקום שבעים וחד קאי",
+    "label_en": "(entertained) Moshe stood in the place of seventy-one",
+    "locus": "Sanhedrin.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "bimkom",
+      "args": [
+       "moshe",
+       "shivim_veechad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_libei_71",
+    "type": "prop",
+    "label_he": "אי הכי ליבעי שבעים וחד",
+    "label_en": "(inside the hypothesis) ordination would then require seventy-one -- against the given three",
+    "locus": "Sanhedrin.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "size_required",
+      "args": [
+       "misamach_savei",
+       "shivim_veechad"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_samchin_bishma",
+    "type": "prop",
+    "label_he": "סמכין ליה בשמא, קרו ליה רבי, ויהבי ליה רשותא למידן דיני קנסות",
+    "label_en": "ordination is not a literal laying of hands: they ordain him by name -- call him 'Rabbi' and licens…",
+    "locus": "Sanhedrin.13b.11",
+    "daf": "13b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "misamach_savei",
+       "minui_bishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "challenge:ch_kashya_misamach",
+    "type": "challenge",
+    "label_he": "קשיא",
+    "label_en": "whence three for ordination? both proposed sources fail; closed kashya -- unanswered but not fatal",
+    "locus": "Sanhedrin.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "kind": "kashya",
+     "by": "abaye",
+     "effect": "difficulty"
+    }
+   },
+   {
+    "id": "dispute:m_smicha_size",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "size of smicha court",
+    "data": {
+     "topic": "size_of_smicha_court"
+    }
+   },
+   {
+    "id": "hypothesis:h_vayismoch",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the source of ordination is 'and he laid his hands upon him' -- Moshe ordain…",
+    "locus": "Sanhedrin.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "abaye",
+     "discharge_locus": "Sanhedrin.13b.10"
+    }
+   },
+   {
+    "id": "hypothesis:h_moshe_71",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) Moshe stood in the place of seventy-one",
+    "locus": "Sanhedrin.13b.10",
+    "daf": "13b",
+    "sentenceId": 9,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "abaye",
+     "discharge_locus": "Sanhedrin.13b.10"
+    }
+   },
+   {
+    "id": "voice:abaye",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "abaye",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:baraita_smicha",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita smicha",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:r_shimon",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r shimon",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:tana_misamach",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tana misamach",
+    "data": {
+     "kind": "baraita"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "challenge:ch_kashya_misamach",
+    "target": "prop:p_misamach_shlosha",
+    "type": "challenges",
+    "regime": "evidence",
+    "kind": "kashya",
+    "status": "difficulty"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "challenge:ch_kashya_misamach",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_smicha_size",
+    "target": "voice:r_shimon",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_smicha_size",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_vayismoch",
+    "target": "prop:p_source_vayismoch",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_vayismoch",
+    "target": "prop:p_tisgei_bechad",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "hypothesis:h_vayismoch",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_moshe_71",
+    "target": "prop:p_moshe_71",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_moshe_71",
+    "target": "prop:p_libei_71",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "hypothesis:h_moshe_71",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:baraita_smicha",
+    "target": "prop:p_lo_ziknei_hashuk",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_smicha",
+    "target": "prop:p_meyuchadin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_smicha_chamisha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_smicha_derivation",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_smicha_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_shimon_derivation",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ein_beit_din_shakul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_ein_beit_din_shakul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_vesamchu_legufei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_vesamchu_legufei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_vesamchu_mufneh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_rosh_rosh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_rosh_rosh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:tana_misamach",
+    "target": "prop:p_misamach_shlosha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_misamach_reading",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_source_vayismoch",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_vayismoch)"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_tisgei_bechad",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_vayismoch)"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_moshe_71",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_moshe_71)"
+   },
+   {
+    "source": "voice:abaye",
+    "target": "prop:p_libei_71",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_moshe_71)"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_samchin_bishma",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

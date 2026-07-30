@@ -503,7 +503,772 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_onen_shabbat",
+   "topic": "onen_obligations_on_shabbat",
+   "parties": [
+    "baraita_onen",
+    "rsbg"
+   ]
+  },
+  {
+   "id": "m_onen_harmonization",
+   "topic": "reconciling_mishnah_with_baraita",
+   "parties": [
+    "rav_papa",
+    "rav_ashi"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_diyuk_lefanav",
+   "assumes": "p_diyuk_lefanav",
+   "verdict": "accepted",
+   "opened_by": "stam_18a",
+   "discharge_locus": "Berakhot.18a.3",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_diyuk_lefanav"
+   ],
+   "locus": "Berakhot.17b.16",
+   "daf": "17b",
+   "sentenceId": 15
+  },
+  {
+   "id": "h_diyuk_meshamro",
+   "assumes": "p_diyuk_meshamro",
+   "verdict": "reductio",
+   "opened_by": "stam_18a",
+   "discharge_locus": "Berakhot.18a.5",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_diyuk_meshamro"
+   ],
+   "locus": "Berakhot.18a.4",
+   "daf": "18a",
+   "sentenceId": 3
+  },
+  {
+   "id": "h_diyuk_kvarot",
+   "assumes": "p_diyuk_kvarot",
+   "verdict": "accepted",
+   "opened_by": "stam_18a",
+   "discharge_locus": "Berakhot.18a.7",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_diyuk_kvarot"
+   ],
+   "locus": "Berakhot.18a.6",
+   "daf": "18a",
+   "sentenceId": 5
+  }
+ ],
+ "challenges": [],
  "queries": [],
  "kb": "svara/ber_18a_onen_patur.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_onen_patur_krishma",
+    "type": "prop",
+    "label_he": "מי שמתו מוטל לפניו פטור מקריאת שמע",
+    "label_en": "one whose dead lies before him is exempt from reciting the Shema",
+    "locus": "Berakhot.17b.12",
+    "daf": "17b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "patur",
+      "args": [
+       "onen",
+       "krishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_onen_patur_kol",
+    "type": "prop",
+    "label_he": "ומן התפלה ומן התפילין ומכל מצות האמורות בתורה",
+    "label_en": "and from prayer, tefillin, and all the mitzvot said in the Torah",
+    "locus": "Berakhot.17b.12",
+    "daf": "17b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "patur",
+      "args": [
+       "onen",
+       "kol_hamitzvot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_diyuk_lefanav",
+    "type": "prop",
+    "label_he": "מוטל לפניו אין, ושאינו מוטל לפניו לא",
+    "label_en": "construal: lying before him -- exempt; not lying before him -- obligated",
+    "locus": "Berakhot.17b.16",
+    "daf": "17b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mishnat_onen",
+       "davka_mutal_lefanav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_baraita_bayit_acher",
+    "type": "prop",
+    "label_he": "מי שמתו מוטל לפניו אוכל בבית אחר... מחזיר פניו ואוכל, ואינו מברך ואינו מזמן",
+    "label_en": "the onen eats in another house, or in his fellow's house, or behind a partition, or turning his fac…",
+    "locus": "Berakhot.17b.17",
+    "daf": "17b",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "rule",
+      "args": [
+       "onen",
+       "okhel_bevayit_acher"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_baraita_onen_patur",
+    "type": "prop",
+    "label_he": "ופטור מקריאת שמע ומן התפלה ומן התפילין ומכל מצות האמורות בתורה",
+    "label_en": "and (the baraita:) he is exempt from Shema, prayer, tefillin, and all mitzvot of the Torah",
+    "locus": "Berakhot.18a.1",
+    "daf": "18a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "patur",
+      "args": [
+       "onen",
+       "krishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shabbat_chayav",
+    "type": "prop",
+    "label_he": "ובשבת מיסב ואוכל בשר ושותה יין ומברך ומזמן... וחייב בכל המצות האמורות בתורה",
+    "label_en": "on Shabbat he reclines, eats meat, drinks wine, blesses, joins zimmun, and is obligated in all the…",
+    "locus": "Berakhot.18a.1",
+    "daf": "18a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "chayav",
+      "args": [
+       "onen_beshabbat",
+       "kol_hamitzvot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mitokh_nitchayev",
+    "type": "prop",
+    "label_he": "מתוך שנתחייב באלו נתחייב בכולן",
+    "label_en": "since he became obligated in these, he became obligated in them all",
+    "locus": "Berakhot.18a.1",
+    "daf": "18a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "mitokh_nitchayev",
+      "args": [
+       "onen_beshabbat",
+       "kulan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nafka_tashmish",
+    "type": "prop",
+    "label_he": "מאי בינייהו, תשמיש המטה איכא בינייהו",
+    "label_en": "the practical difference between the tanna kama and RSbG is marital relations",
+    "locus": "Berakhot.18a.2",
+    "daf": "18a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "nafka_mina",
+      "args": [
+       "m_onen_shabbat",
+       "tashmish_hamita"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_targema_machzir",
+    "type": "prop",
+    "label_he": "תרגמא אמחזיר פניו ואוכל",
+    "label_en": "apply the baraita's exemption clause to the one who turns his face and eats -- the dead IS before h…",
+    "locus": "Berakhot.18a.3",
+    "daf": "18a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "seifa_depatur",
+       "machzir_panav_veokhel"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mutal_lekovro",
+    "type": "prop",
+    "label_he": "כיון שמוטל עליו לקוברו כמוטל לפניו דמי",
+    "label_en": "whoever bears the duty of burial is as one whose dead is before him -- from 'Abraham rose from befo…",
+    "locus": "Berakhot.18a.3",
+    "daf": "18a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "kemutal_lefanav",
+      "args": [
+       "mutal_alav_lekovro"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_diyuk_meshamro",
+    "type": "prop",
+    "label_he": "מתו אין, אבל משמרו לא",
+    "label_en": "construal: his own dead -- exempt; one merely watching a corpse -- obligated",
+    "locus": "Berakhot.18a.4",
+    "daf": "18a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "ptur_onen",
+       "meto_davka_velo_meshamro"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_meshamer_patur",
+    "type": "prop",
+    "label_he": "המשמר את המת אף על פי שאינו מתו פטור מקריאת שמע...",
+    "label_en": "the watcher of a corpse, though it is not his dead, is exempt from Shema, prayer, tefillin, and all…",
+    "locus": "Berakhot.18a.5",
+    "daf": "18a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "patur",
+      "args": [
+       "meshamer_et_hamet",
+       "krishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_meto_af_lo_meshamro",
+    "type": "prop",
+    "label_he": "מתו אף על פי שאינו משמרו",
+    "label_en": "and his dead, though he is not watching it -- exempt",
+    "locus": "Berakhot.18a.5",
+    "daf": "18a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "patur",
+      "args": [
+       "meto_af_eino_meshamro",
+       "krishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_diyuk_kvarot",
+    "type": "prop",
+    "label_he": "מתו ומשמרו אין, אבל מהלך בבית הקברות לא",
+    "label_en": "construal: his dead or watching -- exempt; one walking in a graveyard -- obligated",
+    "locus": "Berakhot.18a.6",
+    "daf": "18a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "ptur_onen",
+       "lo_mehalekh_beveit_hakvarot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_baraita_kvarot",
+    "type": "prop",
+    "label_he": "לא יהלך אדם בבית הקברות ותפילין בראשו וספר תורה בזרועו וקורא... לועג לרש חרף עושהו",
+    "label_en": "one may not walk in a graveyard with tefillin on his head and a Torah scroll in his arm and read --…",
+    "locus": "Berakhot.18a.6",
+    "daf": "18a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "asur",
+      "args": [
+       "mehalekh_beveit_hakvarot",
+       "krishma_betfillin"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kvarot_okimta",
+    "type": "prop",
+    "label_he": "התם תוך ארבע אמות הוא דאסור, חוץ לארבע אמות חייב",
+    "label_en": "there, within four cubits of the dead it is forbidden; beyond four cubits one is obligated",
+    "locus": "Berakhot.18a.7",
+    "daf": "18a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "issur_beit_hakvarot",
+       "tokh_arba_amot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_met_tofes",
+    "type": "prop",
+    "label_he": "מת תופס ארבע אמות לקריאת שמע",
+    "label_en": "a dead person occupies four cubits with respect to the recital of Shema",
+    "locus": "Berakhot.18a.7",
+    "daf": "18a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "tofes",
+      "args": [
+       "met",
+       "arba_amot_lekrishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kvarot_chayav",
+    "type": "prop",
+    "label_he": "חוץ לארבע אמות חייב",
+    "label_en": "one walking in a graveyard beyond four cubits is obligated (the diyuk stands)",
+    "locus": "Berakhot.18a.7",
+    "daf": "18a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "chayav",
+      "args": [
+       "mehalekh_beveit_hakvarot_chutz_learba",
+       "krishma"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_onen_chutz_patur",
+    "type": "prop",
+    "label_he": "הכא חוץ לארבע אמות נמי פטור",
+    "label_en": "but here the onen is exempt even beyond four cubits",
+    "locus": "Berakhot.18a.7",
+    "daf": "18a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "patur",
+      "args": [
+       "onen",
+       "krishma_af_chutz_learba_amot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_onen_shabbat",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "onen obligations on shabbat",
+    "data": {
+     "topic": "onen_obligations_on_shabbat"
+    }
+   },
+   {
+    "id": "dispute:m_onen_harmonization",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "reconciling mishnah with baraita",
+    "data": {
+     "topic": "reconciling_mishnah_with_baraita"
+    }
+   },
+   {
+    "id": "hypothesis:h_diyuk_lefanav",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: construal: lying before him -- exempt; not lying before him -- obligated",
+    "locus": "Berakhot.17b.16",
+    "daf": "17b",
+    "sentenceId": 15,
+    "data": {
+     "verdict": "accepted",
+     "opened_by": "stam_18a",
+     "discharge_locus": "Berakhot.18a.3"
+    }
+   },
+   {
+    "id": "hypothesis:h_diyuk_meshamro",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: construal: his own dead -- exempt; one merely watching a corpse -- obligated",
+    "locus": "Berakhot.18a.4",
+    "daf": "18a",
+    "sentenceId": 3,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_18a",
+     "discharge_locus": "Berakhot.18a.5"
+    }
+   },
+   {
+    "id": "hypothesis:h_diyuk_kvarot",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: construal: his dead or watching -- exempt; one walking in a graveyard -- obligated",
+    "locus": "Berakhot.18a.6",
+    "daf": "18a",
+    "sentenceId": 5,
+    "data": {
+     "verdict": "accepted",
+     "opened_by": "stam_18a",
+     "discharge_locus": "Berakhot.18a.7"
+    }
+   },
+   {
+    "id": "voice:baraita_kvarot",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita kvarot",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_meshamer",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita meshamer",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:baraita_onen",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita onen",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:mar_cited",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mar cited",
+    "data": {
+     "kind": "unknown"
+    }
+   },
+   {
+    "id": "voice:mishnah_onen",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah onen",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_papa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav papa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rsbg",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rsbg",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:stam_18a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 18a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_onen_shabbat",
+    "target": "voice:baraita_onen",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_onen_shabbat",
+    "target": "voice:rsbg",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_onen_harmonization",
+    "target": "voice:rav_papa",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_onen_harmonization",
+    "target": "voice:rav_ashi",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_diyuk_lefanav",
+    "target": "prop:p_diyuk_lefanav",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "hypothesis:h_diyuk_lefanav",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_diyuk_meshamro",
+    "target": "prop:p_diyuk_meshamro",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "hypothesis:h_diyuk_meshamro",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_diyuk_kvarot",
+    "target": "prop:p_diyuk_kvarot",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "hypothesis:h_diyuk_kvarot",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:mishnah_onen",
+    "target": "prop:p_onen_patur_krishma",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishnah_onen",
+    "target": "prop:p_onen_patur_kol",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "prop:p_diyuk_lefanav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_diyuk_lefanav)"
+   },
+   {
+    "source": "voice:baraita_onen",
+    "target": "prop:p_baraita_bayit_acher",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_onen",
+    "target": "prop:p_baraita_onen_patur",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_onen",
+    "target": "prop:p_shabbat_chayav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rsbg",
+    "target": "prop:p_mitokh_nitchayev",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_nafka_tashmish",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_papa",
+    "target": "prop:p_targema_machzir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_mutal_lekovro",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "prop:p_diyuk_meshamro",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_diyuk_meshamro)"
+   },
+   {
+    "source": "voice:baraita_meshamer",
+    "target": "prop:p_meshamer_patur",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "prop:p_meto_af_lo_meshamro",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "prop:p_diyuk_kvarot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_diyuk_kvarot)"
+   },
+   {
+    "source": "voice:baraita_kvarot",
+    "target": "prop:p_baraita_kvarot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "prop:p_kvarot_okimta",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mar_cited",
+    "target": "prop:p_met_tofes",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "prop:p_kvarot_chayav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18a",
+    "target": "prop:p_onen_chutz_patur",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

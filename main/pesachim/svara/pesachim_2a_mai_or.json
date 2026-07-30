@@ -158,6 +158,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Pesachim.3a.4",
      "daf": "3a",
      "sentenceId": 3
@@ -188,6 +194,12 @@
      "withdrawn": false,
      "answered": false,
      "answered_by": [],
+     "attacked_by": [],
+     "spent": false,
+     "aliba": null,
+     "state": "live",
+     "live_for": [],
+     "lifted_for": [],
      "locus": "Pesachim.3a.6",
      "daf": "3a",
      "sentenceId": 5
@@ -202,6 +214,25 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_naghei_mamash",
+   "assumes": "p_or_yemama",
+   "verdict": "reductio",
+   "opened_by": "stam_pes_2a",
+   "discharge_locus": "Pesachim.3a.9",
+   "discharge_concludes": "p_or_orta",
+   "entails_identity": null,
+   "quarantined": [
+    "p_or_yemama"
+   ],
+   "locus": "Pesachim.2a.2",
+   "daf": "2a",
+   "sentenceId": 1
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_din_or_leshlishi",
@@ -330,6 +361,29 @@
         ]
        }
       ]
+     }
+    ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "shelamim_neechal_or_leshlishi",
+     "gloss_en": "shelamim should be eaten on the night after the second day, as zevachim carry the night after their day"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_beod_yom",
+      "text_en": "blocked by the verse: 'ביום זבחכם יאכל וממחרת והנותר עד יום' -- eaten while it is yet day, not on the night of the third"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_beod_yom",
+      "drop": "miut_beod_yom",
+      "drop_node": "ground:miut_beod_yom",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
      }
     ]
    }
@@ -650,6 +704,29 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "blocked",
+    "conclusion": {
+     "term": "notar_nisraf_miyad",
+     "gloss_en": "leftover shelamim should be burned immediately when its eating ends, as burning follows eating for zevachim"
+    },
+    "because": [
+     {
+      "role": "blocker",
+      "node": "ground:miut_bayom_hashlishi",
+      "text_en": "blocked by the verse: 'והנותר מבשר הזבח ביום השלישי באש ישרף' -- by day you burn it, and you do not burn it at night"
+     }
+    ],
+    "would_change_if": [
+     {
+      "counterfactual": "cf_drop_miut_bayom_hashlishi",
+      "drop": "miut_bayom_hashlishi",
+      "drop_node": "ground:miut_bayom_hashlishi",
+      "outcome": "concludes",
+      "text_en": "the inference would stand"
+     }
+    ]
    }
   },
   {
@@ -841,5 +918,319 @@
   }
  ],
  "kb": "svara/pesachim_2a_mai_or.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_or_yemama",
+    "type": "prop",
+    "label_he": "מאן דאמר נגהי — נגהי ממש",
+    "label_en": "or in the Mishnah means actual daylight (Rav Huna's naghei taken literally)",
+    "locus": "Pesachim.2a.2",
+    "daf": "2a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "or_arbaa_asar",
+       "yemama"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_or_orta",
+    "type": "prop",
+    "label_he": "בין רב הונא ובין רב יהודה דכולי עלמא אור אורתא הוא",
+    "label_en": "or in the Mishnah means the evening (of the 14th); all agree",
+    "locus": "Pesachim.3a.9",
+    "daf": "3a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "or_arbaa_asar",
+       "orta"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mar_ki_atreih",
+    "type": "prop",
+    "label_he": "ולא פליגי, מר כי אתריה ומר כי אתריה",
+    "label_en": "there is no dispute: naghei and leilei are each the local word for night",
+    "locus": "Pesachim.3a.9",
+    "daf": "3a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "naghei_leilei_variance",
+       "dialect_of_locale"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lishna_maalya",
+    "type": "prop",
+    "label_he": "לישנא מעליא הוא דנקט",
+    "label_en": "the Mishnah wrote or rather than leilei as refined language",
+    "locus": "Pesachim.3a.10",
+    "daf": "3a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "mishnah_says_or",
+       "lishna_maalya"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:din_or_leshlishi",
+    "type": "schema",
+    "label_he": "ודין הוא",
+    "label_en": "shelamim should be eaten on the night after the second day, as zevachim carry the night after their…",
+    "locus": "Pesachim.3a.3",
+    "daf": "3a",
+    "sentenceId": 2,
+    "data": {
+     "kind": "din_hu",
+     "status": "blocked",
+     "holder": "baraita_shelamim",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "shelamim_neechal_or_leshlishi"
+     }
+    }
+   },
+   {
+    "id": "concl:shelamim_neechal_or_leshlishi",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "shelamim should be eaten on the night after the second day, as zevachim carry the night after their…",
+    "data": {
+     "term": "shelamim_neechal_or_leshlishi"
+    }
+   },
+   {
+    "id": "ground:miut_beod_yom",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'ביום זבחכם יאכל וממחרת והנותר עד יום' -- eaten while it is yet day, not on the night of the third",
+    "locus": "Pesachim.3a.4",
+    "daf": "3a",
+    "sentenceId": 3,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "ויקרא יט,ו"
+    }
+   },
+   {
+    "id": "schema:din_yisaref_miyad",
+    "type": "schema",
+    "label_he": "ודין הוא",
+    "label_en": "leftover shelamim should be burned immediately when its eating ends, as burning follows eating for…",
+    "locus": "Pesachim.3a.5",
+    "daf": "3a",
+    "sentenceId": 4,
+    "data": {
+     "kind": "din_hu",
+     "status": "blocked",
+     "holder": "baraita_shelamim",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "notar_nisraf_miyad"
+     }
+    }
+   },
+   {
+    "id": "concl:notar_nisraf_miyad",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "leftover shelamim should be burned immediately when its eating ends, as burning follows eating for…",
+    "data": {
+     "term": "notar_nisraf_miyad"
+    }
+   },
+   {
+    "id": "ground:miut_bayom_hashlishi",
+    "type": "ground",
+    "label_he": "מיעוט",
+    "label_en": "'והנותר מבשר הזבח ביום השלישי באש ישרף' -- by day you burn it, and you do not burn it at night",
+    "locus": "Pesachim.3a.6",
+    "daf": "3a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "verse",
+     "state": "live",
+     "verse": "ויקרא ז,יז"
+    }
+   },
+   {
+    "id": "hypothesis:h_naghei_mamash",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: or in the Mishnah means actual daylight (Rav Huna's naghei taken literally)",
+    "locus": "Pesachim.2a.2",
+    "daf": "2a",
+    "sentenceId": 1,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_pes_2a",
+     "discharge_locus": "Pesachim.3a.9"
+    }
+   },
+   {
+    "id": "voice:baraita_shelamim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita shelamim",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_pes_2a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam pes 2a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:baraita_shelamim",
+    "target": "schema:din_or_leshlishi",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:din_or_leshlishi",
+    "target": "concl:shelamim_neechal_or_leshlishi",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_beod_yom",
+    "target": "schema:din_or_leshlishi",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "voice:baraita_shelamim",
+    "target": "schema:din_yisaref_miyad",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:din_yisaref_miyad",
+    "target": "concl:notar_nisraf_miyad",
+    "type": "would_conclude",
+    "regime": "structural"
+   },
+   {
+    "source": "ground:miut_bayom_hashlishi",
+    "target": "schema:din_yisaref_miyad",
+    "type": "attacks",
+    "regime": "attack",
+    "kind": "verse",
+    "live": true
+   },
+   {
+    "source": "hypothesis:h_naghei_mamash",
+    "target": "prop:p_or_yemama",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_naghei_mamash",
+    "target": "prop:p_or_orta",
+    "type": "discharge_concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_pes_2a",
+    "target": "hypothesis:h_naghei_mamash",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_pes_2a",
+    "target": "prop:p_or_yemama",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_naghei_mamash)"
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "prop:p_or_orta",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_or_orta",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_2a",
+    "target": "prop:p_mar_ki_atreih",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_pes_2a",
+    "target": "prop:p_lishna_maalya",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

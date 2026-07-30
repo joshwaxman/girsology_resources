@@ -273,7 +273,419 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "m_leshon_krishma",
+   "topic": "language_of_krishma",
+   "parties": [
+    "rebbi",
+    "chachamim"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_rebbi_torah_kol_lashon",
+   "assumes": "p_rebbi_torah_kol_lashon",
+   "verdict": "abandoned",
+   "opened_by": "stam_13a",
+   "discharge_locus": "Berakhot.13a.33",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_rebbi_torah_kol_lashon"
+   ],
+   "locus": "Berakhot.13a.32",
+   "daf": "13a",
+   "sentenceId": 31
+  },
+  {
+   "id": "h_rabbanan_torah_lhk",
+   "assumes": "p_rabbanan_torah_lhk",
+   "verdict": "abandoned",
+   "opened_by": "stam_13a",
+   "discharge_locus": "Berakhot.13a.35",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_rabbanan_torah_lhk"
+   ],
+   "locus": "Berakhot.13a.34",
+   "daf": "13a",
+   "sentenceId": 33
+  }
+ ],
+ "challenges": [],
  "queries": [],
  "kb": "svara/ber_13a_krishma_lashon.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ks_kikhtavah",
+    "type": "prop",
+    "label_he": "קריאת שמע ככתבה",
+    "label_en": "the Shema must be recited as it is written, in the holy tongue",
+    "locus": "Berakhot.13a.25",
+    "daf": "13a",
+    "sentenceId": 24,
+    "data": {
+     "content": {
+      "pred": "language_rule",
+      "args": [
+       "krishma",
+       "kikhtavah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ks_kol_lashon",
+    "type": "prop",
+    "label_he": "בכל לשון",
+    "label_en": "the Shema may be recited in any language",
+    "locus": "Berakhot.13a.25",
+    "daf": "13a",
+    "sentenceId": 24,
+    "data": {
+     "content": {
+      "pred": "language_rule",
+      "args": [
+       "krishma",
+       "kol_lashon"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_vehayu_behavayatan",
+    "type": "prop",
+    "label_he": "אמר קרא והיו -- בהווייתן יהו",
+    "label_en": "'vehayu' -- the words shall remain as they are (in their language)",
+    "locus": "Berakhot.13a.26",
+    "daf": "13a",
+    "sentenceId": 25,
+    "data": {
+     "content": {
+      "pred": "verse_teaches",
+      "args": [
+       "vehayu",
+       "behavayatan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shema_kol_lashon",
+    "type": "prop",
+    "label_he": "שמע -- בכל לשון שאתה שומע",
+    "label_en": "'shema' -- in any language that you hear (understand)",
+    "locus": "Berakhot.13a.27",
+    "daf": "13a",
+    "sentenceId": 26,
+    "data": {
+     "content": {
+      "pred": "verse_teaches",
+      "args": [
+       "shema",
+       "bekhol_lashon_sheata_shomea"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shema_hashma",
+    "type": "prop",
+    "label_he": "השמע לאזניך מה שאתה מוציא מפיך",
+    "label_en": "'shema' -- make audible to your ears what your mouth utters",
+    "locus": "Berakhot.13a.28",
+    "daf": "13a",
+    "sentenceId": 27,
+    "data": {
+     "content": {
+      "pred": "verse_teaches",
+      "args": [
+       "shema",
+       "hashma_leoznecha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_lo_hishmia_yatza",
+    "type": "prop",
+    "label_he": "לא השמיע לאזנו יצא",
+    "label_en": "one who recited inaudibly has nonetheless fulfilled the obligation",
+    "locus": "Berakhot.13a.29",
+    "daf": "13a",
+    "sentenceId": 28,
+    "data": {
+     "content": {
+      "pred": "yatza",
+      "args": [
+       "krishma",
+       "lo_hishmia_leozno"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_vehayu_lemafrea",
+    "type": "prop",
+    "label_he": "ההוא מבעי להו שלא יקרא למפרע",
+    "label_en": "'vehayu' teaches that one may not read out of order",
+    "locus": "Berakhot.13a.30",
+    "daf": "13a",
+    "sentenceId": 29,
+    "data": {
+     "content": {
+      "pred": "verse_teaches",
+      "args": [
+       "vehayu",
+       "shelo_yikra_lemafrea"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_devarim_lemafrea",
+    "type": "prop",
+    "label_he": "נפקא ליה מדברים הדברים",
+    "label_en": "the out-of-order rule is derived from 'devarim'/'hadevarim'",
+    "locus": "Berakhot.13a.31",
+    "daf": "13a",
+    "sentenceId": 30,
+    "data": {
+     "content": {
+      "pred": "verse_teaches",
+      "args": [
+       "devarim_hadevarim",
+       "shelo_yikra_lemafrea"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rebbi_torah_kol_lashon",
+    "type": "prop",
+    "label_he": "למימרא דסבר רבי דכל התורה כולה בכל לשון נאמרה",
+    "label_en": "the entire Torah may be recited in any language (proposed as what Rebbi must hold)",
+    "locus": "Berakhot.13a.32",
+    "daf": "13a",
+    "sentenceId": 31,
+    "data": {
+     "content": {
+      "pred": "torah_language",
+      "args": [
+       "kol_lashon"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rabbanan_torah_lhk",
+    "type": "prop",
+    "label_he": "למימרא דסברי רבנן דכל התורה כולה בלשון הקודש נאמרה",
+    "label_en": "the entire Torah must be recited in the holy tongue only (proposed as what the Sages must hold)",
+    "locus": "Berakhot.13a.34",
+    "daf": "13a",
+    "sentenceId": 33,
+    "data": {
+     "content": {
+      "pred": "torah_language",
+      "args": [
+       "lashon_hakodesh"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:m_leshon_krishma",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "language of krishma",
+    "data": {
+     "topic": "language_of_krishma"
+    }
+   },
+   {
+    "id": "hypothesis:h_rebbi_torah_kol_lashon",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: the entire Torah may be recited in any language (proposed as what Rebbi must hold)",
+    "locus": "Berakhot.13a.32",
+    "daf": "13a",
+    "sentenceId": 31,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_13a",
+     "discharge_locus": "Berakhot.13a.33"
+    }
+   },
+   {
+    "id": "hypothesis:h_rabbanan_torah_lhk",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: the entire Torah must be recited in the holy tongue only (proposed as what the Sages must…",
+    "locus": "Berakhot.13a.34",
+    "daf": "13a",
+    "sentenceId": 33,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_13a",
+     "discharge_locus": "Berakhot.13a.35"
+    }
+   },
+   {
+    "id": "voice:chachamim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "chachamim",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:rebbi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rebbi",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:stam_13a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 13a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_leshon_krishma",
+    "target": "voice:rebbi",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_leshon_krishma",
+    "target": "voice:chachamim",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_rebbi_torah_kol_lashon",
+    "target": "prop:p_rebbi_torah_kol_lashon",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_13a",
+    "target": "hypothesis:h_rebbi_torah_kol_lashon",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_rabbanan_torah_lhk",
+    "target": "prop:p_rabbanan_torah_lhk",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_13a",
+    "target": "hypothesis:h_rabbanan_torah_lhk",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rebbi",
+    "target": "prop:p_ks_kikhtavah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_ks_kol_lashon",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rebbi",
+    "target": "prop:p_vehayu_behavayatan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_shema_kol_lashon",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rebbi",
+    "target": "prop:p_shema_hashma",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_lo_hishmia_yatza",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_vehayu_lemafrea",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rebbi",
+    "target": "prop:p_devarim_lemafrea",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_devarim_lemafrea",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "deny"
+   },
+   {
+    "source": "voice:stam_13a",
+    "target": "prop:p_rebbi_torah_kol_lashon",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_rebbi_torah_kol_lashon)"
+   },
+   {
+    "source": "voice:stam_13a",
+    "target": "prop:p_rabbanan_torah_lhk",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_rabbanan_torah_lhk)"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

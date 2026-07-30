@@ -145,6 +145,21 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [
+  {
+   "id": "ch_kashya_chamisha",
+   "kind": "kashya",
+   "against": "m_miut_asara_kohanim",
+   "by": "rav_huna_br_natan",
+   "gloss_en": "say five kohanim and five Israelites -- the amplification fixes no particular split; closed קשיא, unanswered but not fatal",
+   "effect": "difficulty",
+   "locus": "Sanhedrin.15a.7",
+   "daf": "15a",
+   "sentenceId": 6
+  }
+ ],
  "queries": [
   {
    "id": "status_m_miut_asara_kohanim",
@@ -337,9 +352,232 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "tisha_yisrael_vekohen_kesherim",
+     "gloss_en": "ten mentions of kohen; one for the rule; the rest limitation-after-limitation, amplifying to nine Israelites and one kohen"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:m_miut_asara_kohanim",
+      "text_en": "the miut achar miut licenses tisha_yisrael_vekohen_kesherim: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/sanhedrin_15a_karkaot_tisha_vekohen.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_karkaot_tisha_vekohen",
+    "type": "prop",
+    "label_he": "הקרקעות תשעה וכהן",
+    "label_en": "consecrated land is assessed by nine [Israelites] and a kohen -- ten assessors",
+    "locus": "Sanhedrin.15a.6",
+    "daf": "15a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "assessors",
+      "args": [
+       "karkaot",
+       "tisha_yisrael_vekohen"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_asara_kohanim",
+    "type": "prop",
+    "label_he": "עשרה כהנים כתובין בפרשה",
+    "label_en": "ten mentions of 'kohen' are written in the passage",
+    "locus": "Sanhedrin.15a.6",
+    "daf": "15a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "written_count",
+      "args": [
+       "kohen",
+       "asara"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_miut_achar_miut",
+    "type": "prop",
+    "label_he": "חד לגופיה, הנך הוי מיעוט אחר מיעוט, ואין מיעוט אחר מיעוט אלא לרבות",
+    "label_en": "one mention is for the rule itself; the remainder are limitation after limitation, which only ampli…",
+    "locus": "Sanhedrin.15a.6",
+    "daf": "15a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "derivation",
+      "args": [
+       "tisha_yisrael_vekohen",
+       "miut_achar_miut"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chamisha_chamisha",
+    "type": "prop",
+    "label_he": "אימא חמשה כהנים וחמשה ישראלים",
+    "label_en": "by that arithmetic say five kohanim and five Israelites -- the amplification fixes no split",
+    "locus": "Sanhedrin.15a.7",
+    "daf": "15a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "alternative_split",
+      "args": [
+       "karkaot",
+       "chamisha_vechamisha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:m_miut_asara_kohanim",
+    "type": "schema",
+    "label_he": "מיעוט אחר מיעוט",
+    "label_en": "ten mentions of kohen; one for the rule; the rest limitation-after-limitation, amplifying to nine I…",
+    "locus": "Sanhedrin.15a.6",
+    "daf": "15a",
+    "sentenceId": 5,
+    "data": {
+     "kind": "miut_achar_miut",
+     "status": "stands",
+     "holder": "shmuel",
+     "structure": {
+      "lenient": null,
+      "strict": null,
+      "property": null,
+      "concludes": "tisha_yisrael_vekohen_kesherim"
+     }
+    }
+   },
+   {
+    "id": "concl:tisha_yisrael_vekohen_kesherim",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "ten mentions of kohen; one for the rule; the rest limitation-after-limitation, amplifying to nine I…",
+    "data": {
+     "term": "tisha_yisrael_vekohen_kesherim"
+    }
+   },
+   {
+    "id": "challenge:ch_kashya_chamisha",
+    "type": "challenge",
+    "label_he": "קשיא",
+    "label_en": "say five kohanim and five Israelites -- the amplification fixes no particular split; closed קשיא, u…",
+    "locus": "Sanhedrin.15a.7",
+    "daf": "15a",
+    "sentenceId": 6,
+    "data": {
+     "kind": "kashya",
+     "by": "rav_huna_br_natan",
+     "effect": "difficulty"
+    }
+   },
+   {
+    "id": "voice:mishnah_sanhedrin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah sanhedrin",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:rav_huna_br_natan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna br natan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:shmuel",
+    "target": "schema:m_miut_asara_kohanim",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:m_miut_asara_kohanim",
+    "target": "concl:tisha_yisrael_vekohen_kesherim",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "challenge:ch_kashya_chamisha",
+    "target": "schema:m_miut_asara_kohanim",
+    "type": "challenges",
+    "regime": "evidence",
+    "kind": "kashya",
+    "status": "difficulty"
+   },
+   {
+    "source": "voice:rav_huna_br_natan",
+    "target": "challenge:ch_kashya_chamisha",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:mishnah_sanhedrin",
+    "target": "prop:p_karkaot_tisha_vekohen",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_asara_kohanim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_miut_achar_miut",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_huna_br_natan",
+    "target": "prop:p_chamisha_chamisha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

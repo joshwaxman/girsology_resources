@@ -556,6 +556,49 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_shayarot",
+   "topic": "caravans_alone_block_return",
+   "parties": [
+    "rabba",
+    "r_zeira"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_tenu_even_late",
+   "assumes": "p_mishnah_tenu",
+   "verdict": "abandoned",
+   "opened_by": "stam_18b",
+   "discharge_locus": "Bava_Metzia.18b.11",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_mishnah_tenu"
+   ],
+   "locus": "Bava_Metzia.18a.9",
+   "daf": "18a",
+   "sentenceId": 8
+  },
+  {
+   "id": "h_nisan_tishrei",
+   "assumes": "p_nisan_tishrei",
+   "verdict": "abandoned",
+   "opened_by": "stam_18b",
+   "discharge_locus": "Bava_Metzia.19a.5",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_nisan_tishrei"
+   ],
+   "locus": "Bava_Metzia.19a.3",
+   "daf": "19a",
+   "sentenceId": 2
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "split_rabba",
@@ -866,5 +909,734 @@
   }
  ],
  "kb": "svara/bm_18a_get_shnei_yosef.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_tenu",
+    "type": "prop",
+    "label_he": "הא אמר תנו נותנין, ואפילו לזמן מרובה",
+    "label_en": "(entertained inference) our mishna implies: if the writer says 'give it', the found document is del…",
+    "locus": "Bava_Metzia.18a.9",
+    "daf": "18a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "matnitin_gittin_inference",
+       "deliver_even_after_long_time"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_gittin_lealtar",
+    "type": "prop",
+    "label_he": "המביא גט ואבד הימנו -- מצאו לאלתר כשר, אם לאו פסול",
+    "label_en": "Gittin 27a: an agent who lost a gett may use a found one only if found immediately",
+    "locus": "Bava_Metzia.18a.10",
+    "daf": "18a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "din_matnitin",
+      "args": [
+       "gett_lost_by_agent",
+       "kasher_only_lealtar"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_get_baraita_modeh",
+    "type": "prop",
+    "label_he": "מצא גט אשה בשוק, בזמן שהבעל מודה יחזיר לאשה",
+    "label_en": "baraita: a woman's gett found in the market is returned to the wife when the husband admits it -- w…",
+    "locus": "Bava_Metzia.18b.6",
+    "daf": "18b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "din_baraita",
+      "args": [
+       "found_gett_husband_admits",
+       "yachzir_laisha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shayarot_chiluk",
+    "type": "prop",
+    "label_he": "כאן במקום שהשיירות מצויות, כאן במקום שאין השיירות מצויות",
+    "label_en": "Rabba: the immediate-only rule holds where passing caravans are common; the return rule where they…",
+    "locus": "Bava_Metzia.18a.11",
+    "daf": "18a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "found_gett_rules",
+       "shayarot_metzuyot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_huchzeku_refinement",
+    "type": "prop",
+    "label_he": "והוא שהוחזקו שני יוסף בן שמעון בעיר אחת",
+    "label_en": "refinement: even where caravans are common, the concern requires that two couples of identical name…",
+    "locus": "Bava_Metzia.18a.12",
+    "daf": "18a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "found_gett_rules",
+       "huchzeku_shnei_yosef"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shnei_shevirei",
+    "type": "prop",
+    "label_he": "חיישינן לשני שוירי",
+    "label_en": "Rav Huna, on the gett found in his court naming Sheviri-on-the-Rakhis: we suspect a second town nam…",
+    "locus": "Bava_Metzia.18a.13",
+    "daf": "18a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "concern",
+      "args": [
+       "get_bei_dina",
+       "second_town_same_name"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_maaseh_bd_yachzir",
+    "type": "prop",
+    "label_he": "כל מעשה בית דין הרי זה יחזיר",
+    "label_en": "mishna (20a): any court enactment that is found is returned -- Rabba's ground for returning the cou…",
+    "locus": "Bava_Metzia.18b.1",
+    "daf": "18b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "din_matnitin",
+      "args": [
+       "maaseh_beit_din",
+       "yachzir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_pumbedita_ruling",
+    "type": "prop",
+    "label_he": "עבד רבה עובדא בההוא גיטא דאשתכח בי כיתנא דפומבדיתא כשמעתיה",
+    "label_en": "Rabba ruled in practice, per his own teaching, that the gett found at the Pumbedita flax-house be r…",
+    "locus": "Bava_Metzia.18b.3",
+    "daf": "18b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "ruled_case",
+      "args": [
+       "get_bei_kitana",
+       "yachzir"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kitana_mezabnei",
+    "type": "prop",
+    "label_he": "היכא דמזבני כיתנא, והוא שלא הוחזקו אף על גב דשכיחן שיירתא",
+    "label_en": "version 1: it was found where flax is SOLD -- caravans frequent, but no two identical couples estab…",
+    "locus": "Bava_Metzia.18b.4",
+    "daf": "18b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "pumbedita_case_facts",
+       "sale_site_no_huchzeku"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kitana_taru",
+    "type": "prop",
+    "label_he": "היכא דתרו כיתנא, ואף על גב דהוחזקו, דלא שכיחא שיירות",
+    "label_en": "version 2: it was found where flax is SOAKED -- even with two identical couples established, since…",
+    "locus": "Bava_Metzia.18b.5",
+    "daf": "18b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "pumbedita_case_facts",
+       "soak_site_no_caravans"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_zeira_chiluk",
+    "type": "prop",
+    "label_he": "ומשני: כאן במקום שהשיירות מצויות, וכאן במקום שאין השיירות מצויות",
+    "label_en": "R' Zeira resolves the baraita against the Gittin mishna with the same caravans distinction",
+    "locus": "Bava_Metzia.18b.8",
+    "daf": "18b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "found_gett_rules_zeira",
+       "shayarot_metzuyot"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_zeira_haynu_rabba",
+    "type": "prop",
+    "label_he": "והוא שהוחזקו דלא נהדר, והיינו דרבה",
+    "label_en": "version A: R' Zeira withholds return only where the two couples are established -- identical to Rab…",
+    "locus": "Bava_Metzia.18b.9",
+    "daf": "18b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_zeira_shayarot",
+       "requires_huchzeku"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_zeira_pliga",
+    "type": "prop",
+    "label_he": "אף על גב דלא הוחזקו לא נהדר, ופליגא דרבה",
+    "label_en": "version B: R' Zeira withholds return wherever caravans are common, even unestablished -- and disput…",
+    "locus": "Bava_Metzia.18b.9",
+    "daf": "18b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shitat_zeira_shayarot",
+       "caravans_alone_suffice"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bd_found_in_court",
+    "type": "prop",
+    "label_he": "דאשתכח בבית דין עסקינן, ובית דין כמקום שהשיירות מצויות",
+    "label_en": "(within the disputing version) Rabba reads 'court enactments are returned' as found IN court -- a c…",
+    "locus": "Bava_Metzia.18b.13",
+    "daf": "18b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "maaseh_bd_clause",
+       "found_inside_court"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bd_found_outside",
+    "type": "prop",
+    "label_he": "מי קתני כל מעשה בית דין שנמצאו בבית דין? ולעולם דאשתכח אבראי",
+    "label_en": "(within the disputing version) R' Zeira reads it as found OUTSIDE court; found inside, it would not…",
+    "locus": "Bava_Metzia.18b.14",
+    "daf": "18b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "maaseh_bd_clause",
+       "found_outside_court"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yirmeya_edim",
+    "type": "prop",
+    "label_he": "כגון דקא אמרי עדים: מעולם לא חתמנו אלא על גט אחד של יוסף בן שמעון",
+    "label_en": "R' Yirmeya: the found gett is returned where its witnesses attest they never signed another gett fo…",
+    "locus": "Bava_Metzia.18b.15",
+    "daf": "18b",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "found_gett_return",
+       "witnesses_attest_unique"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ashi_nekev",
+    "type": "prop",
+    "label_he": "כגון דקא אמר: נקב יש בו בצד אות פלונית",
+    "label_en": "Rav Ashi: returned where the loser gives a clear-cut mark -- a hole beside such-and-such a letter;…",
+    "locus": "Bava_Metzia.18b.17",
+    "daf": "18b",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "found_gett_return",
+       "siman_muvhak_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_q_simanim",
+    "type": "prop",
+    "label_he": "רב אשי מספקא ליה סימנים אי דאורייתא אי דרבנן",
+    "label_en": "are ordinary distinguishing marks effective by Torah law or by rabbinic law? (Rav Ashi's unresolved…",
+    "locus": "Bava_Metzia.18b.19",
+    "daf": "18b",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "origin_q",
+      "args": [
+       "simanim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rbbc_returned",
+    "type": "prop",
+    "label_he": "אירכס ליה גיטא בי מדרשא... אהדרוה ניהליה",
+    "label_en": "Rabba bar bar Chana's lost gett was returned to him after he offered both a mark and visual recogni…",
+    "locus": "Bava_Metzia.19a.1",
+    "daf": "19a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "ruled_case",
+      "args": [
+       "get_bei_midrasha",
+       "returned_to_carrier"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nisan_tishrei",
+    "type": "prop",
+    "label_he": "ליחוש שמא כתב ליתן בניסן ולא נתן לה עד תשרי",
+    "label_en": "(entertained concern) the gett may have been written in Nisan and delivered in Tishrei, letting the…",
+    "locus": "Bava_Metzia.19a.3",
+    "daf": "19a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "concern",
+      "args": [
+       "returned_gett",
+       "predated_repossession"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_aytei_reaya",
+    "type": "prop",
+    "label_he": "כי אתיא למטרף אמרינן לה: אייתי ראיה אימת מטא גיטא לידך",
+    "label_en": "answer: when she comes to repossess, the court demands proof of when the gett reached her hand",
+    "locus": "Bava_Metzia.19a.5",
+    "daf": "19a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "returned_gett",
+       "proof_of_delivery_required"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shtar_purchaser",
+    "type": "prop",
+    "label_he": "מדאהדרוה ניהליה רבנן לשטר חוב... שמע מינה קמו רבנן במילתא",
+    "label_en": "why the same answer fails for promissory notes: a purchaser reads the court's returning of a NOTE a…",
+    "locus": "Bava_Metzia.19a.9",
+    "daf": "19a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "shtar_chov_vs_gett",
+       "purchaser_reliance"
+      ]
+     }
+    }
+   },
+   {
+    "id": "dispute:frame_shayarot",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "caravans alone block return",
+    "data": {
+     "topic": "caravans_alone_block_return"
+    }
+   },
+   {
+    "id": "hypothesis:h_tenu_even_late",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained inference) our mishna implies: if the writer says 'give it', the found docume…",
+    "locus": "Bava_Metzia.18a.9",
+    "daf": "18a",
+    "sentenceId": 8,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_18b",
+     "discharge_locus": "Bava_Metzia.18b.11"
+    }
+   },
+   {
+    "id": "hypothesis:h_nisan_tishrei",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained concern) the gett may have been written in Nisan and delivered in Tishrei, le…",
+    "locus": "Bava_Metzia.19a.3",
+    "daf": "19a",
+    "sentenceId": 2,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_18b",
+     "discharge_locus": "Bava_Metzia.19a.5"
+    }
+   },
+   {
+    "id": "voice:ika_damri_batra_18b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ika damri batra 18b",
+    "data": {}
+   },
+   {
+    "id": "voice:ika_damri_kama_18b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ika damri kama 18b",
+    "data": {}
+   },
+   {
+    "id": "voice:r_yirmeya",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yirmeya",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_zeira",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r zeira",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rabba",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabba",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_18b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 18b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_matnitin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna matnitin",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:trad_haynu_rabba",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "trad haynu rabba",
+    "data": {}
+   },
+   {
+    "id": "voice:trad_pliga",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "trad pliga",
+    "data": {}
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:frame_shayarot",
+    "target": "voice:rabba",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_shayarot",
+    "target": "voice:r_zeira",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_tenu_even_late",
+    "target": "prop:p_mishnah_tenu",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "hypothesis:h_tenu_even_late",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_nisan_tishrei",
+    "target": "prop:p_nisan_tishrei",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "hypothesis:h_nisan_tishrei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "prop:p_mishnah_tenu",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_tenu_even_late)"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_gittin_lealtar",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "prop:p_get_baraita_modeh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabba",
+    "target": "prop:p_shayarot_chiluk",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabba",
+    "target": "prop:p_huchzeku_refinement",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "prop:p_shnei_shevirei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_maaseh_bd_yachzir",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabba",
+    "target": "prop:p_pumbedita_ruling",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_zeira",
+    "target": "prop:p_zeira_chiluk",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabba",
+    "target": "prop:p_bd_found_in_court",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(trad_pliga)"
+   },
+   {
+    "source": "voice:r_zeira",
+    "target": "prop:p_bd_found_outside",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(trad_pliga)"
+   },
+   {
+    "source": "voice:r_yirmeya",
+    "target": "prop:p_yirmeya_edim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_ashi_nekev",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_q_simanim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "prop:p_rbbc_returned",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "prop:p_nisan_tishrei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_nisan_tishrei)"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "prop:p_aytei_reaya",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_18b",
+    "target": "prop:p_shtar_purchaser",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ika_damri_kama_18b",
+    "target": "prop:p_kitana_mezabnei",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rabba"
+   },
+   {
+    "source": "voice:ika_damri_batra_18b",
+    "target": "prop:p_kitana_taru",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rabba"
+   },
+   {
+    "source": "voice:trad_haynu_rabba",
+    "target": "prop:p_zeira_haynu_rabba",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_zeira"
+   },
+   {
+    "source": "voice:trad_pliga",
+    "target": "prop:p_zeira_pliga",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_zeira"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

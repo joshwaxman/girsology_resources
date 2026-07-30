@@ -668,6 +668,88 @@
  ],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_safek_mamon",
+   "topic": "property_of_uncertain_ownership",
+   "parties": [
+    "sumchos",
+    "rabbanan_sumchos"
+   ]
+  },
+  {
+   "id": "frame_ramai_pikadon",
+   "topic": "penalty_where_swindler_certain",
+   "parties": [
+    "r_yosei",
+    "rabbanan_yosei"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_chada_katanei",
+   "assumes": "p_chada_katanei",
+   "verdict": "reductio",
+   "opened_by": "stam_2b",
+   "discharge_locus": "Bava_Metzia.2a.10",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_chada_katanei"
+   ],
+   "locus": "Bava_Metzia.2a.5",
+   "daf": "2a",
+   "sentenceId": 4
+  },
+  {
+   "id": "h_not_ben_nanas",
+   "assumes": "p_not_ben_nanas",
+   "verdict": "reductio",
+   "opened_by": "stam_2b",
+   "discharge_locus": "Bava_Metzia.2b.6",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_not_ben_nanas"
+   ],
+   "locus": "Bava_Metzia.2b.4",
+   "daf": "2b",
+   "sentenceId": 3
+  },
+  {
+   "id": "h_not_sumchos",
+   "assumes": "p_not_sumchos",
+   "verdict": "reductio",
+   "opened_by": "stam_2b",
+   "discharge_locus": "Bava_Metzia.3a.2",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_not_sumchos"
+   ],
+   "locus": "Bava_Metzia.2b.7",
+   "daf": "2b",
+   "sentenceId": 6
+  },
+  {
+   "id": "h_not_yosei",
+   "assumes": "p_not_yosei",
+   "verdict": "reductio",
+   "opened_by": "stam_2b",
+   "discharge_locus": "Bava_Metzia.3a.7",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_not_yosei",
+    "p_yosei_would_impound"
+   ],
+   "locus": "Bava_Metzia.3a.3",
+   "daf": "3a",
+   "sentenceId": 2
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_sumchos_no_oath",
@@ -1270,6 +1352,21 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "talit_chaluka_belo_shevua_deoraita",
+     "gloss_en": "if where each has a financial association and each might own all of it Sumchos divides without an oath, then where neither has any association -- and it may belong to both -- all the more so"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:kv_sumchos_no_oath",
+      "text_en": "the kal vachomer licenses talit_chaluka_belo_shevua_deoraita: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   },
   {
@@ -1284,5 +1381,951 @@
   }
  ],
  "kb": "svara/bm_2b_lima_matnitin.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_shevua",
+    "type": "prop",
+    "label_he": "זה ישבע שאין לו בה פחות מחציה... ויחלוקו",
+    "label_en": "two grasping a garment, each claiming all: each swears he owns no less than half, and they divide it",
+    "locus": "Bava_Metzia.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "din_matnitin",
+      "args": [
+       "talit_case",
+       "chaluka_im_shevua"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chada_katanei",
+    "type": "prop",
+    "label_he": "חדא קתני",
+    "label_en": "the mishna teaches ONE compound claim per party ('I found it and it is all mine')",
+    "locus": "Bava_Metzia.2a.5",
+    "daf": "2a",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "matnitin_claims",
+       "one_compound_claim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_reisha_seifa",
+    "type": "prop",
+    "label_he": "רישא במציאה וסיפא במקח וממכר",
+    "label_en": "the first clause concerns a found item, the latter clause a purchase dispute",
+    "locus": "Bava_Metzia.2a.11",
+    "daf": "2a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "matnitin_claims",
+       "metziah_then_mikach"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_nakit_mitarvayhu",
+    "type": "prop",
+    "label_he": "לא צריכא דנקט מתרוייהו, מחד מדעתיה ומחד בעל כרחיה",
+    "label_en": "the purchase case survives 'see who paid' only where the seller took money from both, one willingly…",
+    "locus": "Bava_Metzia.2b.3",
+    "daf": "2b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "case_framing",
+      "args": [
+       "mikach_case",
+       "seller_took_from_both"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bn_no_vain_oath",
+    "type": "prop",
+    "label_he": "כיצד אלו ואלו באין לידי שבועת שוא",
+    "label_en": "Ben Nanas: no oath is imposed where one of the parties is certainly swearing falsely",
+    "locus": "Bava_Metzia.2b.5",
+    "daf": "2b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "no_oath_where",
+      "args": [
+       "certain_vain_oath"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_not_ben_nanas",
+    "type": "prop",
+    "label_he": "לימא מתניתין דלא כבן ננס",
+    "label_en": "(entertained) the mishna cannot be Ben Nanas",
+    "locus": "Bava_Metzia.2b.4",
+    "daf": "2b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "not_per",
+      "args": [
+       "matnitin_shevua",
+       "ben_nanas"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_bn_compatible",
+    "type": "prop",
+    "label_he": "אפילו תימא בן ננס... אימור דתרוייהו בהדי הדדי אגבהוה",
+    "label_en": "the mishna can be Ben Nanas: here both may be swearing truthfully, having lifted it together",
+    "locus": "Bava_Metzia.2b.6",
+    "daf": "2b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "compatible_with",
+      "args": [
+       "matnitin_shevua",
+       "ben_nanas"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sumchos_rule",
+    "type": "prop",
+    "label_he": "ממון המוטל בספק חולקין בלא שבועה",
+    "label_en": "Sumchos: property of uncertain ownership is divided without an oath",
+    "locus": "Bava_Metzia.2b.7",
+    "daf": "2b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "safek_mamon_din",
+      "args": [
+       "chaluka_belo_shevua"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rabbanan_hamotzi",
+    "type": "prop",
+    "label_he": "המוציא מחבירו עליו הראיה",
+    "label_en": "the Rabbis: in property of uncertain ownership, the burden of proof rests on the claimant",
+    "locus": "Bava_Metzia.2b.8",
+    "daf": "2b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "safek_mamon_din",
+      "args": [
+       "hamotzi_alav_haraaya"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_not_sumchos",
+    "type": "prop",
+    "label_he": "לימא מתניתין דלא כסומכוס",
+    "label_en": "(entertained) the mishna cannot be Sumchos",
+    "locus": "Bava_Metzia.2b.7",
+    "daf": "2b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "not_per",
+      "args": [
+       "matnitin_shevua",
+       "sumchos"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rabbanan_tafsi_distinction",
+    "type": "prop",
+    "label_he": "התם דלא תפסי תרוייהו... הכא דתרוייהו תפסי פלגי לה בשבועה",
+    "label_en": "for the Rabbis the mishna is fine: 'burden of proof' was said where neither grasps the property; he…",
+    "locus": "Bava_Metzia.2b.9",
+    "daf": "2b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "rabbanan_hamotzi",
+       "tfisa_by_both"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sumchos_shema_only",
+    "type": "prop",
+    "label_he": "כי אמר סומכוס שמא ושמא, אבל ברי וברי לא אמר",
+    "label_en": "defense (a): Sumchos said his rule only for uncertain-vs-uncertain claims, not certain-vs-certain",
+    "locus": "Bava_Metzia.2b.11",
+    "daf": "2b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "scope_of",
+      "args": [
+       "sumchos_rule",
+       "shema_veshema_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sumchos_even_bari",
+    "type": "prop",
+    "label_he": "אמר סומכוס אפילו ברי וברי",
+    "label_en": "Rabba bar Rav Huna's tradition: Sumchos said it even for certain-vs-certain claims",
+    "locus": "Bava_Metzia.2b.12",
+    "daf": "2b",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "scope_of",
+      "args": [
+       "sumchos_rule",
+       "even_bari_ubari"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_sumchos_drara_only",
+    "type": "prop",
+    "label_he": "כי אמר סומכוס היכא דאיכא דררא דממונא",
+    "label_en": "defense (b): Sumchos said his rule only where each litigant has an independent financial associatio…",
+    "locus": "Bava_Metzia.2b.13",
+    "daf": "2b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "scope_of",
+      "args": [
+       "sumchos_rule",
+       "drara_demamona_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shevua_derabanan",
+    "type": "prop",
+    "label_he": "שבועה זו מדרבנן היא",
+    "label_en": "defense (c, final): the mishna's oath is rabbinic, so it does not bear on Sumchos's Torah-level rule",
+    "locus": "Bava_Metzia.3a.2",
+    "daf": "3a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "origin",
+      "args": [
+       "shevuat_matnitin",
+       "derabanan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yochanan_takana",
+    "type": "prop",
+    "label_he": "שבועה זו תקנת חכמים היא, שלא יהא כל אחד ואחד הולך ותוקף בטליתו של חבירו",
+    "label_en": "R' Yochanan: this oath is an ordinance of the Sages, so that people not seize each other's garments…",
+    "locus": "Bava_Metzia.3a.2",
+    "daf": "3a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "purpose",
+      "args": [
+       "shevuat_matnitin",
+       "deter_seizure"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yosei_ramai",
+    "type": "prop",
+    "label_he": "אם כן מה הפסיד רמאי? אלא הכל יהא מונח עד שיבא אליהו",
+    "label_en": "R' Yosei: where a swindler certainly exists, the whole disputed sum is impounded until Eliyahu come…",
+    "locus": "Bava_Metzia.3a.3",
+    "daf": "3a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "ramai_case_din",
+      "args": [
+       "all_impounded"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rabbanan_shear",
+    "type": "prop",
+    "label_he": "השאר יהא מונח עד שיבא אליהו",
+    "label_en": "the Rabbis (two-depositors case): each takes the smaller sum; only the remainder is impounded until…",
+    "locus": "Bava_Metzia.3a.4",
+    "daf": "3a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "ramai_case_din",
+      "args": [
+       "remainder_impounded"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_not_yosei",
+    "type": "prop",
+    "label_he": "לימא מתניתין דלא כרבי יוסי",
+    "label_en": "(entertained) the mishna cannot be R' Yosei",
+    "locus": "Bava_Metzia.3a.3",
+    "daf": "3a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "not_per",
+      "args": [
+       "matnitin_shevua",
+       "r_yosei"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_yosei_would_impound",
+    "type": "prop",
+    "label_he": "הכא דאיכא למימר דחד מינייהו הוא לא כל שכן",
+    "label_en": "(derived inside the hypothesis) per R' Yosei the garment should all the more be impounded, since it…",
+    "locus": "Bava_Metzia.3a.6",
+    "daf": "3a",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "consequence",
+      "args": [
+       "matnitin_shevua",
+       "talit_impounded"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_hatam_vadai_ramai",
+    "type": "prop",
+    "label_he": "התם ודאי איכא רמאי, הכא מי יימר דאיכא רמאי",
+    "label_en": "the standing answer: there a swindler certainly exists; here perhaps both lifted it together and ne…",
+    "locus": "Bava_Metzia.3a.7",
+    "daf": "3a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "yosei_impounding",
+       "certain_ramai_only"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kenas_lodei",
+    "type": "prop",
+    "label_he": "התם קניס ליה רבי יוסי לרמאי כי היכי דלודי",
+    "label_en": "alternative answer: R' Yosei impounds as a penalty to induce the swindler to confess -- pointless h…",
+    "locus": "Bava_Metzia.3a.8",
+    "daf": "3a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "yosei_impounding",
+       "penalty_to_induce_confession"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_chenvani_mishna",
+    "type": "prop",
+    "label_he": "זה נשבע ונוטל וזה נשבע ונוטל",
+    "label_en": "storekeeper-and-laborer case: each swears and collects from the employer, though one certainly swea…",
+    "locus": "Bava_Metzia.3a.10",
+    "daf": "3a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "din_matnitin",
+      "args": [
+       "chenvani_case",
+       "each_swears_and_takes"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shlichut_answer",
+    "type": "prop",
+    "label_he": "אנא שליחותא דידך קא עבדינא... הלכך תרוייהו משתבעי ושקלי מבעל הבית",
+    "label_en": "no impounding there: each litigant has an independent claim against the employer and is not bound b…",
+    "locus": "Bava_Metzia.3a.12",
+    "daf": "3a",
+    "sentenceId": 11,
+    "data": {
+     "content": {
+      "pred": "distinction",
+      "args": [
+       "chenvani_case",
+       "independent_claims_on_employer"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_sumchos_no_oath",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "if where each has a financial association and each might own all of it Sumchos divides without an o…",
+    "locus": "Bava_Metzia.2b.14",
+    "daf": "2b",
+    "sentenceId": 13,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "stands",
+     "holder": "stam_2b",
+     "structure": {
+      "lenient": "case_drara_demamona",
+      "strict": "case_lo_drara",
+      "property": "chaluka_belo_shevua",
+      "concludes": "talit_chaluka_belo_shevua_deoraita"
+     }
+    }
+   },
+   {
+    "id": "concl:talit_chaluka_belo_shevua_deoraita",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "if where each has a financial association and each might own all of it Sumchos divides without an o…",
+    "data": {
+     "term": "talit_chaluka_belo_shevua_deoraita"
+    }
+   },
+   {
+    "id": "dispute:frame_safek_mamon",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "property of uncertain ownership",
+    "data": {
+     "topic": "property_of_uncertain_ownership"
+    }
+   },
+   {
+    "id": "dispute:frame_ramai_pikadon",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "penalty where swindler certain",
+    "data": {
+     "topic": "penalty_where_swindler_certain"
+    }
+   },
+   {
+    "id": "hypothesis:h_chada_katanei",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: the mishna teaches ONE compound claim per party ('I found it and it is all mine')",
+    "locus": "Bava_Metzia.2a.5",
+    "daf": "2a",
+    "sentenceId": 4,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_2b",
+     "discharge_locus": "Bava_Metzia.2a.10"
+    }
+   },
+   {
+    "id": "hypothesis:h_not_ben_nanas",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the mishna cannot be Ben Nanas",
+    "locus": "Bava_Metzia.2b.4",
+    "daf": "2b",
+    "sentenceId": 3,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_2b",
+     "discharge_locus": "Bava_Metzia.2b.6"
+    }
+   },
+   {
+    "id": "hypothesis:h_not_sumchos",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the mishna cannot be Sumchos",
+    "locus": "Bava_Metzia.2b.7",
+    "daf": "2b",
+    "sentenceId": 6,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_2b",
+     "discharge_locus": "Bava_Metzia.3a.2"
+    }
+   },
+   {
+    "id": "hypothesis:h_not_yosei",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) the mishna cannot be R' Yosei",
+    "locus": "Bava_Metzia.3a.3",
+    "daf": "3a",
+    "sentenceId": 2,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_2b",
+     "discharge_locus": "Bava_Metzia.3a.7"
+    }
+   },
+   {
+    "id": "voice:ben_nanas",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ben nanas",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:r_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rabba_bar_rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabba bar rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rabbanan_sumchos",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabbanan sumchos",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:rabbanan_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabbanan yosei",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:rav_pappa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav pappa",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_shimi_bar_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav shimi bar ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_2b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 2b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:sumchos",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "sumchos",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:tanna_matnitin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna matnitin",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:trad_rav_pappa",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "trad rav pappa",
+    "data": {}
+   },
+   {
+    "id": "voice:trad_rav_shimi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "trad rav shimi",
+    "data": {}
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_2b",
+    "target": "schema:kv_sumchos_no_oath",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_sumchos_no_oath",
+    "target": "concl:talit_chaluka_belo_shevua_deoraita",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_safek_mamon",
+    "target": "voice:sumchos",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_safek_mamon",
+    "target": "voice:rabbanan_sumchos",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_ramai_pikadon",
+    "target": "voice:r_yosei",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_ramai_pikadon",
+    "target": "voice:rabbanan_yosei",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_chada_katanei",
+    "target": "prop:p_chada_katanei",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "hypothesis:h_chada_katanei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_not_ben_nanas",
+    "target": "prop:p_not_ben_nanas",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "hypothesis:h_not_ben_nanas",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_not_sumchos",
+    "target": "prop:p_not_sumchos",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "hypothesis:h_not_sumchos",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_not_yosei",
+    "target": "prop:p_not_yosei",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_not_yosei",
+    "target": "prop:p_yosei_would_impound",
+    "type": "quarantines",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "hypothesis:h_not_yosei",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_mishnah_shevua",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_chada_katanei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_chada_katanei)"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_reisha_seifa",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_nakit_mitarvayhu",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ben_nanas",
+    "target": "prop:p_bn_no_vain_oath",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_not_ben_nanas",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_not_ben_nanas)"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_bn_compatible",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:sumchos",
+    "target": "prop:p_sumchos_rule",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbanan_sumchos",
+    "target": "prop:p_rabbanan_hamotzi",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_not_sumchos",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_not_sumchos)"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_rabbanan_tafsi_distinction",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_sumchos_shema_only",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_sumchos_drara_only",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_sumchos_drara_only",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_shevua_derabanan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_yochanan_takana",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_yosei_ramai",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabbanan_yosei",
+    "target": "prop:p_rabbanan_shear",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_not_yosei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_not_yosei)"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_yosei_would_impound",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "hyp(h_not_yosei)"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_hatam_vadai_ramai",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_kenas_lodei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_kenas_lodei",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "retract"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_chenvani_mishna",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_2b",
+    "target": "prop:p_shlichut_answer",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:trad_rav_pappa",
+    "target": "prop:p_reisha_seifa",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rav_pappa"
+   },
+   {
+    "source": "voice:trad_rav_shimi",
+    "target": "prop:p_reisha_seifa",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rav_shimi_bar_ashi"
+   },
+   {
+    "source": "voice:rabba_bar_rav_huna",
+    "target": "prop:p_sumchos_even_bari",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "sumchos"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }

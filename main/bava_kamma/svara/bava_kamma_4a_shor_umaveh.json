@@ -200,6 +200,39 @@
  "attributions": [],
  "supports": [],
  "frames": [],
+ "disputes": [
+  {
+   "id": "frame_mabeh",
+   "topic": "meaning_of_mabeh",
+   "parties": [
+    "rav",
+    "shmuel"
+   ]
+  },
+  {
+   "id": "frame_shor_aliba_shmuel",
+   "topic": "meaning_of_shor_in_mishnah",
+   "parties": [
+    "rav_yehuda",
+    "rava"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_keren_domya_leeved",
+   "assumes": "p_keren_patur_kaeved",
+   "verdict": "abandoned",
+   "opened_by": null,
+   "discharge_locus": "Bava_Kamma.4a.3",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_keren_patur_kaeved"
+   ]
+  }
+ ],
+ "challenges": [],
  "queries": [
   {
    "id": "status_kv_keren_mishen",
@@ -802,9 +835,341 @@
       ]
      }
     ]
+   },
+   "trace": {
+    "verdict": "stands",
+    "conclusion": {
+     "term": "keren_chayevet",
+     "gloss_en": "if shen, whose object is not to damage, is liable, then keren, whose object is to damage, all the more so"
+    },
+    "because": [
+     {
+      "role": "license",
+      "node": "schema:kv_keren_mishen",
+      "text_en": "the kal vachomer licenses keren_chayevet: no live objection, verse, or restriction defeats it"
+     }
+    ],
+    "would_change_if": []
    }
   }
  ],
  "kb": "svara/bava_kamma_4a_shor_umaveh.pl",
- "kbVersion": "sha256-3c85a8f8b730489a"
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mabeh_adam",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "mav'eh in the mishna is man, from 'if you will inquire, inquire' (Isa 21:12)",
+    "locus": "Bava_Kamma.3b.14",
+    "daf": "3b",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mabeh",
+       "adam"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mabeh_shen",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "mav'eh in the mishna is the tooth, from 'how Esau is searched out' (Ob 1:6)",
+    "locus": "Bava_Kamma.3b.15",
+    "daf": "3b",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "mabeh",
+       "shen"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shor_keren",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the mishna's 'ox' means its horn, and mav'eh its tooth (Rav Yehuda, for Shmuel)",
+    "locus": "Bava_Kamma.3b.19",
+    "daf": "3b",
+    "sentenceId": 18,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shor_mishnah",
+       "keren"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shor_regel",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the mishna's 'ox' means its foot, and mav'eh its tooth (Rava, for Shmuel)",
+    "locus": "Bava_Kamma.4a.7",
+    "daf": "4a",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "shor_mishnah",
+       "regel"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_keren_patur_kaeved",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "keren would be exempt on the model of a slave or maidservant, who intend damage yet their master is…",
+    "locus": "Bava_Kamma.4a.2",
+    "daf": "4a",
+    "sentenceId": 1,
+    "data": {
+     "content": {
+      "pred": "patur_kemo",
+      "args": [
+       "keren",
+       "eved_veamah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_eved_taama_rabba",
+    "type": "prop",
+    "label_he": "טענה",
+    "label_en": "the slave/maidservant exemption has its own weighty reason -- lest a provoked slave burn a neighbou…",
+    "locus": "Bava_Kamma.4a.3",
+    "daf": "4a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "taam_meyuchad",
+      "args": [
+       "ptur_eved_veamah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "schema:kv_keren_mishen",
+    "type": "schema",
+    "label_he": "קל וחומר",
+    "label_en": "if shen, whose object is not to damage, is liable, then keren, whose object is to damage, all the m…",
+    "locus": "Bava_Kamma.4a.2",
+    "daf": "4a",
+    "sentenceId": 1,
+    "data": {
+     "kind": "kal_vachomer",
+     "status": "stands",
+     "holder": "stam_4a",
+     "structure": {
+      "lenient": "shen",
+      "strict": "keren",
+      "property": "chiyuv_nezikin",
+      "concludes": "keren_chayevet"
+     }
+    }
+   },
+   {
+    "id": "concl:keren_chayevet",
+    "type": "conclusion",
+    "label_he": "מסקנה",
+    "label_en": "if shen, whose object is not to damage, is liable, then keren, whose object is to damage, all the m…",
+    "data": {
+     "term": "keren_chayevet"
+    }
+   },
+   {
+    "id": "dispute:frame_mabeh",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "meaning of mabeh",
+    "data": {
+     "topic": "meaning_of_mabeh"
+    }
+   },
+   {
+    "id": "dispute:frame_shor_aliba_shmuel",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "meaning of shor in mishnah",
+    "data": {
+     "topic": "meaning_of_shor_in_mishnah"
+    }
+   },
+   {
+    "id": "hypothesis:h_keren_domya_leeved",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: keren would be exempt on the model of a slave or maidservant, who intend damage yet their…",
+    "data": {
+     "verdict": "abandoned",
+     "discharge_locus": "Bava_Kamma.4a.3"
+    }
+   },
+   {
+    "id": "voice:rav",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rava",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rava",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_4a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 4a",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:stam_4a",
+    "target": "schema:kv_keren_mishen",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "schema:kv_keren_mishen",
+    "target": "concl:keren_chayevet",
+    "type": "concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_mabeh",
+    "target": "voice:rav",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_mabeh",
+    "target": "voice:shmuel",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_shor_aliba_shmuel",
+    "target": "voice:rav_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:frame_shor_aliba_shmuel",
+    "target": "voice:rava",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_keren_domya_leeved",
+    "target": "prop:p_keren_patur_kaeved",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_mabeh_adam",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:shmuel",
+    "target": "prop:p_mabeh_shen",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_shor_keren",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(shmuel)"
+   },
+   {
+    "source": "voice:rava",
+    "target": "prop:p_shor_regel",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert",
+    "ctx": "aliba(shmuel)"
+   },
+   {
+    "source": "voice:stam_4a",
+    "target": "prop:p_keren_patur_kaeved",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_keren_domya_leeved)"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_eved_taama_rabba",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-32bb4278f088ef66"
 }
