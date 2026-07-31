@@ -54,6 +54,11 @@
    "id": "stam_2a",
    "kind": "stam",
    "note": "anonymous redactorial voice of this sugya"
+  },
+  {
+   "id": "tanna_matnitin",
+   "kind": "tanna",
+   "note": "the anonymous tanna of the mishnah's opening clause, whose phrasing the אמר מר exchange (2a.12-13) probes"
   }
  ],
  "props": [
@@ -168,6 +173,48 @@
    "locus": "Berakhot.2b.8",
    "daf": "2b",
    "sentenceId": 7
+  },
+  {
+   "id": "p_mishaat_kohanim",
+   "gloss_en": "the evening Shema may be recited from the hour the priests enter to eat their teruma",
+   "content": {
+    "pred": "start_marker",
+    "args": [
+     "krishma_arvit",
+     "kohanim_ochlim_terumatan"
+    ]
+   },
+   "locus": "Berakhot.2a.1",
+   "daf": "2a",
+   "sentenceId": 0
+  },
+  {
+   "id": "p_kohanim_mitzeit",
+   "gloss_en": "priests eat their teruma from the emergence of the stars",
+   "content": {
+    "pred": "start_marker",
+    "args": [
+     "achilat_terumah",
+     "tzeit_hakochavim"
+    ]
+   },
+   "locus": "Berakhot.2a.13",
+   "daf": "2a",
+   "sentenceId": 12
+  },
+  {
+   "id": "p_kappara_lo_meakva",
+   "gloss_en": "a still-owed atonement offering does not bar a priest from eating teruma once his sun has set",
+   "content": {
+    "pred": "lo_meakev",
+    "args": [
+     "kappara",
+     "achilat_terumah"
+    ]
+   },
+   "locus": "Berakhot.2a.13",
+   "daf": "2a",
+   "sentenceId": 12
   },
   {
    "id": "p_shiur_same",
@@ -326,6 +373,33 @@
    "locus": "Berakhot.2b.19",
    "daf": "2b",
    "sentenceId": 18
+  },
+  {
+   "holder": "tanna_matnitin",
+   "prop": "p_mishaat_kohanim",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.2a.1",
+   "daf": "2a",
+   "sentenceId": 0
+  },
+  {
+   "holder": "tanna_matnitin",
+   "prop": "p_kohanim_mitzeit",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.2a.13",
+   "daf": "2a",
+   "sentenceId": 12
+  },
+  {
+   "holder": "tanna_matnitin",
+   "prop": "p_kappara_lo_meakva",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.2a.13",
+   "daf": "2a",
+   "sentenceId": 12
   },
   {
    "holder": "rabba_bar_rav_shila",
@@ -3709,6 +3783,60 @@
     }
    },
    {
+    "id": "prop:p_mishaat_kohanim",
+    "type": "prop",
+    "label_he": "משעה שהכהנים נכנסים לאכול בתרומתן",
+    "label_en": "the evening Shema may be recited from the hour the priests enter to eat their teruma",
+    "locus": "Berakhot.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "start_marker",
+      "args": [
+       "krishma_arvit",
+       "kohanim_ochlim_terumatan"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kohanim_mitzeit",
+    "type": "prop",
+    "label_he": "כהנים אימת קא אכלי תרומה — משעת צאת הכוכבים",
+    "label_en": "priests eat their teruma from the emergence of the stars",
+    "locus": "Berakhot.2a.13",
+    "daf": "2a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "start_marker",
+      "args": [
+       "achilat_terumah",
+       "tzeit_hakochavim"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_kappara_lo_meakva",
+    "type": "prop",
+    "label_he": "כפרה לא מעכבא",
+    "label_en": "a still-owed atonement offering does not bar a priest from eating teruma once his sun has set",
+    "locus": "Berakhot.2a.13",
+    "daf": "2a",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "lo_meakev",
+      "args": [
+       "kappara",
+       "achilat_terumah"
+      ]
+     }
+    }
+   },
+   {
     "id": "prop:p_shiur_same",
     "type": "prop",
     "label_he": "עני וכהן חד שיעורא הוא",
@@ -4015,6 +4143,15 @@
     "label_he": null,
     "label_en": "tanna kama baraita c",
     "data": {}
+   },
+   {
+    "id": "voice:tanna_matnitin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna matnitin",
+    "data": {
+     "kind": "tanna"
+    }
    }
   ],
   "edges": [
@@ -4149,6 +4286,27 @@
     "stance": "assert"
    },
    {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_mishaat_kohanim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_kohanim_mitzeit",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_kappara_lo_meakva",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
     "source": "voice:rabba_bar_rav_shila",
     "target": "prop:p_rabba_shila_teaching",
     "type": "commit",
@@ -4254,5 +4412,5 @@
    }
   ]
  },
- "kbVersion": "sha256-058ec558de22dc88"
+ "kbVersion": "sha256-67e8fcc9b2e86c27"
 }

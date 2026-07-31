@@ -971,9 +971,935 @@
    "subject": "abaye",
    "label_en": "What does abaye hold? (by transmitting tradition)",
    "goal_display": "split_attribution(abaye, P1, P2)",
-   "verdict": "no_models",
-   "answers": [],
-   "tree": null
+   "verdict": "answers",
+   "answers": [
+    {
+     "P1": "error_margin(shitat_r_meir_edut,lo_toeh_klum)",
+     "P2": "error_margin(shitat_r_meir_edut,toeh_mashehu)"
+    },
+    {
+     "P1": "error_margin(shitat_r_yehuda_edut,chatzi_shaa)",
+     "P2": "error_margin(shitat_r_yehuda_edut,shaa_umashehu)"
+    },
+    {
+     "P1": "error_margin(shitat_r_meir_edut,toeh_mashehu)",
+     "P2": "error_margin(shitat_r_meir_edut,lo_toeh_klum)"
+    },
+    {
+     "P1": "error_margin(shitat_r_yehuda_edut,shaa_umashehu)",
+     "P2": "error_margin(shitat_r_yehuda_edut,chatzi_shaa)"
+    }
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "split_attribution(abaye,error_margin(shitat_r_meir_edut,lo_toeh_klum),error_margin(shitat_r_meir_edut,toeh_mashehu))",
+      "children": [
+       {
+        "node": "holds_per(abaye,error_margin(shitat_r_meir_edut,lo_toeh_klum),chain(lishna_kama_pes_11b))",
+        "children": [
+         {
+          "node": "commit(lishna_kama_pes_11b,holds(abaye,error_margin(shitat_r_meir_edut,lo_toeh_klum)),assert,actual)"
+         }
+        ]
+       },
+       {
+        "node": "holds_per(abaye,error_margin(shitat_r_meir_edut,toeh_mashehu),chain(ika_damri_pes_11b))",
+        "children": [
+         {
+          "node": "commit(ika_damri_pes_11b,holds(abaye,error_margin(shitat_r_meir_edut,toeh_mashehu)),assert,actual)"
+         }
+        ]
+       },
+       {
+        "node": "incompatible(error_margin(shitat_r_meir_edut,lo_toeh_klum),error_margin(shitat_r_meir_edut,toeh_mashehu))",
+        "children": [
+         {
+          "node": "incompatible_content(error_margin(shitat_r_meir_edut,lo_toeh_klum),error_margin(shitat_r_meir_edut,toeh_mashehu))"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not collapses(B | {B ∉ [m_edut_shaot,m_shiur_taut,m_sof_achilat_chametz]},Q2,R2)",
+          "children": [
+           {
+            "node": "not dispute(B | {B ∉ [m_edut_shaot,m_shiur_taut,m_sof_achilat_chametz]},C)"
+           },
+           {
+            "node": "not dispute(B | {B ∉ [m_edut_shaot,m_shiur_taut,m_sof_achilat_chametz]},D)"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_edut_shaot,G2 | {G2 ∉ [r_meir,r_yehuda]},S2)",
+          "children": [
+           {
+            "node": "not dispute(m_edut_shaot,E | {E ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "dispute(m_edut_shaot,tolerated_hour_gap_in_testimony)"
+           },
+           {
+            "node": "not party(m_edut_shaot,G2 | {G2 ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(m_edut_shaot,F | {F ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "not party(m_edut_shaot,G2 | {G2 ∉ [r_meir,r_yehuda]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_edut_shaot,r_meir,H2 | {H2 ∉ [r_meir,r_yehuda]})",
+          "children": [
+           {
+            "node": "not dispute(m_edut_shaot,G | {G ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "party(m_edut_shaot,r_meir)"
+           },
+           {
+            "node": "not party(m_edut_shaot,H2 | {H2 ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(m_edut_shaot,H | {H ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "not party(m_edut_shaot,H2 | {H2 ∉ [r_meir,r_yehuda]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_edut_shaot,r_meir,r_meir)",
+          "children": [
+           {
+            "node": "not dispute(m_edut_shaot,I | {I ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "not dispute(m_edut_shaot,J | {J ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_edut_shaot,r_meir,r_yehuda)",
+          "children": [
+           {
+            "node": "not dispute(m_edut_shaot,K | {K ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "party(m_edut_shaot,r_yehuda)"
+           },
+           {
+            "node": "not position_identity(m_edut_shaot,r_meir,r_yehuda)"
+           },
+           {
+            "node": "not dispute(m_edut_shaot,L | {L ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "not position_identity(m_edut_shaot,r_yehuda,r_meir)"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_edut_shaot,r_yehuda,I2 | {I2 ∉ [r_meir,r_yehuda]})",
+          "children": [
+           {
+            "node": "not dispute(m_edut_shaot,M | {M ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "not party(m_edut_shaot,I2 | {I2 ∉ [r_meir,r_yehuda]})"
+           },
+           {
+            "node": "not dispute(m_edut_shaot,N | {N ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "not party(m_edut_shaot,I2 | {I2 ∉ [r_meir,r_yehuda]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_edut_shaot,r_yehuda,r_meir)",
+          "children": [
+           {
+            "node": "not dispute(m_edut_shaot,O | {O ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(m_edut_shaot,r_yehuda,r_meir))"
+           },
+           {
+            "node": "not dispute(m_edut_shaot,P | {P ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(m_edut_shaot,r_meir,r_yehuda))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_edut_shaot,r_yehuda,r_yehuda)",
+          "children": [
+           {
+            "node": "not dispute(m_edut_shaot,Q | {Q ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "not dispute(m_edut_shaot,R | {R ∉ [tolerated_hour_gap_in_testimony]})"
+           },
+           {
+            "node": "proved(dispute(m_edut_shaot,tolerated_hour_gap_in_testimony))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_edut_shaot,r_yehuda))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_shiur_taut,J2 | {J2 ∉ [abaye,rava]},T2)",
+          "children": [
+           {
+            "node": "not dispute(m_shiur_taut,S | {S ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour)"
+           },
+           {
+            "node": "not party(m_shiur_taut,J2 | {J2 ∉ [abaye,rava]})"
+           },
+           {
+            "node": "not dispute(m_shiur_taut,T | {T ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "not party(m_shiur_taut,J2 | {J2 ∉ [abaye,rava]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_shiur_taut,abaye,K2 | {K2 ∉ [abaye,rava]})",
+          "children": [
+           {
+            "node": "not dispute(m_shiur_taut,U | {U ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "party(m_shiur_taut,abaye)"
+           },
+           {
+            "node": "not party(m_shiur_taut,K2 | {K2 ∉ [abaye,rava]})"
+           },
+           {
+            "node": "not dispute(m_shiur_taut,V | {V ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "not party(m_shiur_taut,K2 | {K2 ∉ [abaye,rava]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_shiur_taut,abaye,abaye)",
+          "children": [
+           {
+            "node": "not dispute(m_shiur_taut,W | {W ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "not dispute(m_shiur_taut,X | {X ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_shiur_taut,abaye,rava)",
+          "children": [
+           {
+            "node": "not dispute(m_shiur_taut,Y | {Y ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "party(m_shiur_taut,rava)"
+           },
+           {
+            "node": "not position_identity(m_shiur_taut,abaye,rava)"
+           },
+           {
+            "node": "not dispute(m_shiur_taut,Z | {Z ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "not position_identity(m_shiur_taut,rava,abaye)"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_shiur_taut,rava,L2 | {L2 ∉ [abaye,rava]})",
+          "children": [
+           {
+            "node": "not dispute(m_shiur_taut,A1 | {A1 ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "not party(m_shiur_taut,L2 | {L2 ∉ [abaye,rava]})"
+           },
+           {
+            "node": "not dispute(m_shiur_taut,B1 | {B1 ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "not party(m_shiur_taut,L2 | {L2 ∉ [abaye,rava]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_shiur_taut,rava,abaye)",
+          "children": [
+           {
+            "node": "not dispute(m_shiur_taut,C1 | {C1 ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "proved(not position_identity(m_shiur_taut,rava,abaye))"
+           },
+           {
+            "node": "not dispute(m_shiur_taut,D1 | {D1 ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,abaye))"
+           },
+           {
+            "node": "proved(not position_identity(m_shiur_taut,abaye,rava))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_shiur_taut,rava,rava)",
+          "children": [
+           {
+            "node": "not dispute(m_shiur_taut,E1 | {E1 ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "not dispute(m_shiur_taut,F1 | {F1 ∉ [how_far_a_person_errs_about_the_hour]})"
+           },
+           {
+            "node": "proved(dispute(m_shiur_taut,how_far_a_person_errs_about_the_hour))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           },
+           {
+            "node": "proved(party(m_shiur_taut,rava))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,M2 | {M2 ∉ [r_meir,r_yehuda,rabban_gamliel]},U2)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,G1 | {G1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14)"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,M2 | {M2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,H1 | {H1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,M2 | {M2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_meir,N2 | {N2 ∉ [r_meir,r_yehuda,rabban_gamliel]})",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,I1 | {I1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "party(m_sof_achilat_chametz,r_meir)"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,N2 | {N2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,J1 | {J1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,N2 | {N2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_meir,r_meir)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,K1 | {K1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,L1 | {L1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_meir,r_yehuda)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,M1 | {M1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "party(m_sof_achilat_chametz,r_yehuda)"
+           },
+           {
+            "node": "not position_identity(m_sof_achilat_chametz,r_meir,r_yehuda)"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,N1 | {N1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "not position_identity(m_sof_achilat_chametz,r_yehuda,r_meir)"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_meir,rabban_gamliel)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,O1 | {O1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "party(m_sof_achilat_chametz,rabban_gamliel)"
+           },
+           {
+            "node": "not position_identity(m_sof_achilat_chametz,r_meir,rabban_gamliel)"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,P1 | {P1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "not position_identity(m_sof_achilat_chametz,rabban_gamliel,r_meir)"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_yehuda,O2 | {O2 ∉ [r_meir,r_yehuda,rabban_gamliel]})",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,Q1 | {Q1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,O2 | {O2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,R1 | {R1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,O2 | {O2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_yehuda,r_meir)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,S1 | {S1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(m_sof_achilat_chametz,r_yehuda,r_meir))"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,T1 | {T1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(m_sof_achilat_chametz,r_meir,r_yehuda))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_yehuda,r_yehuda)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,U1 | {U1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,V1 | {V1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,r_yehuda,rabban_gamliel)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,W1 | {W1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "not position_identity(m_sof_achilat_chametz,r_yehuda,rabban_gamliel)"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,X1 | {X1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "not position_identity(m_sof_achilat_chametz,rabban_gamliel,r_yehuda)"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,rabban_gamliel,P2 | {P2 ∉ [r_meir,r_yehuda,rabban_gamliel]})",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,Y1 | {Y1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,P2 | {P2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,Z1 | {Z1 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "not party(m_sof_achilat_chametz,P2 | {P2 ∉ [r_meir,r_yehuda,rabban_gamliel]})"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,rabban_gamliel,r_meir)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,A2 | {A2 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(m_sof_achilat_chametz,rabban_gamliel,r_meir))"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,B2 | {B2 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_meir))"
+           },
+           {
+            "node": "proved(not position_identity(m_sof_achilat_chametz,r_meir,rabban_gamliel))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,rabban_gamliel,r_yehuda)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,C2 | {C2 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(not position_identity(m_sof_achilat_chametz,rabban_gamliel,r_yehuda))"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,D2 | {D2 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,r_yehuda))"
+           },
+           {
+            "node": "proved(not position_identity(m_sof_achilat_chametz,r_yehuda,rabban_gamliel))"
+           }
+          ]
+         },
+         {
+          "node": "not collapses(m_sof_achilat_chametz,rabban_gamliel,rabban_gamliel)",
+          "children": [
+           {
+            "node": "not dispute(m_sof_achilat_chametz,E2 | {E2 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "not dispute(m_sof_achilat_chametz,F2 | {F2 ∉ [end_of_eating_chametz_on_n14]})"
+           },
+           {
+            "node": "proved(dispute(m_sof_achilat_chametz,end_of_eating_chametz_on_n14))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           },
+           {
+            "node": "proved(party(m_sof_achilat_chametz,rabban_gamliel))"
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(Y2,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(W2,teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
   }
  ],
  "kb": "svara/pesachim_11b_taut_shaot.pl",
@@ -2124,5 +3050,5 @@
    }
   ]
  },
- "kbVersion": "sha256-058ec558de22dc88"
+ "kbVersion": "sha256-67e8fcc9b2e86c27"
 }

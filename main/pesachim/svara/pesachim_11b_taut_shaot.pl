@@ -178,6 +178,23 @@ locus(p_shinuya_hu, 'Pesachim.12b.16').
 content(p_shinuya_hu, klal(shinuyei_hasugya, shinuya_hu)).
 
 % --------------------------------------------------------------------
+% L1': declared content incompatibility (report 017)
+% --------------------------------------------------------------------
+% error_margin: functional in its leading argument(s) -- 6 conflicting pair(s) among this sugya's props
+% p_taut_rm_klum vs p_taut_rm_mashehu
+incompatible_content(error_margin(shitat_r_meir_edut, lo_toeh_klum), error_margin(shitat_r_meir_edut, toeh_mashehu)).
+% p_taut_rm_klum vs p_taut_rm_shtei_shaot
+incompatible_content(error_margin(shitat_r_meir_edut, lo_toeh_klum), error_margin(shitat_r_meir_edut, shtei_shaot_chaser_mashehu)).
+% p_taut_rm_mashehu vs p_taut_rm_shtei_shaot
+incompatible_content(error_margin(shitat_r_meir_edut, toeh_mashehu), error_margin(shitat_r_meir_edut, shtei_shaot_chaser_mashehu)).
+% p_taut_ry_chatzi vs p_taut_ry_shaa_umashehu
+incompatible_content(error_margin(shitat_r_yehuda_edut, chatzi_shaa), error_margin(shitat_r_yehuda_edut, shaa_umashehu)).
+% p_taut_ry_chatzi vs p_taut_ry_shalosh_shaot
+incompatible_content(error_margin(shitat_r_yehuda_edut, chatzi_shaa), error_margin(shitat_r_yehuda_edut, shalosh_shaot_chaser_mashehu)).
+% p_taut_ry_shaa_umashehu vs p_taut_ry_shalosh_shaot
+incompatible_content(error_margin(shitat_r_yehuda_edut, shaa_umashehu), error_margin(shitat_r_yehuda_edut, shalosh_shaot_chaser_mashehu)).
+
+% --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
 % --------------------------------------------------------------------
 % Pesachim.11b.7

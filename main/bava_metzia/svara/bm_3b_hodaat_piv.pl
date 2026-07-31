@@ -165,8 +165,20 @@ schema_holder(kv_gilgul, rav_pappa).
 kv_lenient(kv_gilgul, gilgul_shevua_ded_echad).
 kv_strict(kv_gilgul, haadaat_edim).
 kv_property(kv_gilgul, mechayev_shevua).
-%   defeater at Bava_Metzia.4a.3: in gilgul an oath drags an oath; here money would have to drag an oath. The פיו יוכיח / עד אחד יוכיח cycle (4a.4-6) fails to save the source -- each יוכיח is faulted in turn -- and וחזר הדין hands the burden to the common factor; a teirutz that is itself countered has no construct (013), so the cycle lives in this gloss
+%   defeater at Bava_Metzia.4a.3: in gilgul an oath drags an oath; here money would have to drag an oath
 pircha(kv_gilgul, pircha_shevua_goreret).
+%     answered at Bava_Metzia.4a.4: his own mouth proves it: an admission obligates an oath though no money is dragged
+pircha_answered(pircha_shevua_goreret, teirutz_piv_yochiach).
+%     countered at Bava_Metzia.4a.4: what of the mouth -- it is not subject to contradiction, unlike witnesses
+answer_countered(teirutz_piv_yochiach, pircha_piv_ein_behakchasha).
+%     answered at Bava_Metzia.4a.4: a single witness proves it: he IS subject to contradiction and still obligates an oath
+counter_answered(pircha_piv_ein_behakchasha, teirutz_ed_echad_yochiach).
+%     countered at Bava_Metzia.4a.5: what of a single witness -- one swears about what he testified to, whereas with witnesses one swears about what he denied
+second_answer_countered(teirutz_ed_echad_yochiach, pircha_ed_echad_al_mah_sheme_id).
+%     answered at Bava_Metzia.4a.5: his own mouth proves it again -- and this repetition is what makes the alternation circular
+second_counter_answered(pircha_ed_echad_al_mah_sheme_id, teirutz_piv_yochiach_shuv).
+% וחזר הדין: the text declares the cycle circular
+cycle_reverted(pircha_shevua_goreret).
 % Bava_Metzia.4a.6 -- הצד השוה שבהן: both come about through claim and denial, and there is an oath -- so too witnesses, who come about through claim and denial
 schema_instance(tzad_taana_ukhfira, tzad_hashaveh, edim_mechayvin_shevua).
 schema_holder(tzad_taana_ukhfira, stam_bm3).

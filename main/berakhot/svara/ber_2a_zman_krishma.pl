@@ -27,6 +27,7 @@ voice(rabba_bar_rav_shila, amora).
 voice(bnei_maarava, community).
 voice(chachamim_dbaraita, collective).
 voice(stam_2a, stam).
+voice(tanna_matnitin, tanna).
 
 % --------------------------------------------------------------------
 % L1: reified propositions (content is a TERM, not a formula)
@@ -63,6 +64,18 @@ prop(p_siman_tzeit).
 gloss(p_siman_tzeit, 'the operative marker for nightfall (when the priests may eat teruma) is the emergence of the stars').
 locus(p_siman_tzeit, 'Berakhot.2b.8').
 content(p_siman_tzeit, marker(laila, tzeit_hakochavim)).
+prop(p_mishaat_kohanim).
+gloss(p_mishaat_kohanim, 'the evening Shema may be recited from the hour the priests enter to eat their teruma').
+locus(p_mishaat_kohanim, 'Berakhot.2a.1').
+content(p_mishaat_kohanim, start_marker(krishma_arvit, kohanim_ochlim_terumatan)).
+prop(p_kohanim_mitzeit).
+gloss(p_kohanim_mitzeit, 'priests eat their teruma from the emergence of the stars').
+locus(p_kohanim_mitzeit, 'Berakhot.2a.13').
+content(p_kohanim_mitzeit, start_marker(achilat_terumah, tzeit_hakochavim)).
+prop(p_kappara_lo_meakva).
+gloss(p_kappara_lo_meakva, 'a still-owed atonement offering does not bar a priest from eating teruma once his sun has set').
+locus(p_kappara_lo_meakva, 'Berakhot.2a.13').
+content(p_kappara_lo_meakva, lo_meakev(kappara, achilat_terumah)).
 prop(p_shiur_same).
 gloss(p_shiur_same, 'the poor man\'s mealtime and the priest\'s teruma-time are one and the same measure').
 locus(p_shiur_same, 'Berakhot.2b.7').
@@ -107,6 +120,12 @@ commit(r_meir, marker(krishma_arvit, bein_hashmashot_yehuda), assert, actual).
 commit(r_meir, marker(krishma_arvit, bein_hashmashot_yehuda), retract, actual).
 % Berakhot.2b.19
 commit(r_meir, marker(krishma_arvit, bein_hashmashot_yose), assert, actual).
+% Berakhot.2a.1
+commit(tanna_matnitin, start_marker(krishma_arvit, kohanim_ochlim_terumatan), assert, actual).
+% Berakhot.2a.13 -- מלתא אגב אורחיה קמשמע לן -- taught in passing by the mishnah's phrasing
+commit(tanna_matnitin, start_marker(achilat_terumah, tzeit_hakochavim), assert, actual).
+% Berakhot.2a.13 -- והא קמשמע לן דכפרה לא מעכבא, כדתניא: ובא השמש וטהר -- ביאת שמשו מעכבתו מלאכול בתרומה ואין כפרתו מעכבתו
+commit(tanna_matnitin, lo_meakev(kappara, achilat_terumah), assert, actual).
 % Berakhot.2b.2
 commit(rabba_bar_rav_shila, verse_teaches(vetaher, tehar_yoma), assert, actual).
 % Berakhot.2b.4 -- והדר פשטו לה מברייתא -- their own resolution of the iba'ya they raised at 2b.3
@@ -165,6 +184,19 @@ heard_of(bnei_maarava, p_rabba_shila_teaching, false).
 question(q_hirhur_kedibbur).
 verdict(q_hirhur_kedibbur, teiku).
 question(q_never_discussed).
+
+% --------------------------------------------------------------------
+% L3: necessity challenges (informativeness, not truth -- report 018)
+% --------------------------------------------------------------------
+% Berakhot.2a.12 -- מכדי כהנים אימת קא אכלי תרומה? משעת צאת הכוכבים; לתני ״משעת צאת הכוכבים״! -- everyone knows the priests eat from starrise, so the mishnah should simply have said so: the roundabout phrasing looks uninformative
+necessity_challenge(start_marker(krishma_arvit, kohanim_ochlim_terumatan), nec_litnei_tzeit).
+necessity_kind(nec_litnei_tzeit, litnei).
+necessity_by(nec_litnei_tzeit, stam_2a).
+%   answered at Berakhot.2a.13: מלתא אגב אורחיה קמשמע לן... והא קמשמע לן דכפרה לא מעכבא -- the phrasing teaches the priests' hour in passing, and teaches that a still-owed atonement offering does not bar them: sunset alone (ובא השמש וטהר) conditions their eating
+necessity_answered(nec_litnei_tzeit, ans_agav_orchei_kappara).
+necessity_answer_kind(ans_agav_orchei_kappara, agav_orchei).
+necessity_teaches(ans_agav_orchei_kappara, start_marker(achilat_terumah, tzeit_hakochavim)).
+necessity_teaches(ans_agav_orchei_kappara, lo_meakev(kappara, achilat_terumah)).
 
 % --------------------------------------------------------------------
 % L3: support edges (evidence FOR a position; never establishes)
