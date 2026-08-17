@@ -5,11 +5,17 @@
 % --------------------------------------------------------------------
 % ontology: time boundaries
 % --------------------------------------------------------------------
+boundary_time(age_twenty_five, 25).
+timepoint_scale(age_twenty_five, years_of_life).
+boundary_time(age_thirty, 30).
+timepoint_scale(age_thirty, years_of_life).
+boundary_time(age_fifty, 50).
+timepoint_scale(age_fifty, years_of_life).
 
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
-voice(mishna_24a, mishna).
+voice(mishna_24a, mishnah).
 voice(baraita_mumin_shanim, baraita).
 voice(baraita_zot_asher_laleviim, baraita).
 voice(baraita_kohen_levi, baraita).

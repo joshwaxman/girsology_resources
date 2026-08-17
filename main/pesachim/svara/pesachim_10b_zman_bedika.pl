@@ -6,9 +6,13 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(leil_arbaa_asar, 0).
+timepoint_scale(leil_arbaa_asar, hours_from_leil_arbaa_asar).
 boundary_time(shacharit_arbaa_asar, 12).
+timepoint_scale(shacharit_arbaa_asar, hours_from_leil_arbaa_asar).
 boundary_time(shaat_habiur, 17).
+timepoint_scale(shaat_habiur, hours_from_leil_arbaa_asar).
 boundary_time(issur_onset, 18).
+timepoint_scale(issur_onset, hours_from_leil_arbaa_asar).
 
 % --------------------------------------------------------------------
 % voices

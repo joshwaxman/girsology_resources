@@ -9,7 +9,7 @@
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
-voice(mishna_haisha, mishna).
+voice(mishna_haisha, mishnah).
 voice(beit_shammai, school).
 voice(beit_hillel, school).
 voice(stam_2a, stam).

@@ -6,7 +6,9 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(shivim, 70).
+timepoint_scale(shivim, panel_size).
 boundary_time(shivim_veechad, 71).
+timepoint_scale(shivim_veechad, panel_size).
 
 % --------------------------------------------------------------------
 % voices
@@ -48,7 +50,7 @@ content(p_domin_mehakel, teaches(vehakel_mealecha, bedomin_lach)).
 prop(p_yalfa_gedola).
 gloss(p_yalfa_gedola, 'the similar-to-you requirement carries to the great Sanhedrin from the small, where it is written').
 locus(p_yalfa_gedola, 'Sanhedrin.17a.3').
-content(p_yalfa_gedola, derivation(sanhedri_gedola, misanhedri_ketana)).
+content(p_yalfa_gedola, derivation(din_domin_lach_gedola, sanhedri_ketana)).
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
@@ -68,7 +70,7 @@ commit(r_yehuda, reading_of(itach_bemasa, bedomin_lach), assert, actual).
 % Sanhedrin.17a.3
 commit(tanna_kama_gedola, teaches(vehakel_mealecha, bedomin_lach), assert, actual).
 % Sanhedrin.17a.3
-commit(tanna_kama_gedola, derivation(sanhedri_gedola, misanhedri_ketana), assert, actual).
+commit(tanna_kama_gedola, derivation(din_domin_lach_gedola, sanhedri_ketana), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)

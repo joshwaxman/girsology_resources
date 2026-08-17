@@ -6,9 +6,13 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(echad, 1).
+timepoint_scale(echad, panel_size).
 boundary_time(chamisha, 5).
+timepoint_scale(chamisha, panel_size).
 boundary_time(tisha, 9).
+timepoint_scale(tisha, panel_size).
 boundary_time(asara, 10).
+timepoint_scale(asara, panel_size).
 
 % --------------------------------------------------------------------
 % voices
@@ -27,7 +31,7 @@ content(p_karkaot_tisha_vekohen, assessors(karkaot, tisha_yisrael_vekohen)).
 prop(p_asara_kohanim).
 gloss(p_asara_kohanim, 'ten mentions of \'kohen\' are written in the passage').
 locus(p_asara_kohanim, 'Sanhedrin.15a.6').
-content(p_asara_kohanim, written_count(kohen, asara)).
+content(p_asara_kohanim, written_count(milat_kohen, asara)).
 prop(p_miut_achar_miut).
 gloss(p_miut_achar_miut, 'one mention is for the rule itself; the remainder are limitation after limitation, which only amplifies -- even nine Israelites and one kohen').
 locus(p_miut_achar_miut, 'Sanhedrin.15a.6').
@@ -43,7 +47,7 @@ content(p_chamisha_chamisha, alternative_split(karkaot, chamisha_vechamisha)).
 % Sanhedrin.15a.6
 commit(mishnah_sanhedrin, assessors(karkaot, tisha_yisrael_vekohen), assert, actual).
 % Sanhedrin.15a.6
-commit(shmuel, written_count(kohen, asara), assert, actual).
+commit(shmuel, written_count(milat_kohen, asara), assert, actual).
 % Sanhedrin.15a.6
 commit(shmuel, derivation(tisha_yisrael_vekohen, miut_achar_miut), assert, actual).
 % Sanhedrin.15a.7

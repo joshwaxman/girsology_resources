@@ -5,6 +5,8 @@
 % --------------------------------------------------------------------
 % ontology: time boundaries
 % --------------------------------------------------------------------
+boundary_time(ben_esrim, 20).
+timepoint_scale(ben_esrim, years_of_life).
 
 % --------------------------------------------------------------------
 % voices
@@ -46,7 +48,7 @@ content(p_lanetzach_shani, distinguishes(lanetzach, avodah)).
 prop(p_kohanim_nikreu_leviim).
 gloss(p_kohanim_nikreu_leviim, 'priests are called \'Levites\' in twenty-four places in Scripture, so a verse about Levites can ground a law about priests').
 locus(p_kohanim_nikreu_leviim, 'Chullin.24b.7').
-content(p_kohanim_nikreu_leviim, coreferent_in_scripture(kohanim, leviim)).
+content(p_kohanim_nikreu_leviim, coreferent_in_scripture(kohanim, leviim_kelali)).
 prop(p_katan_pasul).
 gloss(p_katan_pasul, 'a minor is unfit for Temple service even if he is unblemished (\'any man of your descendants\')').
 locus(p_katan_pasul, 'Chullin.24b.8').
@@ -78,7 +80,7 @@ commit(rav_chisda, grounded_in(fit_from_twenty, pasuk_ezra_shalosh_ches), assert
 % Chullin.24b.6 -- ve-idakh -- the other side's deflection of Rav Chisda's proof
 commit(tanna_kamma_gil, distinguishes(lanetzach, avodah), assert, actual).
 % Chullin.24b.7
-commit(r_yehoshua_ben_levi, coreferent_in_scripture(kohanim, leviim), assert, actual).
+commit(r_yehoshua_ben_levi, coreferent_in_scripture(kohanim, leviim_kelali), assert, actual).
 % Chullin.24b.8
 commit(r_elazar, unfit_while(kohen, katan), assert, actual).
 % Chullin.24b.8

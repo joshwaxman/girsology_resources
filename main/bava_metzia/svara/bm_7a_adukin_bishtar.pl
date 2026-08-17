@@ -9,6 +9,9 @@
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
+voice(tosefta_as_taught, baraita).
+voice(trad_eipoch, shita).
+voice(trad_ravina, shita).
 voice(stam_7b, stam).
 voice(rebbi, tanna).
 voice(rashbag, tanna).

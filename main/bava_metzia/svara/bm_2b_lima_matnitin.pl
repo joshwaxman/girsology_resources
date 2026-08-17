@@ -9,6 +9,8 @@
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
+voice(trad_rav_pappa, stam).
+voice(trad_rav_shimi, stam).
 voice(tanna_matnitin, mishnah).
 voice(stam_2b, stam).
 voice(rav_pappa, amora).

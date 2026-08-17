@@ -6,9 +6,13 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(shnayim, 2).
+timepoint_scale(shnayim, panel_size).
 boundary_time(shlosha, 3).
+timepoint_scale(shlosha, panel_size).
 boundary_time(shiva, 7).
+timepoint_scale(shiva, panel_size).
 boundary_time(esrim_veshlosha, 23).
+timepoint_scale(esrim_veshlosha, panel_size).
 
 % --------------------------------------------------------------------
 % voices

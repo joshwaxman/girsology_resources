@@ -15,7 +15,7 @@ voice(rav_ketina, amora).
 voice(rav_papa, amora).
 voice(rava, amora).
 voice(abaye, amora).
-voice(mishna_hashochet, mishna).
+voice(mishna_hashochet, mishnah).
 voice(baraita_kli_cheres, baraita).
 voice(baraita_chatzi_gargeret, baraita).
 voice(baraita_chatzi_kaneh, baraita).

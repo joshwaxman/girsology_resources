@@ -6,10 +6,15 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(echad, 1).
+timepoint_scale(echad, panel_size).
 boundary_time(shnayim, 2).
+timepoint_scale(shnayim, panel_size).
 boundary_time(shlosha, 3).
+timepoint_scale(shlosha, panel_size).
 boundary_time(chamisha, 5).
+timepoint_scale(chamisha, panel_size).
 boundary_time(shivim_veechad, 71).
+timepoint_scale(shivim_veechad, panel_size).
 
 % --------------------------------------------------------------------
 % voices
@@ -74,7 +79,7 @@ content(p_misamach_reading, reading_of(smichat_zekenim_clause, misamach_savei)).
 prop(p_misamach_shlosha).
 gloss(p_misamach_shlosha, 'ordination of elders is by three').
 locus(p_misamach_shlosha, 'Sanhedrin.13b.9').
-content(p_misamach_shlosha, size(misamach_savei, shlosha)).
+content(p_misamach_shlosha, size(beit_din_misamach, shlosha)).
 prop(p_source_vayismoch).
 gloss(p_source_vayismoch, '(entertained) the source of ordination is \'and he laid his hands upon him\' -- Moshe ordaining Yehoshua').
 locus(p_source_vayismoch, 'Sanhedrin.13b.10').
@@ -82,7 +87,7 @@ content(p_source_vayismoch, source_of(misamach_savei, vayismoch_yadav)).
 prop(p_tisgei_bechad).
 gloss(p_tisgei_bechad, '(inside the hypothesis) one ordainer would suffice, as Moshe acted alone -- against the given three').
 locus(p_tisgei_bechad, 'Sanhedrin.13b.10').
-content(p_tisgei_bechad, size_required(misamach_savei, echad)).
+content(p_tisgei_bechad, size_required(beit_din_misamach, echad)).
 prop(p_moshe_n71).
 gloss(p_moshe_n71, '(entertained) Moshe stood in the place of seventy-one').
 locus(p_moshe_n71, 'Sanhedrin.13b.10').
@@ -90,7 +95,7 @@ content(p_moshe_n71, bimkom(moshe, shivim_veechad)).
 prop(p_libei_n71).
 gloss(p_libei_n71, '(inside the hypothesis) ordination would then require seventy-one -- against the given three').
 locus(p_libei_n71, 'Sanhedrin.13b.10').
-content(p_libei_n71, size_required(misamach_savei, shivim_veechad)).
+content(p_libei_n71, size_required(beit_din_misamach, shivim_veechad)).
 prop(p_samchin_bishma).
 gloss(p_samchin_bishma, 'ordination is not a literal laying of hands: they ordain him by name -- call him \'Rabbi\' and license him to judge cases of fines').
 locus(p_samchin_bishma, 'Sanhedrin.13b.11').
@@ -126,17 +131,17 @@ commit(r_yehuda, derivation(smicha_al_harosh, gzera_shava_rosh_rosh), assert, ac
 % Sanhedrin.13b.8 -- veRabbi Shimon lo gamar rosh rosh me'olah
 commit(r_shimon, derivation(smicha_al_harosh, gzera_shava_rosh_rosh), deny, actual).
 % Sanhedrin.13b.9
-commit(tana_misamach, size(misamach_savei, shlosha), assert, actual).
+commit(tana_misamach, size(beit_din_misamach, shlosha), assert, actual).
 % Sanhedrin.13b.9
 commit(r_yochanan, reading_of(smichat_zekenim_clause, misamach_savei), assert, actual).
 % Sanhedrin.13b.10
 commit(abaye, source_of(misamach_savei, vayismoch_yadav), entertain, hyp(h_vayismoch)).
 % Sanhedrin.13b.10
-commit(abaye, size_required(misamach_savei, echad), assert, hyp(h_vayismoch)).
+commit(abaye, size_required(beit_din_misamach, echad), assert, hyp(h_vayismoch)).
 % Sanhedrin.13b.10
 commit(abaye, bimkom(moshe, shivim_veechad), entertain, hyp(h_moshe_n71)).
 % Sanhedrin.13b.10
-commit(abaye, size_required(misamach_savei, shivim_veechad), assert, hyp(h_moshe_n71)).
+commit(abaye, size_required(beit_din_misamach, shivim_veechad), assert, hyp(h_moshe_n71)).
 % Sanhedrin.13b.11 -- answering Rav Acha son of Rava's question 'bida mamash samchin leih?'
 commit(rav_ashi, defined_as(misamach_savei, minui_bishma), assert, actual).
 
@@ -161,5 +166,5 @@ hypothesis_verdict(h_moshe_n71, reductio).
 % L3: redactorial verdicts on an attack (teyuvta / kashya)
 % --------------------------------------------------------------------
 % Sanhedrin.13b.10 -- whence three for ordination? both proposed sources fail; closed kashya -- unanswered but not fatal
-challenge(ch_kashya_misamach, kashya, size(misamach_savei, shlosha)).
+challenge(ch_kashya_misamach, kashya, size(beit_din_misamach, shlosha)).
 challenge_by(ch_kashya_misamach, abaye).

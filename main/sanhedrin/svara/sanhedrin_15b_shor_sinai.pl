@@ -6,6 +6,7 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(esrim_veshlosha, 23).
+timepoint_scale(esrim_veshlosha, panel_size).
 
 % --------------------------------------------------------------------
 % voices

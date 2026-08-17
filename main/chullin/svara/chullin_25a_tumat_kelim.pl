@@ -9,7 +9,7 @@
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
-voice(mishna_kelim, mishna).
+voice(mishna_kelim, mishnah).
 voice(baraita_avir_kelim, baraita).
 voice(baraita_tokho, baraita).
 voice(r_yonatan_ben_avtolemos, tanna).

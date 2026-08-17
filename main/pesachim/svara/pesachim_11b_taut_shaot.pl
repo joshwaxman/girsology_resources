@@ -17,6 +17,8 @@ timepoint_scale(chatzot, hours_from_sunrise).
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
+voice(lishna_kama_pes_11b, stam).
+voice(ika_damri_pes_11b, stam).
 voice(r_meir, tanna).
 voice(r_yehuda, tanna).
 voice(rabban_gamliel, tanna).

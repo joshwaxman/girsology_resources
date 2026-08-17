@@ -9,6 +9,12 @@
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
+voice(lishna_kama_8b, stam).
+voice(lishna_batra_8b, stam).
+voice(ika_damri_kama, stam).
+voice(ika_damri_batra, stam).
+voice(rav_veshmuel, collective).
+voice(tanna_idi, tanna).
 voice(stam_8b, stam).
 voice(rav_yehuda_amora, amora).
 voice(shmuel, amora).
@@ -117,6 +123,9 @@ prop(p_hilcheta_kefuta).
 gloss(p_hilcheta_kefuta, 'the redactor\'s ruling: the vessels are acquired only when the animal is bound').
 locus(p_hilcheta_kefuta, 'Bava_Metzia.9b.6').
 content(p_hilcheta_kefuta, din(kelim_al_behema, kefuta_only)).
+prop(p_shmuel_mapping_which_acquires).
+gloss(p_shmuel_mapping_which_acquires, 'which of Shmuel\'s two rulings attaches to which case (rakhuv or manhig) -- the mapping itself').
+locus(p_shmuel_mapping_which_acquires, 'Bava_Metzia.8b.1').
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)

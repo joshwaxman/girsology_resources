@@ -17,6 +17,8 @@ timepoint_scale(amud_hashachar, night_from_tzeit).
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
+voice(tanna_kama_baraita_b, tanna).
+voice(tanna_kama_baraita_c, tanna).
 voice(r_eliezer, tanna).
 voice(chachamim, collective).
 voice(r_gamliel, tanna).

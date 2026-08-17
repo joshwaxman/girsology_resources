@@ -9,6 +9,7 @@
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
+voice(rabba_bar_avuha, amora).
 voice(stam_6a, stam).
 voice(r_zeira, amora).
 voice(rav_nachman_bm6, amora).

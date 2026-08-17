@@ -6,8 +6,11 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(echad, 1).
+timepoint_scale(echad, count_of_grounds).
 boundary_time(shnayim, 2).
+timepoint_scale(shnayim, count_of_grounds).
 boundary_time(shlosha, 3).
+timepoint_scale(shlosha, count_of_grounds).
 
 % --------------------------------------------------------------------
 % voices

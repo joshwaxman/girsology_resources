@@ -6,8 +6,11 @@
 % ontology: time boundaries
 % --------------------------------------------------------------------
 boundary_time(echad, 1).
+timepoint_scale(echad, panel_size).
 boundary_time(shnayim, 2).
+timepoint_scale(shnayim, panel_size).
 boundary_time(shlosha, 3).
+timepoint_scale(shlosha, panel_size).
 
 % --------------------------------------------------------------------
 % voices
@@ -69,7 +72,7 @@ content(p_shmuel_shnayim_din, din_status(shnayim_shedanu, din_aval_chatzuf)).
 prop(p_nafka_mina_shmuel).
 gloss(p_nafka_mina_shmuel, 'the practical difference between Rava and Rav Acha is Shmuel\'s dictum: for Rava it does not stand, for Rav Acha it does').
 locus(p_nafka_mina_shmuel, 'Sanhedrin.3a.7').
-content(p_nafka_mina_shmuel, nafka_mina(m_minimum_deoraita, shmuel_shnayim_din)).
+content(p_nafka_mina_shmuel, nafka_mina(m_minimum_deoraita, amidat_din_shmuel)).
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
@@ -101,7 +104,7 @@ commit(rava, din_status(shnayim_shedanu, din_aval_chatzuf), deny, actual).
 % Sanhedrin.3a.7 -- leRav Acha it leih diShmuel
 commit(rav_acha_br_ika, din_status(shnayim_shedanu, din_aval_chatzuf), assert, actual).
 % Sanhedrin.3a.7
-commit(stam_2b, nafka_mina(m_minimum_deoraita, shmuel_shnayim_din), assert, actual).
+commit(stam_2b, nafka_mina(m_minimum_deoraita, amidat_din_shmuel), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)

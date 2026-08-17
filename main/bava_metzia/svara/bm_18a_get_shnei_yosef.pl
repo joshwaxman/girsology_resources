@@ -9,6 +9,10 @@
 % --------------------------------------------------------------------
 % voices
 % --------------------------------------------------------------------
+voice(ika_damri_kama_18b, stam).
+voice(ika_damri_batra_18b, stam).
+voice(trad_haynu_rabba, shita).
+voice(trad_pliga, shita).
 voice(stam_18b, stam).
 voice(rabba, amora).
 voice(r_zeira, amora).

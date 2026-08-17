@@ -15,7 +15,7 @@ voice(bei_rav, school).
 voice(rav_papa, amora).
 voice(r_yeshevav, tanna).
 voice(r_akiva, tanna).
-voice(mishna_chalada, mishna).
+voice(mishna_chalada, mishnah).
 voice(stam_30b, stam).
 
 % --------------------------------------------------------------------

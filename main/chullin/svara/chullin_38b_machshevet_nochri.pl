@@ -13,7 +13,7 @@ voice(tanna_kamma_nochri, tanna).
 voice(r_eliezer, tanna).
 voice(r_yosei, tanna).
 voice(r_eliezer_beribi_yosei, tanna).
-voice(mishna_shochet_lenochri, mishna).
+voice(mishna_shochet_lenochri, mishnah).
 voice(lishna_kamma, stam).
 voice(ika_damri, stam).
 voice(stam_38b, stam).
