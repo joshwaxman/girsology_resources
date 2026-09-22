@@ -423,7 +423,7 @@
       "width": "450px",
       "right": "0px",
       "left": "",
-      "text": "דִּכְתִיב לְעֵיל מִינֵּיהּ אֶת דָּמָם תִּזְרוֹק אֲבָל בַּעַל מוּם כְּתִיב בְּפָרָשַׁת",
+      "text": "דִכְתִיב לְעֵיל מִינֵּיהּ אֶת דָּמָם תִּזְרוֹק אֲבָל בַּעַל מוּם כְּתִיב בְּפָרָשַׁת",
       "source_ref": "Rashi on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -433,20 +433,12 @@
           "token_index": 11,
           "consonants": "דכתיב",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 3294,
-          "agreement": 0.9997,
-          "policy": "majority-95",
-          "variants": {
-            "דִּכְתִיב": 3268,
-            "דִכְתִיב": 25,
-            "דְּכָתֵיב": 1
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "rung": "corpus-skipgram-partial",
+          "attestations": 205,
+          "agreement": 1.0,
+          "policy": "initial-dagesh-withheld",
+          "max_distance": 3,
+          "withheld_initial_letters": 1
         },
         {
           "token_index": 12,
@@ -530,7 +522,7 @@
           "token_index": 18,
           "consonants": "בעל",
           "source": "bekhorot/33a",
-          "rung": "local-bi2"
+          "rung": "local-trigram-r"
         },
         {
           "token_index": 19,
@@ -542,7 +534,7 @@
           "token_index": 20,
           "consonants": "כתיב",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-l"
         },
         {
           "token_index": 21,
@@ -596,7 +588,7 @@
       "width": "450px",
       "right": "0px",
       "left": "",
-      "text": "<b>קַלִּים.</b> שְׁלָמִים וּמַעֲשֵׂר ופסח: <b>בעבודת</b> <b>צבור.</b> דאם אין כהן טָהוֹר",
+      "text": "<b>קַלִּים.</b> שְׁלָמִים וּמַעֲשֵׂר ופסח: <b>בעבודת</b> <b>צבור.</b> דאם אֵין כהן טָהוֹר",
       "source_ref": "Rashi on Bekhorot 33a:1:2",
       "gemara_segment_ids": [
         0
@@ -631,6 +623,25 @@
           "policy": "unanimous"
         },
         {
+          "token_index": 40,
+          "consonants": "אין",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-skipgram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "דאם",
+            "אין",
+            "כהן"
+          ],
+          "attestations": 6,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh"
+          ]
+        },
+        {
           "token_index": 42,
           "consonants": "טהור",
           "source": "bavli-corpus",
@@ -662,19 +673,21 @@
         {
           "token_index": 43,
           "consonants": "באותו",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 86,
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "טהור",
+            "באותו",
+            "בית"
+          ],
+          "attestations": 5,
           "agreement": 1.0,
           "policy": "unanimous",
-          "variants": {
-            "בְּאוֹתוֹ": 86
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh"
+          ]
         },
         {
           "token_index": 44,
@@ -717,7 +730,7 @@
       "width": "250px",
       "right": "0px",
       "left": "",
-      "text": "צִבּוּר דִּכְתִיב בְּמוֹעֲדוֹ וַאֲפִילּוּ בשַׁבָּת",
+      "text": "צִבּוּר דְּכְּתִיב בְּמוֹעֲדוֹ וַאֲפִילּוּ בשַׁבָּת",
       "source_ref": "Rashi on Bekhorot 33a:1:2",
       "gemara_segment_ids": [
         0
@@ -744,21 +757,13 @@
         {
           "token_index": 50,
           "consonants": "דכתיב",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 3294,
-          "agreement": 0.9997,
-          "policy": "majority-95",
-          "variants": {
-            "דִּכְתִיב": 3268,
-            "דִכְתִיב": 25,
-            "דְּכָתֵיב": 1
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "source": "bekhorot/33a",
+          "rung": "local-unigram-intro-prefix",
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "כתיב",
+          "base_source_form": "כְּתִיב",
+          "prefix_policy": "reviewed-introductory-prefix"
         },
         {
           "token_index": 51,
@@ -1056,7 +1061,7 @@
           "token_index": 84,
           "consonants": "תלתא",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-r"
         },
         {
           "token_index": 85,
@@ -1074,7 +1079,7 @@
           "token_index": 87,
           "consonants": "כתיבי",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-l"
         }
       ]
     },
@@ -1127,7 +1132,7 @@
           "token_index": 90,
           "consonants": "חד",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-r"
         },
         {
           "token_index": 91,
@@ -1139,7 +1144,7 @@
           "token_index": 92,
           "consonants": "יצחק",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-l"
         },
         {
           "token_index": 93,
@@ -1287,6 +1292,25 @@
           "rung": "local-bigram"
         },
         {
+          "token_index": 114,
+          "consonants": "דטמא",
+          "source": "bavli-corpus",
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 20,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "טמא",
+          "base_source_form": "טָמֵא",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "לא",
+            "טמא",
+            "שאכל"
+          ]
+        },
+        {
           "token_index": 115,
           "consonants": "שאכל",
           "source": "bavli-corpus",
@@ -1312,25 +1336,6 @@
           "attestations": 20,
           "agreement": 1.0,
           "policy": "unanimous"
-        },
-        {
-          "token_index": 114,
-          "consonants": "דטמא",
-          "source": "bavli-corpus",
-          "rung": "corpus-bigram-intro-prefix",
-          "attestations": 20,
-          "agreement": 1.0,
-          "policy": "unanimous",
-          "detached_prefix": "ד",
-          "pointed_prefix": "דְּ",
-          "base_consonants": "טמא",
-          "base_source_form": "טָמֵא",
-          "prefix_policy": "reviewed-introductory-prefix",
-          "base_context": [
-            "לא",
-            "טמא",
-            "שאכל"
-          ]
         }
       ]
     },
@@ -1445,7 +1450,7 @@
           "token_index": 129,
           "consonants": "בטומאה",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-r"
         },
         {
           "token_index": 130,
@@ -1469,24 +1474,26 @@
           "token_index": 133,
           "consonants": "זבים",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-l"
         },
         {
           "token_index": 134,
           "consonants": "וזבות",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 8,
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-bigram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "זבים",
+            "וזבות",
+            "אעג"
+          ],
+          "attestations": 6,
           "agreement": 1.0,
           "policy": "unanimous",
-          "variants": {
-            "וְזָבוֹת": 8
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet"
+          ]
         }
       ]
     },
@@ -1513,18 +1520,20 @@
           "token_index": 136,
           "consonants": "דאכלי",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 25,
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 8,
           "agreement": 1.0,
           "policy": "unanimous",
-          "variants": {
-            "דְּאָכְלִי": 25
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "אכלי",
+          "base_source_form": "אָכְלִי",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "אעג",
+            "אכלי",
+            "ליה"
+          ]
         },
         {
           "token_index": 138,
@@ -1749,7 +1758,7 @@
           "token_index": 159,
           "consonants": "רחמנא",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-r"
         },
         {
           "token_index": 160,
@@ -1761,7 +1770,7 @@
           "token_index": 161,
           "consonants": "נפש",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-l"
         },
         {
           "token_index": 162,
@@ -1796,7 +1805,7 @@
       "width": "250px",
       "right": "0px",
       "left": "",
-      "text": "לא דִּכְתִיב (<a href=\"https://www.sefaria.org/Numbers.9.10\" target=\"_blank\" rel=\"noopener noreferrer\" data-sefaria-ref=\"Numbers.9.10\">במדבר ט׳:י׳</a>) אִ֣ישׁ כִּי יִהְיֶֽה",
+      "text": "לא דְּכְּתִיב (<a href=\"https://www.sefaria.org/Numbers.9.10\" target=\"_blank\" rel=\"noopener noreferrer\" data-sefaria-ref=\"Numbers.9.10\">במדבר ט׳:י׳</a>) אִ֣ישׁ כִּי יִהְיֶֽה",
       "source_ref": "Rashi on Bekhorot 33a:11:1",
       "gemara_segment_ids": [
         10
@@ -1806,20 +1815,20 @@
           "token_index": 165,
           "consonants": "דכתיב",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 3294,
-          "agreement": 0.9997,
-          "policy": "majority-95",
-          "variants": {
-            "דִּכְתִיב": 3268,
-            "דִכְתִיב": 25,
-            "דְּכָתֵיב": 1
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 50,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "כתיב",
+          "base_source_form": "כְּתִיב",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "לא",
+            "כתיב",
+            "במדבר"
+          ]
         }
       ]
     },
@@ -1924,7 +1933,7 @@
           "token_index": 185,
           "consonants": "הוא",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-r"
         },
         {
           "token_index": 186,
@@ -1936,7 +1945,7 @@
           "token_index": 187,
           "consonants": "רחמנא",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-l"
         },
         {
           "token_index": 188,
@@ -2118,7 +2127,7 @@
       "width": "250px",
       "right": "0px",
       "left": "",
-      "text": "בַּעַל מוּם להפשיטו דרך הרגלים כל",
+      "text": "בַּעַל מוּם להפשיטו דרך הרגלים כָּל",
       "source_ref": "Rashi on Bekhorot 33a:12:1",
       "gemara_segment_ids": [
         11
@@ -2135,6 +2144,26 @@
           "consonants": "מום",
           "source": "bekhorot/33a",
           "rung": "local-bigram"
+        },
+        {
+          "token_index": 213,
+          "consonants": "כל",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-skipgram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "הרגלים",
+            "כל",
+            "העור"
+          ],
+          "attestations": 19,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "shulchan-arukh"
+          ]
         }
       ]
     },
@@ -2151,57 +2180,59 @@
         {
           "token_index": 214,
           "consonants": "העור",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 49,
-          "agreement": 0.9796,
-          "policy": "majority-95",
-          "variants": {
-            "הָעוֹר": 48,
-            "הָעִוֵּר": 1
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "כל",
+            "העור",
+            "שלם"
+          ],
+          "attestations": 5,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh"
+          ]
         },
         {
           "token_index": 216,
           "consonants": "לעשות",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 476,
-          "agreement": 0.9958,
-          "policy": "majority-95",
-          "variants": {
-            "לַעֲשׂוֹת": 474,
-            "לֵעָשׂוֹת": 2
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "שלם",
+            "לעשות",
+            "ממנו"
+          ],
+          "attestations": 9,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh"
+          ]
         },
         {
           "token_index": 217,
           "consonants": "ממנו",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 706,
-          "agreement": 0.9929,
-          "policy": "majority-95",
-          "variants": {
-            "מִמֶּנּוּ": 701,
-            "מִמֶּנוּ": 4,
-            "מִמֵּנוֹ": 1
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "לעשות",
+            "ממנו",
+            "מפוח"
+          ],
+          "attestations": 9,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh"
+          ]
         }
       ]
     },
@@ -2209,28 +2240,50 @@
       "width": "250px",
       "right": "0px",
       "left": "",
-      "text": "או למוכרי דבש ושמן שֶׁנּוֹתְנִין אוֹתוֹ",
+      "text": "אוֹ למוכרי דבש ושמן שֶׁנוֹתְנִין אוֹתוֹ",
       "source_ref": "Rashi on Bekhorot 33a:12:1",
       "gemara_segment_ids": [
         11
       ],
       "nikkud_projections": [
         {
+          "token_index": 220,
+          "consonants": "או",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-skipgram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "לנפחים",
+            "או",
+            "למוכרי"
+          ],
+          "attestations": 55,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "shulchan-arukh"
+          ]
+        },
+        {
           "token_index": 224,
           "consonants": "שנותנין",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 14,
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 6,
           "agreement": 1.0,
           "policy": "unanimous",
-          "variants": {
-            "שֶׁנּוֹתְנִין": 14
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "detached_prefix": "ש",
+          "pointed_prefix": "שֶׁ",
+          "base_consonants": "נותנין",
+          "base_source_form": "נוֹתְנִין",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "ושמן",
+            "נותנין",
+            "אותו"
+          ]
         },
         {
           "token_index": 225,
@@ -2518,23 +2571,6 @@
           "policy": "unanimous"
         },
         {
-          "token_index": 263,
-          "consonants": "הבשר",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 134,
-          "agreement": 1.0,
-          "policy": "unanimous",
-          "variants": {
-            "הַבָּשָׂר": 134
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
-        },
-        {
           "token_index": 262,
           "consonants": "דפוגם",
           "source": "bavli-corpus",
@@ -2555,6 +2591,23 @@
           "base_consonants": "פוגם",
           "base_source_form": "פּוֹגֵם",
           "prefix_policy": "reviewed-introductory-prefix"
+        },
+        {
+          "token_index": 263,
+          "consonants": "הבשר",
+          "source": "bavli-corpus",
+          "rung": "corpus-unigram",
+          "attestations": 134,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "variants": {
+            "הַבָּשָׂר": 134
+          },
+          "thresholds": {
+            "unanimous_min_attestations": 3,
+            "majority_min_attestations": 20,
+            "majority_min_share": 0.95
+          }
         }
       ]
     },
@@ -2568,6 +2621,28 @@
         12
       ],
       "nikkud_projections": [
+        {
+          "token_index": 264,
+          "consonants": "דמתיירא",
+          "source": "bavli-corpus",
+          "rung": "corpus-unigram-intro-prefix",
+          "attestations": 19,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "variants": {
+            "מִתְיָירֵא": 19
+          },
+          "thresholds": {
+            "unanimous_min_attestations": 3,
+            "majority_min_attestations": 20,
+            "majority_min_share": 0.95
+          },
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "מתיירא",
+          "base_source_form": "מִתְיָירֵא",
+          "prefix_policy": "reviewed-introductory-prefix"
+        },
         {
           "token_index": 265,
           "consonants": "לחתוך",
@@ -2636,28 +2711,6 @@
             "majority_min_attestations": 20,
             "majority_min_share": 0.95
           }
-        },
-        {
-          "token_index": 264,
-          "consonants": "דמתיירא",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-intro-prefix",
-          "attestations": 19,
-          "agreement": 1.0,
-          "policy": "unanimous",
-          "variants": {
-            "מִתְיָירֵא": 19
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          },
-          "detached_prefix": "ד",
-          "pointed_prefix": "דְּ",
-          "base_consonants": "מתיירא",
-          "base_source_form": "מִתְיָירֵא",
-          "prefix_policy": "reviewed-introductory-prefix"
         }
       ]
     },
@@ -2723,27 +2776,6 @@
       ],
       "nikkud_projections": [
         {
-          "token_index": 278,
-          "consonants": "בפסולי",
-          "source": "bekhorot/33a",
-          "rung": "local-bigram"
-        },
-        {
-          "token_index": 279,
-          "consonants": "המוקדשין",
-          "source": "bekhorot/33a",
-          "rung": "local-bigram"
-        },
-        {
-          "token_index": 280,
-          "consonants": "דאמר",
-          "source": "bavli-corpus",
-          "rung": "corpus-bigram",
-          "attestations": 24,
-          "agreement": 1.0,
-          "policy": "unanimous"
-        },
-        {
           "token_index": 277,
           "consonants": "דמחמיר",
           "source": "bavli-corpus",
@@ -2764,6 +2796,27 @@
           "base_consonants": "מחמיר",
           "base_source_form": "מַחְמִיר",
           "prefix_policy": "reviewed-introductory-prefix"
+        },
+        {
+          "token_index": 278,
+          "consonants": "בפסולי",
+          "source": "bekhorot/33a",
+          "rung": "local-bigram"
+        },
+        {
+          "token_index": 279,
+          "consonants": "המוקדשין",
+          "source": "bekhorot/33a",
+          "rung": "local-bigram"
+        },
+        {
+          "token_index": 280,
+          "consonants": "דאמר",
+          "source": "bavli-corpus",
+          "rung": "corpus-bigram",
+          "attestations": 24,
+          "agreement": 1.0,
+          "policy": "unanimous"
         }
       ]
     },
@@ -3783,6 +3836,28 @@
           "max_distance": 3
         },
         {
+          "token_index": 19,
+          "consonants": "דלעיל",
+          "source": "bavli-corpus",
+          "rung": "corpus-unigram-intro-prefix",
+          "attestations": 11,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "variants": {
+            "לְעֵיל": 11
+          },
+          "thresholds": {
+            "unanimous_min_attestations": 3,
+            "majority_min_attestations": 20,
+            "majority_min_share": 0.95
+          },
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "לעיל",
+          "base_source_form": "לְעֵיל",
+          "prefix_policy": "reviewed-introductory-prefix"
+        },
+        {
           "token_index": 20,
           "consonants": "בריש",
           "source": "bavli-corpus",
@@ -3816,28 +3891,6 @@
           "attestations": 68,
           "agreement": 1.0,
           "policy": "unanimous"
-        },
-        {
-          "token_index": 19,
-          "consonants": "דלעיל",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-intro-prefix",
-          "attestations": 11,
-          "agreement": 1.0,
-          "policy": "unanimous",
-          "variants": {
-            "לְעֵיל": 11
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          },
-          "detached_prefix": "ד",
-          "pointed_prefix": "דְּ",
-          "base_consonants": "לעיל",
-          "base_source_form": "לְעֵיל",
-          "prefix_policy": "reviewed-introductory-prefix"
         }
       ]
     },
@@ -4073,20 +4126,13 @@
         {
           "token_index": 52,
           "consonants": "דמשמע",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 31,
-          "agreement": 0.9677,
-          "policy": "majority-95",
-          "variants": {
-            "דְּמַשְׁמַע": 30,
-            "דִּמְשַׁמַּע": 1
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "source": "bekhorot/37a",
+          "rung": "linked-uni1-intro-prefix",
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "משמע",
+          "base_source_form": "מַשְׁמַע",
+          "prefix_policy": "reviewed-introductory-prefix"
         }
       ]
     },
@@ -4240,24 +4286,6 @@
           "rung": "local-bigram"
         },
         {
-          "token_index": 76,
-          "consonants": "קל",
-          "source": "bavli-corpus",
-          "rung": "corpus-bigram-curated",
-          "attestations": 367,
-          "agreement": 0.9537,
-          "policy": "curated-majority"
-        },
-        {
-          "token_index": 77,
-          "consonants": "וחומר",
-          "source": "bavli-corpus",
-          "rung": "corpus-bigram-curated",
-          "attestations": 367,
-          "agreement": 0.9537,
-          "policy": "curated-majority"
-        },
-        {
           "token_index": 72,
           "consonants": "שנותנו",
           "source": "bavli-corpus",
@@ -4278,6 +4306,24 @@
           "base_consonants": "נותנו",
           "base_source_form": "נוֹתְנוֹ",
           "prefix_policy": "reviewed-introductory-prefix"
+        },
+        {
+          "token_index": 76,
+          "consonants": "קל",
+          "source": "bavli-corpus",
+          "rung": "corpus-bigram-curated",
+          "attestations": 367,
+          "agreement": 0.9537,
+          "policy": "curated-majority"
+        },
+        {
+          "token_index": 77,
+          "consonants": "וחומר",
+          "source": "bavli-corpus",
+          "rung": "corpus-bigram-curated",
+          "attestations": 367,
+          "agreement": 0.9537,
+          "policy": "curated-majority"
         }
       ]
     },
@@ -4339,23 +4385,6 @@
       ],
       "nikkud_projections": [
         {
-          "token_index": 86,
-          "consonants": "התנופה",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 7,
-          "agreement": 1.0,
-          "policy": "unanimous",
-          "variants": {
-            "הַתְּנוּפָה": 7
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
-        },
-        {
           "token_index": 83,
           "consonants": "דמתוקמא",
           "source": "bavli-corpus",
@@ -4398,6 +4427,23 @@
           "base_consonants": "כחזה",
           "base_source_form": "כַּחֲזֵה",
           "prefix_policy": "reviewed-introductory-prefix"
+        },
+        {
+          "token_index": 86,
+          "consonants": "התנופה",
+          "source": "bavli-corpus",
+          "rung": "corpus-unigram",
+          "attestations": 7,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "variants": {
+            "הַתְּנוּפָה": 7
+          },
+          "thresholds": {
+            "unanimous_min_attestations": 3,
+            "majority_min_attestations": 20,
+            "majority_min_share": 0.95
+          }
         }
       ]
     },
@@ -4405,7 +4451,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "בתם. ובכי הַאי גוְנָא אַשְׁכְּחַן בפ''ק",
+      "text": "בתם. ובכי הַאי גַוְנָא אַשְׁכְּחַן בפ''ק",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -4460,6 +4506,17 @@
       ],
       "nikkud_projections": [
         {
+          "token_index": 93,
+          "consonants": "דזבחים",
+          "source": "zevachim/10b",
+          "rung": "linked-uni1-intro-prefix",
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "זבחים",
+          "base_source_form": "זְבָחִים",
+          "prefix_policy": "reviewed-introductory-prefix"
+        },
+        {
           "token_index": 96,
           "consonants": "גבי",
           "source": "bavli-corpus",
@@ -4478,29 +4535,6 @@
           "policy": "unanimous"
         },
         {
-          "token_index": 99,
-          "consonants": "דמו",
-          "source": "zevachim/10b",
-          "rung": "linked-skipgram"
-        },
-        {
-          "token_index": 101,
-          "consonants": "לפנים",
-          "source": "zevachim/10b",
-          "rung": "linked-uni1"
-        },
-        {
-          "token_index": 93,
-          "consonants": "דזבחים",
-          "source": "zevachim/10b",
-          "rung": "linked-uni1-intro-prefix",
-          "detached_prefix": "ד",
-          "pointed_prefix": "דְּ",
-          "base_consonants": "זבחים",
-          "base_source_form": "זְבָחִים",
-          "prefix_policy": "reviewed-introductory-prefix"
-        },
-        {
           "token_index": 98,
           "consonants": "שנכנס",
           "source": "zevachim/10b",
@@ -4515,6 +4549,18 @@
             "נכנס",
             "דמו"
           ]
+        },
+        {
+          "token_index": 99,
+          "consonants": "דמו",
+          "source": "zevachim/10b",
+          "rung": "linked-skipgram"
+        },
+        {
+          "token_index": 101,
+          "consonants": "לפנים",
+          "source": "zevachim/10b",
+          "rung": "linked-uni1"
         }
       ]
     },
@@ -4585,7 +4631,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "מעולה אַף עַל גַּב דְּרַבָּנַן אִית לְהוּ",
+      "text": "מעולה אַף עַל גַּב דְרַבָּנַן אִית לְהוּ",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -4622,19 +4668,12 @@
           "token_index": 116,
           "consonants": "דרבנן",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 676,
+          "rung": "corpus-skipgram-partial",
+          "attestations": 26,
           "agreement": 1.0,
-          "policy": "unanimous",
-          "variants": {
-            "דְּרַבָּנַן": 594,
-            "דְרַבָּנַן": 82
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "policy": "initial-dagesh-withheld",
+          "max_distance": 3,
+          "withheld_initial_letters": 1
         },
         {
           "token_index": 117,
@@ -4981,12 +5020,31 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "חק נתן] לָא דָּרְשִׁינַן קַ''וָ. ובשמעתין",
+      "text": "חק נָתַן] לָא דָּרְשִׁינַן קַ''וָ. ובשמעתין",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
       ],
       "nikkud_projections": [
+        {
+          "token_index": 161,
+          "consonants": "נתן",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-bigram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "חק",
+            "נתן",
+            "לא"
+          ],
+          "attestations": 5,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet"
+          ]
+        },
         {
           "token_index": 162,
           "consonants": "לא",
@@ -5020,7 +5078,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "דְּמִצְוַת עֲשֵׂה שֶׁהַזְּמַן גרמא גבי טְפָלִים",
+      "text": "דְּמִצְוַת עֲשֵׂה שֶׁהַזְּמַן גְּרָמָא גבי טְפָלִים",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -5054,6 +5112,25 @@
           "policy": "unanimous"
         },
         {
+          "token_index": 169,
+          "consonants": "גרמא",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "שהזמן",
+            "גרמא",
+            "גבי"
+          ],
+          "attestations": 8,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh"
+          ]
+        },
+        {
           "token_index": 171,
           "consonants": "טפלים",
           "source": "bavli-corpus",
@@ -5076,7 +5153,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "חַיָּיבִין נָשִׁים לא כל שֶׁכֵּן [צ\"ל אתי קַל וָחוֹמֶר וּמַפְּקָא מג\"ש חק נתן]. והא דְּלְקַמַּן",
+      "text": "חַיָּיבִין נָשִׁים לֹא כָּל שֶׁכֵּן [צ\"ל אתי קַל וָחוֹמֶר וּמַפְּקָא מג\"ש חק נתן]. והא דְּלְקַמַּן",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -5107,6 +5184,49 @@
           "attestations": 5,
           "agreement": 1.0,
           "policy": "unanimous"
+        },
+        {
+          "token_index": 174,
+          "consonants": "לא",
+          "source": "sefaria-rashi-on-tanakh",
+          "rung": "rabbinic-bigram",
+          "corpus": "rashi-on-tanakh",
+          "context": [
+            "נשים",
+            "לא",
+            "כל"
+          ],
+          "attestations": 14,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "rashi-on-tanakh",
+            "rashi-on-tanakh-mining"
+          ]
+        },
+        {
+          "token_index": 175,
+          "consonants": "כל",
+          "source": "sefaria-rashi-on-tanakh",
+          "rung": "rabbinic-trigram",
+          "corpus": "rashi-on-tanakh",
+          "context": [
+            "לא",
+            "כל",
+            "שכן"
+          ],
+          "attestations": 11,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "rashi-on-tanakh",
+            "rashi-on-tanakh-mining",
+            "shulchan-arukh"
+          ]
         },
         {
           "token_index": 176,
@@ -5217,6 +5337,25 @@
       ],
       "nikkud_projections": [
         {
+          "token_index": 194,
+          "consonants": "דעשר",
+          "source": "bavli-corpus",
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 11,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "עשר",
+          "base_source_form": "עַשֵּׂר",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "מהיקשא",
+            "עשר",
+            "תעשר"
+          ]
+        },
+        {
           "token_index": 195,
           "consonants": "תעשר",
           "source": "bavli-corpus",
@@ -5262,25 +5401,6 @@
           "attestations": 8,
           "agreement": 1.0,
           "policy": "unanimous"
-        },
-        {
-          "token_index": 194,
-          "consonants": "דעשר",
-          "source": "bavli-corpus",
-          "rung": "corpus-bigram-intro-prefix",
-          "attestations": 11,
-          "agreement": 1.0,
-          "policy": "unanimous",
-          "detached_prefix": "ד",
-          "pointed_prefix": "דְּ",
-          "base_consonants": "עשר",
-          "base_source_form": "עַשֵּׂר",
-          "prefix_policy": "reviewed-introductory-prefix",
-          "base_context": [
-            "מהיקשא",
-            "עשר",
-            "תעשר"
-          ]
         }
       ]
     },
@@ -5409,7 +5529,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "כִּלְאַיִם זֶה בזֶה מתעשרים מזה עַל זֶה",
+      "text": "כִּלְאַיִם זֶה בזֶה מתעשרים מִזֶּה עַל זֶה",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -5444,6 +5564,25 @@
           "withheld_initial_letters": 1
         },
         {
+          "token_index": 223,
+          "consonants": "מזה",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "מתעשרים",
+            "מזה",
+            "על"
+          ],
+          "attestations": 11,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh"
+          ]
+        },
+        {
           "token_index": 224,
           "consonants": "על",
           "source": "bavli-corpus",
@@ -5467,7 +5606,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "חדש וישן כּוּ'! הָתָם לא מִיתּוֹקְמָא היקשא",
+      "text": "חדש וישן כּוּ'! הָתָם לֹא מִיתּוֹקְמָא היקשא",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -5493,6 +5632,25 @@
           "policy": "unanimous"
         },
         {
+          "token_index": 230,
+          "consonants": "לא",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-skipgram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "התם",
+            "לא",
+            "מיתוקמא"
+          ],
+          "attestations": 23,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet"
+          ]
+        },
+        {
           "token_index": 231,
           "consonants": "מיתוקמא",
           "source": "bavli-corpus",
@@ -5515,7 +5673,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "אי אתית למידן קַ''וָ. וְאַעַ''גַּ דִּלְרַבִּי יוֹסֵי",
+      "text": "אי אתית למידן קַ''וָ. וְאַעַ''גַּ דְּלְרַבִּי יוֹסֵי",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -5543,18 +5701,20 @@
           "token_index": 238,
           "consonants": "דלרבי",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 8,
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 104,
           "agreement": 1.0,
           "policy": "unanimous",
-          "variants": {
-            "דִּלְרַבִּי": 8
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "לרבי",
+          "base_source_form": "לְרַבִּי",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "ואעג",
+            "לרבי",
+            "יוסי"
+          ]
         },
         {
           "token_index": 239,
@@ -5911,7 +6071,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "מ''ד דְּבָשָׂר בְּחָלָב אָסוּר בַּאֲכִילָה וּמוּתָּר",
+      "text": "מ''ד דְּבָּשָׂר בְּחָלָב אָסוּר בַּאֲכִילָה וּמוּתָּר",
       "source_ref": "Tosafot on Bekhorot 33a:1:1",
       "gemara_segment_ids": [
         0
@@ -5921,18 +6081,20 @@
           "token_index": 294,
           "consonants": "דבשר",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 12,
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 25,
           "agreement": 1.0,
           "policy": "unanimous",
-          "variants": {
-            "דְּבָשָׂר": 12
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "בשר",
+          "base_source_form": "בָּשָׂר",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "מד",
+            "בשר",
+            "בחלב"
+          ]
         },
         {
           "token_index": 295,
@@ -6010,15 +6172,6 @@
           "policy": "unanimous"
         },
         {
-          "token_index": 304,
-          "consonants": "ואיכא",
-          "source": "bavli-corpus",
-          "rung": "corpus-bigram",
-          "attestations": 8,
-          "agreement": 1.0,
-          "policy": "unanimous"
-        },
-        {
           "token_index": 302,
           "consonants": "דקדש",
           "source": "bavli-corpus",
@@ -6036,6 +6189,15 @@
             "קדש",
             "קדש"
           ]
+        },
+        {
+          "token_index": 304,
+          "consonants": "ואיכא",
+          "source": "bavli-corpus",
+          "rung": "corpus-bigram",
+          "attestations": 8,
+          "agreement": 1.0,
+          "policy": "unanimous"
         }
       ]
     },
@@ -6493,7 +6655,7 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "דְּהַיְינוּ שְׁנֵי מִינִין. ולא כמו שֶׁרְגִילִין לְפָרֵשׁ",
+      "text": "דְּהַיְינוּ שְׁנֵי מִינִין. וְלֹא כְּמוֹ שֶׁרְגִילִין לְפָרֵשׁ",
       "source_ref": "Tosafot on Bekhorot 33a:2:1",
       "gemara_segment_ids": [
         4
@@ -6533,6 +6695,47 @@
           "attestations": 7,
           "agreement": 1.0,
           "policy": "unanimous"
+        },
+        {
+          "token_index": 367,
+          "consonants": "ולא",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-skipgram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "מינין",
+            "ולא",
+            "כמו"
+          ],
+          "attestations": 18,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "shulchan-arukh"
+          ]
+        },
+        {
+          "token_index": 368,
+          "consonants": "כמו",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-skipgram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "ולא",
+            "כמו",
+            "שרגילין"
+          ],
+          "attestations": 16,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "rashi-on-tanakh",
+            "rashi-on-tanakh-mining"
+          ]
         },
         {
           "token_index": 369,
@@ -6575,12 +6778,34 @@
       "width": "250px",
       "right": "",
       "left": "0px",
-      "text": "שם שקצת הוא כקדשים וקצת הוּא",
+      "text": "שם שקצת הוּא כקדשים וקצת הוּא",
       "source_ref": "Tosafot on Bekhorot 33a:2:1",
       "gemara_segment_ids": [
         4
       ],
       "nikkud_projections": [
+        {
+          "token_index": 373,
+          "consonants": "הוא",
+          "source": "sefaria-rashi-on-tanakh-mining",
+          "rung": "rabbinic-skipgram",
+          "corpus": "rashi-on-tanakh-mining",
+          "context": [
+            "שקצת",
+            "הוא",
+            "כקדשים"
+          ],
+          "attestations": 55,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "rashi-on-tanakh",
+            "rashi-on-tanakh-mining",
+            "shulchan-arukh"
+          ]
+        },
         {
           "token_index": 376,
           "consonants": "הוא",
@@ -6829,7 +7054,7 @@
           "token_index": 419,
           "consonants": "אחת",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-r"
         },
         {
           "token_index": 420,
@@ -6865,7 +7090,7 @@
           "token_index": 423,
           "consonants": "מום",
           "source": "bekhorot/33a",
-          "rung": "local-bigram"
+          "rung": "local-trigram-l"
         },
         {
           "token_index": 424,
@@ -6971,7 +7196,7 @@
       "width": "450px",
       "right": "",
       "left": "0px",
-      "text": "כפרו בעליה צאן קדשים, חק נתן מחקוהו מִכָּאן וגורסים אוֹתוֹ לְמַטָּה) ויש לתמוה דבברייתא אָסְרִי רַבָּנַן בַּעֲלַת מוּם כשנשחטה לְאַחַר זְרִיקַת דם שֶׁל תְּמִימָה ובמשנה שרי, וְרַבִּי אֶלְעָזָר בַּר' שִׁמְעוֹן אסר בברייתא בכל ענין ובמשנה [צ\"ל דַּוְקָא אם קרבה שְׁנִיָּה עַד שֶׁלֹּא נִשְׁחֲטָה רִאשׁוֹנָה תמות שֶׁכְּבָר כפרו בְּעָלִים",
+      "text": "כפרו בעליה צאן קדשים, חק נתן מחקוהו מִכָּאן וגורסים אוֹתוֹ לְמַטָּה) ויש לתמוה דבברייתא אָסְרִי רַבָּנַן בַּעֲלַת מוּם כשנשחטה לְאַחַר זְרִיקַת דם שֶׁל תְּמִימָה ובמשנה שרי, וְרַבִּי אֶלְעָזָר בַּר' שִׁמְעוֹן אסר בברייתא בְּכָל עִנְיָן ובמשנה [צ\"ל דַּוְקָא אִם קרבה שְׁנִיָּה עַד שֶׁלֹּא נִשְׁחֲטָה רִאשׁוֹנָה תמות שֶׁכְּבָר כפרו בְּעָלִים",
       "source_ref": "Tosafot on Bekhorot 33a:4:1",
       "gemara_segment_ids": [
         13
@@ -7158,39 +7383,102 @@
           }
         },
         {
-          "token_index": 469,
-          "consonants": "דוקא",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram",
-          "attestations": 162,
+          "token_index": 465,
+          "consonants": "בכל",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "בברייתא",
+            "בכל",
+            "ענין"
+          ],
+          "attestations": 85,
           "agreement": 1.0,
           "policy": "unanimous",
-          "variants": {
-            "דַּוְקָא": 162
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh",
+            "shulchan-arukh-mining"
+          ]
+        },
+        {
+          "token_index": 466,
+          "consonants": "ענין",
+          "source": "sefaria-shulchan-arukh-mining",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh-mining",
+          "context": [
+            "בכל",
+            "ענין",
+            "ובמשנה"
+          ],
+          "attestations": 34,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh-mining"
+          ]
+        },
+        {
+          "token_index": 469,
+          "consonants": "דוקא",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "צל",
+            "דוקא",
+            "אם"
+          ],
+          "attestations": 16,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh",
+            "shulchan-arukh-mining"
+          ]
+        },
+        {
+          "token_index": 470,
+          "consonants": "אם",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "דוקא",
+            "אם",
+            "קרבה"
+          ],
+          "attestations": 16,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh",
+            "shulchan-arukh-mining"
+          ]
         },
         {
           "token_index": 472,
           "consonants": "שניה",
-          "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 276,
-          "agreement": 0.9674,
-          "policy": "majority-95",
-          "variants": {
-            "שְׁנִיָּה": 267,
-            "שְׁנֵיהּ": 9
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-skipgram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "קרבה",
+            "שניה",
+            "עד"
+          ],
+          "attestations": 7,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet"
+          ]
         },
         {
           "token_index": 473,
@@ -7280,12 +7568,31 @@
       "width": "450px",
       "right": "",
       "left": "0px",
-      "text": "צאן קדשים, חק נתן], אבל (כשנשחטה לְאַחַר זְרִיקַת דם שֶׁל תְּמִימָה ובמשנה שרי וְרַבִּי אֶלְעָזָר בַּר' שִׁמְעוֹן אסר",
+      "text": "צאן קדשים, חק נתן], אֲבָל (כשנשחטה לְאַחַר זְרִיקַת דם שֶׁל תְּמִימָה ובמשנה שרי וְרַבִּי אֶלְעָזָר בַּר' שִׁמְעוֹן אסר",
       "source_ref": "Tosafot on Bekhorot 33a:4:1",
       "gemara_segment_ids": [
         13
       ],
       "nikkud_projections": [
+        {
+          "token_index": 485,
+          "consonants": "אבל",
+          "source": "sefaria-shulchan-arukh-mining",
+          "rung": "rabbinic-skipgram",
+          "corpus": "shulchan-arukh-mining",
+          "context": [
+            "נתן",
+            "אבל",
+            "כשנשחטה"
+          ],
+          "attestations": 17,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh-mining"
+          ]
+        },
         {
           "token_index": 487,
           "consonants": "לאחר",
@@ -7366,12 +7673,51 @@
       "width": "450px",
       "right": "",
       "left": "0px",
-      "text": "בברייתא בכל ענין ובשנה שרי צאן קדשים, חק נתן מחקוהו) כשנשחטה קוֹדֶם לָכֵן [צ\"ל שרי צאן קדשים, חק נתן]! וְאוֹמֵר ר' דבמשנה",
+      "text": "בברייתא בְּכָל עִנְיָן ובשנה שרי צאן קדשים, חק נתן מחקוהו) כשנשחטה קוֹדֶם לָכֵן [צ\"ל שרי צאן קדשים, חק נתן]! וְאוֹמֵר ר' דבמשנה",
       "source_ref": "Tosafot on Bekhorot 33a:4:1",
       "gemara_segment_ids": [
         13
       ],
       "nikkud_projections": [
+        {
+          "token_index": 500,
+          "consonants": "בכל",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "בברייתא",
+            "בכל",
+            "ענין"
+          ],
+          "attestations": 85,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh",
+            "shulchan-arukh-mining"
+          ]
+        },
+        {
+          "token_index": 501,
+          "consonants": "ענין",
+          "source": "sefaria-shulchan-arukh-mining",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh-mining",
+          "context": [
+            "בכל",
+            "ענין",
+            "ובשנה"
+          ],
+          "attestations": 34,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh-mining"
+          ]
+        },
         {
           "token_index": 510,
           "consonants": "קודם",
@@ -7415,7 +7761,7 @@
       "width": "450px",
       "right": "",
       "left": "0px",
-      "text": "מַיְירֵי (שֶׁהִפְרִישׁ פרה בַּעֲלַת) [צ\"ל שפדה הבעלת שיטה מקובצת כתב יד] מום וחיללה עַל התמימה שכל קדושה של",
+      "text": "מַיְירֵי (שֶׁהִפְרִישׁ פרה בַּעֲלַת) [צ\"ל שפדה הבעלת שיטה מקובצת כתב יד] מום וחיללה עַל התמימה שֶׁכָּל קדושה של",
       "source_ref": "Tosafot on Bekhorot 33a:4:1",
       "gemara_segment_ids": [
         13
@@ -7484,6 +7830,26 @@
           "agreement": 1.0,
           "policy": "unanimous",
           "max_distance": 3
+        },
+        {
+          "token_index": 536,
+          "consonants": "שכל",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-skipgram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "התמימה",
+            "שכל",
+            "קדושה"
+          ],
+          "attestations": 30,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "shulchan-arukh"
+          ]
         }
       ]
     },
@@ -7550,7 +7916,7 @@
       "width": "930px",
       "right": "",
       "left": "0px",
-      "text": "לְרַבָּנַן בכל ענין דלא דמיא לחטאת שֶׁכִּיפְּרוּ בעליה. וְרַבִּי אֶלְעָזָר בְּרַבִּי שִׁמְעוֹן מְחַלֵּק בֵּין נִשְׁחֲטָה קוֹדֶם זְרִיקָה לנשחטה לְאַחַר זְרִיקָה. אֲבָל",
+      "text": "לְרַבָּנַן בְּכָל עִנְיָן דלא דמיא לחטאת שֶׁכִּיפְּרוּ בעליה. וְרַבִּי אֶלְעָזָר בְּרַבִּי שִׁמְעוֹן מְחַלֵּק בֵּין נִשְׁחֲטָה קוֹדֶם זְרִיקָה לנשחטה לְאַחַר זְרִיקָה. אֲבָל",
       "source_ref": "Tosafot on Bekhorot 33a:4:1",
       "gemara_segment_ids": [
         13
@@ -7573,6 +7939,45 @@
             "majority_min_attestations": 20,
             "majority_min_share": 0.95
           }
+        },
+        {
+          "token_index": 550,
+          "consonants": "בכל",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "לרבנן",
+            "בכל",
+            "ענין"
+          ],
+          "attestations": 85,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh",
+            "shulchan-arukh-mining"
+          ]
+        },
+        {
+          "token_index": 551,
+          "consonants": "ענין",
+          "source": "sefaria-shulchan-arukh-mining",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh-mining",
+          "context": [
+            "בכל",
+            "ענין",
+            "דלא"
+          ],
+          "attestations": 34,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh-mining"
+          ]
         },
         {
           "token_index": 555,
@@ -7710,7 +8115,7 @@
       "width": "930px",
       "right": "",
       "left": "0px",
-      "text": "הָכָא מַיְירֵי שהתמימה באה ע''י קְדוּשַּׁת עַצְמָהּ ולא חִילֵּל הבעלת מוּם עליה כִּי אִם עַל דָּמִים וְאֵין נראה כְּאִילּוּ פקע קדושה",
+      "text": "הָכָא מַיְירֵי שהתמימה באה ע''י קְדוּשַּׁת עַצְמָהּ וְלֹא חִילֵּל הבעלת מוּם עליה כִּי אִם עַל דְּמַיִם וְאֵין נראה כְּאִילּוּ פקע קדושה",
       "source_ref": "Tosafot on Bekhorot 33a:4:1",
       "gemara_segment_ids": [
         13
@@ -7764,6 +8169,26 @@
           "attestations": 8,
           "agreement": 1.0,
           "policy": "unanimous"
+        },
+        {
+          "token_index": 577,
+          "consonants": "ולא",
+          "source": "sefaria-mishneh-torah-torat-emet",
+          "rung": "rabbinic-bigram",
+          "corpus": "mishneh-torah-torat-emet",
+          "context": [
+            "עצמה",
+            "ולא",
+            "חילל"
+          ],
+          "attestations": 5,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "mishneh-torah-torat-emet",
+            "shulchan-arukh"
+          ]
         },
         {
           "token_index": 578,
@@ -7823,21 +8248,20 @@
           "token_index": 585,
           "consonants": "דמים",
           "source": "bavli-corpus",
-          "rung": "corpus-unigram-majority",
-          "attestations": 468,
-          "agreement": 0.9893,
-          "policy": "majority-95",
-          "variants": {
-            "דָּמִים": 400,
-            "דְמַיִם": 2,
-            "דָמִים": 63,
-            "דְּמַיִם": 3
-          },
-          "thresholds": {
-            "unanimous_min_attestations": 3,
-            "majority_min_attestations": 20,
-            "majority_min_share": 0.95
-          }
+          "rung": "corpus-bigram-intro-prefix",
+          "attestations": 15,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "detached_prefix": "ד",
+          "pointed_prefix": "דְּ",
+          "base_consonants": "מים",
+          "base_source_form": "מַיִם",
+          "prefix_policy": "reviewed-introductory-prefix",
+          "base_context": [
+            "על",
+            "מים",
+            "ואין"
+          ]
         },
         {
           "token_index": 586,
@@ -8011,7 +8435,7 @@
       "width": "930px",
       "right": "",
       "left": "0px",
-      "text": "אֶלְעָזָר בְּרַבִּי שִׁמְעוֹן אֲסוּרָה בכל ענין דדמיא לחטאת שכפרו בעליה:",
+      "text": "אֶלְעָזָר בְּרַבִּי שִׁמְעוֹן אֲסוּרָה בְּכָל עִנְיָן דדמיא לחטאת שכפרו בעליה:",
       "source_ref": "Tosafot on Bekhorot 33a:4:1",
       "gemara_segment_ids": [
         13
@@ -8052,6 +8476,45 @@
             "majority_min_attestations": 20,
             "majority_min_share": 0.95
           }
+        },
+        {
+          "token_index": 615,
+          "consonants": "בכל",
+          "source": "sefaria-shulchan-arukh",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh",
+          "context": [
+            "אסורה",
+            "בכל",
+            "ענין"
+          ],
+          "attestations": 85,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh",
+            "shulchan-arukh-mining"
+          ]
+        },
+        {
+          "token_index": 616,
+          "consonants": "ענין",
+          "source": "sefaria-shulchan-arukh-mining",
+          "rung": "rabbinic-bigram",
+          "corpus": "shulchan-arukh-mining",
+          "context": [
+            "בכל",
+            "ענין",
+            "דדמיא"
+          ],
+          "attestations": 34,
+          "agreement": 1.0,
+          "policy": "unanimous",
+          "withheld_initial_letters": 0,
+          "corroborating_corpora": [
+            "shulchan-arukh-mining"
+          ]
         }
       ]
     }
