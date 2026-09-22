@@ -482,7 +482,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -502,7 +505,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -537,7 +543,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -547,7 +556,7 @@
         "width": "350px",
         "left": "0px",
         "right": "",
-        "text": "התרה וְכֵן בהמוכר אֶת הַסְּפִינָה (<a href=\"/bava_batra/74a\">ב״ב דף עד.</a>) גבי",
+        "text": "התרה וְכֵן בהַמּוֹכֵר אֶת הַסְּפִינָה (<a href=\"/bava_batra/74a\">ב״ב דף עד.</a>) גבי",
         "nikkud_projections": [
           {
             "token_index": 12,
@@ -558,6 +567,40 @@
             "agreement": 1.0,
             "policy": "unanimous",
             "max_distance": 3
+          },
+          {
+            "token_index": 13,
+            "consonants": "בהמוכר",
+            "source": "sefaria-rabbinic-prefix-bridge",
+            "rung": "cross-corpus-first-trigram-prefix",
+            "detached_prefix": "ב",
+            "pointed_prefix": "ב",
+            "base_consonants": "המוכר",
+            "base_source_form": "הַמּוֹכֵר",
+            "prefix_policy": "withheld-clitic-prefix-vowel",
+            "policy": "unanimous-positioned-trigram-across-corpora",
+            "base_context": [
+              "המוכר",
+              "את",
+              "הספינה"
+            ],
+            "attestations": 7,
+            "corpora": [
+              "bartenura-mining",
+              "ein-yaakov",
+              "mishneh-torah-torat-emet",
+              "shulchan-arukh",
+              "shulchan-arukh-mining"
+            ],
+            "source_ids": [
+              "bartenura:Bartenura on Mishnah Bava Batra",
+              "bartenura:Bartenura on Mishnah Kelim",
+              "ein-yaakov:Ein Yaakov",
+              "mishneh-torah-torat-emet:Mishneh Torah, Sales",
+              "shulchan-arukh:Shulchan Arukh, Choshen Mishpat",
+              "shulchan-arukh:Shulchan Arukh, Yoreh De'ah"
+            ],
+            "snapshot_sha256": "28641b195e8144e92b73f726ec6284d30a83f9d6f4a58e699a83e3534656f74b"
           },
           {
             "token_index": 14,
@@ -715,7 +758,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -733,7 +779,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -750,7 +799,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -760,8 +812,48 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "ויש ספרים דְּגָּרְסִי כְּגוֹן מַאן אָמַר רַב",
+        "text": "וְיֵשׁ סְפָרִים דְּגָּרְסִי כְּגוֹן מַאן אָמַר רַב",
         "nikkud_projections": [
+          {
+            "token_index": 46,
+            "consonants": "ויש",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "הספרים",
+              "ויש",
+              "ספרים"
+            ],
+            "attestations": 11,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
+          {
+            "token_index": 47,
+            "consonants": "ספרים",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "ויש",
+              "ספרים",
+              "דגרסי"
+            ],
+            "attestations": 11,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
           {
             "token_index": 48,
             "consonants": "דגרסי",
@@ -777,7 +869,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -854,7 +949,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -871,7 +969,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -898,7 +999,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -917,7 +1021,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -1026,7 +1133,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "וא״ת לְאִידַּךְ גירסא נמי מְנָא לֵיהּ כֹּל",
+        "text": "וא״ת לְאִידַּךְ גירסא נָמֵי מְנָא לֵיהּ כֹּל",
         "nikkud_projections": [
           {
             "token_index": 77,
@@ -1043,7 +1150,30 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
+            "token_index": 79,
+            "consonants": "נמי",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 7454,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "נָמֵי": 7454
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1100,7 +1230,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1172,7 +1305,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "לֵיהּ דְּחָכָם דר׳ יְהוּדָה לָאו כחכם",
+        "text": "לֵיהּ דְּחָכָם דָּר׳ יְהוּדָה לָאו כחכם",
         "nikkud_projections": [
           {
             "token_index": 95,
@@ -1207,6 +1340,26 @@
               "יהודה",
               "לאו"
             ]
+          },
+          {
+            "token_index": 97,
+            "consonants": "דר",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 38,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "דָּר": 38
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
           },
           {
             "token_index": 98,
@@ -1249,7 +1402,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -1271,7 +1427,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -1315,7 +1474,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1343,7 +1505,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1390,7 +1555,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1407,7 +1575,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -1434,7 +1605,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1451,7 +1625,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1468,7 +1645,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -1545,7 +1725,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "יְהוּדָה כֵּיוָן דְּרַבִּי יְהוּדָה לא אַיְירִי",
+        "text": "יְהוּדָה כֵּיוָן דְּרַבִּי יְהוּדָה לֹא אַיְירִי",
         "nikkud_projections": [
           {
             "token_index": 129,
@@ -1588,6 +1768,26 @@
             "policy": "unanimous"
           },
           {
+            "token_index": 133,
+            "consonants": "לא",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "יהודה",
+              "לא",
+              "איירי"
+            ],
+            "attestations": 10,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
+          {
             "token_index": 134,
             "consonants": "איירי",
             "source": "bavli-corpus",
@@ -1601,7 +1801,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -1693,7 +1896,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1715,8 +1921,28 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דר׳ יְהוּדָה ודוחק לוֹמַר דג׳ מְפִירִין",
+        "text": "דָּר׳ יְהוּדָה ודוחק לוֹמַר דָּג׳ מְפִירִין",
         "nikkud_projections": [
+          {
+            "token_index": 146,
+            "consonants": "דר",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 38,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "דָּר": 38
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
           {
             "token_index": 147,
             "consonants": "יהודה",
@@ -1731,7 +1957,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1743,6 +1972,26 @@
             "agreement": 1.0,
             "policy": "unanimous",
             "max_distance": 3
+          },
+          {
+            "token_index": 150,
+            "consonants": "דג",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 66,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "דָּג": 66
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
           },
           {
             "token_index": 151,
@@ -1831,7 +2080,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -1857,7 +2109,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1982,7 +2237,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2159,7 +2417,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2176,7 +2437,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2193,7 +2457,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -2219,7 +2486,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -2268,7 +2538,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2293,7 +2566,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "וא״ת וּמַ״טַ לָא הוי הכא מוּמָא כשנפלה",
+        "text": "וא״ת וּמַ״טַ לָא הֲוֵי הָכָא מוּמָא כשנפלה",
         "nikkud_projections": [
           {
             "token_index": 229,
@@ -2314,6 +2587,47 @@
             "policy": "unanimous"
           },
           {
+            "token_index": 231,
+            "consonants": "הוי",
+            "source": "sefaria-kitzur-shulchan-arukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "kitzur-shulchan-arukh",
+            "context": [
+              "לא",
+              "הוי",
+              "הכא"
+            ],
+            "attestations": 27,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "ein-yaakov",
+              "kitzur-shulchan-arukh"
+            ],
+            "new_corpus_gap_fill": true
+          },
+          {
+            "token_index": 232,
+            "consonants": "הכא",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 3256,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "הָכָא": 3256
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
             "token_index": 233,
             "consonants": "מומא",
             "source": "bavli-corpus",
@@ -2327,7 +2641,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -2337,7 +2654,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "שינו כֵּיוָן דחשיב מום שֶׁבַּגָּלוּי וְאֵינוֹ",
+        "text": "שינו כֵּיוָן דחשיב מוּם שֶׁבַּגָּלוּי וְאֵינוֹ",
         "nikkud_projections": [
           {
             "token_index": 236,
@@ -2354,7 +2671,30 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
+            "token_index": 238,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2371,7 +2711,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2410,7 +2753,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -2459,7 +2805,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2674,7 +3023,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2691,7 +3043,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2735,7 +3090,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -2769,7 +3127,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2787,7 +3148,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2824,7 +3188,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2879,7 +3246,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2896,7 +3266,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2932,7 +3305,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -2987,7 +3363,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "שֶׁהַשִּׁינַּיִם נוֹפְלוֹת מֵחֲמַת זקנה לָא הוי",
+        "text": "שֶׁהַשִּׁינַּיִם נוֹפְלוֹת מֵחֲמַת זקנה לָא הֲוֵי",
         "nikkud_projections": [
           {
             "token_index": 304,
@@ -3003,7 +3379,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ש",
             "pointed_prefix": "שֶׁ",
@@ -3025,7 +3404,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3043,7 +3425,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3054,6 +3439,27 @@
             "attestations": 230,
             "agreement": 1.0,
             "policy": "unanimous"
+          },
+          {
+            "token_index": 309,
+            "consonants": "הוי",
+            "source": "sefaria-kitzur-shulchan-arukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "kitzur-shulchan-arukh",
+            "context": [
+              "לא",
+              "הוי",
+              "כעין"
+            ],
+            "attestations": 27,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "ein-yaakov",
+              "kitzur-shulchan-arukh"
+            ],
+            "new_corpus_gap_fill": true
           }
         ]
       },
@@ -3062,7 +3468,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "כְּעֵין פִּסֵּחַ וְעִוֵּר וּמִיהוּ צָרִיךְ טעם",
+        "text": "כְּעֵין פִּסֵּחַ וְעִוֵּר וּמִיהוּ צָרִיךְ טַעַם",
         "nikkud_projections": [
           {
             "token_index": 310,
@@ -3079,7 +3485,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3108,7 +3517,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3129,6 +3541,27 @@
             "corroborating_corpora": [
               "shulchan-arukh"
             ]
+          },
+          {
+            "token_index": 315,
+            "consonants": "טעם",
+            "source": "sefaria-sefer-hachinukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "sefer-hachinukh",
+            "context": [
+              "צריך",
+              "טעם",
+              "אחר"
+            ],
+            "attestations": 15,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "sefer-hachinukh",
+              "shulchan-arukh-harav"
+            ],
+            "new_corpus_gap_fill": true
           }
         ]
       },
@@ -3137,8 +3570,29 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "אחר דה״נ עֵינָיו מֵחֲמַת זקנה וא״ת",
+        "text": "אַחֵר דה״נ עֵינָיו מֵחֲמַת זקנה וא״ת",
         "nikkud_projections": [
+          {
+            "token_index": 316,
+            "consonants": "אחר",
+            "source": "sefaria-sefer-hachinukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "sefer-hachinukh",
+            "context": [
+              "טעם",
+              "אחר",
+              "דהנ"
+            ],
+            "attestations": 15,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "sefer-hachinukh",
+              "shulchan-arukh-harav"
+            ],
+            "new_corpus_gap_fill": true
+          },
           {
             "token_index": 318,
             "consonants": "עיניו",
@@ -3153,7 +3607,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3171,7 +3628,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -3181,7 +3641,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "מַאי שְׁנָא דְּהִכָּהוּ על אׇזְנוֹ וְחֵרְשׁוֹ חשיב",
+        "text": "מַאי שְׁנָא דְּהִכָּהוּ עַל אׇזְנוֹ וְחֵרְשׁוֹ חשיב",
         "nikkud_projections": [
           {
             "token_index": 322,
@@ -3221,6 +3681,29 @@
             ]
           },
           {
+            "token_index": 325,
+            "consonants": "על",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-neighbor-clitic",
+            "attestations": 7,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "matched_context": [
+              "הכהו",
+              "על",
+              "אזנו"
+            ],
+            "stripped_neighbors": [
+              "previous"
+            ],
+            "original_context": [
+              "דהכהו",
+              "על",
+              "אזנו"
+            ]
+          },
+          {
             "token_index": 326,
             "consonants": "אזנו",
             "source": "bavli-corpus",
@@ -3234,7 +3717,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3251,7 +3737,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -3261,8 +3750,28 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "מום התם ועבד יוֹצֵא לְחֵירוּת",
+        "text": "מוּם התם ועבד יוֹצֵא לְחֵירוּת",
         "nikkud_projections": [
+          {
+            "token_index": 329,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
           {
             "token_index": 332,
             "consonants": "יוצא",
@@ -3278,7 +3787,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3295,7 +3807,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -3305,7 +3820,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דְּהָוֵי מום שֶׁבַּגָּלוּי וְאֵינוֹ חוֹזֵר ולקמן",
+        "text": "דְּהָוֵי מוּם שֶׁבַּגָּלוּי וְאֵינוֹ חוֹזֵר ולקמן",
         "nikkud_projections": [
           {
             "token_index": 334,
@@ -3322,7 +3837,30 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
+            "token_index": 335,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3339,7 +3877,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3436,8 +3977,32 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "בבהמה באדם לא מִיפַּסְלִי אֶלָּא",
+        "text": "בבְהֵמָה באדם לא מִיפַּסְלִי אֶלָּא",
         "nikkud_projections": [
+          {
+            "token_index": 352,
+            "consonants": "בבהמה",
+            "source": "sefaria-mishneh-torah-torat-emet",
+            "rung": "rabbinic-partial-clitic-unigram",
+            "corpus": "mishneh-torah-torat-emet",
+            "attestations": 72,
+            "position_agreements": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "withheld_letter_positions": [
+              0,
+              4
+            ],
+            "base_attestations": 624,
+            "policy": "agreeing-stem-with-ambiguous-bkl-prefix",
+            "corroborating_corpora": [
+              "mishneh-torah-torat-emet",
+              "shulchan-arukh"
+            ]
+          },
           {
             "token_index": 355,
             "consonants": "מיפסלי",
@@ -3452,7 +4017,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3550,8 +4118,28 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "כדמפרש לְקַמַּן בין חרש בִּידֵי",
+        "text": "כְּדִמְפָרֵשׁ לְקַמַּן בין חרש בִּידֵי",
         "nikkud_projections": [
+          {
+            "token_index": 363,
+            "consonants": "כדמפרש",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "אהרן",
+              "כדמפרש",
+              "לקמן"
+            ],
+            "attestations": 7,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
           {
             "token_index": 364,
             "consonants": "לקמן",
@@ -3567,7 +4155,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -3586,7 +4177,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "אָדָם לחרש בִּידֵי שָׁמַיִם וי״ל דְּגַּבֵּי עבד",
+        "text": "אָדָם לחרש בִּידֵי שָׁמַיִם וי״ל דְּגַּבֵּי עֶבֶד",
         "nikkud_projections": [
           {
             "token_index": 368,
@@ -3633,6 +4224,29 @@
               "גבי",
               "עבד"
             ]
+          },
+          {
+            "token_index": 374,
+            "consonants": "עבד",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-neighbor-clitic",
+            "attestations": 8,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "matched_context": [
+              "גבי",
+              "עבד",
+              "גלי"
+            ],
+            "stripped_neighbors": [
+              "previous"
+            ],
+            "original_context": [
+              "דגבי",
+              "עבד",
+              "גלי"
+            ]
           }
         ]
       },
@@ -3641,7 +4255,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "גַּלִּי רַחֲמָנָא דבדבר קל חשיב מום לָצֵאת",
+        "text": "גַּלִּי רַחֲמָנָא דבדבר קל חשיב מוּם לָצֵאת",
         "nikkud_projections": [
           {
             "token_index": 375,
@@ -3660,6 +4274,26 @@
             "attestations": 15,
             "agreement": 1.0,
             "policy": "unanimous"
+          },
+          {
+            "token_index": 380,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
           },
           {
             "token_index": 381,
@@ -3702,7 +4336,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -3711,23 +4348,26 @@
     "display_markup": {
       "method": "exact Hebrew words after per-line tzurat.line_alignment.needleman_wunsch2",
       "source": "tzurat/girsology_resources/bekhorot/37a/core_daf.json",
-      "source_sha256": "0b2ff40e5dd690340cf7dea33cd6d15e61a8216c60eaa1e5eaa5adc2d6b86492",
+      "source_sha256": "ba29370e6c859fa67afa4e281b1cc67e723422b07a34f5ef60cc00f645d267c9",
       "exact_words": 22,
       "divergent_heading_words": 0
     },
     "nikkud_projection": {
-      "method": "Rif ladder: local/Bavli contexts, then audited Sefaria rabbinic trigrams and bigrams; reviewed censorship units; curated roshei-teivot",
+      "method": "Rif ladder, same-comment/peer Rashi context, audited rabbinic tiers, positioned prefix bridge, reviewed formulas and censorship",
       "counts": {
         "acronym-corpus": 3,
         "corpus-bigram": 73,
         "corpus-bigram-intro-prefix": 3,
+        "corpus-bigram-neighbor-clitic": 2,
         "corpus-bigram-partial": 2,
+        "corpus-short-unigram": 9,
         "corpus-skipgram": 4,
         "corpus-skipgram-intro-prefix": 5,
         "corpus-unigram": 39,
         "corpus-unigram-intro-prefix": 4,
         "corpus-unigram-majority": 19,
         "corpus-unigram-majority-intro-prefix": 1,
+        "cross-corpus-first-trigram-prefix": 1,
         "linked-bi2": 4,
         "linked-bigram": 4,
         "linked-uni1": 2,
@@ -3737,8 +4377,9 @@
         "local-trigram-l": 7,
         "local-trigram-r": 6,
         "local-unigram-intro-prefix": 1,
-        "projected": 228,
-        "rabbinic-bigram": 4,
+        "projected": 249,
+        "rabbinic-bigram": 12,
+        "rabbinic-partial-clitic-unigram": 1,
         "rabbinic-skipgram": 7
       }
     }
@@ -4367,7 +5008,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -4387,7 +5031,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -4422,7 +5069,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -4432,7 +5082,7 @@
         "width": "350px",
         "left": "0px",
         "right": "",
-        "text": "התרה. וְכֵן בהמוכר אֶת הַסְּפִינָה (<a href=\"/bava_batra/74a\">ב&#x27;&#x27;ב דף עד.</a>) גבי",
+        "text": "התרה. וְכֵן בהַמּוֹכֵר אֶת הַסְּפִינָה (<a href=\"/bava_batra/74a\">ב&#x27;&#x27;ב דף עד.</a>) גבי",
         "nikkud_projections": [
           {
             "token_index": 12,
@@ -4443,6 +5093,40 @@
             "agreement": 1.0,
             "policy": "unanimous",
             "max_distance": 3
+          },
+          {
+            "token_index": 13,
+            "consonants": "בהמוכר",
+            "source": "sefaria-rabbinic-prefix-bridge",
+            "rung": "cross-corpus-first-trigram-prefix",
+            "detached_prefix": "ב",
+            "pointed_prefix": "ב",
+            "base_consonants": "המוכר",
+            "base_source_form": "הַמּוֹכֵר",
+            "prefix_policy": "withheld-clitic-prefix-vowel",
+            "policy": "unanimous-positioned-trigram-across-corpora",
+            "base_context": [
+              "המוכר",
+              "את",
+              "הספינה"
+            ],
+            "attestations": 7,
+            "corpora": [
+              "bartenura-mining",
+              "ein-yaakov",
+              "mishneh-torah-torat-emet",
+              "shulchan-arukh",
+              "shulchan-arukh-mining"
+            ],
+            "source_ids": [
+              "bartenura:Bartenura on Mishnah Bava Batra",
+              "bartenura:Bartenura on Mishnah Kelim",
+              "ein-yaakov:Ein Yaakov",
+              "mishneh-torah-torat-emet:Mishneh Torah, Sales",
+              "shulchan-arukh:Shulchan Arukh, Choshen Mishpat",
+              "shulchan-arukh:Shulchan Arukh, Yoreh De'ah"
+            ],
+            "snapshot_sha256": "28641b195e8144e92b73f726ec6284d30a83f9d6f4a58e699a83e3534656f74b"
           },
           {
             "token_index": 14,
@@ -4578,7 +5262,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -4595,7 +5282,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -4605,8 +5295,48 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "ויש ספרים דְּגָּרְסִי כְּגוֹן מַאן אָמַר רַב",
+        "text": "וְיֵשׁ סְפָרִים דְּגָּרְסִי כְּגוֹן מַאן אָמַר רַב",
         "nikkud_projections": [
+          {
+            "token_index": 39,
+            "consonants": "ויש",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "הספרים",
+              "ויש",
+              "ספרים"
+            ],
+            "attestations": 11,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
+          {
+            "token_index": 40,
+            "consonants": "ספרים",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "ויש",
+              "ספרים",
+              "דגרסי"
+            ],
+            "attestations": 11,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
           {
             "token_index": 41,
             "consonants": "דגרסי",
@@ -4622,7 +5352,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -4695,7 +5428,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -4722,7 +5458,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -4741,7 +5480,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -4850,7 +5592,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "וא&#x27;&#x27;ת לְאִידַּךְ גירסא נמי מְנָא לֵיהּ כֹּל",
+        "text": "וא&#x27;&#x27;ת לְאִידַּךְ גירסא נָמֵי מְנָא לֵיהּ כֹּל",
         "nikkud_projections": [
           {
             "token_index": 70,
@@ -4867,7 +5609,30 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
+            "token_index": 72,
+            "consonants": "נמי",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 7454,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "נָמֵי": 7454
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -4924,7 +5689,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -4996,7 +5764,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "לֵיהּ דְּחָכָם דר&#x27; יְהוּדָה לָאו כחכם",
+        "text": "לֵיהּ דְּחָכָם דָּר&#x27; יְהוּדָה לָאו כחכם",
         "nikkud_projections": [
           {
             "token_index": 88,
@@ -5031,6 +5799,26 @@
               "יהודה",
               "לאו"
             ]
+          },
+          {
+            "token_index": 90,
+            "consonants": "דר",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 38,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "דָּר": 38
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
           },
           {
             "token_index": 91,
@@ -5073,7 +5861,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -5095,7 +5886,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -5139,7 +5933,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5167,7 +5964,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5214,7 +6014,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5231,7 +6034,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5250,7 +6056,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5268,7 +6077,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -5295,7 +6107,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5312,7 +6127,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5329,7 +6147,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -5406,7 +6227,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "יְהוּדָה כֵּיוָן דְּרַבִּי יְהוּדָה לא אַיְירִי",
+        "text": "יְהוּדָה כֵּיוָן דְּרַבִּי יְהוּדָה לֹא אַיְירִי",
         "nikkud_projections": [
           {
             "token_index": 124,
@@ -5449,6 +6270,26 @@
             "policy": "unanimous"
           },
           {
+            "token_index": 128,
+            "consonants": "לא",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "יהודה",
+              "לא",
+              "איירי"
+            ],
+            "attestations": 10,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
+          {
             "token_index": 129,
             "consonants": "איירי",
             "source": "bavli-corpus",
@@ -5462,7 +6303,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -5554,7 +6398,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5576,8 +6423,28 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דר&#x27; יְהוּדָה! ודוחק לוֹמַר דג&#x27; מְפִירִין",
+        "text": "דָּר&#x27; יְהוּדָה! ודוחק לוֹמַר דָּג&#x27; מְפִירִין",
         "nikkud_projections": [
+          {
+            "token_index": 141,
+            "consonants": "דר",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 38,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "דָּר": 38
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
           {
             "token_index": 142,
             "consonants": "יהודה",
@@ -5592,7 +6459,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5604,6 +6474,26 @@
             "agreement": 1.0,
             "policy": "unanimous",
             "max_distance": 3
+          },
+          {
+            "token_index": 145,
+            "consonants": "דג",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 66,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "דָּג": 66
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
           },
           {
             "token_index": 146,
@@ -5664,7 +6554,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -5709,7 +6602,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -5735,7 +6631,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5860,7 +6759,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -5889,7 +6791,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -6037,7 +6942,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "כֵּיצַד צוֹלִין (<a href=\"/pesachim/84a\">פסחים פד.</a>). או בדל הָאוֹזֶן",
+        "text": "כֵּיצַד צוֹלִין (<a href=\"/pesachim/84a\">פסחים פד.</a>). אוֹ בדל הָאוֹזֶן",
         "nikkud_projections": [
           {
             "token_index": 196,
@@ -6054,7 +6959,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6071,7 +6979,30 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
+            "token_index": 200,
+            "consonants": "או",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 4890,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "אוֹ": 4890
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6088,7 +7019,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -6114,7 +7048,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -6163,7 +7100,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6188,7 +7128,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "וא&#x27;&#x27;ת וּמַ&#x27;&#x27;טַ לָא הוי הכא מוּמָא כשנפלה",
+        "text": "וא&#x27;&#x27;ת וּמַ&#x27;&#x27;טַ לָא הֲוֵי הָכָא מוּמָא כשנפלה",
         "nikkud_projections": [
           {
             "token_index": 225,
@@ -6209,6 +7149,47 @@
             "policy": "unanimous"
           },
           {
+            "token_index": 227,
+            "consonants": "הוי",
+            "source": "sefaria-kitzur-shulchan-arukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "kitzur-shulchan-arukh",
+            "context": [
+              "לא",
+              "הוי",
+              "הכא"
+            ],
+            "attestations": 27,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "ein-yaakov",
+              "kitzur-shulchan-arukh"
+            ],
+            "new_corpus_gap_fill": true
+          },
+          {
+            "token_index": 228,
+            "consonants": "הכא",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 3256,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "הָכָא": 3256
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
             "token_index": 229,
             "consonants": "מומא",
             "source": "bavli-corpus",
@@ -6222,7 +7203,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -6232,7 +7216,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "שינו כֵּיוָן דחשיב מום שֶׁבַּגָּלוּי וְאֵינוֹ",
+        "text": "שינו כֵּיוָן דחשיב מוּם שֶׁבַּגָּלוּי וְאֵינוֹ",
         "nikkud_projections": [
           {
             "token_index": 232,
@@ -6249,7 +7233,30 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
+            "token_index": 234,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6266,7 +7273,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6305,7 +7315,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -6354,7 +7367,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6506,7 +7522,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6523,7 +7542,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6567,7 +7589,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -6601,7 +7626,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6619,7 +7647,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6656,7 +7687,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6711,7 +7745,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6728,7 +7765,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6764,7 +7804,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6819,7 +7862,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "שֶׁהַשִּׁינַּיִם נוֹפְלוֹת מֵחֲמַת זקנה לָא הוי",
+        "text": "שֶׁהַשִּׁינַּיִם נוֹפְלוֹת מֵחֲמַת זקנה לָא הֲוֵי",
         "nikkud_projections": [
           {
             "token_index": 295,
@@ -6835,7 +7878,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ש",
             "pointed_prefix": "שֶׁ",
@@ -6857,7 +7903,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6875,7 +7924,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6886,6 +7938,27 @@
             "attestations": 230,
             "agreement": 1.0,
             "policy": "unanimous"
+          },
+          {
+            "token_index": 300,
+            "consonants": "הוי",
+            "source": "sefaria-kitzur-shulchan-arukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "kitzur-shulchan-arukh",
+            "context": [
+              "לא",
+              "הוי",
+              "כעין"
+            ],
+            "attestations": 27,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "ein-yaakov",
+              "kitzur-shulchan-arukh"
+            ],
+            "new_corpus_gap_fill": true
           }
         ]
       },
@@ -6894,7 +7967,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "כְּעֵין פִּסֵּחַ וְעִוֵּר. וּמִיהוּ צָרִיךְ טעם",
+        "text": "כְּעֵין פִּסֵּחַ וְעִוֵּר. וּמִיהוּ צָרִיךְ טַעַם",
         "nikkud_projections": [
           {
             "token_index": 301,
@@ -6911,7 +7984,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6940,7 +8016,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -6961,6 +8040,27 @@
             "corroborating_corpora": [
               "shulchan-arukh"
             ]
+          },
+          {
+            "token_index": 306,
+            "consonants": "טעם",
+            "source": "sefaria-sefer-hachinukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "sefer-hachinukh",
+            "context": [
+              "צריך",
+              "טעם",
+              "אחר"
+            ],
+            "attestations": 15,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "sefer-hachinukh",
+              "shulchan-arukh-harav"
+            ],
+            "new_corpus_gap_fill": true
           }
         ]
       },
@@ -6969,8 +8069,29 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "אחר דה&#x27;&#x27;נ עֵינָיו כהות מֵחֲמַת זקנה! וא&#x27;&#x27;ת",
+        "text": "אַחֵר דה&#x27;&#x27;נ עֵינָיו כהות מֵחֲמַת זקנה! וא&#x27;&#x27;ת",
         "nikkud_projections": [
+          {
+            "token_index": 307,
+            "consonants": "אחר",
+            "source": "sefaria-sefer-hachinukh",
+            "rung": "rabbinic-bigram",
+            "corpus": "sefer-hachinukh",
+            "context": [
+              "טעם",
+              "אחר",
+              "דהנ"
+            ],
+            "attestations": 15,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "sefer-hachinukh",
+              "shulchan-arukh-harav"
+            ],
+            "new_corpus_gap_fill": true
+          },
           {
             "token_index": 309,
             "consonants": "עיניו",
@@ -6985,7 +8106,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7003,7 +8127,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -7013,7 +8140,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "מַאי שְׁנָא דְּהִכָּהוּ על אׇזְנוֹ וְחֵרְשׁוֹ חשיב",
+        "text": "מַאי שְׁנָא דְּהִכָּהוּ עַל אׇזְנוֹ וְחֵרְשׁוֹ חשיב",
         "nikkud_projections": [
           {
             "token_index": 314,
@@ -7053,6 +8180,29 @@
             ]
           },
           {
+            "token_index": 317,
+            "consonants": "על",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-neighbor-clitic",
+            "attestations": 7,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "matched_context": [
+              "הכהו",
+              "על",
+              "אזנו"
+            ],
+            "stripped_neighbors": [
+              "previous"
+            ],
+            "original_context": [
+              "דהכהו",
+              "על",
+              "אזנו"
+            ]
+          },
+          {
             "token_index": 318,
             "consonants": "אזנו",
             "source": "bavli-corpus",
@@ -7066,7 +8216,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7083,7 +8236,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -7093,8 +8249,28 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "מום התם ועבד יוֹצֵא לְחֵירוּת",
+        "text": "מוּם התם ועבד יוֹצֵא לְחֵירוּת",
         "nikkud_projections": [
+          {
+            "token_index": 321,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
           {
             "token_index": 324,
             "consonants": "יוצא",
@@ -7110,7 +8286,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7127,7 +8306,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -7137,7 +8319,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דְּהָוֵי מום שֶׁבַּגָּלוּי וְאֵינוֹ חוֹזֵר, ולקמן",
+        "text": "דְּהָוֵי מוּם שֶׁבַּגָּלוּי וְאֵינוֹ חוֹזֵר, ולקמן",
         "nikkud_projections": [
           {
             "token_index": 326,
@@ -7154,7 +8336,30 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
+          },
+          {
+            "token_index": 327,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7171,7 +8376,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7268,8 +8476,32 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "בבהמה! וַאֲפִילּוּ באדם לא מִיפַּסְלִי אֶלָּא",
+        "text": "בבְהֵמָה! וַאֲפִילּוּ באדם לא מִיפַּסְלִי אֶלָּא",
         "nikkud_projections": [
+          {
+            "token_index": 344,
+            "consonants": "בבהמה",
+            "source": "sefaria-mishneh-torah-torat-emet",
+            "rung": "rabbinic-partial-clitic-unigram",
+            "corpus": "mishneh-torah-torat-emet",
+            "attestations": 72,
+            "position_agreements": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "withheld_letter_positions": [
+              0,
+              4
+            ],
+            "base_attestations": 624,
+            "policy": "agreeing-stem-with-ambiguous-bkl-prefix",
+            "corroborating_corpora": [
+              "mishneh-torah-torat-emet",
+              "shulchan-arukh"
+            ]
+          },
           {
             "token_index": 345,
             "consonants": "ואפילו",
@@ -7284,7 +8516,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7301,7 +8536,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7399,8 +8637,28 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "כדמפרש לְקַמַּן וְלֹא מְפַלֵּיג בֵּין חרש בִּידֵי",
+        "text": "כְּדִמְפָרֵשׁ לְקַמַּן וְלֹא מְפַלֵּיג בֵּין חרש בִּידֵי",
         "nikkud_projections": [
+          {
+            "token_index": 356,
+            "consonants": "כדמפרש",
+            "source": "sefaria-bartenura-mining",
+            "rung": "rabbinic-bigram",
+            "corpus": "bartenura-mining",
+            "context": [
+              "אהרן",
+              "כדמפרש",
+              "לקמן"
+            ],
+            "attestations": 7,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "bartenura-mining"
+            ],
+            "new_corpus_gap_fill": true
+          },
           {
             "token_index": 357,
             "consonants": "לקמן",
@@ -7416,7 +8674,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -7472,7 +8733,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "אָדָם לחרש בִּידֵי שָׁמַיִם! וי&#x27;&#x27;ל דְּגַּבֵּי עבד",
+        "text": "אָדָם לחרש בִּידֵי שָׁמַיִם! וי&#x27;&#x27;ל דְּגַּבֵּי עֶבֶד",
         "nikkud_projections": [
           {
             "token_index": 363,
@@ -7519,6 +8780,29 @@
               "גבי",
               "עבד"
             ]
+          },
+          {
+            "token_index": 369,
+            "consonants": "עבד",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-neighbor-clitic",
+            "attestations": 8,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "matched_context": [
+              "גבי",
+              "עבד",
+              "גלי"
+            ],
+            "stripped_neighbors": [
+              "previous"
+            ],
+            "original_context": [
+              "דגבי",
+              "עבד",
+              "גלי"
+            ]
           }
         ]
       },
@@ -7527,7 +8811,7 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "גַּלִּי רַחֲמָנָא דבדבר קל חשיב מום לָצֵאת",
+        "text": "גַּלִּי רַחֲמָנָא דבדבר קל חשיב מוּם לָצֵאת",
         "nikkud_projections": [
           {
             "token_index": 370,
@@ -7546,6 +8830,26 @@
             "attestations": 15,
             "agreement": 1.0,
             "policy": "unanimous"
+          },
+          {
+            "token_index": 375,
+            "consonants": "מום",
+            "source": "bavli-corpus",
+            "rung": "corpus-short-unigram",
+            "attestations": 507,
+            "agreement": 1.0,
+            "policy": "unanimous-short",
+            "variants": {
+              "מוּם": 507
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
+            }
           },
           {
             "token_index": 376,
@@ -7588,25 +8892,31 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
       }
     ],
     "nikkud_projection": {
-      "method": "Rif ladder: local/Bavli contexts, then audited Sefaria rabbinic trigrams and bigrams; reviewed censorship units; curated roshei-teivot",
+      "method": "Rif ladder, same-comment/peer Rashi context, audited rabbinic tiers, positioned prefix bridge, reviewed formulas and censorship",
       "counts": {
         "acronym-corpus": 3,
         "corpus-bigram": 72,
         "corpus-bigram-intro-prefix": 3,
+        "corpus-bigram-neighbor-clitic": 2,
         "corpus-bigram-partial": 2,
+        "corpus-short-unigram": 10,
         "corpus-skipgram": 4,
         "corpus-skipgram-intro-prefix": 4,
         "corpus-unigram": 41,
         "corpus-unigram-intro-prefix": 4,
         "corpus-unigram-majority": 20,
         "corpus-unigram-majority-intro-prefix": 1,
+        "cross-corpus-first-trigram-prefix": 1,
         "linked-bi2": 4,
         "linked-bigram": 4,
         "linked-uni1": 2,
@@ -7616,8 +8926,9 @@
         "local-trigram-l": 6,
         "local-trigram-r": 6,
         "local-unigram-intro-prefix": 1,
-        "projected": 225,
-        "rabbinic-bigram": 4,
+        "projected": 247,
+        "rabbinic-bigram": 12,
+        "rabbinic-partial-clitic-unigram": 1,
         "rabbinic-skipgram": 8
       }
     },

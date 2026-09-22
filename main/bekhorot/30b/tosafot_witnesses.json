@@ -157,7 +157,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -174,7 +177,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -248,20 +254,47 @@
           {
             "token_index": 15,
             "consonants": "חשוד",
-            "source": "bekhorot/30b",
-            "rung": "local-trigram-r"
+            "source": "same-daf-rashi",
+            "rung": "peer-rashi-trigram-r",
+            "policy": "same-daf-cross-commentary-context",
+            "donor_comment_id": "Rashi on Bekhorot 30b:1:1",
+            "donor_comment_sha256": "b0692945a691d6a4becb5a1d65f49e8c046d69a4c84ece437945b5710b64e127",
+            "donor_form": "חָשׁוּד",
+            "donor_context_rung": "trigram-r",
+            "corroborating_comments": [
+              "Rashi on Bekhorot 30b:1:1"
+            ],
+            "propagation_depth": 1
           },
           {
             "token_index": 16,
             "consonants": "על",
-            "source": "bekhorot/30b",
-            "rung": "local-trigram"
+            "source": "same-daf-rashi",
+            "rung": "peer-rashi-trigram",
+            "policy": "same-daf-cross-commentary-context",
+            "donor_comment_id": "Rashi on Bekhorot 30b:1:1",
+            "donor_comment_sha256": "b0692945a691d6a4becb5a1d65f49e8c046d69a4c84ece437945b5710b64e127",
+            "donor_form": "עַל",
+            "donor_context_rung": "trigram",
+            "corroborating_comments": [
+              "Rashi on Bekhorot 30b:1:1"
+            ],
+            "propagation_depth": 1
           },
           {
             "token_index": 17,
             "consonants": "השביעית",
-            "source": "bekhorot/30b",
-            "rung": "local-trigram-l"
+            "source": "same-daf-rashi",
+            "rung": "peer-rashi-trigram-l",
+            "policy": "same-daf-cross-commentary-context",
+            "donor_comment_id": "Rashi on Bekhorot 30b:1:1",
+            "donor_comment_sha256": "b0692945a691d6a4becb5a1d65f49e8c046d69a4c84ece437945b5710b64e127",
+            "donor_form": "הַשְּׁבִיעִית",
+            "donor_context_rung": "trigram-l",
+            "corroborating_comments": [
+              "Rashi on Bekhorot 30b:1:1"
+            ],
+            "propagation_depth": 1
           }
         ]
       },
@@ -315,7 +348,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -332,7 +368,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -342,8 +381,31 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "הא דְּקָאָמַר הָכָא אֵינוֹ נאסר אֶלָּא",
+        "text": "הָא דְּקָאָמַר הָכָא אֵינוֹ נֶאֱסָר אֶלָּא",
         "nikkud_projections": [
+          {
+            "token_index": 23,
+            "consonants": "הא",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-neighbor-clitic",
+            "attestations": 13,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "matched_context": [
+              "בצינעא",
+              "הא",
+              "קאמר"
+            ],
+            "stripped_neighbors": [
+              "following"
+            ],
+            "original_context": [
+              "בצינעא",
+              "הא",
+              "דקאמר"
+            ]
+          },
           {
             "token_index": 24,
             "consonants": "דקאמר",
@@ -382,6 +444,26 @@
             "agreement": 1.0,
             "policy": "unanimous",
             "max_distance": 3
+          },
+          {
+            "token_index": 27,
+            "consonants": "נאסר",
+            "source": "sefaria-shulchan-arukh-harav",
+            "rung": "rabbinic-bigram",
+            "corpus": "shulchan-arukh-harav",
+            "context": [
+              "אינו",
+              "נאסר",
+              "אלא"
+            ],
+            "attestations": 6,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "corroborating_corpora": [
+              "shulchan-arukh-harav"
+            ],
+            "new_corpus_gap_fill": true
           },
           {
             "token_index": 28,
@@ -524,7 +606,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -650,26 +735,30 @@
     "display_markup": {
       "method": "exact Hebrew words after per-line tzurat.line_alignment.needleman_wunsch2",
       "source": "tzurat/girsology_resources/bekhorot/30b/core_daf.json",
-      "source_sha256": "6b0f2f44a0c7f4bf0f87a19a3dee944cbd575430250481ccc8a7336c2f25094e",
+      "source_sha256": "2be66594554ef4f0856d52685454090cc6bde19c8602e5b1c7dc402eee1fabed",
       "exact_words": 11,
       "divergent_heading_words": 0
     },
     "nikkud_projection": {
-      "method": "Rif ladder: local/Bavli contexts, then audited Sefaria rabbinic trigrams and bigrams; reviewed censorship units; curated roshei-teivot",
+      "method": "Rif ladder, same-comment/peer Rashi context, audited rabbinic tiers, positioned prefix bridge, reviewed formulas and censorship",
       "counts": {
         "corpus-bigram": 10,
         "corpus-bigram-intro-prefix": 1,
+        "corpus-bigram-neighbor-clitic": 1,
         "corpus-skipgram": 3,
         "corpus-unigram": 4,
         "corpus-unigram-intro-prefix": 1,
         "local-bigram": 2,
         "local-bigram-intro-prefix": 1,
-        "local-trigram": 3,
-        "local-trigram-l": 4,
-        "local-trigram-r": 3,
+        "local-trigram": 2,
+        "local-trigram-l": 3,
+        "local-trigram-r": 2,
         "local-unigram-intro-prefix": 1,
-        "projected": 40,
-        "rabbinic-bigram": 7
+        "peer-rashi-trigram": 1,
+        "peer-rashi-trigram-l": 1,
+        "peer-rashi-trigram-r": 1,
+        "projected": 42,
+        "rabbinic-bigram": 8
       }
     }
   },
@@ -846,7 +935,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -863,7 +955,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             },
             "detached_prefix": "ד",
             "pointed_prefix": "דְּ",
@@ -937,20 +1032,47 @@
           {
             "token_index": 15,
             "consonants": "חשוד",
-            "source": "bekhorot/30b",
-            "rung": "local-trigram-r"
+            "source": "same-daf-rashi",
+            "rung": "peer-rashi-trigram-r",
+            "policy": "same-daf-cross-commentary-context",
+            "donor_comment_id": "Rashi on Bekhorot 30b:1:1",
+            "donor_comment_sha256": "b0692945a691d6a4becb5a1d65f49e8c046d69a4c84ece437945b5710b64e127",
+            "donor_form": "חָשׁוּד",
+            "donor_context_rung": "trigram-r",
+            "corroborating_comments": [
+              "Rashi on Bekhorot 30b:1:1"
+            ],
+            "propagation_depth": 1
           },
           {
             "token_index": 16,
             "consonants": "על",
-            "source": "bekhorot/30b",
-            "rung": "local-trigram"
+            "source": "same-daf-rashi",
+            "rung": "peer-rashi-trigram",
+            "policy": "same-daf-cross-commentary-context",
+            "donor_comment_id": "Rashi on Bekhorot 30b:1:1",
+            "donor_comment_sha256": "b0692945a691d6a4becb5a1d65f49e8c046d69a4c84ece437945b5710b64e127",
+            "donor_form": "עַל",
+            "donor_context_rung": "trigram",
+            "corroborating_comments": [
+              "Rashi on Bekhorot 30b:1:1"
+            ],
+            "propagation_depth": 1
           },
           {
             "token_index": 17,
             "consonants": "השביעית",
-            "source": "bekhorot/30b",
-            "rung": "local-trigram-l"
+            "source": "same-daf-rashi",
+            "rung": "peer-rashi-trigram-l",
+            "policy": "same-daf-cross-commentary-context",
+            "donor_comment_id": "Rashi on Bekhorot 30b:1:1",
+            "donor_comment_sha256": "b0692945a691d6a4becb5a1d65f49e8c046d69a4c84ece437945b5710b64e127",
+            "donor_form": "הַשְּׁבִיעִית",
+            "donor_context_rung": "trigram-l",
+            "corroborating_comments": [
+              "Rashi on Bekhorot 30b:1:1"
+            ],
+            "propagation_depth": 1
           }
         ]
       },
@@ -1004,7 +1126,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1021,7 +1146,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           }
         ]
@@ -1031,8 +1159,31 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "הא דְּקָאָמַר הָכָא אֵינוֹ נֶחְשָׁד אֶלָּא",
+        "text": "הָא דְּקָאָמַר הָכָא אֵינוֹ נֶחְשָׁד אֶלָּא",
         "nikkud_projections": [
+          {
+            "token_index": 23,
+            "consonants": "הא",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-neighbor-clitic",
+            "attestations": 13,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "withheld_initial_letters": 0,
+            "matched_context": [
+              "בצינעא",
+              "הא",
+              "קאמר"
+            ],
+            "stripped_neighbors": [
+              "following"
+            ],
+            "original_context": [
+              "בצינעא",
+              "הא",
+              "דקאמר"
+            ]
+          },
           {
             "token_index": 24,
             "consonants": "דקאמר",
@@ -1215,7 +1366,10 @@
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
-              "majority_min_share": 0.95
+              "majority_min_share": 0.95,
+              "short_min_attestations": 20,
+              "short_min_pointed_share": 0.95,
+              "short_policy": "unanimous-only"
             }
           },
           {
@@ -1345,20 +1499,24 @@
       }
     ],
     "nikkud_projection": {
-      "method": "Rif ladder: local/Bavli contexts, then audited Sefaria rabbinic trigrams and bigrams; reviewed censorship units; curated roshei-teivot",
+      "method": "Rif ladder, same-comment/peer Rashi context, audited rabbinic tiers, positioned prefix bridge, reviewed formulas and censorship",
       "counts": {
         "corpus-bigram": 8,
         "corpus-bigram-intro-prefix": 1,
+        "corpus-bigram-neighbor-clitic": 1,
         "corpus-skipgram": 2,
         "corpus-unigram": 4,
         "corpus-unigram-intro-prefix": 1,
         "local-bigram": 2,
         "local-bigram-intro-prefix": 1,
-        "local-trigram": 5,
-        "local-trigram-l": 3,
-        "local-trigram-r": 3,
+        "local-trigram": 4,
+        "local-trigram-l": 2,
+        "local-trigram-r": 2,
         "local-unigram-intro-prefix": 1,
-        "projected": 38,
+        "peer-rashi-trigram": 1,
+        "peer-rashi-trigram-l": 1,
+        "peer-rashi-trigram-r": 1,
+        "projected": 39,
         "rabbinic-bigram": 7
       }
     },
