@@ -342,8 +342,30 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דאיירי בבשר ולא בעצם כִּי ההיא",
+        "text": "דְּאַיְירִי בבשר ולא בעצם כִּי ההיא",
         "nikkud_projections": [
+          {
+            "token_index": 32,
+            "consonants": "דאיירי",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 9,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "אַיְירִי": 9
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "איירי",
+            "base_source_form": "אַיְירִי",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 36,
             "consonants": "כי",
@@ -360,25 +382,55 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דבראשית רבה דְּקָאָמַר עַל הָאָדָם",
+        "text": "דְּבְּרֵאשִׁית רבה דְּקָאָמַר עַל הָאָדָם",
         "nikkud_projections": [
           {
-            "token_index": 40,
-            "consonants": "דקאמר",
+            "token_index": 38,
+            "consonants": "דבראשית",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 300,
-            "agreement": 0.98,
-            "policy": "majority-95",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 112,
+            "agreement": 1.0,
+            "policy": "unanimous",
             "variants": {
-              "דְּקָאָמַר": 294,
-              "דְּקָאֲמַר": 6
+              "בְּרֵאשִׁית": 67,
+              "בְרֵאשִׁית": 45
             },
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
               "majority_min_share": 0.95
-            }
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "בראשית",
+            "base_source_form": "בְּרֵאשִׁית",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
+          {
+            "token_index": 40,
+            "consonants": "דקאמר",
+            "source": "bavli-corpus",
+            "rung": "corpus-skipgram-intro-prefix",
+            "attestations": 46,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "max_distance": 3,
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "קאמר",
+            "base_source_form": "קָאָמַר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_left_context": [
+              "רבה",
+              "דבראשית",
+              "ההיא"
+            ],
+            "base_right_context": [
+              "על",
+              "האדם",
+              "המכוסה"
+            ]
           },
           {
             "token_index": 41,
@@ -542,20 +594,13 @@
           {
             "token_index": 73,
             "consonants": "דקאמר",
-            "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 300,
-            "agreement": 0.98,
-            "policy": "majority-95",
-            "variants": {
-              "דְּקָאָמַר": 294,
-              "דְּקָאֲמַר": 6
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "source": "bava_batra/12a",
+            "rung": "linked-uni1-intro-prefix",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "קאמר",
+            "base_source_form": "קָאָמַר",
+            "prefix_policy": "reviewed-introductory-prefix"
           },
           {
             "token_index": 74,
@@ -588,8 +633,30 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "ההיא דאע״פ [שניטלה] נְבוּאָה מִן",
+        "text": "ההיא דאע״פ [שֶׁנִיטְּלָה] נְבוּאָה מִן",
         "nikkud_projections": [
+          {
+            "token_index": 80,
+            "consonants": "שניטלה",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 33,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "נִיטְּלָה": 33
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "ניטלה",
+            "base_source_form": "נִיטְּלָה",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 81,
             "consonants": "נבואה",
@@ -707,12 +774,15 @@
       "method": "Rif ladder: local/corpus n-grams and bilateral skipgrams; reviewed censorship units; curated roshei-teivot",
       "counts": {
         "corpus-bigram": 5,
+        "corpus-skipgram-intro-prefix": 1,
         "corpus-unigram": 10,
-        "corpus-unigram-majority": 8,
+        "corpus-unigram-intro-prefix": 3,
+        "corpus-unigram-majority": 6,
         "linked-bigram": 2,
         "linked-uni1": 1,
+        "linked-uni1-intro-prefix": 1,
         "local-bigram": 2,
-        "projected": 28
+        "projected": 31
       }
     }
   },
@@ -1090,8 +1160,30 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דאיירי בבשר ולא בעצם כִּי ההיא",
+        "text": "דְּאַיְירִי בבשר ולא בעצם כִּי ההיא",
         "nikkud_projections": [
+          {
+            "token_index": 32,
+            "consonants": "דאיירי",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 9,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "אַיְירִי": 9
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "איירי",
+            "base_source_form": "אַיְירִי",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 36,
             "consonants": "כי",
@@ -1108,25 +1200,55 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "דבראשית רבה דְּקָאָמַר עַל הָאָדָם",
+        "text": "דְּבְּרֵאשִׁית רבה דְּקָאָמַר עַל הָאָדָם",
         "nikkud_projections": [
           {
-            "token_index": 40,
-            "consonants": "דקאמר",
+            "token_index": 38,
+            "consonants": "דבראשית",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 300,
-            "agreement": 0.98,
-            "policy": "majority-95",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 112,
+            "agreement": 1.0,
+            "policy": "unanimous",
             "variants": {
-              "דְּקָאָמַר": 294,
-              "דְּקָאֲמַר": 6
+              "בְּרֵאשִׁית": 67,
+              "בְרֵאשִׁית": 45
             },
             "thresholds": {
               "unanimous_min_attestations": 3,
               "majority_min_attestations": 20,
               "majority_min_share": 0.95
-            }
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "בראשית",
+            "base_source_form": "בְּרֵאשִׁית",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
+          {
+            "token_index": 40,
+            "consonants": "דקאמר",
+            "source": "bavli-corpus",
+            "rung": "corpus-skipgram-intro-prefix",
+            "attestations": 46,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "max_distance": 3,
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "קאמר",
+            "base_source_form": "קָאָמַר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_left_context": [
+              "רבה",
+              "דבראשית",
+              "ההיא"
+            ],
+            "base_right_context": [
+              "על",
+              "האדם",
+              "המכוסה"
+            ]
           },
           {
             "token_index": 41,
@@ -1290,20 +1412,13 @@
           {
             "token_index": 73,
             "consonants": "דקאמר",
-            "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 300,
-            "agreement": 0.98,
-            "policy": "majority-95",
-            "variants": {
-              "דְּקָאָמַר": 294,
-              "דְּקָאֲמַר": 6
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "source": "bava_batra/12a",
+            "rung": "linked-uni1-intro-prefix",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "קאמר",
+            "base_source_form": "קָאָמַר",
+            "prefix_policy": "reviewed-introductory-prefix"
           },
           {
             "token_index": 74,
@@ -1336,8 +1451,30 @@
         "width": "250px",
         "left": "0px",
         "right": "",
-        "text": "ההיא דאע&#x27;&#x27;פ שניטלה נְבוּאָה מִן",
+        "text": "ההיא דאע&#x27;&#x27;פ שֶׁנִיטְּלָה נְבוּאָה מִן",
         "nikkud_projections": [
+          {
+            "token_index": 80,
+            "consonants": "שניטלה",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 33,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "נִיטְּלָה": 33
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "ניטלה",
+            "base_source_form": "נִיטְּלָה",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 81,
             "consonants": "נבואה",
@@ -1467,12 +1604,15 @@
       "method": "Rif ladder: local/corpus n-grams and bilateral skipgrams; reviewed censorship units; curated roshei-teivot",
       "counts": {
         "corpus-bigram": 5,
+        "corpus-skipgram-intro-prefix": 1,
         "corpus-unigram": 11,
-        "corpus-unigram-majority": 8,
+        "corpus-unigram-intro-prefix": 3,
+        "corpus-unigram-majority": 6,
         "linked-bigram": 2,
         "linked-uni1": 1,
+        "linked-uni1-intro-prefix": 1,
         "local-bigram": 2,
-        "projected": 29
+        "projected": 32
       }
     },
     "line_alignment": {

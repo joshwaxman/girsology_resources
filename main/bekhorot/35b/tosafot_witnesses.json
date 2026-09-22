@@ -657,7 +657,7 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "כְּהוּנָּה אוֹ שאוהבו וְרָגִיל לִיתֵּן לו׃",
+        "text": "כְּהוּנָּה אוֹ שֶׁאוֹהֲבוֹ וְרָגִיל לִיתֵּן לו׃",
         "nikkud_projections": [
           {
             "token_index": 43,
@@ -676,6 +676,28 @@
             "attestations": 5,
             "agreement": 1.0,
             "policy": "unanimous"
+          },
+          {
+            "token_index": 45,
+            "consonants": "שאוהבו",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 8,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "אוֹהֲבוֹ": 8
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "אוהבו",
+            "base_source_form": "אוֹהֲבוֹ",
+            "prefix_policy": "reviewed-introductory-prefix"
           },
           {
             "token_index": 46,
@@ -724,8 +746,30 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "דדווקא רוֹעֵי כֹהֲנִים בין בֵּי יִשְׂרָאֵל בֵּין",
+        "text": "דְּדַּוְוקָא רוֹעֵי כֹהֲנִים בין בֵּי יִשְׂרָאֵל בֵּין",
         "nikkud_projections": [
+          {
+            "token_index": 58,
+            "consonants": "דדווקא",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 16,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "דַּוְוקָא": 16
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "דווקא",
+            "base_source_form": "דַּוְוקָא",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 59,
             "consonants": "רועי",
@@ -970,7 +1014,7 @@
             "token_index": 86,
             "consonants": "כרבי",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 87,
@@ -982,7 +1026,7 @@
             "token_index": 88,
             "consonants": "בן",
             "source": "bekhorot/35b",
-            "rung": "local-bi2"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 89,
@@ -1003,19 +1047,26 @@
             "token_index": 90,
             "consonants": "דקסבר",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 66,
+            "rung": "corpus-skipgram-intro-prefix",
+            "attestations": 17,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּקָסָבַר": 60,
-              "דְקָסָבַר": 6
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "max_distance": 3,
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "קסבר",
+            "base_source_form": "קָסָבַר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_left_context": [
+              "קפוסאי",
+              "בן",
+              "יהושע"
+            ],
+            "base_right_context": [
+              "רמ",
+              "החשוד",
+              "על"
+            ]
           },
           {
             "token_index": 91,
@@ -1164,19 +1215,20 @@
             "token_index": 109,
             "consonants": "דישראל",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 108,
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 6,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּיִשְׂרָאֵל": 78,
-              "דְיִשְׂרָאֵל": 30
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "ישראל",
+            "base_source_form": "יִשְׂרָאֵל",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "איירי",
+              "ישראל",
+              "אפילו"
+            ]
           },
           {
             "token_index": 110,
@@ -1236,20 +1288,26 @@
             "token_index": 116,
             "consonants": "דאסור",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 93,
-            "agreement": 0.9892,
-            "policy": "majority-95",
-            "variants": {
-              "דְּאָסוּר": 90,
-              "דַּאֲסִור": 1,
-              "דְאָסוּר": 2
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-skipgram-intro-prefix",
+            "attestations": 31,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "max_distance": 3,
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "אסור",
+            "base_source_form": "אָסוּר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_left_context": [
+              "היכא",
+              "כל",
+              "ולרמ"
+            ],
+            "base_right_context": [
+              "אפי",
+              "שנים",
+              "אין"
+            ]
           },
           {
             "token_index": 119,
@@ -1330,7 +1388,7 @@
             "token_index": 127,
             "consonants": "מעיד",
             "source": "bekhorot/35b",
-            "rung": "local-bi2"
+            "rung": "local-trigram-r"
           }
         ]
       },
@@ -1412,8 +1470,31 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "דלקמן וכן בְּסָמוּךְ דפריך כהני הָ״נָ",
+        "text": "דְּלְקַמַּן וכן בְּסָמוּךְ דְּפָּרֵיךְ כהני הָ״נָ",
         "nikkud_projections": [
+          {
+            "token_index": 145,
+            "consonants": "דלקמן",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-majority-intro-prefix",
+            "attestations": 33,
+            "agreement": 0.9697,
+            "policy": "majority-95",
+            "variants": {
+              "לְקַמַּן": 32,
+              "לְקַמָּן": 1
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "לקמן",
+            "base_source_form": "לְקַמַּן",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 147,
             "consonants": "בסמוך",
@@ -1431,6 +1512,30 @@
               "majority_min_attestations": 20,
               "majority_min_share": 0.95
             }
+          },
+          {
+            "token_index": 148,
+            "consonants": "דפריך",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-majority-intro-prefix",
+            "attestations": 40,
+            "agreement": 0.975,
+            "policy": "majority-95",
+            "variants": {
+              "פָרֵיךְ": 3,
+              "פָּרֵיךְ": 36,
+              "פְּרֵיךְ": 1
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "פריך",
+            "base_source_form": "פָּרֵיךְ",
+            "prefix_policy": "reviewed-introductory-prefix"
           },
           {
             "token_index": 150,
@@ -1454,7 +1559,7 @@
             "token_index": 151,
             "consonants": "דלא",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 152,
@@ -1466,7 +1571,7 @@
             "token_index": 153,
             "consonants": "דינא",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 156,
@@ -1735,18 +1840,20 @@
             "token_index": 180,
             "consonants": "דמשום",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 19,
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 20,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּמִשּׁוּם": 19
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "משום",
+            "base_source_form": "מִשּׁוּם",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "מסתברא",
+              "משום",
+              "כבוד"
+            ]
           }
         ]
       },
@@ -1800,8 +1907,27 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "דתפלת עַרְבִית (<a href=\"/berakhot/27b\">ברכות דף כז׃</a>) שֶׁאָמַר",
+        "text": "דְּתְּפִלַּת עַרְבִית (<a href=\"/berakhot/27b\">ברכות דף כז׃</a>) שֶׁאָמַר",
         "nikkud_projections": [
+          {
+            "token_index": 188,
+            "consonants": "דתפלת",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 9,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "תפלת",
+            "base_source_form": "תְּפִלַּת",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "ההיא",
+              "תפלת",
+              "ערבית"
+            ]
+          },
           {
             "token_index": 189,
             "consonants": "ערבית",
@@ -1914,19 +2040,20 @@
             "token_index": 202,
             "consonants": "שאמר",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 362,
-            "agreement": 0.989,
-            "policy": "majority-95",
-            "variants": {
-              "שֶׁאָמַר": 358,
-              "שֶּׁאָמַר": 4
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 6,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "אמר",
+            "base_source_form": "אָמַר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "מה",
+              "אמר",
+              "תחלה"
+            ]
           },
           {
             "token_index": 203,
@@ -2202,19 +2329,20 @@
             "token_index": 238,
             "consonants": "דישראל",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 108,
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 26,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּיִשְׂרָאֵל": 78,
-              "דְיִשְׂרָאֵל": 30
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "ישראל",
+            "base_source_form": "יִשְׂרָאֵל",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "כיון",
+              "ישראל",
+              "נמי"
+            ]
           },
           {
             "token_index": 239,
@@ -2765,19 +2893,20 @@
             "token_index": 308,
             "consonants": "דמשמע",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 31,
-            "agreement": 0.9677,
-            "policy": "majority-95",
-            "variants": {
-              "דְּמַשְׁמַע": 30,
-              "דִּמְשַׁמַּע": 1
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 23,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "משמע",
+            "base_source_form": "מַשְׁמַע",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "לרבא",
+              "משמע",
+              "ליה"
+            ]
           },
           {
             "token_index": 309,
@@ -2916,7 +3045,7 @@
             "token_index": 323,
             "consonants": "כל",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 324,
@@ -2934,7 +3063,7 @@
             "token_index": 326,
             "consonants": "נגע",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 327,
@@ -3086,7 +3215,7 @@
         "width": "450px",
         "left": "",
         "right": "0px",
-        "text": "וְעוֹד בלא בְּכוֹר נָמֵי יָכוֹל לְהַקְשׁוֹת לְרַבִּי מֵאִיר מטעם דנחשדו",
+        "text": "וְעוֹד בלא בְּכוֹר נָמֵי יָכוֹל לְהַקְשׁוֹת לְרַבִּי מֵאִיר מטעם דְּנֶחְשְׁדוּ",
         "nikkud_projections": [
           {
             "token_index": 341,
@@ -3170,6 +3299,28 @@
             "consonants": "מאיר",
             "source": "bekhorot/35b",
             "rung": "local-bigram"
+          },
+          {
+            "token_index": 350,
+            "consonants": "דנחשדו",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 27,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "נֶחְשְׁדוּ": 27
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "נחשדו",
+            "base_source_form": "נֶחְשְׁדוּ",
+            "prefix_policy": "reviewed-introductory-prefix"
           }
         ]
       },
@@ -3266,17 +3417,23 @@
       "counts": {
         "acronym-corpus": 7,
         "corpus-bigram": 66,
+        "corpus-bigram-intro-prefix": 6,
         "corpus-bigram-partial": 1,
         "corpus-skipgram": 12,
-        "corpus-unigram": 42,
-        "corpus-unigram-majority": 26,
+        "corpus-skipgram-intro-prefix": 2,
+        "corpus-unigram": 38,
+        "corpus-unigram-intro-prefix": 3,
+        "corpus-unigram-majority": 23,
+        "corpus-unigram-majority-intro-prefix": 2,
         "linked-bi2": 1,
         "linked-bigram": 2,
         "linked-uni1": 2,
-        "local-bi2": 13,
-        "local-bigram": 43,
+        "local-bi2": 11,
+        "local-bigram": 38,
         "local-trigram": 4,
-        "projected": 219
+        "local-trigram-l": 3,
+        "local-trigram-r": 4,
+        "projected": 225
       }
     }
   },
@@ -4095,7 +4252,7 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "כְּהוּנָּה שאוהבו וְרָגִיל לִיתֵּן לוֹ.",
+        "text": "כְּהוּנָּה שֶׁאוֹהֲבוֹ וְרָגִיל לִיתֵּן לוֹ.",
         "nikkud_projections": [
           {
             "token_index": 43,
@@ -4114,6 +4271,28 @@
               "majority_min_attestations": 20,
               "majority_min_share": 0.95
             }
+          },
+          {
+            "token_index": 44,
+            "consonants": "שאוהבו",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 8,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "אוֹהֲבוֹ": 8
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "אוהבו",
+            "base_source_form": "אוֹהֲבוֹ",
+            "prefix_policy": "reviewed-introductory-prefix"
           },
           {
             "token_index": 45,
@@ -4171,8 +4350,30 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "דדווקא רוֹעֵי כֹהֲנִים בין בֵּי יִשְׂרָאֵל בֵּין",
+        "text": "דְּדַּוְוקָא רוֹעֵי כֹהֲנִים בין בֵּי יִשְׂרָאֵל בֵּין",
         "nikkud_projections": [
+          {
+            "token_index": 57,
+            "consonants": "דדווקא",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 16,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "דַּוְוקָא": 16
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "דווקא",
+            "base_source_form": "דַּוְוקָא",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 58,
             "consonants": "רועי",
@@ -4417,7 +4618,7 @@
             "token_index": 85,
             "consonants": "כרבי",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 86,
@@ -4429,7 +4630,7 @@
             "token_index": 87,
             "consonants": "בן",
             "source": "bekhorot/35b",
-            "rung": "local-bi2"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 88,
@@ -4450,19 +4651,26 @@
             "token_index": 89,
             "consonants": "דקסבר",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 66,
+            "rung": "corpus-skipgram-intro-prefix",
+            "attestations": 17,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּקָסָבַר": 60,
-              "דְקָסָבַר": 6
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "max_distance": 3,
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "קסבר",
+            "base_source_form": "קָסָבַר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_left_context": [
+              "קפוסאי",
+              "בן",
+              "יהושע"
+            ],
+            "base_right_context": [
+              "רמ",
+              "החשוד",
+              "על"
+            ]
           },
           {
             "token_index": 90,
@@ -4611,19 +4819,20 @@
             "token_index": 108,
             "consonants": "דישראל",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 108,
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 6,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּיִשְׂרָאֵל": 78,
-              "דְיִשְׂרָאֵל": 30
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "ישראל",
+            "base_source_form": "יִשְׂרָאֵל",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "איירי",
+              "ישראל",
+              "אפילו"
+            ]
           },
           {
             "token_index": 109,
@@ -4668,7 +4877,7 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "הֵיכָא דחשוד אפי&#x27; שנים אֵין",
+        "text": "הֵיכָא דְּחָשׁוּד אפי&#x27; שנים אֵין",
         "nikkud_projections": [
           {
             "token_index": 114,
@@ -4678,6 +4887,17 @@
             "attestations": 164,
             "agreement": 1.0,
             "policy": "unanimous"
+          },
+          {
+            "token_index": 115,
+            "consonants": "דחשוד",
+            "source": "bekhorot/35b",
+            "rung": "local-unigram-intro-prefix",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "חשוד",
+            "base_source_form": "חָשׁוּד",
+            "prefix_policy": "reviewed-introductory-prefix"
           },
           {
             "token_index": 118,
@@ -4749,7 +4969,7 @@
             "token_index": 126,
             "consonants": "מעיד",
             "source": "bekhorot/35b",
-            "rung": "local-bi2"
+            "rung": "local-trigram-r"
           }
         ]
       },
@@ -4837,8 +5057,31 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "דלקמן! וכן בְּסָמוּךְ דפריך כהני הָ&#x27;&#x27;נָ דְּלָא דָּיְינִי",
+        "text": "דְּלְקַמַּן! וכן בְּסָמוּךְ דְּפָּרֵיךְ כהני הָ&#x27;&#x27;נָ דְּלָא דָּיְינִי",
         "nikkud_projections": [
+          {
+            "token_index": 144,
+            "consonants": "דלקמן",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-majority-intro-prefix",
+            "attestations": 33,
+            "agreement": 0.9697,
+            "policy": "majority-95",
+            "variants": {
+              "לְקַמַּן": 32,
+              "לְקַמָּן": 1
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "לקמן",
+            "base_source_form": "לְקַמַּן",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 146,
             "consonants": "בסמוך",
@@ -4858,6 +5101,30 @@
             }
           },
           {
+            "token_index": 147,
+            "consonants": "דפריך",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-majority-intro-prefix",
+            "attestations": 40,
+            "agreement": 0.975,
+            "policy": "majority-95",
+            "variants": {
+              "פָרֵיךְ": 3,
+              "פָּרֵיךְ": 36,
+              "פְּרֵיךְ": 1
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "פריך",
+            "base_source_form": "פָּרֵיךְ",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
+          {
             "token_index": 149,
             "consonants": "הנ",
             "source": "bavli-corpus",
@@ -4870,7 +5137,7 @@
             "token_index": 150,
             "consonants": "דלא",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 151,
@@ -4891,7 +5158,7 @@
             "token_index": 152,
             "consonants": "דינא",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 153,
@@ -5242,18 +5509,20 @@
             "token_index": 194,
             "consonants": "דמשום",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 19,
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 20,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּמִשּׁוּם": 19
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "משום",
+            "base_source_form": "מִשּׁוּם",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "מסתברא",
+              "משום",
+              "כבוד"
+            ]
           }
         ]
       },
@@ -5307,8 +5576,27 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "דתפלת עַרְבִית (<a href=\"/berakhot/27b\">ברכות דף כז:</a>) שֶׁאָמַר",
+        "text": "דְּתְּפִלַּת עַרְבִית (<a href=\"/berakhot/27b\">ברכות דף כז:</a>) שֶׁאָמַר",
         "nikkud_projections": [
+          {
+            "token_index": 202,
+            "consonants": "דתפלת",
+            "source": "bavli-corpus",
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 9,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "תפלת",
+            "base_source_form": "תְּפִלַּת",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "ההיא",
+              "תפלת",
+              "ערבית"
+            ]
+          },
           {
             "token_index": 203,
             "consonants": "ערבית",
@@ -5421,19 +5709,20 @@
             "token_index": 216,
             "consonants": "שאמר",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 362,
-            "agreement": 0.989,
-            "policy": "majority-95",
-            "variants": {
-              "שֶׁאָמַר": 358,
-              "שֶּׁאָמַר": 4
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 6,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "אמר",
+            "base_source_form": "אָמַר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "מה",
+              "אמר",
+              "תחלה"
+            ]
           },
           {
             "token_index": 217,
@@ -5726,19 +6015,20 @@
             "token_index": 252,
             "consonants": "דישראל",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram",
-            "attestations": 108,
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 26,
             "agreement": 1.0,
             "policy": "unanimous",
-            "variants": {
-              "דְּיִשְׂרָאֵל": 78,
-              "דְיִשְׂרָאֵל": 30
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "ישראל",
+            "base_source_form": "יִשְׂרָאֵל",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "כיון",
+              "ישראל",
+              "נמי"
+            ]
           },
           {
             "token_index": 253,
@@ -6210,7 +6500,7 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "התם פָּרֵיךְ שַׁפִּיר. וְעוֹד יש לְפָרֵשׁ דפריך לְרָבָא",
+        "text": "התם פָּרֵיךְ שַׁפִּיר. וְעוֹד יש לְפָרֵשׁ דְּפָּרֵיךְ לְרָבָא",
         "nikkud_projections": [
           {
             "token_index": 316,
@@ -6286,6 +6576,30 @@
             }
           },
           {
+            "token_index": 321,
+            "consonants": "דפריך",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-majority-intro-prefix",
+            "attestations": 40,
+            "agreement": 0.975,
+            "policy": "majority-95",
+            "variants": {
+              "פָרֵיךְ": 3,
+              "פָּרֵיךְ": 36,
+              "פְּרֵיךְ": 1
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "פריך",
+            "base_source_form": "פָּרֵיךְ",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
+          {
             "token_index": 322,
             "consonants": "לרבא",
             "source": "bavli-corpus",
@@ -6315,19 +6629,20 @@
             "token_index": 323,
             "consonants": "דמשמע",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 31,
-            "agreement": 0.9677,
-            "policy": "majority-95",
-            "variants": {
-              "דְּמַשְׁמַע": 30,
-              "דִּמְשַׁמַּע": 1
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 23,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "משמע",
+            "base_source_form": "מַשְׁמַע",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "לרבא",
+              "משמע",
+              "ליה"
+            ]
           },
           {
             "token_index": 324,
@@ -6466,7 +6781,7 @@
             "token_index": 338,
             "consonants": "כל",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 339,
@@ -6484,7 +6799,7 @@
             "token_index": 341,
             "consonants": "נגע",
             "source": "bekhorot/35b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 342,
@@ -6636,7 +6951,7 @@
         "width": "450px",
         "left": "",
         "right": "0px",
-        "text": "וְעוֹד בלא בְּכוֹר נָמֵי יָכוֹל לְהַקְשׁוֹת לְרַבִּי מֵאִיר מטעם דנחשדו",
+        "text": "וְעוֹד בלא בְּכוֹר נָמֵי יָכוֹל לְהַקְשׁוֹת לְרַבִּי מֵאִיר מטעם דְּנֶחְשְׁדוּ",
         "nikkud_projections": [
           {
             "token_index": 356,
@@ -6720,6 +7035,28 @@
             "consonants": "מאיר",
             "source": "bekhorot/35b",
             "rung": "local-bigram"
+          },
+          {
+            "token_index": 365,
+            "consonants": "דנחשדו",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 27,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "נֶחְשְׁדוּ": 27
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "נחשדו",
+            "base_source_form": "נֶחְשְׁדוּ",
+            "prefix_policy": "reviewed-introductory-prefix"
           }
         ]
       },
@@ -6809,17 +7146,24 @@
       "counts": {
         "acronym-corpus": 7,
         "corpus-bigram": 66,
+        "corpus-bigram-intro-prefix": 6,
         "corpus-bigram-partial": 1,
         "corpus-skipgram": 14,
-        "corpus-unigram": 46,
-        "corpus-unigram-majority": 27,
+        "corpus-skipgram-intro-prefix": 1,
+        "corpus-unigram": 42,
+        "corpus-unigram-intro-prefix": 3,
+        "corpus-unigram-majority": 25,
+        "corpus-unigram-majority-intro-prefix": 3,
         "linked-bi2": 1,
         "linked-bigram": 2,
         "linked-uni1": 2,
-        "local-bi2": 13,
-        "local-bigram": 43,
+        "local-bi2": 11,
+        "local-bigram": 38,
         "local-trigram": 5,
-        "projected": 227
+        "local-trigram-l": 3,
+        "local-trigram-r": 4,
+        "local-unigram-intro-prefix": 1,
+        "projected": 235
       }
     },
     "line_alignment": {

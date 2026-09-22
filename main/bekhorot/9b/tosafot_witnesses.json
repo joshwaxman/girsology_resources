@@ -228,8 +228,30 @@
         "width": "450px",
         "left": "",
         "right": "0px",
-        "text": "<big><b>לְאַפְקוֹעֵי לאיסורא מיניה.</b></big> דלפוטרו ממצות עֲרִיפָה לֹא",
+        "text": "<big><b>לְאַפְקוֹעֵי לאיסורא מיניה.</b></big> דְּלְפוֹטְרוֹ ממצות עֲרִיפָה לֹא",
         "nikkud_projections": [
+          {
+            "token_index": 3,
+            "consonants": "דלפוטרו",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 15,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "לְפוֹטְרוֹ": 15
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "לפוטרו",
+            "base_source_form": "לְפוֹטְרוֹ",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 5,
             "consonants": "עריפה",
@@ -386,7 +408,7 @@
         "width": "450px",
         "left": "",
         "right": "0px",
-        "text": "קידשׁ. מַשְׁמַע הכא דמקודשת בגבולין קודם שֶׁיַּגִּיעַ לִירוּשָׁלַיִם",
+        "text": "קידשׁ. מַשְׁמַע הכא דְּמְקוּדֶּשֶׁת בגבולין קודם שֶׁיַּגִּיעַ לִירוּשָׁלַיִם",
         "nikkud_projections": [
           {
             "token_index": 27,
@@ -408,6 +430,28 @@
               "majority_min_attestations": 20,
               "majority_min_share": 0.95
             }
+          },
+          {
+            "token_index": 29,
+            "consonants": "דמקודשת",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 313,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "מְקוּדֶּשֶׁת": 313
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "מקודשת",
+            "base_source_form": "מְקוּדֶּשֶׁת",
+            "prefix_policy": "reviewed-introductory-prefix"
           },
           {
             "token_index": 32,
@@ -715,20 +759,20 @@
             "token_index": 62,
             "consonants": "דאסור",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 93,
-            "agreement": 0.9892,
-            "policy": "majority-95",
-            "variants": {
-              "דְּאָסוּר": 90,
-              "דַּאֲסִור": 1,
-              "דְאָסוּר": 2
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 42,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "אסור",
+            "base_source_form": "אָסוּר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "כיון",
+              "אסור",
+              "באכילה"
+            ]
           },
           {
             "token_index": 63,
@@ -992,31 +1036,29 @@
         "width": "180px",
         "left": "",
         "right": "70px",
-        "text": "שֶׁיָּכוֹל לְהַאֲכִילוֹ לַאֲחֵרִים",
+        "text": "שֶׁיָכוֹל לְהַאֲכִילוֹ לַאֲחֵרִים",
         "nikkud_projections": [
           {
             "token_index": 105,
             "consonants": "שיכול",
-            "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 136,
-            "agreement": 0.9559,
-            "policy": "majority-95",
-            "variants": {
-              "שֶׁיָּכוֹל": 130,
-              "שֶּׁיָּכוֹל": 6
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "source": "bekhorot/9b",
+            "rung": "local-bigram-intro-prefix",
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "יכול",
+            "base_source_form": "יָכוֹל",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "אוכל",
+              "יכול",
+              "להאכילו"
+            ]
           },
           {
             "token_index": 106,
             "consonants": "להאכילו",
             "source": "bekhorot/9b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 107,
@@ -1205,7 +1247,7 @@
             "token_index": 135,
             "consonants": "אוכל",
             "source": "bekhorot/9b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 136,
@@ -1217,7 +1259,7 @@
             "token_index": 137,
             "consonants": "יכול",
             "source": "bekhorot/9b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 138,
@@ -1481,7 +1523,7 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "גַּב שֶׁיָּכוֹל לְהַאֲכִילָן לַאֲחֵרִים אֲבָל",
+        "text": "גַּב שֶׁיָכוֹל לְהַאֲכִילָן לַאֲחֵרִים אֲבָל",
         "nikkud_projections": [
           {
             "token_index": 158,
@@ -1496,19 +1538,26 @@
             "token_index": 159,
             "consonants": "שיכול",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 136,
-            "agreement": 0.9559,
-            "policy": "majority-95",
-            "variants": {
-              "שֶׁיָּכוֹל": 130,
-              "שֶּׁיָּכוֹל": 6
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-skipgram-intro-prefix",
+            "attestations": 25,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "max_distance": 3,
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "יכול",
+            "base_source_form": "יָכוֹל",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_left_context": [
+              "גב",
+              "על",
+              "ואף"
+            ],
+            "base_right_context": [
+              "להאכילן",
+              "לאחרים",
+              "אבל"
+            ]
           },
           {
             "token_index": 160,
@@ -1681,13 +1730,19 @@
       "method": "Rif ladder: local/corpus n-grams and bilateral skipgrams; reviewed censorship units; curated roshei-teivot",
       "counts": {
         "corpus-bigram": 54,
+        "corpus-bigram-intro-prefix": 1,
         "corpus-skipgram": 5,
+        "corpus-skipgram-intro-prefix": 1,
         "corpus-unigram": 18,
-        "corpus-unigram-majority": 14,
-        "local-bigram": 9,
+        "corpus-unigram-intro-prefix": 2,
+        "corpus-unigram-majority": 11,
+        "local-bigram": 6,
+        "local-bigram-intro-prefix": 1,
         "local-trigram": 2,
+        "local-trigram-l": 1,
+        "local-trigram-r": 2,
         "perek-registry": 1,
-        "projected": 103
+        "projected": 105
       }
     }
   },
@@ -2060,8 +2115,30 @@
         "width": "450px",
         "left": "",
         "right": "0px",
-        "text": "<big><b>לְאַפְקוֹעֵי</b></big> <big><b>לאיסורא</b></big> <big><b>מִינֵּיהּ.</b></big> דלפוטרו ממצות עֲרִיפָה לֹא",
+        "text": "<big><b>לְאַפְקוֹעֵי</b></big> <big><b>לאיסורא</b></big> <big><b>מִינֵּיהּ.</b></big> דְּלְפוֹטְרוֹ ממצות עֲרִיפָה לֹא",
         "nikkud_projections": [
+          {
+            "token_index": 3,
+            "consonants": "דלפוטרו",
+            "source": "bavli-corpus",
+            "rung": "corpus-unigram-intro-prefix",
+            "attestations": 15,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "variants": {
+              "לְפוֹטְרוֹ": 15
+            },
+            "thresholds": {
+              "unanimous_min_attestations": 3,
+              "majority_min_attestations": 20,
+              "majority_min_share": 0.95
+            },
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "לפוטרו",
+            "base_source_form": "לְפוֹטְרוֹ",
+            "prefix_policy": "reviewed-introductory-prefix"
+          },
           {
             "token_index": 5,
             "consonants": "עריפה",
@@ -2583,20 +2660,20 @@
             "token_index": 68,
             "consonants": "דאסור",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 93,
-            "agreement": 0.9892,
-            "policy": "majority-95",
-            "variants": {
-              "דְּאָסוּר": 90,
-              "דַּאֲסִור": 1,
-              "דְאָסוּר": 2
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-bigram-intro-prefix",
+            "attestations": 42,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "detached_prefix": "ד",
+            "pointed_prefix": "דְּ",
+            "base_consonants": "אסור",
+            "base_source_form": "אָסוּר",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_context": [
+              "כיון",
+              "אסור",
+              "באכילה"
+            ]
           },
           {
             "token_index": 69,
@@ -3060,7 +3137,7 @@
             "token_index": 142,
             "consonants": "אוכל",
             "source": "bekhorot/9b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-r"
           },
           {
             "token_index": 143,
@@ -3072,7 +3149,7 @@
             "token_index": 144,
             "consonants": "יכול",
             "source": "bekhorot/9b",
-            "rung": "local-bigram"
+            "rung": "local-trigram-l"
           },
           {
             "token_index": 145,
@@ -3348,7 +3425,7 @@
         "width": "250px",
         "left": "",
         "right": "0px",
-        "text": "גַּב שֶׁיָּכוֹל לְהַאֲכִילָן לַאֲחֵרִים, אֲבָל",
+        "text": "גַּב שֶׁיָכוֹל לְהַאֲכִילָן לַאֲחֵרִים, אֲבָל",
         "nikkud_projections": [
           {
             "token_index": 167,
@@ -3363,19 +3440,26 @@
             "token_index": 168,
             "consonants": "שיכול",
             "source": "bavli-corpus",
-            "rung": "corpus-unigram-majority",
-            "attestations": 136,
-            "agreement": 0.9559,
-            "policy": "majority-95",
-            "variants": {
-              "שֶׁיָּכוֹל": 130,
-              "שֶּׁיָּכוֹל": 6
-            },
-            "thresholds": {
-              "unanimous_min_attestations": 3,
-              "majority_min_attestations": 20,
-              "majority_min_share": 0.95
-            }
+            "rung": "corpus-skipgram-intro-prefix",
+            "attestations": 25,
+            "agreement": 1.0,
+            "policy": "unanimous",
+            "max_distance": 3,
+            "detached_prefix": "ש",
+            "pointed_prefix": "שֶׁ",
+            "base_consonants": "יכול",
+            "base_source_form": "יָכוֹל",
+            "prefix_policy": "reviewed-introductory-prefix",
+            "base_left_context": [
+              "גב",
+              "על",
+              "ואף"
+            ],
+            "base_right_context": [
+              "להאכילן",
+              "לאחרים",
+              "אבל"
+            ]
           },
           {
             "token_index": 169,
@@ -3558,13 +3642,18 @@
       "method": "Rif ladder: local/corpus n-grams and bilateral skipgrams; reviewed censorship units; curated roshei-teivot",
       "counts": {
         "corpus-bigram": 55,
+        "corpus-bigram-intro-prefix": 1,
         "corpus-skipgram": 6,
+        "corpus-skipgram-intro-prefix": 1,
         "corpus-unigram": 21,
-        "corpus-unigram-majority": 13,
-        "local-bigram": 10,
+        "corpus-unigram-intro-prefix": 1,
+        "corpus-unigram-majority": 11,
+        "local-bigram": 8,
         "local-trigram": 1,
+        "local-trigram-l": 1,
+        "local-trigram-r": 1,
         "perek-registry": 1,
-        "projected": 107
+        "projected": 108
       }
     },
     "line_alignment": {
