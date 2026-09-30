@@ -1,0 +1,205 @@
+{
+ "sugya": "berakhot_27b_arvit_ein_la_keva",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.27b.13",
+  "end": "Berakhot.27b.13"
+ },
+ "voices": [
+  {
+   "id": "mishnah_tefillat_haerev",
+   "kind": "mishnah",
+   "note": "the mishnah (26a) whose clause תפלת הערב אין לה קבע is cited at 27b.13"
+  },
+  {
+   "id": "stam_27b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice: the question, the אילימא reading and its refusal"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mishnah_arvit_ein_la_keva",
+   "gloss_en": "[the mishnah:] the evening prayer has no fixed [time]",
+   "content": null,
+   "locus": "Berakhot.27b.13",
+   "daf": "27b",
+   "sentenceId": 12
+  },
+  {
+   "id": "p_ilaima_kol_halayla",
+   "gloss_en": "entertained: 'has no fixed time' means that if he wishes he may pray the whole night",
+   "content": {
+    "pred": "reading_of",
+    "args": [
+     "tefillat_haerev_ein_la_keva",
+     "mitpallel_kol_halayla"
+    ]
+   },
+   "locus": "Berakhot.27b.13",
+   "daf": "27b",
+   "sentenceId": 12
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishnah_tefillat_haerev",
+   "prop": "p_mishnah_arvit_ein_la_keva",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.27b.13",
+   "daf": "27b",
+   "sentenceId": 12
+  },
+  {
+   "holder": "stam_27b",
+   "prop": "p_ilaima_kol_halayla",
+   "stance": "entertain",
+   "ctx": "hyp(h_ilaima_kol_halayla)",
+   "locus": "Berakhot.27b.13",
+   "daf": "27b",
+   "sentenceId": 12
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_ilaima_kol_halayla",
+   "assumes": "p_ilaima_kol_halayla",
+   "verdict": "reductio",
+   "opened_by": "stam_27b",
+   "discharge_locus": "Berakhot.27b.13",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_ilaima_kol_halayla"
+   ],
+   "locus": "Berakhot.27b.13",
+   "daf": "27b",
+   "sentenceId": 12
+  }
+ ],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/berakhot_27b_arvit_ein_la_keva.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_arvit_ein_la_keva",
+    "type": "prop",
+    "label_he": "תפלת הערב אין לה קבע",
+    "label_en": "[the mishnah:] the evening prayer has no fixed [time]",
+    "locus": "Berakhot.27b.13",
+    "daf": "27b",
+    "sentenceId": 12,
+    "data": {},
+    "skel": [
+     0,
+     16
+    ]
+   },
+   {
+    "id": "prop:p_ilaima_kol_halayla",
+    "type": "prop",
+    "label_he": "אילימא דאי בעי מצלי כוליה ליליא",
+    "label_en": "entertained: 'has no fixed time' means that if he wishes he may pray the whole night",
+    "locus": "Berakhot.27b.13",
+    "daf": "27b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "tefillat_haerev_ein_la_keva",
+       "mitpallel_kol_halayla"
+      ]
+     }
+    },
+    "skel": [
+     27,
+     53
+    ]
+   },
+   {
+    "id": "hypothesis:h_ilaima_kol_halayla",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: entertained: 'has no fixed time' means that if he wishes he may pray the whole night",
+    "locus": "Berakhot.27b.13",
+    "daf": "27b",
+    "sentenceId": 12,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_27b",
+     "discharge_locus": "Berakhot.27b.13"
+    }
+   },
+   {
+    "id": "voice:mishnah_tefillat_haerev",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah tefillat haerev",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_27b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 27b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_ilaima_kol_halayla",
+    "target": "prop:p_ilaima_kol_halayla",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_27b",
+    "target": "hypothesis:h_ilaima_kol_halayla",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:mishnah_tefillat_haerev",
+    "target": "prop:p_mishnah_arvit_ein_la_keva",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_27b",
+    "target": "prop:p_ilaima_kol_halayla",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_ilaima_kol_halayla)"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

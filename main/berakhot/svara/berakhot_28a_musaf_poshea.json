@@ -1,0 +1,175 @@
+{
+ "sugya": "berakhot_28a_musaf_poshea",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.28a.14",
+  "end": "Berakhot.28a.14"
+ },
+ "voices": [
+  {
+   "id": "tanna_kama_26a",
+   "kind": "tanna",
+   "note": "the mishnah's anonymous first opinion (26a.12), cited as the lemma"
+  },
+  {
+   "id": "r_yochanan",
+   "kind": "amora"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_tk_musaf_kol_hayom",
+   "gloss_en": "and [the prayer] of the additional offerings (musaf) [may be recited] all day",
+   "content": {
+    "pred": "deadline",
+    "args": [
+     "tefillat_musaf",
+     "kol_hayom"
+    ]
+   },
+   "locus": "Berakhot.28a.14",
+   "daf": "28a",
+   "sentenceId": 13
+  },
+  {
+   "id": "p_meacher_musaf_poshea",
+   "gloss_en": "R' Yochanan: and he [who delays it] is called negligent (poshea)",
+   "content": {
+    "pred": "nikra",
+    "args": [
+     "meacher_tefillat_musaf",
+     "poshea"
+    ]
+   },
+   "locus": "Berakhot.28a.14",
+   "daf": "28a",
+   "sentenceId": 13
+  }
+ ],
+ "commits": [
+  {
+   "holder": "tanna_kama_26a",
+   "prop": "p_tk_musaf_kol_hayom",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.28a.14",
+   "daf": "28a",
+   "sentenceId": 13
+  },
+  {
+   "holder": "r_yochanan",
+   "prop": "p_meacher_musaf_poshea",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.28a.14",
+   "daf": "28a",
+   "sentenceId": 13
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/berakhot_28a_musaf_poshea.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_tk_musaf_kol_hayom",
+    "type": "prop",
+    "label_he": "ושל מוספין כל היום",
+    "label_en": "and [the prayer] of the additional offerings (musaf) [may be recited] all day",
+    "locus": "Berakhot.28a.14",
+    "daf": "28a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "deadline",
+      "args": [
+       "tefillat_musaf",
+       "kol_hayom"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     15
+    ]
+   },
+   {
+    "id": "prop:p_meacher_musaf_poshea",
+    "type": "prop",
+    "label_he": "אמר רבי יוחנן: ונקרא פושע",
+    "label_en": "R' Yochanan: and he [who delays it] is called negligent (poshea)",
+    "locus": "Berakhot.28a.14",
+    "daf": "28a",
+    "sentenceId": 13,
+    "data": {
+     "content": {
+      "pred": "nikra",
+      "args": [
+       "meacher_tefillat_musaf",
+       "poshea"
+      ]
+     }
+    },
+    "skel": [
+     15,
+     35
+    ]
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:tanna_kama_26a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kama 26a",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:tanna_kama_26a",
+    "target": "prop:p_tk_musaf_kol_hayom",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_meacher_musaf_poshea",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

@@ -1,0 +1,200 @@
+{
+ "sugya": "berakhot_8b_halakha_kerabban_gamliel",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.2a.3",
+  "end": "Berakhot.8b.17"
+ },
+ "voices": [
+  {
+   "id": "r_gamliel",
+   "kind": "tanna",
+   "note": "Rabban Gamliel of the mishnah (2a.3), whose position the ruling adopts"
+  },
+  {
+   "id": "rav_yehuda",
+   "kind": "amora",
+   "note": "transmits Shmuel's ruling"
+  },
+  {
+   "id": "shmuel",
+   "kind": "amora"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_end_amud",
+   "gloss_en": "Rabban Gamliel: the evening Shema may be recited until dawn",
+   "content": {
+    "pred": "deadline",
+    "args": [
+     "krishma_arvit",
+     "amud_hashachar"
+    ]
+   },
+   "locus": "Berakhot.2a.3",
+   "daf": "2a",
+   "sentenceId": 2
+  },
+  {
+   "id": "p_halakha_kerabban_gamliel",
+   "gloss_en": "Rav Yehuda in Shmuel's name: the halakha follows Rabban Gamliel",
+   "content": {
+    "pred": "halakha_ke",
+    "args": [
+     "deadline_of_krishma_arvit",
+     "r_gamliel"
+    ]
+   },
+   "locus": "Berakhot.8b.17",
+   "daf": "8b",
+   "sentenceId": 16
+  }
+ ],
+ "commits": [
+  {
+   "holder": "r_gamliel",
+   "prop": "p_end_amud",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.2a.3",
+   "daf": "2a",
+   "sentenceId": 2
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [
+  {
+   "reporter": "rav_yehuda",
+   "subject": "shmuel",
+   "prop": "p_halakha_kerabban_gamliel",
+   "locus": "Berakhot.8b.17",
+   "daf": "8b",
+   "sentenceId": 16
+  }
+ ],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [
+  {
+   "id": "split_shmuel",
+   "kind": "attribution",
+   "subject": "shmuel",
+   "label_en": "What does shmuel hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(shmuel, P1, P2)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null
+  }
+ ],
+ "kb": "svara/berakhot_8b_halakha_kerabban_gamliel.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_end_amud",
+    "type": "prop",
+    "label_he": "רבן גמליאל אומר: עד שיעלה עמוד השחר",
+    "label_en": "Rabban Gamliel: the evening Shema may be recited until dawn",
+    "locus": "Berakhot.2a.3",
+    "daf": "2a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "deadline",
+      "args": [
+       "krishma_arvit",
+       "amud_hashachar"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     28
+    ]
+   },
+   {
+    "id": "prop:p_halakha_kerabban_gamliel",
+    "type": "prop",
+    "label_he": "אמר רב יהודה אמר שמואל: הלכה כרבן גמליאל",
+    "label_en": "Rav Yehuda in Shmuel's name: the halakha follows Rabban Gamliel",
+    "locus": "Berakhot.8b.17",
+    "daf": "8b",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "halakha_ke",
+      "args": [
+       "deadline_of_krishma_arvit",
+       "r_gamliel"
+      ]
+     }
+    },
+    "skel": [
+     16,
+     48
+    ]
+   },
+   {
+    "id": "voice:r_gamliel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r gamliel",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_gamliel",
+    "target": "prop:p_end_amud",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_halakha_kerabban_gamliel",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "shmuel"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

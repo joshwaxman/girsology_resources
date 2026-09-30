@@ -1,0 +1,219 @@
+{
+ "sugya": "berakhot_20b_mezuza_pshita",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.20b.6",
+  "end": "Berakhot.20b.6"
+ },
+ "voices": [
+  {
+   "id": "matnitin_nashim_avadim",
+   "kind": "mishnah",
+   "note": "Mishnah Berakhot 3:3 (נשים ועבדים וקטנים...), cited as lemma at 20b.6"
+  },
+  {
+   "id": "stam_20b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_chayavin_bimezuza",
+   "gloss_en": "the mishnah: [women, slaves and minors] are obligated in mezuza",
+   "content": {
+    "pred": "chayav",
+    "args": [
+     "nashim_avadim_uktanim",
+     "mezuzah"
+    ]
+   },
+   "locus": "Berakhot.20b.6",
+   "daf": "20b",
+   "sentenceId": 5
+  },
+  {
+   "id": "p_mezuza_ketalmud_torah",
+   "gloss_en": "you might have said: since [mezuza] is juxtaposed to Torah study, [it is like it]",
+   "content": {
+    "pred": "dami_le",
+    "args": [
+     "mezuzah",
+     "talmud_torah"
+    ]
+   },
+   "locus": "Berakhot.20b.6",
+   "daf": "20b",
+   "sentenceId": 5
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_nashim_avadim",
+   "prop": "p_chayavin_bimezuza",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.20b.6",
+   "daf": "20b",
+   "sentenceId": 5
+  },
+  {
+   "holder": "stam_20b",
+   "prop": "p_mezuza_ketalmud_torah",
+   "stance": "entertain",
+   "ctx": "hyp(h_mezuza_ketalmud_torah)",
+   "locus": "Berakhot.20b.6",
+   "daf": "20b",
+   "sentenceId": 5
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_mezuza_ketalmud_torah",
+   "assumes": "p_mezuza_ketalmud_torah",
+   "verdict": "reductio",
+   "opened_by": "stam_20b",
+   "discharge_locus": "Berakhot.20b.6",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_mezuza_ketalmud_torah"
+   ],
+   "locus": "Berakhot.20b.6",
+   "daf": "20b",
+   "sentenceId": 5
+  }
+ ],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/berakhot_20b_mezuza_pshita.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chayavin_bimezuza",
+    "type": "prop",
+    "label_he": "ובמזוזה",
+    "label_en": "the mishnah: [women, slaves and minors] are obligated in mezuza",
+    "locus": "Berakhot.20b.6",
+    "daf": "20b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "chayav",
+      "args": [
+       "nashim_avadim_uktanim",
+       "mezuzah"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     7
+    ]
+   },
+   {
+    "id": "prop:p_mezuza_ketalmud_torah",
+    "type": "prop",
+    "label_he": "מהו דתימא: הואיל ואתקש לתלמוד תורה",
+    "label_en": "you might have said: since [mezuza] is juxtaposed to Torah study, [it is like it]",
+    "locus": "Berakhot.20b.6",
+    "daf": "20b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "dami_le",
+      "args": [
+       "mezuzah",
+       "talmud_torah"
+      ]
+     }
+    },
+    "skel": [
+     12,
+     40
+    ]
+   },
+   {
+    "id": "hypothesis:h_mezuza_ketalmud_torah",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: you might have said: since [mezuza] is juxtaposed to Torah study, [it is like it]",
+    "locus": "Berakhot.20b.6",
+    "daf": "20b",
+    "sentenceId": 5,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_20b",
+     "discharge_locus": "Berakhot.20b.6"
+    }
+   },
+   {
+    "id": "voice:matnitin_nashim_avadim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin nashim avadim",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_20b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 20b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_mezuza_ketalmud_torah",
+    "target": "prop:p_mezuza_ketalmud_torah",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_20b",
+    "target": "hypothesis:h_mezuza_ketalmud_torah",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:matnitin_nashim_avadim",
+    "target": "prop:p_chayavin_bimezuza",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_20b",
+    "target": "prop:p_mezuza_ketalmud_torah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_mezuza_ketalmud_torah)"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

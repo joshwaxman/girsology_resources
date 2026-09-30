@@ -1,0 +1,150 @@
+{
+ "sugya": "berakhot_7b_leah_hodaah",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.7b.5",
+  "end": "Berakhot.7b.5"
+ },
+ "voices": [
+  {
+   "id": "r_yochanan",
+   "kind": "amora",
+   "note": "transmits R' Shimon ben Yochai's dictum (משום, 7b.5)"
+  },
+  {
+   "id": "r_shimon_ben_yochai",
+   "kind": "tanna"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_leah_hodeta",
+   "gloss_en": "from the day the Holy One created His world no one gave thanks to Him until Leah came and thanked Him -- 'this time I will give thanks to the Lord' (Gen 29:35)",
+   "content": {
+    "pred": "verse_teaches",
+    "args": [
+     "hapaam_odeh_et_hashem",
+     "leah_hodeta"
+    ]
+   },
+   "locus": "Berakhot.7b.5",
+   "daf": "7b",
+   "sentenceId": 4
+  }
+ ],
+ "commits": [
+  {
+   "holder": "r_shimon_ben_yochai",
+   "prop": "p_leah_hodeta",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.7b.5",
+   "daf": "7b",
+   "sentenceId": 4
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [
+  {
+   "reporter": "r_yochanan",
+   "subject": "r_shimon_ben_yochai",
+   "prop": "p_leah_hodeta",
+   "locus": "Berakhot.7b.5",
+   "daf": "7b",
+   "sentenceId": 4
+  }
+ ],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [
+  {
+   "id": "split_r_shimon_ben_yochai",
+   "kind": "attribution",
+   "subject": "r_shimon_ben_yochai",
+   "label_en": "What does r_shimon_ben_yochai hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(r_shimon_ben_yochai, P1, P2)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null
+  }
+ ],
+ "kb": "svara/berakhot_7b_leah_hodaah.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_leah_hodeta",
+    "type": "prop",
+    "label_he": "מיום שברא הקדוש ברוך הוא את עולמו לא היה אדם שהודה להקדוש ברוך הוא, עד שבאתה לאה והודתו, שנאמר הפעם אודה את ה'",
+    "label_en": "from the day the Holy One created His world no one gave thanks to Him until Leah came and thanked H…",
+    "locus": "Berakhot.7b.5",
+    "daf": "7b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "verse_teaches",
+      "args": [
+       "hapaam_odeh_et_hashem",
+       "leah_hodeta"
+      ]
+     }
+    },
+    "skel": [
+     30,
+     115
+    ]
+   },
+   {
+    "id": "voice:r_shimon_ben_yochai",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r shimon ben yochai",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_shimon_ben_yochai",
+    "target": "prop:p_leah_hodeta",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_leah_hodeta",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_shimon_ben_yochai"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

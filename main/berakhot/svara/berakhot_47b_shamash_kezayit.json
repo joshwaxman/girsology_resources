@@ -1,0 +1,215 @@
+{
+ "sugya": "berakhot_47b_shamash_kezayit",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.45a.4",
+  "end": "Berakhot.47b.3"
+ },
+ "voices": [
+  {
+   "id": "matnitin_45a",
+   "kind": "mishnah",
+   "note": "Mishnah Berakhot 7:1 at 45a.4 (out of span); its clause השמש שאכל כזית is the lemma"
+  },
+  {
+   "id": "stam_47b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice: פשיטא, מהו דתימא, קא משמע לן"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mishnah_shamash_mezamnin",
+   "gloss_en": "the mishnah: a zimmun is formed over the waiter who ate an olive's bulk",
+   "content": {
+    "pred": "din_mishnah",
+    "args": [
+     "shamash_sheachal_kezayit",
+     "mezamnin_alav"
+    ]
+   },
+   "locus": "Berakhot.45a.4",
+   "daf": "45a",
+   "sentenceId": 3
+  },
+  {
+   "id": "p_shamash_lo_kava",
+   "gloss_en": "you might have said: the waiter has not fixed [himself to the meal, so no zimmun is formed over him]",
+   "content": {
+    "pred": "reason",
+    "args": [
+     "ein_mezamnin_al_shamash",
+     "shamash_lo_kava"
+    ]
+   },
+   "locus": "Berakhot.47b.3",
+   "daf": "47b",
+   "sentenceId": 2
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_45a",
+   "prop": "p_mishnah_shamash_mezamnin",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.45a.4",
+   "daf": "45a",
+   "sentenceId": 3
+  },
+  {
+   "holder": "stam_47b",
+   "prop": "p_shamash_lo_kava",
+   "stance": "entertain",
+   "ctx": "hyp(h_shamash_lo_kava)",
+   "locus": "Berakhot.47b.3",
+   "daf": "47b",
+   "sentenceId": 2
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_shamash_lo_kava",
+   "assumes": "p_shamash_lo_kava",
+   "verdict": "reductio",
+   "opened_by": "stam_47b",
+   "discharge_locus": "Berakhot.47b.3",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_shamash_lo_kava"
+   ],
+   "locus": "Berakhot.47b.3",
+   "daf": "47b",
+   "sentenceId": 2
+  }
+ ],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/berakhot_47b_shamash_kezayit.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_shamash_mezamnin",
+    "type": "prop",
+    "label_he": "והשמש שאכל כזית... מזמנין עליו",
+    "label_en": "the mishnah: a zimmun is formed over the waiter who ate an olive's bulk",
+    "locus": "Berakhot.45a.4",
+    "daf": "45a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "din_mishnah",
+      "args": [
+       "shamash_sheachal_kezayit",
+       "mezamnin_alav"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_shamash_lo_kava",
+    "type": "prop",
+    "label_he": "מהו דתימא: שמש לא קבע",
+    "label_en": "you might have said: the waiter has not fixed [himself to the meal, so no zimmun is formed over him]",
+    "locus": "Berakhot.47b.3",
+    "daf": "47b",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "reason",
+      "args": [
+       "ein_mezamnin_al_shamash",
+       "shamash_lo_kava"
+      ]
+     }
+    },
+    "skel": [
+     17,
+     33
+    ]
+   },
+   {
+    "id": "hypothesis:h_shamash_lo_kava",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: you might have said: the waiter has not fixed [himself to the meal, so no zimmun is formed…",
+    "locus": "Berakhot.47b.3",
+    "daf": "47b",
+    "sentenceId": 2,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_47b",
+     "discharge_locus": "Berakhot.47b.3"
+    }
+   },
+   {
+    "id": "voice:matnitin_45a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin 45a",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_47b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 47b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_shamash_lo_kava",
+    "target": "prop:p_shamash_lo_kava",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_47b",
+    "target": "hypothesis:h_shamash_lo_kava",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:matnitin_45a",
+    "target": "prop:p_mishnah_shamash_mezamnin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_47b",
+    "target": "prop:p_shamash_lo_kava",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_shamash_lo_kava)"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

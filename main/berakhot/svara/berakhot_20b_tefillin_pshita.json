@@ -1,0 +1,215 @@
+{
+ "sugya": "berakhot_20b_tefillin_pshita",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.20b.1",
+  "end": "Berakhot.20b.4"
+ },
+ "voices": [
+  {
+   "id": "matnitin_nashim_avadim",
+   "kind": "mishnah",
+   "note": "Mishnah Berakhot 3:3 (נשים ועבדים וקטנים...), 20b.1; cited as lemma at 20b.4"
+  },
+  {
+   "id": "stam_20b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_peturin_mitefillin",
+   "gloss_en": "the mishnah: [women, slaves and minors are exempt] from tefillin",
+   "content": {
+    "pred": "exempt",
+    "args": [
+     "nashim_avadim_uktanim",
+     "tefillin"
+    ]
+   },
+   "locus": "Berakhot.20b.1",
+   "daf": "20b",
+   "sentenceId": 0
+  },
+  {
+   "id": "p_tefillin_kemezuza",
+   "gloss_en": "you might have said: since [tefillin] is juxtaposed to mezuza, [it is like it]",
+   "content": {
+    "pred": "dami_le",
+    "args": [
+     "tefillin",
+     "mezuzah"
+    ]
+   },
+   "locus": "Berakhot.20b.4",
+   "daf": "20b",
+   "sentenceId": 3
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_nashim_avadim",
+   "prop": "p_peturin_mitefillin",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.20b.1",
+   "daf": "20b",
+   "sentenceId": 0
+  },
+  {
+   "holder": "stam_20b",
+   "prop": "p_tefillin_kemezuza",
+   "stance": "entertain",
+   "ctx": "hyp(h_tefillin_kemezuza)",
+   "locus": "Berakhot.20b.4",
+   "daf": "20b",
+   "sentenceId": 3
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_tefillin_kemezuza",
+   "assumes": "p_tefillin_kemezuza",
+   "verdict": "reductio",
+   "opened_by": "stam_20b",
+   "discharge_locus": "Berakhot.20b.4",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_tefillin_kemezuza"
+   ],
+   "locus": "Berakhot.20b.4",
+   "daf": "20b",
+   "sentenceId": 3
+  }
+ ],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/berakhot_20b_tefillin_pshita.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_peturin_mitefillin",
+    "type": "prop",
+    "label_he": "ומן התפילין",
+    "label_en": "the mishnah: [women, slaves and minors are exempt] from tefillin",
+    "locus": "Berakhot.20b.1",
+    "daf": "20b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "exempt",
+      "args": [
+       "nashim_avadim_uktanim",
+       "tefillin"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     10
+    ]
+   },
+   {
+    "id": "prop:p_tefillin_kemezuza",
+    "type": "prop",
+    "label_he": "מהו דתימא: הואיל ואיתקש למזוזה",
+    "label_en": "you might have said: since [tefillin] is juxtaposed to mezuza, [it is like it]",
+    "locus": "Berakhot.20b.4",
+    "daf": "20b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "dami_le",
+      "args": [
+       "tefillin",
+       "mezuzah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "hypothesis:h_tefillin_kemezuza",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: you might have said: since [tefillin] is juxtaposed to mezuza, [it is like it]",
+    "locus": "Berakhot.20b.4",
+    "daf": "20b",
+    "sentenceId": 3,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_20b",
+     "discharge_locus": "Berakhot.20b.4"
+    }
+   },
+   {
+    "id": "voice:matnitin_nashim_avadim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin nashim avadim",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_20b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 20b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_tefillin_kemezuza",
+    "target": "prop:p_tefillin_kemezuza",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_20b",
+    "target": "hypothesis:h_tefillin_kemezuza",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:matnitin_nashim_avadim",
+    "target": "prop:p_peturin_mitefillin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_20b",
+    "target": "prop:p_tefillin_kemezuza",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_tefillin_kemezuza)"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

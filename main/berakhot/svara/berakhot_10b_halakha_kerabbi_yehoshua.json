@@ -1,0 +1,200 @@
+{
+ "sugya": "berakhot_10b_halakha_kerabbi_yehoshua",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.9b.9",
+  "end": "Berakhot.10b.31"
+ },
+ "voices": [
+  {
+   "id": "r_yehoshua",
+   "kind": "tanna",
+   "note": "R' Yehoshua of the mishnah (9b.9), whose position the ruling adopts"
+  },
+  {
+   "id": "rav_yehuda",
+   "kind": "amora",
+   "note": "transmits Shmuel's ruling"
+  },
+  {
+   "id": "shmuel",
+   "kind": "amora"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_ry_shalosh_shaot",
+   "gloss_en": "R' Yehoshua: the morning Shema may be recited until three hours [of the day]",
+   "content": {
+    "pred": "deadline",
+    "args": [
+     "krishma_shacharit",
+     "shalosh_shaot_yom"
+    ]
+   },
+   "locus": "Berakhot.9b.9",
+   "daf": "9b",
+   "sentenceId": 8
+  },
+  {
+   "id": "p_halakha_kerabbi_yehoshua",
+   "gloss_en": "Rav Yehuda in Shmuel's name: the halakha follows R' Yehoshua",
+   "content": {
+    "pred": "halakha_ke",
+    "args": [
+     "deadline_of_krishma_shacharit",
+     "r_yehoshua"
+    ]
+   },
+   "locus": "Berakhot.10b.31",
+   "daf": "10b",
+   "sentenceId": 30
+  }
+ ],
+ "commits": [
+  {
+   "holder": "r_yehoshua",
+   "prop": "p_ry_shalosh_shaot",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.9b.9",
+   "daf": "9b",
+   "sentenceId": 8
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [
+  {
+   "reporter": "rav_yehuda",
+   "subject": "shmuel",
+   "prop": "p_halakha_kerabbi_yehoshua",
+   "locus": "Berakhot.10b.31",
+   "daf": "10b",
+   "sentenceId": 30
+  }
+ ],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [
+  {
+   "id": "split_shmuel",
+   "kind": "attribution",
+   "subject": "shmuel",
+   "label_en": "What does shmuel hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(shmuel, P1, P2)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null
+  }
+ ],
+ "kb": "svara/berakhot_10b_halakha_kerabbi_yehoshua.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ry_shalosh_shaot",
+    "type": "prop",
+    "label_he": "רבי יהושע אומר: עד שלש שעות",
+    "label_en": "R' Yehoshua: the morning Shema may be recited until three hours [of the day]",
+    "locus": "Berakhot.9b.9",
+    "daf": "9b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "deadline",
+      "args": [
+       "krishma_shacharit",
+       "shalosh_shaot_yom"
+      ]
+     }
+    },
+    "skel": [
+     83,
+     104
+    ]
+   },
+   {
+    "id": "prop:p_halakha_kerabbi_yehoshua",
+    "type": "prop",
+    "label_he": "אמר רב יהודה אמר שמואל: הלכה כרבי יהושע",
+    "label_en": "Rav Yehuda in Shmuel's name: the halakha follows R' Yehoshua",
+    "locus": "Berakhot.10b.31",
+    "daf": "10b",
+    "sentenceId": 30,
+    "data": {
+     "content": {
+      "pred": "halakha_ke",
+      "args": [
+       "deadline_of_krishma_shacharit",
+       "r_yehoshua"
+      ]
+     }
+    },
+    "skel": [
+     21,
+     52
+    ]
+   },
+   {
+    "id": "voice:r_yehoshua",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehoshua",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:shmuel",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "shmuel",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yehoshua",
+    "target": "prop:p_ry_shalosh_shaot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_halakha_kerabbi_yehoshua",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "shmuel"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

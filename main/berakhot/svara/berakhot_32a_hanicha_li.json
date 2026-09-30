@@ -1,0 +1,206 @@
+{
+ "sugya": "berakhot_32a_hanicha_li",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.32a.16",
+  "end": "Berakhot.32a.16"
+ },
+ "voices": [
+  {
+   "id": "r_abbahu",
+   "kind": "amora"
+  },
+  {
+   "id": "moshe",
+   "kind": "unknown",
+   "note": "Moses, speaker inside R' Abbahu's exposition"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_ilmalei_mikra_katuv",
+   "gloss_en": "were the verse not written, it would be impossible to say it",
+   "content": null,
+   "locus": "Berakhot.32a.16",
+   "daf": "32a",
+   "sentenceId": 15
+  },
+  {
+   "id": "p_hanicha_li_melamed",
+   "gloss_en": "'now let Me be...' (Ex 32:10) teaches that Moses seized the Holy One as a man seizes his fellow by his garment",
+   "content": {
+    "pred": "verse_teaches",
+    "args": [
+     "hanicha_li",
+     "tfaso_moshe_lehakadosh_baruch_hu"
+    ]
+   },
+   "locus": "Berakhot.32a.16",
+   "daf": "32a",
+   "sentenceId": 15
+  },
+  {
+   "id": "p_ein_ani_manichacha",
+   "gloss_en": "Moses said before Him: Master of the world, I will not let You go until You forgive and pardon them",
+   "content": null,
+   "locus": "Berakhot.32a.16",
+   "daf": "32a",
+   "sentenceId": 15
+  }
+ ],
+ "commits": [
+  {
+   "holder": "r_abbahu",
+   "prop": "p_ilmalei_mikra_katuv",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.32a.16",
+   "daf": "32a",
+   "sentenceId": 15
+  },
+  {
+   "holder": "r_abbahu",
+   "prop": "p_hanicha_li_melamed",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.32a.16",
+   "daf": "32a",
+   "sentenceId": 15
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [
+  {
+   "reporter": "r_abbahu",
+   "subject": "moshe",
+   "prop": "p_ein_ani_manichacha",
+   "locus": "Berakhot.32a.16",
+   "daf": "32a",
+   "sentenceId": 15
+  }
+ ],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [
+  {
+   "id": "split_moshe",
+   "kind": "attribution",
+   "subject": "moshe",
+   "label_en": "What does moshe hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(moshe, P1, P2)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null
+  }
+ ],
+ "kb": "svara/berakhot_32a_hanicha_li.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ilmalei_mikra_katuv",
+    "type": "prop",
+    "label_he": "אלמלא מקרא כתוב אי אפשר לאומרו",
+    "label_en": "were the verse not written, it would be impossible to say it",
+    "locus": "Berakhot.32a.16",
+    "daf": "32a",
+    "sentenceId": 15,
+    "data": {},
+    "skel": [
+     56,
+     81
+    ]
+   },
+   {
+    "id": "prop:p_hanicha_li_melamed",
+    "type": "prop",
+    "label_he": "ועתה הניחה לי... מלמד שתפסו משה להקדוש ברוך הוא כאדם שהוא תופס את חבירו בבגדו",
+    "label_en": "'now let Me be...' (Ex 32:10) teaches that Moses seized the Holy One as a man seizes his fellow by…",
+    "locus": "Berakhot.32a.16",
+    "daf": "32a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "verse_teaches",
+      "args": [
+       "hanicha_li",
+       "tfaso_moshe_lehakadosh_baruch_hu"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ein_ani_manichacha",
+    "type": "prop",
+    "label_he": "ואמר לפניו: רבונו של עולם, אין אני מניחך עד שתמחול ותסלח להם",
+    "label_en": "Moses said before Him: Master of the world, I will not let You go until You forgive and pardon them",
+    "locus": "Berakhot.32a.16",
+    "daf": "32a",
+    "sentenceId": 15,
+    "data": {},
+    "skel": [
+     130,
+     177
+    ]
+   },
+   {
+    "id": "voice:moshe",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "moshe",
+    "data": {
+     "kind": "unknown"
+    }
+   },
+   {
+    "id": "voice:r_abbahu",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r abbahu",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_abbahu",
+    "target": "prop:p_ilmalei_mikra_katuv",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_abbahu",
+    "target": "prop:p_hanicha_li_melamed",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_abbahu",
+    "target": "prop:p_ein_ani_manichacha",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "moshe"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}

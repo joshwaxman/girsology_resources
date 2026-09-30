@@ -1,0 +1,219 @@
+{
+ "sugya": "berakhot_20b_birkat_hamazon_pshita",
+ "tractate": "Berakhot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Berakhot.20b.7",
+  "end": "Berakhot.20b.7"
+ },
+ "voices": [
+  {
+   "id": "matnitin_nashim_avadim",
+   "kind": "mishnah",
+   "note": "Mishnah Berakhot 3:3 (נשים ועבדים וקטנים...), cited as lemma at 20b.7"
+  },
+  {
+   "id": "stam_20b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_chayavin_bebhm",
+   "gloss_en": "the mishnah: [women, slaves and minors] are obligated in Grace after Meals",
+   "content": {
+    "pred": "chayav",
+    "args": [
+     "nashim_avadim_uktanim",
+     "birkat_hamazon"
+    ]
+   },
+   "locus": "Berakhot.20b.7",
+   "daf": "20b",
+   "sentenceId": 6
+  },
+  {
+   "id": "p_bhm_kezman_grama",
+   "gloss_en": "you might have said: since it is written 'when the Lord gives you meat to eat in the evening and bread in the morning to the full', it is like a time-bound positive mitzva",
+   "content": {
+    "pred": "dami_le",
+    "args": [
+     "birkat_hamazon",
+     "mitzvat_aseh_shehazman_grama"
+    ]
+   },
+   "locus": "Berakhot.20b.7",
+   "daf": "20b",
+   "sentenceId": 6
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_nashim_avadim",
+   "prop": "p_chayavin_bebhm",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.20b.7",
+   "daf": "20b",
+   "sentenceId": 6
+  },
+  {
+   "holder": "stam_20b",
+   "prop": "p_bhm_kezman_grama",
+   "stance": "entertain",
+   "ctx": "hyp(h_bhm_kezman_grama)",
+   "locus": "Berakhot.20b.7",
+   "daf": "20b",
+   "sentenceId": 6
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_bhm_kezman_grama",
+   "assumes": "p_bhm_kezman_grama",
+   "verdict": "reductio",
+   "opened_by": "stam_20b",
+   "discharge_locus": "Berakhot.20b.7",
+   "discharge_concludes": null,
+   "entails_identity": null,
+   "quarantined": [
+    "p_bhm_kezman_grama"
+   ],
+   "locus": "Berakhot.20b.7",
+   "daf": "20b",
+   "sentenceId": 6
+  }
+ ],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/berakhot_20b_birkat_hamazon_pshita.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chayavin_bebhm",
+    "type": "prop",
+    "label_he": "ובברכת המזון",
+    "label_en": "the mishnah: [women, slaves and minors] are obligated in Grace after Meals",
+    "locus": "Berakhot.20b.7",
+    "daf": "20b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "chayav",
+      "args": [
+       "nashim_avadim_uktanim",
+       "birkat_hamazon"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     11
+    ]
+   },
+   {
+    "id": "prop:p_bhm_kezman_grama",
+    "type": "prop",
+    "label_he": "מהו דתימא: הואיל וכתיב בתת ה׳ לכם בערב בשר לאכל ולחם בבקר לשבע, כמצות עשה שהזמן גרמא דמי",
+    "label_en": "you might have said: since it is written 'when the Lord gives you meat to eat in the evening and br…",
+    "locus": "Berakhot.20b.7",
+    "daf": "20b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "dami_le",
+      "args": [
+       "birkat_hamazon",
+       "mitzvat_aseh_shehazman_grama"
+      ]
+     }
+    },
+    "skel": [
+     16,
+     84
+    ]
+   },
+   {
+    "id": "hypothesis:h_bhm_kezman_grama",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: you might have said: since it is written 'when the Lord gives you meat to eat in the eveni…",
+    "locus": "Berakhot.20b.7",
+    "daf": "20b",
+    "sentenceId": 6,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_20b",
+     "discharge_locus": "Berakhot.20b.7"
+    }
+   },
+   {
+    "id": "voice:matnitin_nashim_avadim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin nashim avadim",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_20b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 20b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_bhm_kezman_grama",
+    "target": "prop:p_bhm_kezman_grama",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_20b",
+    "target": "hypothesis:h_bhm_kezman_grama",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:matnitin_nashim_avadim",
+    "target": "prop:p_chayavin_bebhm",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_20b",
+    "target": "prop:p_bhm_kezman_grama",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_bhm_kezman_grama)"
+   }
+  ]
+ },
+ "kbVersion": "sha256-41cb78e4229b0c71"
+}
