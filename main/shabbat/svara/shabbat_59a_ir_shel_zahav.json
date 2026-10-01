@@ -1,0 +1,208 @@
+{
+ "sugya": "shabbat_59a_ir_shel_zahav",
+ "tractate": "Shabbat",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Shabbat.57a.4",
+  "end": "Shabbat.59a.9"
+ },
+ "voices": [
+  {
+   "id": "matnitin_57a",
+   "kind": "mishnah",
+   "note": "the mishna במה אשה יוצאת (57a.1-5), its clause cited as lemma at 59a.9"
+  },
+  {
+   "id": "r_yochanan",
+   "kind": "amora"
+  },
+  {
+   "id": "rabba_bar_bar_chana",
+   "kind": "amora",
+   "note": "transmits R' Yochanan (59a.9)"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_isha_ir_shel_zahav",
+   "gloss_en": "the mishna: a woman does not go out with a city of gold",
+   "content": {
+    "pred": "asur",
+    "args": [
+     "yetzia_beir_shel_zahav",
+     "isha"
+    ]
+   },
+   "locus": "Shabbat.57a.4",
+   "daf": "57a",
+   "sentenceId": 3
+  },
+  {
+   "id": "p_ir_shel_zahav_yerushalayim",
+   "gloss_en": "what is 'a city of gold'? R' Yochanan: a Jerusalem of gold",
+   "content": {
+    "pred": "defined_as",
+    "args": [
+     "ir_shel_zahav",
+     "yerushalayim_dedahava"
+    ]
+   },
+   "locus": "Shabbat.59a.9",
+   "daf": "59a",
+   "sentenceId": 8
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_57a",
+   "prop": "p_isha_ir_shel_zahav",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Shabbat.57a.4",
+   "daf": "57a",
+   "sentenceId": 3
+  },
+  {
+   "holder": "r_yochanan",
+   "prop": "p_ir_shel_zahav_yerushalayim",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Shabbat.59a.9",
+   "daf": "59a",
+   "sentenceId": 8
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [
+  {
+   "reporter": "rabba_bar_bar_chana",
+   "subject": "r_yochanan",
+   "prop": "p_ir_shel_zahav_yerushalayim",
+   "locus": "Shabbat.59a.9",
+   "daf": "59a",
+   "sentenceId": 8
+  }
+ ],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [
+  {
+   "id": "split_r_yochanan",
+   "kind": "attribution",
+   "subject": "r_yochanan",
+   "label_en": "What does r_yochanan hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(r_yochanan, P1, P2)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null
+  }
+ ],
+ "kb": "svara/shabbat_59a_ir_shel_zahav.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_isha_ir_shel_zahav",
+    "type": "prop",
+    "label_he": "[לא תצא אשה ...] ולא בעיר של זהב",
+    "label_en": "the mishna: a woman does not go out with a city of gold",
+    "locus": "Shabbat.57a.4",
+    "daf": "57a",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "asur",
+      "args": [
+       "yetzia_beir_shel_zahav",
+       "isha"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_ir_shel_zahav_yerushalayim",
+    "type": "prop",
+    "label_he": "מאי בעיר של זהב? ... ירושלים דדהבא",
+    "label_en": "what is 'a city of gold'? R' Yochanan: a Jerusalem of gold",
+    "locus": "Shabbat.59a.9",
+    "daf": "59a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "ir_shel_zahav",
+       "yerushalayim_dedahava"
+      ]
+     }
+    }
+   },
+   {
+    "id": "voice:matnitin_57a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin 57a",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:r_yochanan",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yochanan",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rabba_bar_bar_chana",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rabba bar bar chana",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_57a",
+    "target": "prop:p_isha_ir_shel_zahav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yochanan",
+    "target": "prop:p_ir_shel_zahav_yerushalayim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rabba_bar_bar_chana",
+    "target": "prop:p_ir_shel_zahav_yerushalayim",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "r_yochanan"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0779270e571840b1"
+}

@@ -1,0 +1,214 @@
+{
+ "sugya": "shabbat_63a_mai_alla",
+ "tractate": "Shabbat",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Shabbat.63a.3",
+  "end": "Shabbat.63a.8"
+ },
+ "voices": [
+  {
+   "id": "matnitin_63a",
+   "kind": "mishnah",
+   "note": "the mishna לא יצא האיש (63a.3), whose word באלה the Gemara asks about at 63a.8"
+  },
+  {
+   "id": "stam_63a_alla",
+   "kind": "stam",
+   "note": "anonymous redactorial voice: מאי באלה? קולפא"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mt_alla",
+   "gloss_en": "the mishna: [a man may not go out] with an alla",
+   "content": {
+    "pred": "asur",
+    "args": [
+     "yetzia_bealla",
+     "ish"
+    ]
+   },
+   "locus": "Shabbat.63a.3",
+   "daf": "63a",
+   "sentenceId": 2
+  },
+  {
+   "id": "p_q_mai_alla",
+   "gloss_en": "the Gemara: what is 'with an alla'?",
+   "content": null,
+   "locus": "Shabbat.63a.8",
+   "daf": "63a",
+   "sentenceId": 7
+  },
+  {
+   "id": "p_stam_alla_kulpa",
+   "gloss_en": "the Gemara: [an alla is] a kulpa (a club)",
+   "content": {
+    "pred": "defined_as",
+    "args": [
+     "alla",
+     "kulpa"
+    ]
+   },
+   "locus": "Shabbat.63a.8",
+   "daf": "63a",
+   "sentenceId": 7
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_63a",
+   "prop": "p_mt_alla",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Shabbat.63a.3",
+   "daf": "63a",
+   "sentenceId": 2
+  },
+  {
+   "holder": "stam_63a_alla",
+   "prop": "p_q_mai_alla",
+   "stance": "query",
+   "ctx": "actual",
+   "locus": "Shabbat.63a.8",
+   "daf": "63a",
+   "sentenceId": 7
+  },
+  {
+   "holder": "stam_63a_alla",
+   "prop": "p_stam_alla_kulpa",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Shabbat.63a.8",
+   "daf": "63a",
+   "sentenceId": 7
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/shabbat_63a_mai_alla.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mt_alla",
+    "type": "prop",
+    "label_he": "ולא באלה",
+    "label_en": "the mishna: [a man may not go out] with an alla",
+    "locus": "Shabbat.63a.3",
+    "daf": "63a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "asur",
+      "args": [
+       "yetzia_bealla",
+       "ish"
+      ]
+     }
+    },
+    "skel": [
+     35,
+     42
+    ]
+   },
+   {
+    "id": "prop:p_q_mai_alla",
+    "type": "prop",
+    "label_he": "מאי באלה?",
+    "label_en": "the Gemara: what is 'with an alla'?",
+    "locus": "Shabbat.63a.8",
+    "daf": "63a",
+    "sentenceId": 7,
+    "data": {},
+    "skel": [
+     2,
+     9
+    ]
+   },
+   {
+    "id": "prop:p_stam_alla_kulpa",
+    "type": "prop",
+    "label_he": "קולפא",
+    "label_en": "the Gemara: [an alla is] a kulpa (a club)",
+    "locus": "Shabbat.63a.8",
+    "daf": "63a",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "alla",
+       "kulpa"
+      ]
+     }
+    },
+    "skel": [
+     9,
+     14
+    ]
+   },
+   {
+    "id": "voice:matnitin_63a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin 63a",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_63a_alla",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 63a alla",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_63a",
+    "target": "prop:p_mt_alla",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_63a_alla",
+    "target": "prop:p_q_mai_alla",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "query"
+   },
+   {
+    "source": "voice:stam_63a_alla",
+    "target": "prop:p_stam_alla_kulpa",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0779270e571840b1"
+}
