@@ -1,0 +1,162 @@
+{
+ "sugya": "chullin_24b_tahor_bichli_cheres",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.24b.10",
+  "end": "Chullin.24b.10"
+ },
+ "voices": [
+  {
+   "id": "mishna_tahor_bichli_cheres",
+   "kind": "mishnah",
+   "note": "the anonymous mishna at 24b.10"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_tahor_bicheres_tamei_bashear",
+   "gloss_en": "that which is pure in an earthenware vessel is impure in all [other] vessels",
+   "content": {
+    "pred": "inverse_purity",
+    "args": [
+     "keli_cheres",
+     "keli_shetef"
+    ]
+   },
+   "locus": "Chullin.24b.10",
+   "daf": "24b",
+   "sentenceId": 9
+  },
+  {
+   "id": "p_tahor_bashear_tamei_bicheres",
+   "gloss_en": "that which is pure in all vessels is impure in an earthenware vessel",
+   "content": {
+    "pred": "inverse_purity",
+    "args": [
+     "keli_shetef",
+     "keli_cheres"
+    ]
+   },
+   "locus": "Chullin.24b.10",
+   "daf": "24b",
+   "sentenceId": 9
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishna_tahor_bichli_cheres",
+   "prop": "p_tahor_bicheres_tamei_bashear",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.24b.10",
+   "daf": "24b",
+   "sentenceId": 9
+  },
+  {
+   "holder": "mishna_tahor_bichli_cheres",
+   "prop": "p_tahor_bashear_tamei_bicheres",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.24b.10",
+   "daf": "24b",
+   "sentenceId": 9
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_24b_tahor_bichli_cheres.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_tahor_bicheres_tamei_bashear",
+    "type": "prop",
+    "label_he": "טהור בכלי חרש -- טמא בכל הכלים",
+    "label_en": "that which is pure in an earthenware vessel is impure in all [other] vessels",
+    "locus": "Chullin.24b.10",
+    "daf": "24b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "inverse_purity",
+      "args": [
+       "keli_cheres",
+       "keli_shetef"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     15
+    ]
+   },
+   {
+    "id": "prop:p_tahor_bashear_tamei_bicheres",
+    "type": "prop",
+    "label_he": "טהור בכל הכלים -- טמא בכלי חרש",
+    "label_en": "that which is pure in all vessels is impure in an earthenware vessel",
+    "locus": "Chullin.24b.10",
+    "daf": "24b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "inverse_purity",
+      "args": [
+       "keli_shetef",
+       "keli_cheres"
+      ]
+     }
+    },
+    "skel": [
+     26,
+     38
+    ]
+   },
+   {
+    "id": "voice:mishna_tahor_bichli_cheres",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna tahor bichli cheres",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishna_tahor_bichli_cheres",
+    "target": "prop:p_tahor_bicheres_tamei_bashear",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_tahor_bichli_cheres",
+    "target": "prop:p_tahor_bashear_tamei_bicheres",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

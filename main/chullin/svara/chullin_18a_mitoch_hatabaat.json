@@ -1,0 +1,201 @@
+{
+ "sugya": "chullin_18a_mitoch_hatabaat",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.18a.11",
+  "end": "Chullin.18a.11"
+ },
+ "voices": [
+  {
+   "id": "tanna_matnitin_18a",
+   "kind": "mishnah",
+   "note": "the anonymous first tanna of the mishna at 18a.11"
+  },
+  {
+   "id": "r_yosei_brabbi_yehuda",
+   "kind": "tanna"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_tabaat_kula_kasher",
+   "gloss_en": "one who slaughters from within the ring and left a thread's breadth over the whole of it -- his slaughter is valid",
+   "content": {
+    "pred": "kasher",
+    "args": [
+     "shechita_mitoch_hatabaat_shiyer_chut_al_pnei_kula"
+    ]
+   },
+   "locus": "Chullin.18a.11",
+   "daf": "18a",
+   "sentenceId": 10
+  },
+  {
+   "id": "p_tabaat_ruba_kasher",
+   "gloss_en": "R' Yosei b'R' Yehuda says: a thread's breadth over its majority",
+   "content": {
+    "pred": "kasher",
+    "args": [
+     "shechita_mitoch_hatabaat_shiyer_chut_al_pnei_ruba"
+    ]
+   },
+   "locus": "Chullin.18a.11",
+   "daf": "18a",
+   "sentenceId": 10
+  }
+ ],
+ "commits": [
+  {
+   "holder": "tanna_matnitin_18a",
+   "prop": "p_tabaat_kula_kasher",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.18a.11",
+   "daf": "18a",
+   "sentenceId": 10
+  },
+  {
+   "holder": "r_yosei_brabbi_yehuda",
+   "prop": "p_tabaat_ruba_kasher",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.18a.11",
+   "daf": "18a",
+   "sentenceId": 10
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [
+  {
+   "id": "m_shiyur_hatabaat",
+   "topic": "shiur_shiyur_hatabaat",
+   "parties": [
+    "tanna_matnitin_18a",
+    "r_yosei_brabbi_yehuda"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_18a_mitoch_hatabaat.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_tabaat_kula_kasher",
+    "type": "prop",
+    "label_he": "השוחט מתוך הטבעת, ושייר בה מלא החוט על פני כולה -- שחיטתו כשרה",
+    "label_en": "one who slaughters from within the ring and left a thread's breadth over the whole of it -- his sla…",
+    "locus": "Chullin.18a.11",
+    "daf": "18a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "kasher",
+      "args": [
+       "shechita_mitoch_hatabaat_shiyer_chut_al_pnei_kula"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     41
+    ]
+   },
+   {
+    "id": "prop:p_tabaat_ruba_kasher",
+    "type": "prop",
+    "label_he": "רבי יוסי ברבי יהודה אומר: מלא חוט על פני רובה",
+    "label_en": "R' Yosei b'R' Yehuda says: a thread's breadth over its majority",
+    "locus": "Chullin.18a.11",
+    "daf": "18a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "kasher",
+      "args": [
+       "shechita_mitoch_hatabaat_shiyer_chut_al_pnei_ruba"
+      ]
+     }
+    },
+    "skel": [
+     51,
+     86
+    ]
+   },
+   {
+    "id": "dispute:m_shiyur_hatabaat",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "shiur shiyur hatabaat",
+    "data": {
+     "topic": "shiur_shiyur_hatabaat"
+    }
+   },
+   {
+    "id": "voice:r_yosei_brabbi_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei brabbi yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:tanna_matnitin_18a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna matnitin 18a",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_shiyur_hatabaat",
+    "target": "voice:tanna_matnitin_18a",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_shiyur_hatabaat",
+    "target": "voice:r_yosei_brabbi_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:tanna_matnitin_18a",
+    "target": "prop:p_tabaat_kula_kasher",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei_brabbi_yehuda",
+    "target": "prop:p_tabaat_ruba_kasher",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

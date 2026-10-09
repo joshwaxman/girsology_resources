@@ -1,0 +1,204 @@
+{
+ "sugya": "chullin_138a_gazaz_umachar",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.138a.10",
+  "end": "Chullin.138a.10"
+ },
+ "voices": [
+  {
+   "id": "rav_chisda",
+   "kind": "amora"
+  },
+  {
+   "id": "r_natan_bar_hoshaya",
+   "kind": "amora"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_rav_chisda_chayav",
+   "gloss_en": "he sheared and sold the first -- Rav Chisda: obligated",
+   "content": {
+    "pred": "din",
+    "args": [
+     "gazaz_umachar_rishona",
+     "chayav"
+    ]
+   },
+   "locus": "Chullin.138a.10",
+   "daf": "138a",
+   "sentenceId": 9
+  },
+  {
+   "id": "p_rnbh_patur",
+   "gloss_en": "R' Natan bar Hoshaya: exempt",
+   "content": {
+    "pred": "din",
+    "args": [
+     "gazaz_umachar_rishona",
+     "patur"
+    ]
+   },
+   "locus": "Chullin.138a.10",
+   "daf": "138a",
+   "sentenceId": 9
+  }
+ ],
+ "commits": [
+  {
+   "holder": "rav_chisda",
+   "prop": "p_rav_chisda_chayav",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.138a.10",
+   "daf": "138a",
+   "sentenceId": 9
+  },
+  {
+   "holder": "r_natan_bar_hoshaya",
+   "prop": "p_rnbh_patur",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.138a.10",
+   "daf": "138a",
+   "sentenceId": 9
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [
+  {
+   "id": "m_gazaz_umachar",
+   "topic": "din_gazaz_umachar_rishona",
+   "parties": [
+    "rav_chisda",
+    "r_natan_bar_hoshaya"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_138a_gazaz_umachar.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_rav_chisda_chayav",
+    "type": "prop",
+    "label_he": "גזז ומכר ראשונה -- רב חסדא אמר: חייב",
+    "label_en": "he sheared and sold the first -- Rav Chisda: obligated",
+    "locus": "Chullin.138a.10",
+    "daf": "138a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "gazaz_umachar_rishona",
+       "chayav"
+      ]
+     }
+    },
+    "skel": [
+     20,
+     33
+    ]
+   },
+   {
+    "id": "prop:p_rnbh_patur",
+    "type": "prop",
+    "label_he": "רבי נתן בר הושעיא אמר: פטור",
+    "label_en": "R' Natan bar Hoshaya: exempt",
+    "locus": "Chullin.138a.10",
+    "daf": "138a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "gazaz_umachar_rishona",
+       "patur"
+      ]
+     }
+    },
+    "skel": [
+     46,
+     67
+    ]
+   },
+   {
+    "id": "dispute:m_gazaz_umachar",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "din gazaz umachar rishona",
+    "data": {
+     "topic": "din_gazaz_umachar_rishona"
+    }
+   },
+   {
+    "id": "voice:r_natan_bar_hoshaya",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r natan bar hoshaya",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_chisda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav chisda",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_gazaz_umachar",
+    "target": "voice:rav_chisda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_gazaz_umachar",
+    "target": "voice:r_natan_bar_hoshaya",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:rav_chisda",
+    "target": "prop:p_rav_chisda_chayav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_natan_bar_hoshaya",
+    "target": "prop:p_rnbh_patur",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

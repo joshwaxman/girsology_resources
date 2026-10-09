@@ -1,0 +1,162 @@
+{
+ "sugya": "chullin_25a_tahor_bichlei_etz",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.25a.11",
+  "end": "Chullin.25a.11"
+ },
+ "voices": [
+  {
+   "id": "mishna_tahor_bichlei_etz",
+   "kind": "mishnah",
+   "note": "the anonymous mishna at 25a.11"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_tahor_beetz_tamei_bematechet",
+   "gloss_en": "that which is pure in wooden vessels is impure in metal vessels",
+   "content": {
+    "pred": "inverse_purity",
+    "args": [
+     "kli_etz",
+     "kli_matechet"
+    ]
+   },
+   "locus": "Chullin.25a.11",
+   "daf": "25a",
+   "sentenceId": 10
+  },
+  {
+   "id": "p_tahor_bematechet_tamei_beetz",
+   "gloss_en": "that which is pure in metal vessels is impure in wooden vessels",
+   "content": {
+    "pred": "inverse_purity",
+    "args": [
+     "kli_matechet",
+     "kli_etz"
+    ]
+   },
+   "locus": "Chullin.25a.11",
+   "daf": "25a",
+   "sentenceId": 10
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishna_tahor_bichlei_etz",
+   "prop": "p_tahor_beetz_tamei_bematechet",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.25a.11",
+   "daf": "25a",
+   "sentenceId": 10
+  },
+  {
+   "holder": "mishna_tahor_bichlei_etz",
+   "prop": "p_tahor_bematechet_tamei_beetz",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.25a.11",
+   "daf": "25a",
+   "sentenceId": 10
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_25a_tahor_bichlei_etz.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_tahor_beetz_tamei_bematechet",
+    "type": "prop",
+    "label_he": "טהור בכלי עץ -- טמא בכלי מתכות",
+    "label_en": "that which is pure in wooden vessels is impure in metal vessels",
+    "locus": "Chullin.25a.11",
+    "daf": "25a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "inverse_purity",
+      "args": [
+       "kli_etz",
+       "kli_matechet"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     14
+    ]
+   },
+   {
+    "id": "prop:p_tahor_bematechet_tamei_beetz",
+    "type": "prop",
+    "label_he": "טהור בכלי מתכות -- טמא בכלי עץ",
+    "label_en": "that which is pure in metal vessels is impure in wooden vessels",
+    "locus": "Chullin.25a.11",
+    "daf": "25a",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "inverse_purity",
+      "args": [
+       "kli_matechet",
+       "kli_etz"
+      ]
+     }
+    },
+    "skel": [
+     26,
+     39
+    ]
+   },
+   {
+    "id": "voice:mishna_tahor_bichlei_etz",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna tahor bichlei etz",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishna_tahor_bichlei_etz",
+    "target": "prop:p_tahor_beetz_tamei_bematechet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_tahor_bichlei_etz",
+    "target": "prop:p_tahor_bematechet_tamei_beetz",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

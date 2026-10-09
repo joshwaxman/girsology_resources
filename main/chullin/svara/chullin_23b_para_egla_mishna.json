@@ -1,0 +1,161 @@
+{
+ "sugya": "chullin_23b_para_egla_mishna",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.23b.11",
+  "end": "Chullin.23b.11"
+ },
+ "voices": [
+  {
+   "id": "mishna_23b",
+   "kind": "mishnah"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_kasher_bapara_pasul_baegla",
+   "gloss_en": "[that which is] fit in the red heifer is unfit in the heifer whose neck is broken",
+   "content": {
+    "pred": "exists_fit_unfit",
+    "args": [
+     "para",
+     "egla"
+    ]
+   },
+   "locus": "Chullin.23b.11",
+   "daf": "23b",
+   "sentenceId": 10
+  },
+  {
+   "id": "p_kasher_baegla_pasul_bapara",
+   "gloss_en": "[that which is] fit in the heifer whose neck is broken is unfit in the red heifer",
+   "content": {
+    "pred": "exists_fit_unfit",
+    "args": [
+     "egla",
+     "para"
+    ]
+   },
+   "locus": "Chullin.23b.11",
+   "daf": "23b",
+   "sentenceId": 10
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishna_23b",
+   "prop": "p_kasher_bapara_pasul_baegla",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.23b.11",
+   "daf": "23b",
+   "sentenceId": 10
+  },
+  {
+   "holder": "mishna_23b",
+   "prop": "p_kasher_baegla_pasul_bapara",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.23b.11",
+   "daf": "23b",
+   "sentenceId": 10
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_23b_para_egla_mishna.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_kasher_bapara_pasul_baegla",
+    "type": "prop",
+    "label_he": "כשר בפרה - פסול בעגלה",
+    "label_en": "[that which is] fit in the red heifer is unfit in the heifer whose neck is broken",
+    "locus": "Chullin.23b.11",
+    "daf": "23b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "exists_fit_unfit",
+      "args": [
+       "para",
+       "egla"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     20
+    ]
+   },
+   {
+    "id": "prop:p_kasher_baegla_pasul_bapara",
+    "type": "prop",
+    "label_he": "כשר בעגלה - פסול בפרה",
+    "label_en": "[that which is] fit in the heifer whose neck is broken is unfit in the red heifer",
+    "locus": "Chullin.23b.11",
+    "daf": "23b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "exists_fit_unfit",
+      "args": [
+       "egla",
+       "para"
+      ]
+     }
+    },
+    "skel": [
+     20,
+     36
+    ]
+   },
+   {
+    "id": "voice:mishna_23b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna 23b",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishna_23b",
+    "target": "prop:p_kasher_bapara_pasul_baegla",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_23b",
+    "target": "prop:p_kasher_baegla_pasul_bapara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

@@ -1,0 +1,162 @@
+{
+ "sugya": "chullin_25b_shkedim_marim",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.25b.5",
+  "end": "Chullin.25b.5"
+ },
+ "voices": [
+  {
+   "id": "matnitin_25b",
+   "kind": "mishnah",
+   "note": "the anonymous tanna of the mishna at 25b.5"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_chayav_marim_patur_metukim",
+   "gloss_en": "what is obligated in bitter almonds is exempt in sweet almonds",
+   "content": {
+    "pred": "inverse_obligation",
+    "args": [
+     "shkedim_marim",
+     "shkedim_metukim"
+    ]
+   },
+   "locus": "Chullin.25b.5",
+   "daf": "25b",
+   "sentenceId": 4
+  },
+  {
+   "id": "p_chayav_metukim_patur_marim",
+   "gloss_en": "what is obligated in sweet almonds is exempt in bitter almonds",
+   "content": {
+    "pred": "inverse_obligation",
+    "args": [
+     "shkedim_metukim",
+     "shkedim_marim"
+    ]
+   },
+   "locus": "Chullin.25b.5",
+   "daf": "25b",
+   "sentenceId": 4
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_25b",
+   "prop": "p_chayav_marim_patur_metukim",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.25b.5",
+   "daf": "25b",
+   "sentenceId": 4
+  },
+  {
+   "holder": "matnitin_25b",
+   "prop": "p_chayav_metukim_patur_marim",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.25b.5",
+   "daf": "25b",
+   "sentenceId": 4
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_25b_shkedim_marim.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chayav_marim_patur_metukim",
+    "type": "prop",
+    "label_he": "החייב בשקדים המרים פטור במתוקים",
+    "label_en": "what is obligated in bitter almonds is exempt in sweet almonds",
+    "locus": "Chullin.25b.5",
+    "daf": "25b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "inverse_obligation",
+      "args": [
+       "shkedim_marim",
+       "shkedim_metukim"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     31
+    ]
+   },
+   {
+    "id": "prop:p_chayav_metukim_patur_marim",
+    "type": "prop",
+    "label_he": "החייב במתוקים פטור במרים",
+    "label_en": "what is obligated in sweet almonds is exempt in bitter almonds",
+    "locus": "Chullin.25b.5",
+    "daf": "25b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "inverse_obligation",
+      "args": [
+       "shkedim_metukim",
+       "shkedim_marim"
+      ]
+     }
+    },
+    "skel": [
+     31,
+     52
+    ]
+   },
+   {
+    "id": "voice:matnitin_25b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin 25b",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_25b",
+    "target": "prop:p_chayav_marim_patur_metukim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:matnitin_25b",
+    "target": "prop:p_chayav_metukim_patur_marim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

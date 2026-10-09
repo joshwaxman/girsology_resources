@@ -1,0 +1,1125 @@
+{
+ "sugya": "chullin_44a_pesukat_hagargeret",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.42a.3",
+  "end": "Chullin.44b.1"
+ },
+ "voices": [
+  {
+   "id": "mishna_eilu_tereifot",
+   "kind": "mishnah",
+   "note": "the mishnah אלו טרפות (42a.3), cited as lemma at 44a.16"
+  },
+  {
+   "id": "baraita_pesukat_hagargeret",
+   "kind": "baraita",
+   "note": "the תנא at 44a.16: כמה פסוקת הגרגרת? ברובה"
+  },
+  {
+   "id": "rav",
+   "kind": "amora"
+  },
+  {
+   "id": "ika_damri_44b",
+   "kind": "stam",
+   "note": "the ואמרי לה tradition of Rav's answer at 44b.1"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_pesukat_hagargeret",
+   "gloss_en": "the mishnah: [among the tereifot is] a severed windpipe",
+   "content": {
+    "pred": "din",
+    "args": [
+     "pesukat_hagargeret",
+     "tereifa"
+    ]
+   },
+   "locus": "Chullin.42a.3",
+   "daf": "42a",
+   "sentenceId": 2
+  },
+  {
+   "id": "p_baraita_berubah",
+   "gloss_en": "the baraita: how much is 'a severed windpipe'? -- [cut] in its majority",
+   "content": {
+    "pred": "shiur",
+    "args": [
+     "pesukat_hagargeret",
+     "rov_gargeret"
+    ]
+   },
+   "locus": "Chullin.44a.16",
+   "daf": "44a",
+   "sentenceId": 15
+  },
+  {
+   "id": "p_rav_rov_oviyah",
+   "gloss_en": "Rav: [its majority is] the majority of its thickness",
+   "content": {
+    "pred": "reading_of",
+    "args": [
+     "rov_gargeret",
+     "rov_oviyah"
+    ]
+   },
+   "locus": "Chullin.44b.1",
+   "daf": "44b",
+   "sentenceId": 0
+  },
+  {
+   "id": "p_rav_rov_chalalah",
+   "gloss_en": "and some report [Rav as saying]: the majority of its cavity",
+   "content": {
+    "pred": "reading_of",
+    "args": [
+     "rov_gargeret",
+     "rov_chalalah"
+    ]
+   },
+   "locus": "Chullin.44b.1",
+   "daf": "44b",
+   "sentenceId": 0
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishna_eilu_tereifot",
+   "prop": "p_pesukat_hagargeret",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.42a.3",
+   "daf": "42a",
+   "sentenceId": 2
+  },
+  {
+   "holder": "baraita_pesukat_hagargeret",
+   "prop": "p_baraita_berubah",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.44a.16",
+   "daf": "44a",
+   "sentenceId": 15
+  },
+  {
+   "holder": "rav",
+   "prop": "p_rav_rov_oviyah",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.44b.1",
+   "daf": "44b",
+   "sentenceId": 0
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [
+  {
+   "reporter": "ika_damri_44b",
+   "subject": "rav",
+   "prop": "p_rav_rov_chalalah",
+   "locus": "Chullin.44b.1",
+   "daf": "44b",
+   "sentenceId": 0
+  }
+ ],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [
+  {
+   "id": "split_rav",
+   "kind": "attribution",
+   "subject": "rav",
+   "label_en": "What does rav hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(rav, P1, P2)",
+   "verdict": "answers",
+   "answers": [
+    {
+     "P1": "reading_of(rov_gargeret,rov_chalalah)",
+     "P2": "reading_of(rov_gargeret,rov_oviyah)"
+    },
+    {
+     "P1": "reading_of(rov_gargeret,rov_oviyah)",
+     "P2": "reading_of(rov_gargeret,rov_chalalah)"
+    }
+   ],
+   "tree": {
+    "node": "query",
+    "children": [
+     {
+      "node": "split_attribution(rav,reading_of(rov_gargeret,rov_chalalah),reading_of(rov_gargeret,rov_oviyah))",
+      "children": [
+       {
+        "node": "holds_per(rav,reading_of(rov_gargeret,rov_chalalah),chain(ika_damri_44b))",
+        "children": [
+         {
+          "node": "commit(ika_damri_44b,holds(rav,reading_of(rov_gargeret,rov_chalalah)),assert,actual)"
+         }
+        ]
+       },
+       {
+        "node": "holds_per(rav,reading_of(rov_gargeret,rov_oviyah),direct)",
+        "children": [
+         {
+          "node": "holds(rav,reading_of(rov_gargeret,rov_oviyah))",
+          "children": [
+           {
+            "node": "commit(rav,reading_of(rov_gargeret,rov_oviyah),assert,actual)"
+           },
+           {
+            "node": "not retracted(rav,reading_of(rov_gargeret,rov_oviyah))",
+            "children": [
+             {
+              "node": "not commit(rav,reading_of(rov_gargeret,rov_oviyah),retract,actual)"
+             }
+            ]
+           },
+           {
+            "node": "not refuted_content(reading_of(rov_gargeret,rov_oviyah))",
+            "children": [
+             {
+              "node": "not teyuvta_refutes(reading_of(rov_gargeret,rov_oviyah),A2 | {A2 ∉ [ctl_ch_blunted,ctl_ch_kv_blunted,ctl_ch_kv_live,ctl_ch_live_teyuvta,ctl_challenge_never]})",
+              "children": [
+               {
+                "node": "not challenge(A2 | {A2 ∉ [ctl_ch_blunted,ctl_ch_kv_blunted,ctl_ch_kv_live,ctl_ch_live_teyuvta,ctl_challenge_never]},teyuvta,reading_of(rov_gargeret,rov_oviyah))"
+               }
+              ]
+             },
+             {
+              "node": "not teyuvta_refutes(reading_of(rov_gargeret,rov_oviyah),ctl_ch_blunted)",
+              "children": [
+               {
+                "node": "not challenge(ctl_ch_blunted,teyuvta,reading_of(rov_gargeret,rov_oviyah))"
+               }
+              ]
+             },
+             {
+              "node": "not teyuvta_refutes(reading_of(rov_gargeret,rov_oviyah),ctl_ch_kv_blunted)",
+              "children": [
+               {
+                "node": "not challenge(ctl_ch_kv_blunted,teyuvta,reading_of(rov_gargeret,rov_oviyah))"
+               }
+              ]
+             },
+             {
+              "node": "not teyuvta_refutes(reading_of(rov_gargeret,rov_oviyah),ctl_ch_kv_live)",
+              "children": [
+               {
+                "node": "not challenge(ctl_ch_kv_live,teyuvta,reading_of(rov_gargeret,rov_oviyah))"
+               }
+              ]
+             },
+             {
+              "node": "not teyuvta_refutes(reading_of(rov_gargeret,rov_oviyah),ctl_ch_live_teyuvta)",
+              "children": [
+               {
+                "node": "not challenge(ctl_ch_live_teyuvta,teyuvta,reading_of(rov_gargeret,rov_oviyah))"
+               }
+              ]
+             },
+             {
+              "node": "not teyuvta_refutes(reading_of(rov_gargeret,rov_oviyah),ctl_challenge_never)",
+              "children": [
+               {
+                "node": "not challenge(ctl_challenge_never,teyuvta,reading_of(rov_gargeret,rov_oviyah))"
+               }
+              ]
+             }
+            ]
+           },
+           {
+            "node": "not content_under_objection(reading_of(rov_gargeret,rov_oviyah))",
+            "children": [
+             {
+              "node": "not objection_refutes(reading_of(rov_gargeret,rov_oviyah),Q1)",
+              "children": [
+               {
+                "node": "not objection_against(reading_of(rov_gargeret,rov_oviyah),Q1)"
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "incompatible(reading_of(rov_gargeret,rov_chalalah),reading_of(rov_gargeret,rov_oviyah))"
+       }
+      ]
+     },
+     {
+      "node": "o_nmr_check",
+      "children": [
+       {
+        "node": "not o_chk_1",
+        "children": [
+         {
+          "node": "not unjustified_collapse(B | {B ∉ [ctl_frame_c1,ctl_frame_c2,ctl_frame_c3]})",
+          "children": [
+           {
+            "node": "not collapses(B | {B ∉ [ctl_frame_c1,ctl_frame_c2,ctl_frame_c3]},D2,E2)",
+            "children": [
+             {
+              "node": "not dispute(B | {B ∉ [ctl_frame_c1,ctl_frame_c2,ctl_frame_c3]},C)"
+             },
+             {
+              "node": "not dispute(B | {B ∉ [ctl_frame_c1,ctl_frame_c2,ctl_frame_c3]},D)"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "node": "not unjustified_collapse(ctl_frame_c1)",
+          "children": [
+           {
+            "node": "not collapses(ctl_frame_c1,R1 | {R1 ∉ [ctl_col_a,ctl_col_b]},F2)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c1,E | {E ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "dispute(ctl_frame_c1,ctl_topic_c1)"
+             },
+             {
+              "node": "not party(ctl_frame_c1,R1 | {R1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c1,F | {F ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "not party(ctl_frame_c1,R1 | {R1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c1,ctl_col_a,S1 | {S1 ∉ [ctl_col_a,ctl_col_b]})",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c1,G | {G ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "party(ctl_frame_c1,ctl_col_a)"
+             },
+             {
+              "node": "not party(ctl_frame_c1,S1 | {S1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c1,H | {H ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "not party(ctl_frame_c1,S1 | {S1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c1,ctl_col_a,ctl_col_a)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c1,I | {I ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c1,J | {J ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c1,ctl_col_a,ctl_col_b)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c1,K | {K ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "party(ctl_frame_c1,ctl_col_b)"
+             },
+             {
+              "node": "not position_identity(ctl_frame_c1,ctl_col_a,ctl_col_b)"
+             },
+             {
+              "node": "not dispute(ctl_frame_c1,L | {L ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "not position_identity(ctl_frame_c1,ctl_col_b,ctl_col_a)"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c1,ctl_col_b,T1 | {T1 ∉ [ctl_col_a,ctl_col_b]})",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c1,M | {M ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "not party(ctl_frame_c1,T1 | {T1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c1,N | {N ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "not party(ctl_frame_c1,T1 | {T1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c1,ctl_col_b,ctl_col_a)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c1,O | {O ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "proved(not position_identity(ctl_frame_c1,ctl_col_b,ctl_col_a))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c1,P | {P ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_a))"
+             },
+             {
+              "node": "proved(not position_identity(ctl_frame_c1,ctl_col_a,ctl_col_b))"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c1,ctl_col_b,ctl_col_b)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c1,Q | {Q ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c1,R | {R ∉ [ctl_topic_c1]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c1,ctl_topic_c1))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c1,ctl_col_b))"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "node": "not unjustified_collapse(ctl_frame_c2)",
+          "children": [
+           {
+            "node": "not collapses(ctl_frame_c2,U1 | {U1 ∉ [ctl_col_a,ctl_col_b]},G2)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c2,S | {S ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "dispute(ctl_frame_c2,ctl_topic_c2)"
+             },
+             {
+              "node": "not party(ctl_frame_c2,U1 | {U1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c2,T | {T ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "not party(ctl_frame_c2,U1 | {U1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c2,ctl_col_a,V1 | {V1 ∉ [ctl_col_a,ctl_col_b]})",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c2,U | {U ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "party(ctl_frame_c2,ctl_col_a)"
+             },
+             {
+              "node": "not party(ctl_frame_c2,V1 | {V1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c2,V | {V ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "not party(ctl_frame_c2,V1 | {V1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c2,ctl_col_a,ctl_col_a)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c2,W | {W ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c2,X | {X ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c2,ctl_col_a,ctl_col_b)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c2,Y | {Y ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "party(ctl_frame_c2,ctl_col_b)"
+             },
+             {
+              "node": "not position_identity(ctl_frame_c2,ctl_col_a,ctl_col_b)",
+              "children": [
+               {
+                "node": "not ctl_col_assumed",
+                "children": [
+                 {
+                  "node": "ctl_col_concl",
+                  "children": [
+                   {
+                    "node": "chs(not ctl_col_assumed)"
+                   }
+                  ]
+                 }
+                ]
+               }
+              ]
+             },
+             {
+              "node": "not dispute(ctl_frame_c2,Z | {Z ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "not position_identity(ctl_frame_c2,ctl_col_b,ctl_col_a)"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c2,ctl_col_b,W1 | {W1 ∉ [ctl_col_a,ctl_col_b]})",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c2,A1 | {A1 ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "not party(ctl_frame_c2,W1 | {W1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c2,B1 | {B1 ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "not party(ctl_frame_c2,W1 | {W1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c2,ctl_col_b,ctl_col_a)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c2,C1 | {C1 ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "proved(not position_identity(ctl_frame_c2,ctl_col_b,ctl_col_a))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c2,D1 | {D1 ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_a))"
+             },
+             {
+              "node": "proved(not position_identity(ctl_frame_c2,ctl_col_a,ctl_col_b))"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c2,ctl_col_b,ctl_col_b)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c2,E1 | {E1 ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c2,F1 | {F1 ∉ [ctl_topic_c2]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c2,ctl_topic_c2))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c2,ctl_col_b))"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "node": "not unjustified_collapse(ctl_frame_c3)",
+          "children": [
+           {
+            "node": "not collapses(ctl_frame_c3,X1 | {X1 ∉ [ctl_col_a,ctl_col_b]},H2)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c3,G1 | {G1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "dispute(ctl_frame_c3,ctl_topic_c3)"
+             },
+             {
+              "node": "not party(ctl_frame_c3,X1 | {X1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c3,H1 | {H1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "not party(ctl_frame_c3,X1 | {X1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c3,ctl_col_a,Y1 | {Y1 ∉ [ctl_col_a,ctl_col_b]})",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c3,I1 | {I1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "party(ctl_frame_c3,ctl_col_a)"
+             },
+             {
+              "node": "not party(ctl_frame_c3,Y1 | {Y1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c3,J1 | {J1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_a))"
+             },
+             {
+              "node": "not party(ctl_frame_c3,Y1 | {Y1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "not collapses(ctl_frame_c3,ctl_col_a,ctl_col_a)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c3,K1 | {K1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_a))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c3,L1 | {L1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_a))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_a))"
+             }
+            ]
+           },
+           {
+            "node": "collapses(ctl_frame_c3,ctl_col_a,ctl_col_b)",
+            "children": [
+             {
+              "node": "dispute(ctl_frame_c3,ctl_topic_c3)"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_a))"
+             },
+             {
+              "node": "party(ctl_frame_c3,ctl_col_b)"
+             },
+             {
+              "node": "position_identity(ctl_frame_c3,ctl_col_a,ctl_col_b)"
+             }
+            ]
+           },
+           {
+            "node": "redundancy_justified(ctl_frame_c3)"
+           },
+           {
+            "node": "not collapses(ctl_frame_c3,ctl_col_b,Z1 | {Z1 ∉ [ctl_col_a,ctl_col_b]})",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c3,M1 | {M1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_b))"
+             },
+             {
+              "node": "not party(ctl_frame_c3,Z1 | {Z1 ∉ [ctl_col_a,ctl_col_b]})"
+             },
+             {
+              "node": "not dispute(ctl_frame_c3,N1 | {N1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_b))"
+             },
+             {
+              "node": "not party(ctl_frame_c3,Z1 | {Z1 ∉ [ctl_col_a,ctl_col_b]})"
+             }
+            ]
+           },
+           {
+            "node": "collapses(ctl_frame_c3,ctl_col_b,ctl_col_a)",
+            "children": [
+             {
+              "node": "dispute(ctl_frame_c3,ctl_topic_c3)"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_a))"
+             },
+             {
+              "node": "proved(position_identity(ctl_frame_c3,ctl_col_a,ctl_col_b))"
+             }
+            ]
+           },
+           {
+            "node": "proved(redundancy_justified(ctl_frame_c3))"
+           },
+           {
+            "node": "not collapses(ctl_frame_c3,ctl_col_b,ctl_col_b)",
+            "children": [
+             {
+              "node": "not dispute(ctl_frame_c3,O1 | {O1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_b))"
+             },
+             {
+              "node": "not dispute(ctl_frame_c3,P1 | {P1 ∉ [ctl_topic_c3]})"
+             },
+             {
+              "node": "proved(dispute(ctl_frame_c3,ctl_topic_c3))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_b))"
+             },
+             {
+              "node": "proved(party(ctl_frame_c3,ctl_col_b))"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_2",
+        "children": [
+         {
+          "node": "not verdict(B2 | {B2 ∉ [ctl_q_teiku]},teiku)"
+         },
+         {
+          "node": "verdict(ctl_q_teiku,teiku)"
+         },
+         {
+          "node": "not permitted(ctl_q_teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_3",
+        "children": [
+         {
+          "node": "not verdict(C2 | {C2 ∉ [ctl_q_teiku]},teiku)"
+         },
+         {
+          "node": "proved(verdict(ctl_q_teiku,teiku))"
+         },
+         {
+          "node": "not ¬ permitted(ctl_q_teiku)"
+         }
+        ]
+       },
+       {
+        "node": "not o_chk_4",
+        "children": [
+         {
+          "node": "not ¬ permitted(A | {A ∉ [ctl_q_no]})"
+         },
+         {
+          "node": "¬ permitted(ctl_q_no)"
+         },
+         {
+          "node": "not permitted(ctl_q_no)."
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "kb": "svara/chullin_44a_pesukat_hagargeret.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_pesukat_hagargeret",
+    "type": "prop",
+    "label_he": "ופסוקת הגרגרת",
+    "label_en": "the mishnah: [among the tereifot is] a severed windpipe",
+    "locus": "Chullin.42a.3",
+    "daf": "42a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "pesukat_hagargeret",
+       "tereifa"
+      ]
+     }
+    },
+    "skel": [
+     27,
+     39
+    ]
+   },
+   {
+    "id": "prop:p_baraita_berubah",
+    "type": "prop",
+    "label_he": "כמה פסוקת הגרגרת? ברובה",
+    "label_en": "the baraita: how much is 'a severed windpipe'? -- [cut] in its majority",
+    "locus": "Chullin.44a.16",
+    "daf": "44a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "shiur",
+      "args": [
+       "pesukat_hagargeret",
+       "rov_gargeret"
+      ]
+     }
+    },
+    "skel": [
+     15,
+     34
+    ]
+   },
+   {
+    "id": "prop:p_rav_rov_oviyah",
+    "type": "prop",
+    "label_he": "רב אמר: רוב עוביה",
+    "label_en": "Rav: [its majority is] the majority of its thickness",
+    "locus": "Chullin.44b.1",
+    "daf": "44b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "rov_gargeret",
+       "rov_oviyah"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_rav_rov_chalalah",
+    "type": "prop",
+    "label_he": "ואמרי לה: רוב חללה",
+    "label_en": "and some report [Rav as saying]: the majority of its cavity",
+    "locus": "Chullin.44b.1",
+    "daf": "44b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "reading_of",
+      "args": [
+       "rov_gargeret",
+       "rov_chalalah"
+      ]
+     }
+    },
+    "skel": [
+     8,
+     22
+    ]
+   },
+   {
+    "id": "voice:baraita_pesukat_hagargeret",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita pesukat hagargeret",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:ika_damri_44b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "ika damri 44b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:mishna_eilu_tereifot",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna eilu tereifot",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:rav",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishna_eilu_tereifot",
+    "target": "prop:p_pesukat_hagargeret",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_pesukat_hagargeret",
+    "target": "prop:p_baraita_berubah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav",
+    "target": "prop:p_rav_rov_oviyah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:ika_damri_44b",
+    "target": "prop:p_rav_rov_chalalah",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rav"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

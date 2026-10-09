@@ -1,0 +1,397 @@
+{
+ "sugya": "chullin_75b_hainu_tanna_kama_shezuri",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.74a.17",
+  "end": "Chullin.75b.8"
+ },
+ "voices": [
+  {
+   "id": "chachamim",
+   "kind": "collective",
+   "note": "וחכמים אומרים (mishna, 74a.17) -- the Gemara's 'תנא קמא' at 75b.8"
+  },
+  {
+   "id": "r_shimon_shezuri",
+   "kind": "tanna"
+  },
+  {
+   "id": "rav_kahana",
+   "kind": "amora"
+  },
+  {
+   "id": "stam_75b_shezuri",
+   "kind": "stam",
+   "note": "the היינו תנא קמא question"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_chachamim_shechitat_imo_metaharto",
+   "gloss_en": "the Sages: [a live nine-month fetus found in a slaughtered animal] -- the slaughter of its mother renders it pure",
+   "content": {
+    "pred": "din",
+    "args": [
+     "ben_tisha_chai_bishchutah",
+     "shechitat_imo_metaharto"
+    ]
+   },
+   "locus": "Chullin.74a.17",
+   "daf": "74a",
+   "sentenceId": 16
+  },
+  {
+   "id": "p_rss_afilu_choresh",
+   "gloss_en": "R' Shimon Shezuri: even if it is five years old and ploughing in the field, the slaughter of its mother renders it pure",
+   "content": {
+    "pred": "din",
+    "args": [
+     "ben_tisha_chai_ben_chamesh_shanim",
+     "shechitat_imo_metaharto"
+    ]
+   },
+   "locus": "Chullin.74b.1",
+   "daf": "74b",
+   "sentenceId": 0
+  },
+  {
+   "id": "p_rss_hainu_tk",
+   "gloss_en": "the stam: [R' Shimon Shezuri's view] is [that of] the first tanna",
+   "content": {
+    "pred": "collapse_of",
+    "args": [
+     "r_shimon_shezuri",
+     "chachamim"
+    ]
+   },
+   "locus": "Chullin.75b.8",
+   "daf": "75b",
+   "sentenceId": 7
+  },
+  {
+   "id": "p_nafka_mina_hifris",
+   "gloss_en": "Rav Kahana: [a case where] it stood (hoofed) upon the ground is [the difference] between them",
+   "content": {
+    "pred": "nafka_mina",
+    "args": [
+     "m_rss_tk_75b",
+     "hifris_al_gabei_karka"
+    ]
+   },
+   "locus": "Chullin.75b.8",
+   "daf": "75b",
+   "sentenceId": 7
+  }
+ ],
+ "commits": [
+  {
+   "holder": "chachamim",
+   "prop": "p_chachamim_shechitat_imo_metaharto",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.74a.17",
+   "daf": "74a",
+   "sentenceId": 16
+  },
+  {
+   "holder": "r_shimon_shezuri",
+   "prop": "p_rss_afilu_choresh",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.74b.1",
+   "daf": "74b",
+   "sentenceId": 0
+  },
+  {
+   "holder": "stam_75b_shezuri",
+   "prop": "p_rss_hainu_tk",
+   "stance": "entertain",
+   "ctx": "hyp(h_rss_hainu_tk)",
+   "locus": "Chullin.75b.8",
+   "daf": "75b",
+   "sentenceId": 7
+  },
+  {
+   "holder": "rav_kahana",
+   "prop": "p_nafka_mina_hifris",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.75b.8",
+   "daf": "75b",
+   "sentenceId": 7
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [
+  {
+   "id": "m_rss_tk_75b",
+   "topic": "ben_pekua_rss_tanna_kama",
+   "parties": [
+    "chachamim",
+    "r_shimon_shezuri"
+   ]
+  }
+ ],
+ "hypotheses": [
+  {
+   "id": "h_rss_hainu_tk",
+   "assumes": "p_rss_hainu_tk",
+   "verdict": "reductio",
+   "opened_by": "stam_75b_shezuri",
+   "discharge_locus": "Chullin.75b.8",
+   "discharge_concludes": "p_nafka_mina_hifris",
+   "entails_identity": {
+    "frame": "m_rss_tk_75b",
+    "v1": "chachamim",
+    "v2": "r_shimon_shezuri"
+   },
+   "quarantined": [
+    "p_rss_hainu_tk"
+   ],
+   "locus": "Chullin.75b.8",
+   "daf": "75b",
+   "sentenceId": 7
+  }
+ ],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_75b_hainu_tanna_kama_shezuri.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chachamim_shechitat_imo_metaharto",
+    "type": "prop",
+    "label_he": "וחכמים אומרים: שחיטת אמו מטהרתו",
+    "label_en": "the Sages: [a live nine-month fetus found in a slaughtered animal] -- the slaughter of its mother r…",
+    "locus": "Chullin.74a.17",
+    "daf": "74a",
+    "sentenceId": 16,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "ben_tisha_chai_bishchutah",
+       "shechitat_imo_metaharto"
+      ]
+     }
+    },
+    "skel": [
+     47,
+     73
+    ]
+   },
+   {
+    "id": "prop:p_rss_afilu_choresh",
+    "type": "prop",
+    "label_he": "רבי שמעון שזורי אומר: אפילו בן חמש שנים וחורש בשדה -- שחיטת אמו מטהרתו",
+    "label_en": "R' Shimon Shezuri: even if it is five years old and ploughing in the field, the slaughter of its mo…",
+    "locus": "Chullin.74b.1",
+    "daf": "74b",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "ben_tisha_chai_ben_chamesh_shanim",
+       "shechitat_imo_metaharto"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     40
+    ]
+   },
+   {
+    "id": "prop:p_rss_hainu_tk",
+    "type": "prop",
+    "label_he": "היינו תנא קמא",
+    "label_en": "the stam: [R' Shimon Shezuri's view] is [that of] the first tanna",
+    "locus": "Chullin.75b.8",
+    "daf": "75b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "collapse_of",
+      "args": [
+       "r_shimon_shezuri",
+       "chachamim"
+      ]
+     }
+    },
+    "skel": [
+     25,
+     36
+    ]
+   },
+   {
+    "id": "prop:p_nafka_mina_hifris",
+    "type": "prop",
+    "label_he": "הפריס על גבי קרקע איכא בינייהו",
+    "label_en": "Rav Kahana: [a case where] it stood (hoofed) upon the ground is [the difference] between them",
+    "locus": "Chullin.75b.8",
+    "daf": "75b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "nafka_mina",
+      "args": [
+       "m_rss_tk_75b",
+       "hifris_al_gabei_karka"
+      ]
+     }
+    },
+    "skel": [
+     45,
+     70
+    ]
+   },
+   {
+    "id": "dispute:m_rss_tk_75b",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "ben pekua rss tanna kama",
+    "data": {
+     "topic": "ben_pekua_rss_tanna_kama"
+    }
+   },
+   {
+    "id": "hypothesis:h_rss_hainu_tk",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: the stam: [R' Shimon Shezuri's view] is [that of] the first tanna",
+    "locus": "Chullin.75b.8",
+    "daf": "75b",
+    "sentenceId": 7,
+    "data": {
+     "verdict": "reductio",
+     "opened_by": "stam_75b_shezuri",
+     "discharge_locus": "Chullin.75b.8"
+    }
+   },
+   {
+    "id": "voice:chachamim",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "chachamim",
+    "data": {
+     "kind": "collective"
+    }
+   },
+   {
+    "id": "voice:r_shimon_shezuri",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r shimon shezuri",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_kahana",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav kahana",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:stam_75b_shezuri",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 75b shezuri",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_rss_tk_75b",
+    "target": "voice:chachamim",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_rss_tk_75b",
+    "target": "voice:r_shimon_shezuri",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_rss_hainu_tk",
+    "target": "prop:p_rss_hainu_tk",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_rss_hainu_tk",
+    "target": "prop:p_nafka_mina_hifris",
+    "type": "discharge_concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_rss_hainu_tk",
+    "target": "dispute:m_rss_tk_75b",
+    "type": "would_collapse",
+    "regime": "structural",
+    "v1": "chachamim",
+    "v2": "r_shimon_shezuri"
+   },
+   {
+    "source": "voice:stam_75b_shezuri",
+    "target": "hypothesis:h_rss_hainu_tk",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_chachamim_shechitat_imo_metaharto",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon_shezuri",
+    "target": "prop:p_rss_afilu_choresh",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_75b_shezuri",
+    "target": "prop:p_rss_hainu_tk",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_rss_hainu_tk)"
+   },
+   {
+    "source": "voice:rav_kahana",
+    "target": "prop:p_nafka_mina_hifris",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}

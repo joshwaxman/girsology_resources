@@ -1,0 +1,170 @@
+{
+ "sugya": "chullin_121b_alal_shekinso",
+ "tractate": "Chullin",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Chullin.117b.9",
+  "end": "Chullin.121b.22"
+ },
+ "voices": [
+  {
+   "id": "r_yehuda",
+   "kind": "tanna"
+  },
+  {
+   "id": "rav_huna",
+   "kind": "amora"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_ry_alal_mechunas_chayav",
+   "gloss_en": "R' Yehuda: collected alal, if there is an olive-bulk of it in one place -- one is liable for it",
+   "content": {
+    "pred": "din",
+    "args": [
+     "alal_hamechunas_kezayit_bemakom_echad",
+     "chayav"
+    ]
+   },
+   "locus": "Chullin.117b.9",
+   "daf": "117b",
+   "sentenceId": 8
+  },
+  {
+   "id": "p_huna_vehu_shekinso",
+   "gloss_en": "Rav Huna: and that is when he collected it",
+   "content": {
+    "pred": "requires",
+    "args": [
+     "alal_hamechunas_kezayit_bemakom_echad",
+     "kinus_haalal"
+    ]
+   },
+   "locus": "Chullin.121b.22",
+   "daf": "121b",
+   "sentenceId": 21
+  }
+ ],
+ "commits": [
+  {
+   "holder": "r_yehuda",
+   "prop": "p_ry_alal_mechunas_chayav",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.117b.9",
+   "daf": "117b",
+   "sentenceId": 8
+  },
+  {
+   "holder": "rav_huna",
+   "prop": "p_huna_vehu_shekinso",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Chullin.121b.22",
+   "daf": "121b",
+   "sentenceId": 21
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/chullin_121b_alal_shekinso.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ry_alal_mechunas_chayav",
+    "type": "prop",
+    "label_he": "רבי יהודה אומר: האלל המכונס, אם יש בו כזית במקום אחד -- חייב עליו",
+    "label_en": "R' Yehuda: collected alal, if there is an olive-bulk of it in one place -- one is liable for it",
+    "locus": "Chullin.117b.9",
+    "daf": "117b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "alal_hamechunas_kezayit_bemakom_echad",
+       "chayav"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     40
+    ]
+   },
+   {
+    "id": "prop:p_huna_vehu_shekinso",
+    "type": "prop",
+    "label_he": "אמר רב הונא: והוא שכינסו",
+    "label_en": "Rav Huna: and that is when he collected it",
+    "locus": "Chullin.121b.22",
+    "daf": "121b",
+    "sentenceId": 21,
+    "data": {
+     "content": {
+      "pred": "requires",
+      "args": [
+       "alal_hamechunas_kezayit_bemakom_echad",
+       "kinus_haalal"
+      ]
+     }
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:rav_huna",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav huna",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ry_alal_mechunas_chayav",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_huna",
+    "target": "prop:p_huna_vehu_shekinso",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-0e5081c3dd3a8033"
+}
