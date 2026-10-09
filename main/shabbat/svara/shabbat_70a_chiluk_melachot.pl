@@ -90,12 +90,36 @@ prop(p_hena_achat_shigegat_shabbat).
 gloss(p_hena_achat_shigegat_shabbat, '\'many that are one\' is unwitting that it is Shabbat while knowing the labours').
 locus(p_hena_achat_shigegat_shabbat, 'Shabbat.70b.1').
 content(p_hena_achat_shigegat_shabbat, reading_of(hena_shehi_achat, shigegat_shabbat_uzdon_melachot)).
+prop(p_chayav_al_kol_melacha).
+gloss(p_chayav_al_kol_melacha, 'the mishnah\'s din (lemma at 70a.2): one who did many labours in one lapse of awareness is liable for each labour -- the division of labours whose source the sugya asks for').
+locus(p_chayav_al_kol_melacha, 'Shabbat.70a.2').
+content(p_chayav_al_kol_melacha, chayav(osah_kol_hamelachot_behelem_echad, chatat_al_kol_melacha)).
+prop(p_shmuel_ribta_mitot).
+gloss(p_shmuel_ribta_mitot, 'Shmuel\'s criterion: the doubled \'mot yumat\' multiplies deaths for a single desecration -- one desecration can carry many liabilities').
+locus(p_shmuel_ribta_mitot, 'Shabbat.70a.2').
+content(p_shmuel_ribta_mitot, teaches(mechaleleha_mot_yumat, mitot_harbe_al_chilul_echad)).
+prop(p_tnehu_inyan_leshogeg).
+gloss(p_tnehu_inyan_leshogeg, 'the bridge (the stam, answering הא במזיד כתיב): since the deliberate case is already written (Ex 35:2), the verse is applied to the unwitting one, and \'shall die\' is by money -- the multiple liabilities become multiple sin-offerings').
+locus(p_tnehu_inyan_leshogeg, 'Shabbat.70a.2').
+content(p_tnehu_inyan_leshogeg, applies_to(mechaleleha_mot_yumat, chilul_shabbat_beshogeg)).
+prop(p_ybrc_makor).
+gloss(p_ybrc_makor, 'R\' Yosei b\'R\' Chanina: R\' Yosei\'s \'sometimes once for all, sometimes for each\' is derived from the doubled forms of \'and does from one of these\' (Lev 4:2)').
+locus(p_ybrc_makor, 'Shabbat.70a.6').
+content(p_ybrc_makor, derived_from(peamim_achat_peamim_al_kol_achat, meachat_mehena)).
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
 % --------------------------------------------------------------------
 % Shabbat.70a.2
 commit(shmuel, source_of(chiluk_melachot, mechaleleha_mot_yumat), assert, actual).
+% Shabbat.70a.2 -- pass derivations-v1: אמר שמואל, אמר קרא ... התורה רבתה מיתות הרבה על חילול אחד
+commit(shmuel, teaches(mechaleleha_mot_yumat, mitot_harbe_al_chilul_echad), assert, actual).
+% Shabbat.70a.2 -- pass derivations-v1: the din whose source (חילוק מלאכות מנלן) Shmuel gives
+commit(shmuel, chayav(osah_kol_hamelachot_behelem_echad, chatat_al_kol_melacha), assert, actual).
+% Shabbat.70a.2 -- pass derivations-v1: the unmarked answer to the unmarked האי במזיד כתיב
+commit(stam_70a, applies_to(mechaleleha_mot_yumat, chilul_shabbat_beshogeg), assert, actual).
+% Shabbat.70a.6 -- pass derivations-v1: מאי טעמא דרבי יוסי
+commit(r_yosei_berabbi_chanina, derived_from(peamim_achat_peamim_al_kol_achat, meachat_mehena), assert, actual).
 % Shabbat.70a.3 -- דתניא, רבי נתן אומר
 commit(r_natan, teaches(eleh_hadevarim, lamed_tet_melachot_misinai), assert, actual).
 % Shabbat.70a.4
@@ -191,3 +215,25 @@ support(teaches(meachat_mehena, peamim_achat_peamim_al_kol_achat), s_mai_taama_r
 support_kind(s_mai_taama_r_yosei, svara).
 support_by(s_mai_taama_r_yosei, r_yosei_berabbi_chanina).
 support_source(s_mai_taama_r_yosei, p_ahat_shehi_hena).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Shabbat.70a.2 -- pass derivations-v1
+derivation(der_shmuel_mechaleleha, shmuel, chayav(osah_kol_hamelachot_behelem_echad, chatat_al_kol_melacha)).
+derivation_step(der_shmuel_mechaleleha, source, source_of(chiluk_melachot, mechaleleha_mot_yumat)).
+derivation_step(der_shmuel_mechaleleha, rule, teaches(mechaleleha_mot_yumat, mitot_harbe_al_chilul_echad)).
+derivation_step(der_shmuel_mechaleleha, case, applies_to(mechaleleha_mot_yumat, chilul_shabbat_beshogeg)).
+%   step p_tnehu_inyan_leshogeg borrowed from stam_70a: the bridge to the unwitting case (אם אינו ענין למזיד ... תנהו ענין לשוגג; יומת בממון) is the unmarked answer to the stam's האי במזיד כתיב, not Shmuel's own words
+derivation_text(der_shmuel_mechaleleha, mechaleleha_mot_yumat).
+% Shemot 31:14
+text_citation(mechaleleha_mot_yumat, shemot, 31, 14).
+% Shabbat.70a.6 -- pass derivations-v1 -- Shmuel denies the rule step (70b.1, ושמואל ... לא משמע ליה), so the chain does not stand for him
+derivation(der_ybrc_achat_shehi_hena, r_yosei_berabbi_chanina, teaches(meachat_mehena, peamim_achat_peamim_al_kol_achat)).
+derivation_step(der_ybrc_achat_shehi_hena, source, derived_from(peamim_achat_peamim_al_kol_achat, meachat_mehena)).
+derivation_step(der_ybrc_achat_shehi_hena, rule, verse_teaches(meachat_mehena, achat_shehi_hena_vehena_shehi_achat)).
+derivation_step(der_ybrc_achat_shehi_hena, case, reading_of(achat_shehi_hena, zadon_shabbat_ushgagat_melachot)).
+derivation_step(der_ybrc_achat_shehi_hena, case, reading_of(hena_shehi_achat, shigegat_shabbat_uzdon_melachot)).
+derivation_text(der_ybrc_achat_shehi_hena, meachat_mehena).
+% Vayikra 4:2
+text_citation(meachat_mehena, vayikra, 4, 2).

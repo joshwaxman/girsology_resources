@@ -272,3 +272,14 @@ support(yodim(metim, maase_hachayim), s_af_r_yonatan).
 support_kind(s_af_r_yonatan, svara).
 support_by(s_af_r_yonatan, stam_18b).
 support_source(s_af_r_yonatan, p_metim_mesaprim).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Berakhot.18b.17 -- pass derivations-v1 -- the text gives no bridge: it reads לאמר as לך אמור להם לאברהם ליצחק וליעקב and does not state that the telling is between the dead
+derivation(der_yonatan_leimor, r_yonatan, mesaprim_zeh_im_zeh(metim)).
+derivation_step(der_yonatan_leimor, source, source_of(metim_mesaprim_zeh_im_zeh, asher_nishbati_leavraham_leimor)).
+derivation_step(der_yonatan_leimor, rule, verse_teaches(leimor, lech_emor_laavot_kiyamti_hashevua)).
+derivation_text(der_yonatan_leimor, asher_nishbati_leavraham_leimor).
+% Devarim 34:4
+text_citation(asher_nishbati_leavraham_leimor, devarim, 34, 4).

@@ -1,0 +1,213 @@
+{
+ "sugya": "shabbat_123b_kol_hakelim_nitalin",
+ "tractate": "Shabbat",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Shabbat.123b.5",
+  "end": "Shabbat.123b.5"
+ },
+ "voices": [
+  {
+   "id": "r_yosei",
+   "kind": "tanna"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_kol_hakelim_nitalin",
+   "gloss_en": "R' Yosei: all vessels may be moved on Shabbat [except those listed next]",
+   "content": {
+    "pred": "mutar",
+    "args": [
+     "tiltul_kol_hakelim",
+     "shabbat"
+    ]
+   },
+   "locus": "Shabbat.123b.5",
+   "daf": "123b",
+   "sentenceId": 4
+  },
+  {
+   "id": "p_masar_gadol_asur",
+   "gloss_en": "R' Yosei: except the large saw [which may not be moved]",
+   "content": {
+    "pred": "asur",
+    "args": [
+     "tiltul_masar_gadol",
+     "shabbat"
+    ]
+   },
+   "locus": "Shabbat.123b.5",
+   "daf": "123b",
+   "sentenceId": 4
+  },
+  {
+   "id": "p_yated_macharesha_asur",
+   "gloss_en": "R' Yosei: and [except] the peg [blade] of a plow",
+   "content": {
+    "pred": "asur",
+    "args": [
+     "tiltul_yated_shel_macharesha",
+     "shabbat"
+    ]
+   },
+   "locus": "Shabbat.123b.5",
+   "daf": "123b",
+   "sentenceId": 4
+  }
+ ],
+ "commits": [
+  {
+   "holder": "r_yosei",
+   "prop": "p_kol_hakelim_nitalin",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Shabbat.123b.5",
+   "daf": "123b",
+   "sentenceId": 4
+  },
+  {
+   "holder": "r_yosei",
+   "prop": "p_masar_gadol_asur",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Shabbat.123b.5",
+   "daf": "123b",
+   "sentenceId": 4
+  },
+  {
+   "holder": "r_yosei",
+   "prop": "p_yated_macharesha_asur",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Shabbat.123b.5",
+   "daf": "123b",
+   "sentenceId": 4
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/shabbat_123b_kol_hakelim_nitalin.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_kol_hakelim_nitalin",
+    "type": "prop",
+    "label_he": "כל הכלים ניטלין",
+    "label_en": "R' Yosei: all vessels may be moved on Shabbat [except those listed next]",
+    "locus": "Shabbat.123b.5",
+    "daf": "123b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "mutar",
+      "args": [
+       "tiltul_kol_hakelim",
+       "shabbat"
+      ]
+     }
+    },
+    "skel": [
+     15,
+     28
+    ]
+   },
+   {
+    "id": "prop:p_masar_gadol_asur",
+    "type": "prop",
+    "label_he": "חוץ מן המסר הגדול",
+    "label_en": "R' Yosei: except the large saw [which may not be moved]",
+    "locus": "Shabbat.123b.5",
+    "daf": "123b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "asur",
+      "args": [
+       "tiltul_masar_gadol",
+       "shabbat"
+      ]
+     }
+    },
+    "skel": [
+     28,
+     42
+    ]
+   },
+   {
+    "id": "prop:p_yated_macharesha_asur",
+    "type": "prop",
+    "label_he": "ויתד של מחרישה",
+    "label_en": "R' Yosei: and [except] the peg [blade] of a plow",
+    "locus": "Shabbat.123b.5",
+    "daf": "123b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "asur",
+      "args": [
+       "tiltul_yated_shel_macharesha",
+       "shabbat"
+      ]
+     }
+    },
+    "skel": [
+     42,
+     54
+    ]
+   },
+   {
+    "id": "voice:r_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_kol_hakelim_nitalin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_masar_gadol_asur",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_yated_macharesha_asur",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-c91891f8b056f110"
+}

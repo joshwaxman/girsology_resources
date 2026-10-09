@@ -134,6 +134,14 @@ prop(p_reiach_lo_kalevanon).
 gloss(p_reiach_lo_kalevanon, 'Rav: as it says \'his branches shall spread, his beauty shall be as the olive tree, and his scent as the Lebanon\' (Hos 14:7)').
 locus(p_reiach_lo_kalevanon, 'Berakhot.43b.4').
 content(p_reiach_lo_kalevanon, source_of(bachurei_yisrael_reiach_tov, veriach_lo_kalevanon)).
+prop(p_mevarchin_al_hareiach).
+gloss(p_mevarchin_al_hareiach, 'Rav: [the din whose source he seeks:] one blesses over scent').
+locus(p_mevarchin_al_hareiach, 'Berakhot.43b.3').
+content(p_mevarchin_al_hareiach, chayav_levarech(al_hareiach)).
+prop(p_haneshama_tehalel_al_hanaat_neshama).
+gloss(p_haneshama_tehalel_al_hanaat_neshama, 'Rav\'s criterion read from the verse: \'every soul shall praise\' -- the soul praises over a thing the soul enjoys and the body does not').
+locus(p_haneshama_tehalel_al_hanaat_neshama, 'Berakhot.43b.3').
+content(p_haneshama_tehalel_al_hanaat_neshama, chayav_levarech(davar_shehaneshama_nehenet_velo_haguf)).
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
@@ -194,6 +202,10 @@ commit(rav, identifies(davar_shehaneshama_nehenet_velo_haguf, reiach), assert, a
 commit(rav, atidim(bachurei_yisrael, reiach_tov_kalevanon), assert, actual).
 % Berakhot.43b.4
 commit(rav, source_of(bachurei_yisrael_reiach_tov, veriach_lo_kalevanon), assert, actual).
+% Berakhot.43b.3 -- the din presupposed by his מנין
+commit(rav, chayav_levarech(al_hareiach), assert, actual).
+% Berakhot.43b.3
+commit(rav, chayav_levarech(davar_shehaneshama_nehenet_velo_haguf), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)
@@ -243,6 +255,10 @@ commit(rav_zutra_bar_tovia, holds(rav, identifies(davar_shehaneshama_nehenet_vel
 commit(rav_zutra_bar_tovia, holds(rav, atidim(bachurei_yisrael, reiach_tov_kalevanon)), assert, actual).
 % Berakhot.43b.4
 commit(rav_zutra_bar_tovia, holds(rav, source_of(bachurei_yisrael_reiach_tov, veriach_lo_kalevanon)), assert, actual).
+% Berakhot.43b.3
+commit(rav_zutra_bar_tovia, holds(rav, chayav_levarech(al_hareiach)), assert, actual).
+% Berakhot.43b.3
+commit(rav_zutra_bar_tovia, holds(rav, chayav_levarech(davar_shehaneshama_nehenet_velo_haguf)), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: redactorial verdicts on an attack (teyuvta / kashya)
@@ -280,3 +296,15 @@ support(source_of(birkat_hareiach, kol_haneshama_tehalel_ya), s_neshama_nehenet)
 support_kind(s_neshama_nehenet, svara).
 support_by(s_neshama_nehenet, rav).
 support_source(s_neshama_nehenet, p_neshama_nehenet_reiach).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Berakhot.43b.3 -- pass derivations-v1
+derivation(der_rav_kol_haneshama, rav, chayav_levarech(al_hareiach)).
+derivation_step(der_rav_kol_haneshama, source, source_of(birkat_hareiach, kol_haneshama_tehalel_ya)).
+derivation_step(der_rav_kol_haneshama, rule, chayav_levarech(davar_shehaneshama_nehenet_velo_haguf)).
+derivation_step(der_rav_kol_haneshama, case, identifies(davar_shehaneshama_nehenet_velo_haguf, reiach)).
+derivation_text(der_rav_kol_haneshama, kol_haneshama_tehalel_ya).
+% Tehillim 150:6
+text_citation(kol_haneshama_tehalel_ya, tehillim, 150, 6).

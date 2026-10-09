@@ -194,6 +194,14 @@ prop(p_hikon_likrat).
 gloss(p_hikon_likrat, 'because it is said \'prepare to meet your God, O Israel\' (Amos 4:12) -- and this one is not prepared').
 locus(p_hikon_likrat, 'Berakhot.51b.8').
 content(p_hikon_likrat, verse_teaches(hikon_likrat_elokecha, hachana_lifnei_beracha)).
+prop(p_beracha_tzricha_hachana).
+gloss(p_beracha_tzricha_hachana, 'the baraita\'s criterion, read from the verse: one who blesses must be prepared to meet his God').
+locus(p_beracha_tzricha_hachana, 'Berakhot.51b.8').
+content(p_beracha_tzricha_hachana, requires(beracha, hachana_lifnei_beracha)).
+prop(p_hai_lo_metakan).
+gloss(p_hai_lo_metakan, 'the bridge, in Aramaic and so the Gemara\'s gloss on the Hebrew baraita (stam): and this one (who drank in pairs) is not prepared').
+locus(p_hai_lo_metakan, 'Berakhot.51b.8').
+content(p_hai_lo_metakan, lacks(shoteh_kfalayim, hachana_lifnei_beracha)).
 prop(p_ochel_umehalech_meumad).
 gloss(p_ochel_umehalech_meumad, 'one who eats while walking blesses standing').
 locus(p_ochel_umehalech_meumad, 'Berakhot.51b.9').
@@ -306,6 +314,10 @@ commit(rav_nachman_bar_yitzchak, reading_of(kos_shel_puranut, kos_sheni), assert
 commit(baraita_hashoteh_kfalayim, asur(beracha, shoteh_kfalayim), assert, actual).
 % Berakhot.51b.8
 commit(baraita_hashoteh_kfalayim, verse_teaches(hikon_likrat_elokecha, hachana_lifnei_beracha), assert, actual).
+% Berakhot.51b.8
+commit(baraita_hashoteh_kfalayim, requires(beracha, hachana_lifnei_beracha), assert, actual).
+% Berakhot.51b.8
+commit(stam_51a, lacks(shoteh_kfalayim, hachana_lifnei_beracha), assert, actual).
 % Berakhot.51b.9 -- אמר רבי אבהו, ואמרי לה במתניתא תנא
 commit(r_abbahu, posture(birkat_hamazon_ochel_umehalech, meumad), assert, actual).
 % Berakhot.51b.9
@@ -412,3 +424,16 @@ support(asur(beracha, shoteh_kfalayim), s_mishum_shenemar_hikon).
 support_kind(s_mishum_shenemar_hikon, svara).
 support_by(s_mishum_shenemar_hikon, baraita_hashoteh_kfalayim).
 support_source(s_mishum_shenemar_hikon, p_hikon_likrat).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Berakhot.51b.8 -- pass derivations-v1 -- משום שנאמר הכון לקראת אלהיך ישראל (the baraita), והאי לא מתקן (the stam's Aramaic gloss, borrowed). Corrected within pass derivations-v1 after Fable review
+derivation(der_baraita_hikon, baraita_hashoteh_kfalayim, asur(beracha, shoteh_kfalayim)).
+derivation_step(der_baraita_hikon, source, verse_teaches(hikon_likrat_elokecha, hachana_lifnei_beracha)).
+derivation_step(der_baraita_hikon, rule, requires(beracha, hachana_lifnei_beracha)).
+derivation_step(der_baraita_hikon, case, lacks(shoteh_kfalayim, hachana_lifnei_beracha)).
+%   step p_hai_lo_metakan borrowed from stam_51a: והאי לא מתקן is Aramaic -- the Gemara's application of the baraita's verse to the case, not the baraita's own words
+derivation_text(der_baraita_hikon, hikon_likrat_elokecha).
+% Amos 4:12
+text_citation(hikon_likrat_elokecha, amos, 4, 12).

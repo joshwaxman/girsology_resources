@@ -161,6 +161,14 @@ prop(p_rava_tzamid_patil).
 gloss(p_rava_tzamid_patil, 'Rava: the midras of an earthenware vessel is pure from here -- \'every open vessel that has no sealed cover on it\' (Num 19:15): with a sealed cover it is pure; are we not dealing even with one he designated for his menstruant wife, and the Merciful says pure?').
 locus(p_rava_tzamid_patil, 'Shabbat.84b.3').
 content(p_rava_tzamid_patil, source_of(tohorat_midras_keli_cheres, tzamid_patil)).
+prop(p_rava_yesh_tzamid_tahor).
+gloss(p_rava_yesh_tzamid_tahor, 'Rava\'s criterion, read from \'every open vessel that has no sealed cover on it [is impure]\' (Num 19:15): an earthenware vessel with a sealed cover on it is pure').
+locus(p_rava_yesh_tzamid_tahor, 'Shabbat.84b.3').
+content(p_rava_yesh_tzamid_tahor, not_susceptible(keli_cheres_yesh_tzamid_patil)).
+prop(p_rava_yichadinhu_lenidda).
+gloss(p_rava_yichadinhu_lenidda, 'Rava\'s bridge: the verse speaks even of [a sealed vessel] he designated for his menstruant wife, and the Merciful One says pure -- so an earthenware vessel is not subject to midras').
+locus(p_rava_yichadinhu_lenidda, 'Shabbat.84b.3').
+content(p_rava_yichadinhu_lenidda, not_susceptible_to(keli_cheres_meyuchad_leishto_nidda, tumat_midras)).
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
@@ -235,6 +243,10 @@ commit(r_chanina, reason(tumat_mapatz_bezav, ika_tahara_bemino), assert, actual)
 commit(stam_83b, source_of(ika_tahara_bemino, shnei_kraei_mishkav_zav), assert, actual).
 % Shabbat.84b.3
 commit(rava, source_of(tohorat_midras_keli_cheres, tzamid_patil), assert, actual).
+% Shabbat.84b.3
+commit(rava, not_susceptible(keli_cheres_yesh_tzamid_patil), assert, actual).
+% Shabbat.84b.3
+commit(rava, not_susceptible_to(keli_cheres_meyuchad_leishto_nidda, tumat_midras), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)
@@ -357,3 +369,15 @@ support(not_susceptible_to(keli_cheres, tumat_midras), s_rava_tzamid_patil).
 support_kind(s_rava_tzamid_patil, svara).
 support_by(s_rava_tzamid_patil, rava).
 support_source(s_rava_tzamid_patil, p_rava_tzamid_patil).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Shabbat.84b.3 -- pass derivations-v1 -- the source-request is the stam's ומדרס כלי חרס מנלן דטהור (84a.4); Rava answers it מהכא
+derivation(der_rava_tzamid_patil, rava, not_susceptible_to(keli_cheres, tumat_midras)).
+derivation_step(der_rava_tzamid_patil, source, source_of(tohorat_midras_keli_cheres, tzamid_patil)).
+derivation_step(der_rava_tzamid_patil, rule, not_susceptible(keli_cheres_yesh_tzamid_patil)).
+derivation_step(der_rava_tzamid_patil, case, not_susceptible_to(keli_cheres_meyuchad_leishto_nidda, tumat_midras)).
+derivation_text(der_rava_tzamid_patil, tzamid_patil).
+% Bamidbar 19:15
+text_citation(tzamid_patil, bamidbar, 19, 15).

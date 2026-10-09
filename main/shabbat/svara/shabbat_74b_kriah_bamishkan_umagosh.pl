@@ -84,6 +84,10 @@ prop(p_chochma_leeinei_haamim).
 gloss(p_chochma_leeinei_haamim, 'R\' Yochanan: which wisdom and understanding is in the eyes of the nations? say: this is calculating seasons and constellations').
 locus(p_chochma_leeinei_haamim, 'Shabbat.75a.4').
 content(p_chochma_leeinei_haamim, identifies(chochma_uvina_leeinei_haamim, chishuv_tekufot_umazalot)).
+prop(p_yochanan_chochma_leeinei_haamim).
+gloss(p_yochanan_chochma_leeinei_haamim, 'R\' Yochanan\'s criterion: the verse commands keeping and doing a wisdom and understanding that is such \'in the eyes of the nations\' -- one the nations themselves can see').
+locus(p_yochanan_chochma_leeinei_haamim, 'Shabbat.75a.4').
+content(p_yochanan_chochma_leeinei_haamim, teaches(ushmartem_vaasitem_ki_hi_chochmatchem, mitzvat_chochma_uvina_leeinei_haamim)).
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
@@ -118,6 +122,8 @@ commit(r_yochanan, mitzva(chishuv_tekufot_umazalot), assert, actual).
 commit(r_yochanan, source_of(mitzvat_chishuv_tekufot_umazalot, ushmartem_vaasitem_ki_hi_chochmatchem), assert, actual).
 % Shabbat.75a.4
 commit(r_yochanan, identifies(chochma_uvina_leeinei_haamim, chishuv_tekufot_umazalot), assert, actual).
+% Shabbat.75a.4 -- pass derivations-v1
+commit(r_yochanan, teaches(ushmartem_vaasitem_ki_hi_chochmatchem, mitzvat_chochma_uvina_leeinei_haamim), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)
@@ -153,6 +159,8 @@ commit(r_shmuel_bar_nachmani, holds(r_yochanan, mitzva(chishuv_tekufot_umazalot)
 commit(r_shmuel_bar_nachmani, holds(r_yochanan, source_of(mitzvat_chishuv_tekufot_umazalot, ushmartem_vaasitem_ki_hi_chochmatchem)), assert, actual).
 % Shabbat.75a.4
 commit(r_shmuel_bar_nachmani, holds(r_yochanan, identifies(chochma_uvina_leeinei_haamim, chishuv_tekufot_umazalot)), assert, actual).
+% Shabbat.75a.4
+commit(r_shmuel_bar_nachmani, holds(r_yochanan, teaches(ushmartem_vaasitem_ki_hi_chochmatchem, mitzvat_chochma_uvina_leeinei_haamim)), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: objections against a position (report 016)
@@ -183,3 +191,15 @@ support(mitzva(chishuv_tekufot_umazalot), s_ushmartem_vaasitem).
 support_kind(s_ushmartem_vaasitem, svara).
 support_by(s_ushmartem_vaasitem, r_yochanan).
 support_source(s_ushmartem_vaasitem, p_ushmartem_source).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Shabbat.75a.4 -- pass derivations-v1
+derivation(der_yochanan_ushmartem, r_yochanan, mitzva(chishuv_tekufot_umazalot)).
+derivation_step(der_yochanan_ushmartem, source, source_of(mitzvat_chishuv_tekufot_umazalot, ushmartem_vaasitem_ki_hi_chochmatchem)).
+derivation_step(der_yochanan_ushmartem, rule, teaches(ushmartem_vaasitem_ki_hi_chochmatchem, mitzvat_chochma_uvina_leeinei_haamim)).
+derivation_step(der_yochanan_ushmartem, case, identifies(chochma_uvina_leeinei_haamim, chishuv_tekufot_umazalot)).
+derivation_text(der_yochanan_ushmartem, ushmartem_vaasitem_ki_hi_chochmatchem).
+% Devarim 4:6
+text_citation(ushmartem_vaasitem_ki_hi_chochmatchem, devarim, 4, 6).

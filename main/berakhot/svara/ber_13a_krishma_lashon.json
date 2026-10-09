@@ -165,6 +165,34 @@
    "locus": "Berakhot.13a.34",
    "daf": "13a",
    "sentenceId": 33
+  },
+  {
+   "id": "p_rebbi_makor",
+   "gloss_en": "Rebbi's source: the rule 'as it is written' derives from 'vehayu' (and these words shall be)",
+   "content": {
+    "pred": "derived_from",
+    "args": [
+     "kikhtavah",
+     "vehayu"
+    ]
+   },
+   "locus": "Berakhot.13a.26",
+   "daf": "13a",
+   "sentenceId": 25
+  },
+  {
+   "id": "p_chachamim_makor",
+   "gloss_en": "the Sages' source: the rule 'in any language' derives from 'shema' (hear)",
+   "content": {
+    "pred": "derived_from",
+    "args": [
+     "kol_lashon",
+     "shema"
+    ]
+   },
+   "locus": "Berakhot.13a.27",
+   "daf": "13a",
+   "sentenceId": 26
   }
  ],
  "commits": [
@@ -248,6 +276,24 @@
    "locus": "Berakhot.13a.31",
    "daf": "13a",
    "sentenceId": 30
+  },
+  {
+   "holder": "rebbi",
+   "prop": "p_rebbi_makor",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.13a.26",
+   "daf": "13a",
+   "sentenceId": 25
+  },
+  {
+   "holder": "chachamim",
+   "prop": "p_chachamim_makor",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Berakhot.13a.27",
+   "daf": "13a",
+   "sentenceId": 26
   },
   {
    "holder": "stam_13a",
@@ -547,6 +593,50 @@
     ]
    },
    {
+    "id": "prop:p_rebbi_makor",
+    "type": "prop",
+    "label_he": "מאי טעמא דרבי? אמר קרא והיו",
+    "label_en": "Rebbi's source: the rule 'as it is written' derives from 'vehayu' (and these words shall be)",
+    "locus": "Berakhot.13a.26",
+    "daf": "13a",
+    "sentenceId": 25,
+    "data": {
+     "content": {
+      "pred": "derived_from",
+      "args": [
+       "kikhtavah",
+       "vehayu"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     21
+    ]
+   },
+   {
+    "id": "prop:p_chachamim_makor",
+    "type": "prop",
+    "label_he": "ורבנן, מאי טעמייהו? אמר קרא שמע",
+    "label_en": "the Sages' source: the rule 'in any language' derives from 'shema' (hear)",
+    "locus": "Berakhot.13a.27",
+    "daf": "13a",
+    "sentenceId": 26,
+    "data": {
+     "content": {
+      "pred": "derived_from",
+      "args": [
+       "kol_lashon",
+       "shema"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     24
+    ]
+   },
+   {
     "id": "dispute:m_leshon_krishma",
     "type": "dispute",
     "label_he": "מחלוקת",
@@ -720,6 +810,20 @@
     "stance": "deny"
    },
    {
+    "source": "voice:rebbi",
+    "target": "prop:p_rebbi_makor",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:chachamim",
+    "target": "prop:p_chachamim_makor",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
     "source": "voice:stam_13a",
     "target": "prop:p_rebbi_torah_kol_lashon",
     "type": "commit",
@@ -737,5 +841,5 @@
    }
   ]
  },
- "kbVersion": "sha256-0779270e571840b1"
+ "kbVersion": "sha256-c91891f8b056f110"
 }

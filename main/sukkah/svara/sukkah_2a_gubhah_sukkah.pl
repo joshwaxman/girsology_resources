@@ -65,6 +65,18 @@ prop(p_rava_arai).
 gloss(p_rava_arai, 'Rava\'s criterion: the Torah demands a TEMPORARY dwelling; above twenty amot one necessarily builds a fixed one').
 locus(p_rava_arai, 'Sukkah.2a.12').
 content(p_rava_arai, requires(sukkah, dirat_arai)).
+prop(p_rabbah_lemala_yedia).
+gloss(p_rabbah_lemala_yedia, 'Rabbah\'s bridge: above twenty amot the dweller does not know he dwells in a sukkah, because the eye does not reach the sekhakh -- the case lacks the awareness his criterion requires').
+locus(p_rabbah_lemala_yedia, 'Sukkah.2a.8').
+content(p_rabbah_lemala_yedia, lacks(sukkah_gvoha_meesrim, yediat_sukkah)).
+prop(p_zeira_lemala_tzel).
+gloss(p_zeira_lemala_tzel, 'R\' Zeira\'s bridge: above twenty amot one sits not in the shade of the sekhakh but only in the shade of the walls -- the case lacks sukkah-shade').
+locus(p_zeira_lemala_tzel, 'Sukkah.2a.9').
+content(p_zeira_lemala_tzel, lacks(sukkah_gvoha_meesrim, tzel_sukkah)).
+prop(p_rava_lemala_keva).
+gloss(p_rava_lemala_keva, 'Rava\'s bridge: above twenty amot one does not build a temporary dwelling but a fixed one -- the case lacks the temporary-dwelling status his criterion requires (the height-class reading Rava defends at 2a.14)').
+locus(p_rava_lemala_keva, 'Sukkah.2a.12').
+content(p_rava_lemala_keva, lacks(sukkah_gvoha_meesrim, dirat_arai)).
 prop(p_yedia_ledorot).
 gloss(p_yedia_ledorot, 'the others\' ground against Rabbah\'s verse: למען ידעו speaks of the GENERATIONS\' historical knowledge of the clouds of glory, not the sitter\'s awareness').
 locus(p_yedia_ledorot, 'Sukkah.2b.1').
@@ -165,6 +177,12 @@ commit(r_zeira, requires(sukkah, tzel_sukkah), assert, actual).
 commit(rava, derived_from(psul_sukkah_gvoha, basukkot_teshvu), assert, actual).
 % Sukkah.2a.12
 commit(rava, requires(sukkah, dirat_arai), assert, actual).
+% Sukkah.2a.8
+commit(rabbah, lacks(sukkah_gvoha_meesrim, yediat_sukkah), assert, actual).
+% Sukkah.2a.9
+commit(r_zeira, lacks(sukkah_gvoha_meesrim, tzel_sukkah), assert, actual).
+% Sukkah.2a.12
+commit(rava, lacks(sukkah_gvoha_meesrim, dirat_arai), assert, actual).
 % Sukkah.2b.1 -- כולהו כרבה לא אמרי — ההוא ידיעה לדורות היא
 commit(r_zeira, derived_from(psul_sukkah_gvoha, lemaan_yedu), deny, actual).
 % Sukkah.2b.1 -- כולהו כרבה לא אמרי
@@ -303,3 +321,31 @@ necessity_by(nec_veod, stam_2a).
 necessity_answered(nec_veod, a_katan_sheeino_tzarich).
 necessity_answer_kind(a_katan_sheeino_tzarich, tzricha).
 necessity_answer_by(a_katan_sheeino_tzarich, stam_2a).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Sukkah.2a.8 -- pass derivations-v1
+derivation(der_rabbah_yedia, rabbah, pasul(sukkah_gvoha_meesrim)).
+derivation_step(der_rabbah_yedia, source, derived_from(psul_sukkah_gvoha, lemaan_yedu)).
+derivation_step(der_rabbah_yedia, rule, requires(sukkah, yediat_sukkah)).
+derivation_step(der_rabbah_yedia, case, lacks(sukkah_gvoha_meesrim, yediat_sukkah)).
+derivation_text(der_rabbah_yedia, lemaan_yedu).
+% Vayikra 23:43
+text_citation(lemaan_yedu, vayikra, 23, 43).
+% Sukkah.2a.9 -- pass derivations-v1
+derivation(der_zeira_tzel, r_zeira, pasul(sukkah_gvoha_meesrim)).
+derivation_step(der_zeira_tzel, source, derived_from(psul_sukkah_gvoha, sukkah_tihyeh_letzel)).
+derivation_step(der_zeira_tzel, rule, requires(sukkah, tzel_sukkah)).
+derivation_step(der_zeira_tzel, case, lacks(sukkah_gvoha_meesrim, tzel_sukkah)).
+derivation_text(der_zeira_tzel, sukkah_tihyeh_letzel).
+% Yeshayahu 4:6
+text_citation(sukkah_tihyeh_letzel, yeshayahu, 4, 6).
+% Sukkah.2a.12 -- pass derivations-v1 -- the rule's אמרה תורה (צא מדירת קבע ושב בדירת עראי) is Rava's gloss on the verse; the bridge is the height-class reading he defends against Abaye at 2a.14
+derivation(der_rava_arai, rava, pasul(sukkah_gvoha_meesrim)).
+derivation_step(der_rava_arai, source, derived_from(psul_sukkah_gvoha, basukkot_teshvu)).
+derivation_step(der_rava_arai, rule, requires(sukkah, dirat_arai)).
+derivation_step(der_rava_arai, case, lacks(sukkah_gvoha_meesrim, dirat_arai)).
+derivation_text(der_rava_arai, basukkot_teshvu).
+% Vayikra 23:42
+text_citation(basukkot_teshvu, vayikra, 23, 42).

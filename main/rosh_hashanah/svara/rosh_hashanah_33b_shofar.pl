@@ -111,6 +111,14 @@ prop(p_bakese).
 gloss(p_bakese, 'Psalms 81:4: the festival on which the moon is covered is RH, and the Merciful One says SHOFAR -- the answer that saves the midbar tanna from trumpets').
 locus(p_bakese, 'Rosh_Hashanah.34a.19').
 content(p_bakese, verse_teaches(tiku_bachodesh_shofar, bashofar)).
+prop(p_bakese_chag_shofar).
+gloss(p_bakese_chag_shofar, 'the criterion read from Psalms 81:4: on the festival on which the moon is covered, the Merciful One says to sound a SHOFAR').
+locus(p_bakese_chag_shofar, 'Rosh_Hashanah.34a.19').
+content(p_bakese_chag_shofar, requires(chag_bakese, shofar)).
+prop(p_bakese_zeh_rh).
+gloss(p_bakese_zeh_rh, 'the bridge: the festival on which the moon is covered is Rosh HaShana -- so the RH teruah is with a shofar, not trumpets').
+locus(p_bakese_zeh_rh, 'Rosh_Hashanah.34a.19').
+content(p_bakese_zeh_rh, identified_as(chag_bakese, rosh_hashana)).
 prop(p_takana).
 gloss(p_takana, 'R\' Abbahu instituted in Caesarea the order tekia -- three shevarim -- teruah -- tekia; its rationale is the OPEN doubt about the teruah\'s nature (= q_ganach_yalil)').
 locus(p_takana, 'Rosh_Hashanah.34a.20').
@@ -191,6 +199,10 @@ commit(r_yonatan, verse_teaches(vehaavarta_shofar_teruah, derekh_haavarato), ass
 commit(stam_rh, verse_teaches(tiku_bachodesh_shofar, bashofar), assert, actual).
 % Rosh_Hashanah.34a.19 -- the shofar requirement re-established for the midbar tanna via Psalms 81:4
 commit(stam_rh, requires(teruah, shofar), assert, actual).
+% Rosh_Hashanah.34a.19
+commit(stam_rh, requires(chag_bakese, shofar), assert, actual).
+% Rosh_Hashanah.34a.19
+commit(stam_rh, identified_as(chag_bakese, rosh_hashana), assert, actual).
 % Rosh_Hashanah.34a.20
 commit(r_abahu, takana(seder_tashrat, safek_ganach_yalil), assert, actual).
 % Rosh_Hashanah.34a.20
@@ -351,3 +363,15 @@ necessity_answered(nec_mai_atkin, a_ganach_veyalil).
 necessity_answer_kind(a_ganach_veyalil, kamashma_lan).
 necessity_answer_by(a_ganach_veyalil, stam_rh).
 necessity_teaches(a_ganach_veyalil, takana(seder_tashrat, safek_ganach_veyalil)).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Rosh_Hashanah.34a.19 -- pass derivations-v1 -- the source-request is the pircha אי מה להלן חצוצרות אף כאן חצוצרות (34a.18), answered תלמוד לומר
+derivation(der_stam_bakese, stam_rh, requires(teruah, shofar)).
+derivation_step(der_stam_bakese, source, verse_teaches(tiku_bachodesh_shofar, bashofar)).
+derivation_step(der_stam_bakese, rule, requires(chag_bakese, shofar)).
+derivation_step(der_stam_bakese, case, identified_as(chag_bakese, rosh_hashana)).
+derivation_text(der_stam_bakese, tiku_bachodesh_shofar).
+% Tehillim 81:4
+text_citation(tiku_bachodesh_shofar, tehillim, 81, 4).

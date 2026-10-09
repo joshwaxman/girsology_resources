@@ -108,6 +108,22 @@ prop(p_rybb_src_binyan_yerushalayim).
 gloss(p_rybb_src_binyan_yerushalayim, 'R\' Yehuda ben Beteira: \'the good\' is the building of Jerusalem, and so it says \'this good mountain and the Lebanon\'').
 locus(p_rybb_src_binyan_yerushalayim, 'Berakhot.48b.12').
 content(p_rybb_src_binyan_yerushalayim, source_of(binyan_yerushalayim, hatova)).
+prop(p_ry_lefanav_din).
+gloss(p_ry_lefanav_din, 'the din R\' Yitzchak\'s verse answers: a blessing is required BEFORE eating (the baraita\'s question, which his אינו צריך takes up)').
+locus(p_ry_lefanav_din, 'Berakhot.48b.5').
+content(p_ry_lefanav_din, requires(lechem_kodem_achila, beracha)).
+prop(p_ry_barech_lachmecha).
+gloss(p_ry_barech_lachmecha, 'R\' Yitzchak\'s criterion: read uvareikh (\'and bless your bread\') -- bread requires a blessing').
+locus(p_ry_barech_lachmecha, 'Berakhot.48b.7').
+content(p_ry_barech_lachmecha, requires(lechem, beracha)).
+prop(p_ry_karui_lechem).
+gloss(p_ry_karui_lechem, 'R\' Yitzchak\'s bridge: when is it called \'bread\'? before one eats it -- so the blessing over \'bread\' is the blessing before eating').
+locus(p_ry_karui_lechem, 'Berakhot.48b.7').
+content(p_ry_karui_lechem, nikra(lechem_kodem_achila, lechem)).
+prop(p_rm_bechol_din).
+gloss(p_rm_bechol_din, 'R\' Meir\'s bridge: your Judge in every judgment He judges you, a measure of calamity included -- so the blessing to \'the Lord your God\' extends to the bad').
+locus(p_rm_bechol_din, 'Berakhot.48b.11').
+content(p_rm_bechol_din, applies_to(dayyancha, midat_puraanut)).
 
 % --------------------------------------------------------------------
 % L1': declared content incompatibility (report 017)
@@ -164,6 +180,14 @@ commit(r_meir, verse_teaches(elokecha, dayyancha), assert, actual).
 commit(r_yehuda_ben_beteira, source_of(birkat_hatorah, tova), assert, actual).
 % Berakhot.48b.12
 commit(r_yehuda_ben_beteira, source_of(binyan_yerushalayim, hatova), assert, actual).
+% Berakhot.48b.7 -- his אינו צריך answers לפניו מנין with a source, so he holds the din
+commit(r_yitzchak, requires(lechem_kodem_achila, beracha), assert, actual).
+% Berakhot.48b.7
+commit(r_yitzchak, requires(lechem, beracha), assert, actual).
+% Berakhot.48b.7
+commit(r_yitzchak, nikra(lechem_kodem_achila, lechem), assert, actual).
+% Berakhot.48b.11
+commit(r_meir, applies_to(dayyancha, midat_puraanut), assert, actual).
 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)
@@ -209,3 +233,23 @@ schema_holder(gs_natan_veetna, r_chiyya_bar_nachmani).
 schema_source(gs_natan_veetna, asher_natan_lach).
 schema_target(gs_natan_veetna, torah).
 schema_factor(gs_natan_veetna, netina).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Berakhot.48b.7 -- pass derivations-v1
+derivation(der_yitzchak_lechem, r_yitzchak, requires(lechem_kodem_achila, beracha)).
+derivation_step(der_yitzchak_lechem, source, source_of(beracha_lifnei_achila, uverach_et_lachmecha)).
+derivation_step(der_yitzchak_lechem, rule, requires(lechem, beracha)).
+derivation_step(der_yitzchak_lechem, case, nikra(lechem_kodem_achila, lechem)).
+derivation_text(der_yitzchak_lechem, uverach_et_lachmecha).
+% Shemot 23:25
+text_citation(uverach_et_lachmecha, shemot, 23, 25).
+% Berakhot.48b.11 -- pass derivations-v1
+derivation(der_meir_dayyancha, r_meir, chayav_levarech(al_haraah)).
+derivation_step(der_meir_dayyancha, source, source_of(beracha_al_haraah, asher_natan_lecha_hashem_elokecha)).
+derivation_step(der_meir_dayyancha, rule, verse_teaches(elokecha, dayyancha)).
+derivation_step(der_meir_dayyancha, case, applies_to(dayyancha, midat_puraanut)).
+derivation_text(der_meir_dayyancha, asher_natan_lecha_hashem_elokecha).
+% Devarim 8:10
+text_citation(asher_natan_lecha_hashem_elokecha, devarim, 8, 10).

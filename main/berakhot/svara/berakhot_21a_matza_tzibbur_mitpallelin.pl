@@ -152,3 +152,14 @@ schema_holder(gs_toch_toch, baraita_rabbenai).
 schema_source(gs_toch_toch, hibadlu_mitoch_haeda_hazot).
 schema_target(gs_toch_toch, venikdashti_betoch_bnei_yisrael).
 schema_factor(gs_toch_toch, toch).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Berakhot.21b.4 -- pass derivations-v1 -- the text gives no bridge: it does not say that kedusha is a דבר שבקדושה or that an individual is fewer than ten; the application is left implicit, so none is minted
+derivation(der_rav_adda_venikdashti, rav_adda_bar_ahava, din(yachid_vekedusha, ein_omer_kedusha)).
+derivation_step(der_rav_adda_venikdashti, source, source_of(davar_shebikdusha_beasara, venikdashti_betoch_bnei_yisrael)).
+derivation_step(der_rav_adda_venikdashti, rule, requires(davar_shebikdusha, minyan_asara)).
+derivation_text(der_rav_adda_venikdashti, venikdashti_betoch_bnei_yisrael).
+% Vayikra 22:32
+text_citation(venikdashti_betoch_bnei_yisrael, vayikra, 22, 32).

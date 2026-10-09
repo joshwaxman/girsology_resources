@@ -40,6 +40,18 @@ prop(p_ushfatum_derivation).
 gloss(p_ushfatum_derivation, 'ushfatum = two; a court may not be evenly balanced, add one: three').
 locus(p_ushfatum_derivation, 'Sanhedrin.10a.6').
 content(p_ushfatum_derivation, derivation(shlosha_makkot, ushfatum_veshakul)).
+prop(p_huna_makor_ushfatum).
+gloss(p_huna_makor_ushfatum, 'Rav Huna: the three-judge court for lashes derives from the verse\'s \'and they shall judge them\' (Devarim 25:1)').
+locus(p_huna_makor_ushfatum, 'Sanhedrin.10a.6').
+content(p_huna_makor_ushfatum, derived_from(shlosha_makkot, ushfatum)).
+prop(p_huna_ushfatum_shnayim).
+gloss(p_huna_ushfatum_shnayim, 'Rav Huna\'s criterion read from the verse: the plural \'they shall judge\' means two judges').
+locus(p_huna_ushfatum_shnayim, 'Sanhedrin.10a.6').
+content(p_huna_ushfatum_shnayim, reading_of(ushfatum, shnayim)).
+prop(p_huna_mosifin_od_echad).
+gloss(p_huna_mosifin_od_echad, 'Rav Huna\'s bridge: a court may not be evenly balanced, so one judge is added to the two -- here are three').
+locus(p_huna_mosifin_od_echad, 'Sanhedrin.10a.6').
+content(p_huna_mosifin_od_echad, completes_to(ein_beit_din_shakul, shlosha)).
 prop(p_hitzdiku_leminyan).
 gloss(p_hitzdiku_leminyan, '(entertained) vehitzdiku and vehirshi\'u also count toward the tally of judges').
 locus(p_hitzdiku_leminyan, 'Sanhedrin.10a.7').
@@ -78,6 +90,12 @@ commit(tanna_kama_makkot, size(beit_din_makkot, shlosha), assert, actual).
 commit(r_yishmael, size(beit_din_makkot, esrim_veshlosha), assert, actual).
 % Sanhedrin.10a.6
 commit(rav_huna, derivation(shlosha_makkot, ushfatum_veshakul), assert, actual).
+% Sanhedrin.10a.6
+commit(rav_huna, derived_from(shlosha_makkot, ushfatum), assert, actual).
+% Sanhedrin.10a.6
+commit(rav_huna, reading_of(ushfatum, shnayim), assert, actual).
+% Sanhedrin.10a.6
+commit(rav_huna, completes_to(ein_beit_din_shakul, shlosha), assert, actual).
 % Sanhedrin.10a.7
 commit(stam_10a, counts_toward(vehitzdiku_vehirshiu, minyan_dayanim), entertain, hyp(h_hitzdiku_leminyan)).
 % Sanhedrin.10a.7
@@ -116,3 +134,15 @@ hypothesis_verdict(h_hitzdiku_leminyan, abandoned).
 % Sanhedrin.10a.11 -- rasha ('im bin hakot harasha') -- rasha ('asher hu rasha lamut'): as those liable to death are tried by twenty-three, so those liable to lashes
 schema_instance(gz_rasha_rasha, gezera_shava, makkot_beesrim_veshlosha).
 schema_holder(gz_rasha_rasha, r_yishmael).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Sanhedrin.10a.6 -- pass derivations-v1
+derivation(der_huna_ushfatum, rav_huna, size(beit_din_makkot, shlosha)).
+derivation_step(der_huna_ushfatum, source, derived_from(shlosha_makkot, ushfatum)).
+derivation_step(der_huna_ushfatum, rule, reading_of(ushfatum, shnayim)).
+derivation_step(der_huna_ushfatum, case, completes_to(ein_beit_din_shakul, shlosha)).
+derivation_text(der_huna_ushfatum, ushfatum).
+% Devarim 25:1
+text_citation(ushfatum, devarim, 25, 1).

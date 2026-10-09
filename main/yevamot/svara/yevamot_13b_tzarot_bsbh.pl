@@ -49,6 +49,18 @@ prop(p_taam_bs_chutza).
 gloss(p_taam_bs_chutza, 'Beit Shammai\'s reason: ״החוצה״ implies an inside (ervah) wife alongside the outside one, and the Torah says לא תהיה of the outside one -- the rival is released').
 locus(p_taam_bs_chutza, 'Yevamot.13b.3').
 content(p_taam_bs_chutza, taam_bs(derashat_hachutza)).
+prop(p_rsbp_makor).
+gloss(p_rsbp_makor, 'R\' Shimon ben Pazi: Beit Shammai\'s permitting the rivals to the brothers derives from \'the wife of the dead man shall not be outside, to a stranger\'').
+locus(p_rsbp_makor, 'Yevamot.13b.3').
+content(p_rsbp_makor, derived_from(tzarot_laachim_mutarot, lo_tihyeh_eshet_hamet_hachutza)).
+prop(p_rsbp_chutza_penimit).
+gloss(p_rsbp_chutza_penimit, 'the criterion read from the verse: \'outside\' implies that there is an \'inside\' wife (a relative of the yavam, inside his family)').
+locus(p_rsbp_chutza_penimit, 'Yevamot.13b.3').
+content(p_rsbp_chutza_penimit, teaches(milat_chutza, yesh_penimit)).
+prop(p_rsbp_lo_tihyeh_tzara).
+gloss(p_rsbp_lo_tihyeh_tzara, 'the bridge: of the \'outside\' one the Torah still says \'shall not be\' [to a stranger] -- even where one wife is an ervah, her rival, outside the yavam\'s family, falls under the levirate bond').
+locus(p_rsbp_lo_tihyeh_tzara, 'Yevamot.13b.3').
+content(p_rsbp_lo_tihyeh_tzara, applies_to(lo_tihyeh_lezar, tzarat_ervah)).
 prop(p_ein_kiddushin_biyevama).
 gloss(p_ein_kiddushin_biyevama, 'kiddushin do not take hold in a yevama -- לא תהיה בה הויה לזר').
 locus(p_ein_kiddushin_biyevama, 'Yevamot.13b.4').
@@ -113,6 +125,12 @@ commit(stam_13b, teaches(milat_chutza, ribui_arusa), assert, aliba(beit_hillel))
 commit(stam_13b, objection(ein_isur_chal_al_isur, nasa_chai_kodem), query, actual).
 % Yevamot.13b.12 -- completes Rava's account inside Beit Shammai's framework
 commit(stam_13b, answer(ein_isur_chal_al_isur, tzarat_ervah_shelo_bimkom_sharya), assert, aliba(beit_shammai)).
+% Yevamot.13b.3
+commit(r_shimon_ben_pazi, derived_from(tzarot_laachim_mutarot, lo_tihyeh_eshet_hamet_hachutza), assert, aliba(beit_shammai)).
+% Yevamot.13b.3
+commit(r_shimon_ben_pazi, teaches(milat_chutza, yesh_penimit), assert, aliba(beit_shammai)).
+% Yevamot.13b.3
+commit(r_shimon_ben_pazi, applies_to(lo_tihyeh_lezar, tzarat_ervah), assert, aliba(beit_shammai)).
 
 % --------------------------------------------------------------------
 % L3: dispute frames (scope for the corpus-economy principle)
@@ -130,3 +148,24 @@ party(m_chaltzu_kehuna, beit_hillel).
 % `תרי תנאי אליבא ד־` -- attribution is NOT a function.
 % Yevamot.13b.4
 commit(rav_yehuda, holds(rav, ein_kiddushin(yevama, zar)), assert, actual).
+% Yevamot.13b.3
+commit(r_shimon_ben_pazi, holds(beit_shammai, derived_from(tzarot_laachim_mutarot, lo_tihyeh_eshet_hamet_hachutza)), assert, actual).
+% Yevamot.13b.3
+commit(r_shimon_ben_pazi, holds(beit_shammai, teaches(milat_chutza, yesh_penimit)), assert, actual).
+% Yevamot.13b.3
+commit(r_shimon_ben_pazi, holds(beit_shammai, applies_to(lo_tihyeh_lezar, tzarat_ervah)), assert, actual).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Yevamot.13b.3 -- pass derivations-v1 -- an aliba account: R' Shimon ben Pazi reconstructs Beit Shammai's chain (his commits are ctx aliba beit_shammai, as p_taam_bs_chutza); Rava's competing account (13b.10) is a principle, not a verse, so it gets no derivation. Rav's 13b.4 reading (לא תהיה בה הויה לזר) restates the din in the verse's words with no separate criterion or bridge, so it stays a plain derived_from
+derivation(der_rsbp_hachutza, r_shimon_ben_pazi, tzarot_laachim(mutarot)).
+derivation_step(der_rsbp_hachutza, source, derived_from(tzarot_laachim_mutarot, lo_tihyeh_eshet_hamet_hachutza)).
+derivation_step(der_rsbp_hachutza, rule, teaches(milat_chutza, yesh_penimit)).
+derivation_step(der_rsbp_hachutza, case, applies_to(lo_tihyeh_lezar, tzarat_ervah)).
+%   step p_rsbp_makor borrowed from beit_shammai: מאי טעמא דבית שמאי -- R' Shimon ben Pazi gives the verse as Beit Shammai's reason, not as his own holding
+%   step p_rsbp_chutza_penimit borrowed from beit_shammai: the criterion is part of the reason he reports for Beit Shammai
+%   step p_rsbp_lo_tihyeh_tzara borrowed from beit_shammai: the bridge is part of the reason he reports for Beit Shammai
+derivation_text(der_rsbp_hachutza, lo_tihyeh_eshet_hamet_hachutza).
+% Devarim 25:5
+text_citation(lo_tihyeh_eshet_hamet_hachutza, devarim, 25, 5).

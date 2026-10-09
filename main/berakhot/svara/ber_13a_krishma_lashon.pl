@@ -56,6 +56,14 @@ prop(p_rabbanan_torah_lhk).
 gloss(p_rabbanan_torah_lhk, 'the entire Torah must be recited in the holy tongue only (proposed as what the Sages must hold)').
 locus(p_rabbanan_torah_lhk, 'Berakhot.13a.34').
 content(p_rabbanan_torah_lhk, torah_language(lashon_hakodesh)).
+prop(p_rebbi_makor).
+gloss(p_rebbi_makor, 'Rebbi\'s source: the rule \'as it is written\' derives from \'vehayu\' (and these words shall be)').
+locus(p_rebbi_makor, 'Berakhot.13a.26').
+content(p_rebbi_makor, derived_from(kikhtavah, vehayu)).
+prop(p_chachamim_makor).
+gloss(p_chachamim_makor, 'the Sages\' source: the rule \'in any language\' derives from \'shema\' (hear)').
+locus(p_chachamim_makor, 'Berakhot.13a.27').
+content(p_chachamim_makor, derived_from(kol_lashon, shema)).
 
 % --------------------------------------------------------------------
 % L2: commitments (holder x prop x stance x context)
@@ -78,6 +86,10 @@ commit(chachamim, verse_teaches(vehayu, shelo_yikra_lemafrea), assert, actual).
 commit(rebbi, verse_teaches(devarim_hadevarim, shelo_yikra_lemafrea), assert, actual).
 % Berakhot.13a.31 -- דברים הדברים לא דרשי
 commit(chachamim, verse_teaches(devarim_hadevarim, shelo_yikra_lemafrea), deny, actual).
+% Berakhot.13a.26
+commit(rebbi, derived_from(kikhtavah, vehayu), assert, actual).
+% Berakhot.13a.27
+commit(chachamim, derived_from(kol_lashon, shema), assert, actual).
 % Berakhot.13a.32
 commit(stam_13a, torah_language(kol_lashon), entertain, hyp(h_rebbi_torah_kol_lashon)).
 % Berakhot.13a.34
@@ -99,3 +111,21 @@ hypothesis_verdict(h_rebbi_torah_kol_lashon, abandoned).
 hypothesis(h_rabbanan_torah_lhk, p_rabbanan_torah_lhk).
 % Berakhot.13a.35
 hypothesis_verdict(h_rabbanan_torah_lhk, abandoned).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Berakhot.13a.26 -- pass derivations-v1 -- the text gives no separate bridge: the criterion בהווייתן יהו (the words stay as they are) is applied to the Shema directly, with no עד...למעלה step
+derivation(der_rebbi_vehayu, rebbi, language_rule(krishma, kikhtavah)).
+derivation_step(der_rebbi_vehayu, source, derived_from(kikhtavah, vehayu)).
+derivation_step(der_rebbi_vehayu, rule, verse_teaches(vehayu, behavayatan)).
+derivation_text(der_rebbi_vehayu, vehayu).
+% Devarim 6:6
+text_citation(vehayu, devarim, 6, 6).
+% Berakhot.13a.27 -- pass derivations-v1 -- the text gives no separate bridge: the criterion בכל לשון שאתה שומע (any language you understand) is the application itself, stated in one clause
+derivation(der_chachamim_shema, chachamim, language_rule(krishma, kol_lashon)).
+derivation_step(der_chachamim_shema, source, derived_from(kol_lashon, shema)).
+derivation_step(der_chachamim_shema, rule, verse_teaches(shema, bekhol_lashon_sheata_shomea)).
+derivation_text(der_chachamim_shema, shema).
+% Devarim 6:4
+text_citation(shema, devarim, 6, 4).

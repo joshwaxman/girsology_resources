@@ -207,3 +207,14 @@ support(derived_from(hkbh_soed_et_hacholeh, hashem_yisadenu_al_eres_dvai), s_tan
 support_kind(s_tanya_nami_hachi_shechina, tanya_nami_hachi).
 support_by(s_tanya_nami_hachi_shechina, stam_12b).
 support_source(s_tanya_nami_hachi_shechina, p_shechina_lemaala_derived).
+
+% --------------------------------------------------------------------
+% derivation chains: source / rule / case (report 024)
+% --------------------------------------------------------------------
+% Shabbat.12b.3 -- pass derivations-v1 -- the text gives no bridge: it does not say that sitting on the bed or on a chair places the visitor at or above the Shechina over the sick man's head; the application is left implicit, so none is minted
+derivation(der_baraita_shechina_lemaala, baraita_hanichnas_levaker, asur(yeshiva_al_gabei_mita_vekise, bikur_choleh)).
+derivation_step(der_baraita_shechina_lemaala, source, derived_from(shechina_lemaala_mimraashotav_shel_choleh, hashem_yisadenu_al_eres_dvai)).
+derivation_step(der_baraita_shechina_lemaala, rule, reason(issur_yeshiva_al_gabei_mita_vekise, shechina_lemaala_mimraashotav_shel_choleh)).
+derivation_text(der_baraita_shechina_lemaala, hashem_yisadenu_al_eres_dvai).
+% Tehillim 41:4
+text_citation(hashem_yisadenu_al_eres_dvai, tehillim, 41, 4).
