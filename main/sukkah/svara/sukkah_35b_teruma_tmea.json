@@ -1,0 +1,173 @@
+{
+ "sugya": "sukkah_35b_teruma_tmea",
+ "tractate": "Sukkah",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Sukkah.35b.4",
+  "end": "Sukkah.35b.4"
+ },
+ "voices": [
+  {
+   "id": "mishnah_sukkah_34b",
+   "kind": "mishnah",
+   "note": "the etrog mishnah (34b.8), its clause re-cited as the lemma at 35b.4"
+  },
+  {
+   "id": "stam_35b",
+   "kind": "stam"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_teruma_tmea_pasul",
+   "gloss_en": "an etrog of impure teruma is unfit",
+   "content": {
+    "pred": "pasul",
+    "args": [
+     "etrog_shel_teruma_tmea"
+    ]
+   },
+   "locus": "Sukkah.35b.4",
+   "daf": "35b",
+   "sentenceId": 3
+  },
+  {
+   "id": "p_teruma_tmea_heter_achila",
+   "gloss_en": "the reason: it has no permission to be eaten",
+   "content": {
+    "pred": "reason",
+    "args": [
+     "psul_etrog_teruma_tmea",
+     "ein_ba_heter_achila"
+    ]
+   },
+   "locus": "Sukkah.35b.4",
+   "daf": "35b",
+   "sentenceId": 3
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishnah_sukkah_34b",
+   "prop": "p_teruma_tmea_pasul",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Sukkah.35b.4",
+   "daf": "35b",
+   "sentenceId": 3
+  },
+  {
+   "holder": "stam_35b",
+   "prop": "p_teruma_tmea_heter_achila",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Sukkah.35b.4",
+   "daf": "35b",
+   "sentenceId": 3
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/sukkah_35b_teruma_tmea.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_teruma_tmea_pasul",
+    "type": "prop",
+    "label_he": "של תרומה טמאה פסולה",
+    "label_en": "an etrog of impure teruma is unfit",
+    "locus": "Sukkah.35b.4",
+    "daf": "35b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "pasul",
+      "args": [
+       "etrog_shel_teruma_tmea"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     16
+    ]
+   },
+   {
+    "id": "prop:p_teruma_tmea_heter_achila",
+    "type": "prop",
+    "label_he": "דלית בה היתר אכילה",
+    "label_en": "the reason: it has no permission to be eaten",
+    "locus": "Sukkah.35b.4",
+    "daf": "35b",
+    "sentenceId": 3,
+    "data": {
+     "content": {
+      "pred": "reason",
+      "args": [
+       "psul_etrog_teruma_tmea",
+       "ein_ba_heter_achila"
+      ]
+     }
+    },
+    "skel": [
+     16,
+     31
+    ]
+   },
+   {
+    "id": "voice:mishnah_sukkah_34b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah sukkah 34b",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_35b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 35b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishnah_sukkah_34b",
+    "target": "prop:p_teruma_tmea_pasul",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_35b",
+    "target": "prop:p_teruma_tmea_heter_achila",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-ce8423fd1482c2d3"
+}

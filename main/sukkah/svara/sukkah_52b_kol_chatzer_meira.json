@@ -1,0 +1,172 @@
+{
+ "sugya": "sukkah_52b_kol_chatzer_meira",
+ "tractate": "Sukkah",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Sukkah.51a.16",
+  "end": "Sukkah.53a.1"
+ },
+ "voices": [
+  {
+   "id": "mishnah_sukkah_51a",
+   "kind": "mishnah",
+   "note": "the Beit HaShoeva mishnah (51a.16), whose clause is cited at 52b.17"
+  },
+  {
+   "id": "baraita_isha_boreret",
+   "kind": "baraita",
+   "note": "the תנא at 52b.17, whose content is 53a.1"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mishnah_kol_chatzer",
+   "gloss_en": "and there was no courtyard in Jerusalem that was not lit by the light of the Beit HaShoeva (cited at 52b.17)",
+   "content": {
+    "pred": "din",
+    "args": [
+     "simchat_beit_hashoeva",
+     "kol_chatzer_birushalayim_meira"
+    ]
+   },
+   "locus": "Sukkah.51a.16",
+   "daf": "51a",
+   "sentenceId": 15
+  },
+  {
+   "id": "p_isha_boreret",
+   "gloss_en": "it was taught: a woman would sort wheat by the light of the Beit HaShoeva",
+   "content": {
+    "pred": "din",
+    "args": [
+     "simchat_beit_hashoeva",
+     "isha_boreret_chitim_laor"
+    ]
+   },
+   "locus": "Sukkah.53a.1",
+   "daf": "53a",
+   "sentenceId": 0
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishnah_sukkah_51a",
+   "prop": "p_mishnah_kol_chatzer",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Sukkah.51a.16",
+   "daf": "51a",
+   "sentenceId": 15
+  },
+  {
+   "holder": "baraita_isha_boreret",
+   "prop": "p_isha_boreret",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Sukkah.53a.1",
+   "daf": "53a",
+   "sentenceId": 0
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/sukkah_52b_kol_chatzer_meira.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_kol_chatzer",
+    "type": "prop",
+    "label_he": "ולא היה חצר בירושלים שאינה מאירה מאור בית השואבה",
+    "label_en": "and there was no courtyard in Jerusalem that was not lit by the light of the Beit HaShoeva (cited a…",
+    "locus": "Sukkah.51a.16",
+    "daf": "51a",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "simchat_beit_hashoeva",
+       "kol_chatzer_birushalayim_meira"
+      ]
+     }
+    },
+    "skel": [
+     271,
+     311
+    ]
+   },
+   {
+    "id": "prop:p_isha_boreret",
+    "type": "prop",
+    "label_he": "תנא: אשה היתה בוררת חטים לאור של בית השואבה",
+    "label_en": "it was taught: a woman would sort wheat by the light of the Beit HaShoeva",
+    "locus": "Sukkah.53a.1",
+    "daf": "53a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "simchat_beit_hashoeva",
+       "isha_boreret_chitim_laor"
+      ]
+     }
+    }
+   },
+   {
+    "id": "voice:baraita_isha_boreret",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita isha boreret",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:mishnah_sukkah_51a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah sukkah 51a",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishnah_sukkah_51a",
+    "target": "prop:p_mishnah_kol_chatzer",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_isha_boreret",
+    "target": "prop:p_isha_boreret",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-ce8423fd1482c2d3"
+}

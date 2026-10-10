@@ -1,0 +1,176 @@
+{
+ "sugya": "sukkah_29a_mikpa_shel_grisin",
+ "tractate": "Sukkah",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Sukkah.28b.8",
+  "end": "Sukkah.29a.3"
+ },
+ "voices": [
+  {
+   "id": "mishnah_sukkah",
+   "kind": "mishnah",
+   "note": "Sukkah 28b.8: ירדו גשמים, מאימתי מותר לפנות — משתסרח המקפה"
+  },
+  {
+   "id": "tana_grisin",
+   "kind": "baraita",
+   "note": "the תנא at 29a.3"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mishnah_mikpa",
+   "gloss_en": "if rain fell, one may vacate the sukkah from when the mikpa would spoil",
+   "content": {
+    "pred": "shiur",
+    "args": [
+     "pinui_sukkah_bigshamim",
+     "mishtisrach_hamikpa"
+    ]
+   },
+   "locus": "Sukkah.28b.8",
+   "daf": "28b",
+   "sentenceId": 7
+  },
+  {
+   "id": "p_tana_grisin",
+   "gloss_en": "it was taught: from when a mikpa of grisin (pounded grain) would spoil -- specifying the mishnah's mikpa",
+   "content": {
+    "pred": "defined_as",
+    "args": [
+     "mishtisrach_hamikpa",
+     "mishtisrach_mikpa_shel_grisin"
+    ]
+   },
+   "locus": "Sukkah.29a.3",
+   "daf": "29a",
+   "sentenceId": 2
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishnah_sukkah",
+   "prop": "p_mishnah_mikpa",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Sukkah.28b.8",
+   "daf": "28b",
+   "sentenceId": 7
+  },
+  {
+   "holder": "tana_grisin",
+   "prop": "p_tana_grisin",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Sukkah.29a.3",
+   "daf": "29a",
+   "sentenceId": 2
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/sukkah_29a_mikpa_shel_grisin.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_mikpa",
+    "type": "prop",
+    "label_he": "ירדו גשמים, מאימתי מותר לפנות — משתסרח המקפה",
+    "label_en": "if rain fell, one may vacate the sukkah from when the mikpa would spoil",
+    "locus": "Sukkah.28b.8",
+    "daf": "28b",
+    "sentenceId": 7,
+    "data": {
+     "content": {
+      "pred": "shiur",
+      "args": [
+       "pinui_sukkah_bigshamim",
+       "mishtisrach_hamikpa"
+      ]
+     }
+    },
+    "skel": [
+     39,
+     74
+    ]
+   },
+   {
+    "id": "prop:p_tana_grisin",
+    "type": "prop",
+    "label_he": "תנא: משתסרח המקפה של גריסין",
+    "label_en": "it was taught: from when a mikpa of grisin (pounded grain) would spoil -- specifying the mishnah's…",
+    "locus": "Sukkah.29a.3",
+    "daf": "29a",
+    "sentenceId": 2,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "mishtisrach_hamikpa",
+       "mishtisrach_mikpa_shel_grisin"
+      ]
+     }
+    },
+    "skel": [
+     9,
+     31
+    ]
+   },
+   {
+    "id": "voice:mishnah_sukkah",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishnah sukkah",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:tana_grisin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tana grisin",
+    "data": {
+     "kind": "baraita"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishnah_sukkah",
+    "target": "prop:p_mishnah_mikpa",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tana_grisin",
+    "target": "prop:p_tana_grisin",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-ce8423fd1482c2d3"
+}
