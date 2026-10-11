@@ -1,0 +1,176 @@
+{
+ "sugya": "megillah_18b_mitnamnem",
+ "tractate": "Megillah",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Megillah.17a.10",
+  "end": "Megillah.18b.9"
+ },
+ "voices": [
+  {
+   "id": "matnitin_17a",
+   "kind": "mishnah",
+   "note": "the mishna opening Megillah chapter 2 (17a.9-11); its מתנמנם clause is cited at 18b.9"
+  },
+  {
+   "id": "rav_ashi",
+   "kind": "amora"
+  },
+  {
+   "id": "stam_18b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice: היכי דמי"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mitnamnem_yatza",
+   "gloss_en": "the mishnah: one who read the Megilla while dozing has fulfilled his obligation",
+   "content": {
+    "pred": "yatza",
+    "args": [
+     "kriat_megillah",
+     "kriat_megillah_mitnamnem"
+    ]
+   },
+   "locus": "Megillah.17a.10",
+   "daf": "17a",
+   "sentenceId": 9
+  },
+  {
+   "id": "p_mitnamnem_defined",
+   "gloss_en": "Rav Ashi: dozing is asleep and not asleep, awake and not awake -- when called he answers, he cannot return a reasoned reply, and when reminded he remembers",
+   "content": {
+    "pred": "defined_as",
+    "args": [
+     "mitnamnem",
+     "nim_velo_nim_tir_velo_tir"
+    ]
+   },
+   "locus": "Megillah.18b.9",
+   "daf": "18b",
+   "sentenceId": 8
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_17a",
+   "prop": "p_mitnamnem_yatza",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Megillah.17a.10",
+   "daf": "17a",
+   "sentenceId": 9
+  },
+  {
+   "holder": "rav_ashi",
+   "prop": "p_mitnamnem_defined",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Megillah.18b.9",
+   "daf": "18b",
+   "sentenceId": 8
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/megillah_18b_mitnamnem.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mitnamnem_yatza",
+    "type": "prop",
+    "label_he": "קראה ... מתנמנם — יצא",
+    "label_en": "the mishnah: one who read the Megilla while dozing has fulfilled his obligation",
+    "locus": "Megillah.17a.10",
+    "daf": "17a",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "yatza",
+      "args": [
+       "kriat_megillah",
+       "kriat_megillah_mitnamnem"
+      ]
+     }
+    }
+   },
+   {
+    "id": "prop:p_mitnamnem_defined",
+    "type": "prop",
+    "label_he": "נים ולא נים, תיר ולא תיר, דקרו ליה ועני ולא ידע לאהדורי סברא, וכי מדכרו ליה מידכר",
+    "label_en": "Rav Ashi: dozing is asleep and not asleep, awake and not awake -- when called he answers, he cannot…",
+    "locus": "Megillah.18b.9",
+    "daf": "18b",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "mitnamnem",
+       "nim_velo_nim_tir_velo_tir"
+      ]
+     }
+    },
+    "skel": [
+     33,
+     95
+    ]
+   },
+   {
+    "id": "voice:matnitin_17a",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin 17a",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:rav_ashi",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav ashi",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_17a",
+    "target": "prop:p_mitnamnem_yatza",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_ashi",
+    "target": "prop:p_mitnamnem_defined",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-307631f6aa90d6c2"
+}

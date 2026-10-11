@@ -1,0 +1,166 @@
+{
+ "sugya": "megillah_4b_sidura_deyomei",
+ "tractate": "Megillah",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Megillah.2a.1",
+  "end": "Megillah.4b.5"
+ },
+ "voices": [
+  {
+   "id": "mishna_megillah",
+   "kind": "mishnah"
+  },
+  {
+   "id": "stam_4b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice of 4b.5-6"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mishnah_reisha_yarcha",
+   "gloss_en": "the Megilla is read on the eleventh, twelfth, thirteenth, fourteenth or fifteenth -- the first clause, ordered by the dates of the month",
+   "content": {
+    "pred": "din",
+    "args": [
+     "kriat_megilla",
+     "achad_asar_ad_chamisha_asar"
+    ]
+   },
+   "locus": "Megillah.2a.1",
+   "daf": "2a",
+   "sentenceId": 0
+  },
+  {
+   "id": "p_mishnah_seifa_chal_bsheni",
+   "gloss_en": "how so? if [the fourteenth] falls on Monday, villages and large towns read on that day, etc. -- the latter clause, ordered by the days of the week",
+   "content": {
+    "pred": "din",
+    "args": [
+     "kfarim_chal_bsheni",
+     "korin_bo_bayom"
+    ]
+   },
+   "locus": "Megillah.4b.5",
+   "daf": "4b",
+   "sentenceId": 4
+  }
+ ],
+ "commits": [
+  {
+   "holder": "mishna_megillah",
+   "prop": "p_mishnah_reisha_yarcha",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Megillah.2a.1",
+   "daf": "2a",
+   "sentenceId": 0
+  },
+  {
+   "holder": "mishna_megillah",
+   "prop": "p_mishnah_seifa_chal_bsheni",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Megillah.4b.5",
+   "daf": "4b",
+   "sentenceId": 4
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/megillah_4b_sidura_deyomei.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_reisha_yarcha",
+    "type": "prop",
+    "label_he": "מגילה נקראת באחד עשר, בשנים עשר, בשלשה עשר, בארבעה עשר, בחמשה עשר",
+    "label_en": "the Megilla is read on the eleventh, twelfth, thirteenth, fourteenth or fifteenth -- the first clau…",
+    "locus": "Megillah.2a.1",
+    "daf": "2a",
+    "sentenceId": 0,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "kriat_megilla",
+       "achad_asar_ad_chamisha_asar"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     50
+    ]
+   },
+   {
+    "id": "prop:p_mishnah_seifa_chal_bsheni",
+    "type": "prop",
+    "label_he": "כיצד? חל להיות בשני בשבת — כפרים ועיירות גדולות קורין בו ביום וכו׳",
+    "label_en": "how so? if [the fourteenth] falls on Monday, villages and large towns read on that day, etc. -- the…",
+    "locus": "Megillah.4b.5",
+    "daf": "4b",
+    "sentenceId": 4,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "kfarim_chal_bsheni",
+       "korin_bo_bayom"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     51
+    ]
+   },
+   {
+    "id": "voice:mishna_megillah",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "mishna megillah",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:mishna_megillah",
+    "target": "prop:p_mishnah_reisha_yarcha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:mishna_megillah",
+    "target": "prop:p_mishnah_seifa_chal_bsheni",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-307631f6aa90d6c2"
+}

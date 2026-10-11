@@ -1,0 +1,166 @@
+{
+ "sugya": "megillah_8b_musgar_umuchlat",
+ "tractate": "Megillah",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Megillah.8b.6",
+  "end": "Megillah.8b.7"
+ },
+ "voices": [
+  {
+   "id": "matnitin_8b",
+   "kind": "mishnah",
+   "note": "the anonymous mishna at Megillah 8b.6-7"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_ein_bein_musgar_lemuchlat",
+   "gloss_en": "there is no difference between a quarantined leper and a confirmed leper except letting the hair grow wild and rending the garments",
+   "content": {
+    "pred": "ein_bein_ela",
+    "args": [
+     "metzora_musgar",
+     "metzora_muchlat",
+     "pria_ufrima"
+    ]
+   },
+   "locus": "Megillah.8b.6",
+   "daf": "8b",
+   "sentenceId": 5
+  },
+  {
+   "id": "p_ein_bein_tahor_mehesger_lehechlet",
+   "gloss_en": "there is no difference between one purified from quarantine and one purified from confirmation except shaving and the birds",
+   "content": {
+    "pred": "ein_bein_ela",
+    "args": [
+     "tahor_mitoch_hesger",
+     "tahor_mitoch_hechlet",
+     "tiglachat_vetziporim"
+    ]
+   },
+   "locus": "Megillah.8b.7",
+   "daf": "8b",
+   "sentenceId": 6
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_8b",
+   "prop": "p_ein_bein_musgar_lemuchlat",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Megillah.8b.6",
+   "daf": "8b",
+   "sentenceId": 5
+  },
+  {
+   "holder": "matnitin_8b",
+   "prop": "p_ein_bein_tahor_mehesger_lehechlet",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Megillah.8b.7",
+   "daf": "8b",
+   "sentenceId": 6
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/megillah_8b_musgar_umuchlat.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ein_bein_musgar_lemuchlat",
+    "type": "prop",
+    "label_he": "אין בין מצורע מוסגר למצורע מוחלט אלא פריעה ופרימה",
+    "label_en": "there is no difference between a quarantined leper and a confirmed leper except letting the hair gr…",
+    "locus": "Megillah.8b.6",
+    "daf": "8b",
+    "sentenceId": 5,
+    "data": {
+     "content": {
+      "pred": "ein_bein_ela",
+      "args": [
+       "metzora_musgar",
+       "metzora_muchlat",
+       "pria_ufrima"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     45
+    ]
+   },
+   {
+    "id": "prop:p_ein_bein_tahor_mehesger_lehechlet",
+    "type": "prop",
+    "label_he": "אין בין טהור מתוך הסגר לטהור מתוך החלט אלא תגלחת וצפרים",
+    "label_en": "there is no difference between one purified from quarantine and one purified from confirmation exce…",
+    "locus": "Megillah.8b.7",
+    "daf": "8b",
+    "sentenceId": 6,
+    "data": {
+     "content": {
+      "pred": "ein_bein_ela",
+      "args": [
+       "tahor_mitoch_hesger",
+       "tahor_mitoch_hechlet",
+       "tiglachat_vetziporim"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     45
+    ]
+   },
+   {
+    "id": "voice:matnitin_8b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin 8b",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_8b",
+    "target": "prop:p_ein_bein_musgar_lemuchlat",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:matnitin_8b",
+    "target": "prop:p_ein_bein_tahor_mehesger_lehechlet",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-307631f6aa90d6c2"
+}
