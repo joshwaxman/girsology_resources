@@ -1,0 +1,183 @@
+{
+ "sugya": "taanit_20a_shteihen_likelala",
+ "tractate": "Taanit",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Taanit.20a.9",
+  "end": "Taanit.20a.9"
+ },
+ "voices": [
+  {
+   "id": "matnitin_ir_shelo_yardu",
+   "kind": "mishnah",
+   "note": "the mishnah clause וכן עיר שלא ירדו עליה גשמים, cited as a lemma at 20a.9"
+  },
+  {
+   "id": "rav_yehuda",
+   "kind": "amora"
+  },
+  {
+   "id": "rav",
+   "kind": "amora"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_lemma_ir_shelo_yardu",
+   "gloss_en": "the mishnah: and likewise a city upon which rain did not fall, etc. (lemma)",
+   "content": null,
+   "locus": "Taanit.20a.9",
+   "daf": "20a",
+   "sentenceId": 8
+  },
+  {
+   "id": "p_rav_shteihen_likelala",
+   "gloss_en": "Rav: and both of them [the city rained upon and the city not rained upon] are for a curse",
+   "content": {
+    "pred": "siman_klala",
+    "args": [
+     "shtei_hearim"
+    ]
+   },
+   "locus": "Taanit.20a.9",
+   "daf": "20a",
+   "sentenceId": 8
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_ir_shelo_yardu",
+   "prop": "p_lemma_ir_shelo_yardu",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Taanit.20a.9",
+   "daf": "20a",
+   "sentenceId": 8
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [
+  {
+   "reporter": "rav_yehuda",
+   "subject": "rav",
+   "prop": "p_rav_shteihen_likelala",
+   "locus": "Taanit.20a.9",
+   "daf": "20a",
+   "sentenceId": 8
+  }
+ ],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [
+  {
+   "id": "split_rav",
+   "kind": "attribution",
+   "subject": "rav",
+   "label_en": "What does rav hold? (by transmitting tradition)",
+   "goal_display": "split_attribution(rav, P1, P2)",
+   "verdict": "no_models",
+   "answers": [],
+   "tree": null
+  }
+ ],
+ "kb": "svara/taanit_20a_shteihen_likelala.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_lemma_ir_shelo_yardu",
+    "type": "prop",
+    "label_he": "וכן עיר שלא ירדו עליה גשמים כו׳",
+    "label_en": "the mishnah: and likewise a city upon which rain did not fall, etc. (lemma)",
+    "locus": "Taanit.20a.9",
+    "daf": "20a",
+    "sentenceId": 8,
+    "data": {},
+    "skel": [
+     0,
+     24
+    ]
+   },
+   {
+    "id": "prop:p_rav_shteihen_likelala",
+    "type": "prop",
+    "label_he": "ושתיהן לקללה",
+    "label_en": "Rav: and both of them [the city rained upon and the city not rained upon] are for a curse",
+    "locus": "Taanit.20a.9",
+    "daf": "20a",
+    "sentenceId": 8,
+    "data": {
+     "content": {
+      "pred": "siman_klala",
+      "args": [
+       "shtei_hearim"
+      ]
+     }
+    },
+    "skel": [
+     39,
+     50
+    ]
+   },
+   {
+    "id": "voice:matnitin_ir_shelo_yardu",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin ir shelo yardu",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:rav",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav",
+    "data": {
+     "kind": "amora"
+    }
+   },
+   {
+    "id": "voice:rav_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "rav yehuda",
+    "data": {
+     "kind": "amora"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_ir_shelo_yardu",
+    "target": "prop:p_lemma_ir_shelo_yardu",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:rav_yehuda",
+    "target": "prop:p_rav_shteihen_likelala",
+    "type": "attributes",
+    "regime": "structural",
+    "subject": "rav"
+   }
+  ]
+ },
+ "kbVersion": "sha256-49d49c71db8fb5d4"
+}

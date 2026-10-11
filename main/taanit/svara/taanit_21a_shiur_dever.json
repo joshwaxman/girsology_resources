@@ -1,0 +1,176 @@
+{
+ "sugya": "taanit_21a_shiur_dever",
+ "tractate": "Taanit",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Taanit.21a.15",
+  "end": "Taanit.21a.15"
+ },
+ "voices": [
+  {
+   "id": "matnitin_taanit_dever",
+   "kind": "mishnah",
+   "note": "the mishna's definition of דבר, cited as a lemma at 21a.15"
+  },
+  {
+   "id": "baraita_shiur_dever",
+   "kind": "baraita",
+   "note": "תנו רבנן (21a.15): the fifteen-hundred city"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mishna_dever_chamesh_meot",
+   "gloss_en": "the mishna (cited): what is a pestilence? a city that sends out five hundred foot-soldiers, etc.",
+   "content": {
+    "pred": "defined_as",
+    "args": [
+     "dever",
+     "ir_chamesh_meot_shlosha_metim_bishlosha_yamim"
+    ]
+   },
+   "locus": "Taanit.21a.15",
+   "daf": "21a",
+   "sentenceId": 14
+  },
+  {
+   "id": "p_baraita_dever_elef_vachamesh_meot",
+   "gloss_en": "a city that sends out fifteen hundred foot-soldiers, such as Kfar Akko, from which nine dead go out in three days one after the other -- this is a pestilence",
+   "content": {
+    "pred": "defined_as",
+    "args": [
+     "dever",
+     "ir_elef_vachamesh_meot_tisha_metim_bishlosha_yamim"
+    ]
+   },
+   "locus": "Taanit.21a.15",
+   "daf": "21a",
+   "sentenceId": 14
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_taanit_dever",
+   "prop": "p_mishna_dever_chamesh_meot",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Taanit.21a.15",
+   "daf": "21a",
+   "sentenceId": 14
+  },
+  {
+   "holder": "baraita_shiur_dever",
+   "prop": "p_baraita_dever_elef_vachamesh_meot",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Taanit.21a.15",
+   "daf": "21a",
+   "sentenceId": 14
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/taanit_21a_shiur_dever.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishna_dever_chamesh_meot",
+    "type": "prop",
+    "label_he": "אי זו היא דבר — עיר המוציאה חמש מאות רגלי כו׳",
+    "label_en": "the mishna (cited): what is a pestilence? a city that sends out five hundred foot-soldiers, etc.",
+    "locus": "Taanit.21a.15",
+    "daf": "21a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "dever",
+       "ir_chamesh_meot_shlosha_metim_bishlosha_yamim"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     33
+    ]
+   },
+   {
+    "id": "prop:p_baraita_dever_elef_vachamesh_meot",
+    "type": "prop",
+    "label_he": "עיר המוציאה חמש מאות ואלף רגלי, כגון כפר עכו, ויצאו הימנה תשעה מתים בשלשה ימים זה אחר זה — הרי זה דבר",
+    "label_en": "a city that sends out fifteen hundred foot-soldiers, such as Kfar Akko, from which nine dead go out…",
+    "locus": "Taanit.21a.15",
+    "daf": "21a",
+    "sentenceId": 14,
+    "data": {
+     "content": {
+      "pred": "defined_as",
+      "args": [
+       "dever",
+       "ir_elef_vachamesh_meot_tisha_metim_bishlosha_yamim"
+      ]
+     }
+    },
+    "skel": [
+     40,
+     117
+    ]
+   },
+   {
+    "id": "voice:baraita_shiur_dever",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita shiur dever",
+    "data": {
+     "kind": "baraita"
+    }
+   },
+   {
+    "id": "voice:matnitin_taanit_dever",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin taanit dever",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_taanit_dever",
+    "target": "prop:p_mishna_dever_chamesh_meot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_shiur_dever",
+    "target": "prop:p_baraita_dever_elef_vachamesh_meot",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-49d49c71db8fb5d4"
+}

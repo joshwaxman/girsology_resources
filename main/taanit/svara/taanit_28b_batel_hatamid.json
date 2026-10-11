@@ -1,0 +1,174 @@
+{
+ "sugya": "taanit_28b_batel_hatamid",
+ "tractate": "Taanit",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Taanit.28b.11",
+  "end": "Taanit.28b.11"
+ },
+ "voices": [
+  {
+   "id": "matnitin_26b",
+   "kind": "mishnah",
+   "note": "Mishnah Taanit 26a.14-26b.1, cited at 28b.11"
+  },
+  {
+   "id": "stam_28b",
+   "kind": "stam",
+   "note": "the Gemara's own voice: גמרא"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_mishnah_tamid",
+   "gloss_en": "(the mishnah, cited) [on the seventeenth of Tammuz] the daily offering ceased",
+   "content": {
+    "pred": "day_of_month",
+    "args": [
+     "bitul_hatamid",
+     "shiva_asar_betammuz"
+    ]
+   },
+   "locus": "Taanit.28b.11",
+   "daf": "28b",
+   "sentenceId": 10
+  },
+  {
+   "id": "p_stam_tamid_gemara",
+   "gloss_en": "[this is known by] tradition",
+   "content": {
+    "pred": "known_by_tradition",
+    "args": [
+     "bitul_hatamid_beshiva_asar_betammuz"
+    ]
+   },
+   "locus": "Taanit.28b.11",
+   "daf": "28b",
+   "sentenceId": 10
+  }
+ ],
+ "commits": [
+  {
+   "holder": "matnitin_26b",
+   "prop": "p_mishnah_tamid",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Taanit.28b.11",
+   "daf": "28b",
+   "sentenceId": 10
+  },
+  {
+   "holder": "stam_28b",
+   "prop": "p_stam_tamid_gemara",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Taanit.28b.11",
+   "daf": "28b",
+   "sentenceId": 10
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/taanit_28b_batel_hatamid.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_mishnah_tamid",
+    "type": "prop",
+    "label_he": "בטל התמיד",
+    "label_en": "(the mishnah, cited) [on the seventeenth of Tammuz] the daily offering ceased",
+    "locus": "Taanit.28b.11",
+    "daf": "28b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "day_of_month",
+      "args": [
+       "bitul_hatamid",
+       "shiva_asar_betammuz"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     8
+    ]
+   },
+   {
+    "id": "prop:p_stam_tamid_gemara",
+    "type": "prop",
+    "label_he": "גמרא",
+    "label_en": "[this is known by] tradition",
+    "locus": "Taanit.28b.11",
+    "daf": "28b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "known_by_tradition",
+      "args": [
+       "bitul_hatamid_beshiva_asar_betammuz"
+      ]
+     }
+    },
+    "skel": [
+     8,
+     12
+    ]
+   },
+   {
+    "id": "voice:matnitin_26b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "matnitin 26b",
+    "data": {
+     "kind": "mishnah"
+    }
+   },
+   {
+    "id": "voice:stam_28b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 28b",
+    "data": {
+     "kind": "stam"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:matnitin_26b",
+    "target": "prop:p_mishnah_tamid",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_28b",
+    "target": "prop:p_stam_tamid_gemara",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-49d49c71db8fb5d4"
+}
