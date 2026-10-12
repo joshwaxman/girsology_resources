@@ -1,0 +1,162 @@
+{
+ "sugya": "bekhorot_30b_chaver_shemet",
+ "tractate": "Bekhorot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Bekhorot.30b.16",
+  "end": "Bekhorot.30b.16"
+ },
+ "voices": [
+  {
+   "id": "baraita_chaver_shemet",
+   "kind": "baraita",
+   "note": "תנו רבנן (30b.16)"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_chaver_shemet_bechezkatan",
+   "gloss_en": "a chaver who died -- his wife, his children and the members of his household remain in their presumption until they are suspected",
+   "content": {
+    "pred": "din",
+    "args": [
+     "ishto_uvanav_shel_chaver_shemet",
+     "bechezkatan"
+    ]
+   },
+   "locus": "Bekhorot.30b.16",
+   "daf": "30b",
+   "sentenceId": 15
+  },
+  {
+   "id": "p_chatzer_techelet_bechezkata",
+   "gloss_en": "and likewise a courtyard in which tekhelet is sold remains in its presumption until it is disqualified",
+   "content": {
+    "pred": "din",
+    "args": [
+     "chatzer_shemochrin_ba_techelet",
+     "bechezkatan"
+    ]
+   },
+   "locus": "Bekhorot.30b.16",
+   "daf": "30b",
+   "sentenceId": 15
+  }
+ ],
+ "commits": [
+  {
+   "holder": "baraita_chaver_shemet",
+   "prop": "p_chaver_shemet_bechezkatan",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.30b.16",
+   "daf": "30b",
+   "sentenceId": 15
+  },
+  {
+   "holder": "baraita_chaver_shemet",
+   "prop": "p_chatzer_techelet_bechezkata",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.30b.16",
+   "daf": "30b",
+   "sentenceId": 15
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/bekhorot_30b_chaver_shemet.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_chaver_shemet_bechezkatan",
+    "type": "prop",
+    "label_he": "חבר שמת -- אשתו ובניו ובני ביתו הרי הן בחזקתן, עד שיחשדו",
+    "label_en": "a chaver who died -- his wife, his children and the members of his household remain in their presum…",
+    "locus": "Bekhorot.30b.16",
+    "daf": "30b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "ishto_uvanav_shel_chaver_shemet",
+       "bechezkatan"
+      ]
+     }
+    },
+    "skel": [
+     7,
+     13
+    ]
+   },
+   {
+    "id": "prop:p_chatzer_techelet_bechezkata",
+    "type": "prop",
+    "label_he": "וכן חצר שמוכרין בה תכלת -- הרי היא בחזקתה, עד שתיפסל",
+    "label_en": "and likewise a courtyard in which tekhelet is sold remains in its presumption until it is disqualif…",
+    "locus": "Bekhorot.30b.16",
+    "daf": "30b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "chatzer_shemochrin_ba_techelet",
+       "bechezkatan"
+      ]
+     }
+    },
+    "skel": [
+     49,
+     68
+    ]
+   },
+   {
+    "id": "voice:baraita_chaver_shemet",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "baraita chaver shemet",
+    "data": {
+     "kind": "baraita"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "voice:baraita_chaver_shemet",
+    "target": "prop:p_chaver_shemet_bechezkatan",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:baraita_chaver_shemet",
+    "target": "prop:p_chatzer_techelet_bechezkata",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-1e0ca9be3164e919"
+}

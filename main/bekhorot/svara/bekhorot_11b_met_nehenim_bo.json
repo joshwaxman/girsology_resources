@@ -1,0 +1,449 @@
+{
+ "sugya": "bekhorot_11b_met_nehenim_bo",
+ "tractate": "Bekhorot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Bekhorot.11b.10",
+  "end": "Bekhorot.11b.11"
+ },
+ "voices": [
+  {
+   "id": "tanna_matnitin",
+   "kind": "mishnah",
+   "note": "the mishna clause ואם מת נהנים בו, cited as lemma at 11b.10"
+  },
+  {
+   "id": "stam_11b",
+   "kind": "stam",
+   "note": "anonymous redactorial voice of this sugya"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_met_nehenim",
+   "gloss_en": "and if [the lamb of a firstborn donkey's redemption] died, one may derive benefit from it",
+   "content": {
+    "pred": "din",
+    "args": [
+     "seh_pidyon_peter_chamor_shemet",
+     "mutar_behanaa"
+    ]
+   },
+   "locus": "Bekhorot.11b.10",
+   "daf": "11b",
+   "sentenceId": 9
+  },
+  {
+   "id": "p_met_bei_kohen",
+   "gloss_en": "(entertained) it died in the kohen's house, and the kohen benefits from it",
+   "content": {
+    "pred": "okimta",
+    "args": [
+     "din_met_nehenim",
+     "met_bei_kohen"
+    ]
+   },
+   "locus": "Bekhorot.11b.10",
+   "daf": "11b",
+   "sentenceId": 9
+  },
+  {
+   "id": "p_met_bei_baalim",
+   "gloss_en": "rather, it died in the owner's house, and the kohen benefits from it",
+   "content": {
+    "pred": "okimta",
+    "args": [
+     "din_met_nehenim",
+     "met_bei_baalim_venehene_kohen"
+    ]
+   },
+   "locus": "Bekhorot.11b.10",
+   "daf": "11b",
+   "sentenceId": 9
+  },
+  {
+   "id": "p_lo_zacha_ad_shemagia",
+   "gloss_en": "(hava amina) as long as it has not reached his hand, [the kohen] has not acquired it",
+   "content": {
+    "pred": "din",
+    "args": [
+     "seh_pidyon_peter_chamor_shehufrash",
+     "lo_zacha_kohen_ad_shemagia_leyado"
+    ]
+   },
+   "locus": "Bekhorot.11b.11",
+   "daf": "11b",
+   "sentenceId": 10
+  },
+  {
+   "id": "p_birshut_kohen_meet_hafrasha",
+   "gloss_en": "from the moment he separated it, it stands in the kohen's possession",
+   "content": {
+    "pred": "din",
+    "args": [
+     "seh_pidyon_peter_chamor_shehufrash",
+     "birshut_kohen"
+    ]
+   },
+   "locus": "Bekhorot.11b.11",
+   "daf": "11b",
+   "sentenceId": 10
+  }
+ ],
+ "commits": [
+  {
+   "holder": "tanna_matnitin",
+   "prop": "p_met_nehenim",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.11b.10",
+   "daf": "11b",
+   "sentenceId": 9
+  },
+  {
+   "holder": "stam_11b",
+   "prop": "p_met_bei_kohen",
+   "stance": "entertain",
+   "ctx": "hyp(h_met_bei_kohen)",
+   "locus": "Bekhorot.11b.10",
+   "daf": "11b",
+   "sentenceId": 9
+  },
+  {
+   "holder": "stam_11b",
+   "prop": "p_met_bei_baalim",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.11b.10",
+   "daf": "11b",
+   "sentenceId": 9
+  },
+  {
+   "holder": "stam_11b",
+   "prop": "p_lo_zacha_ad_shemagia",
+   "stance": "entertain",
+   "ctx": "hyp(h_sda_lo_zacha)",
+   "locus": "Bekhorot.11b.11",
+   "daf": "11b",
+   "sentenceId": 10
+  },
+  {
+   "holder": "stam_11b",
+   "prop": "p_birshut_kohen_meet_hafrasha",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.11b.11",
+   "daf": "11b",
+   "sentenceId": 10
+  },
+  {
+   "holder": "tanna_matnitin",
+   "prop": "p_birshut_kohen_meet_hafrasha",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.11b.11",
+   "daf": "11b",
+   "sentenceId": 10
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [],
+ "hypotheses": [
+  {
+   "id": "h_met_bei_kohen",
+   "assumes": "p_met_bei_kohen",
+   "verdict": "abandoned",
+   "opened_by": "stam_11b",
+   "discharge_locus": "Bekhorot.11b.10",
+   "discharge_concludes": "p_met_bei_baalim",
+   "entails_identity": null,
+   "quarantined": [
+    "p_met_bei_kohen"
+   ],
+   "locus": "Bekhorot.11b.10",
+   "daf": "11b",
+   "sentenceId": 9
+  },
+  {
+   "id": "h_sda_lo_zacha",
+   "assumes": "p_lo_zacha_ad_shemagia",
+   "verdict": "abandoned",
+   "opened_by": "stam_11b",
+   "discharge_locus": "Bekhorot.11b.11",
+   "discharge_concludes": "p_birshut_kohen_meet_hafrasha",
+   "entails_identity": null,
+   "quarantined": [
+    "p_lo_zacha_ad_shemagia"
+   ],
+   "locus": "Bekhorot.11b.11",
+   "daf": "11b",
+   "sentenceId": 10
+  }
+ ],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/bekhorot_11b_met_nehenim_bo.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_met_nehenim",
+    "type": "prop",
+    "label_he": "ואם מת נהנים בו",
+    "label_en": "and if [the lamb of a firstborn donkey's redemption] died, one may derive benefit from it",
+    "locus": "Bekhorot.11b.10",
+    "daf": "11b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "seh_pidyon_peter_chamor_shemet",
+       "mutar_behanaa"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     12
+    ]
+   },
+   {
+    "id": "prop:p_met_bei_kohen",
+    "type": "prop",
+    "label_he": "אילימא דמית בי כהן, ונהנה בו כהן",
+    "label_en": "(entertained) it died in the kohen's house, and the kohen benefits from it",
+    "locus": "Bekhorot.11b.10",
+    "daf": "11b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "din_met_nehenim",
+       "met_bei_kohen"
+      ]
+     }
+    },
+    "skel": [
+     20,
+     45
+    ]
+   },
+   {
+    "id": "prop:p_met_bei_baalim",
+    "type": "prop",
+    "label_he": "אלא, דמית בי בעלים ונהנה בו כהן",
+    "label_en": "rather, it died in the owner's house, and the kohen benefits from it",
+    "locus": "Bekhorot.11b.10",
+    "daf": "11b",
+    "sentenceId": 9,
+    "data": {
+     "content": {
+      "pred": "okimta",
+      "args": [
+       "din_met_nehenim",
+       "met_bei_baalim_venehene_kohen"
+      ]
+     }
+    },
+    "skel": [
+     63,
+     87
+    ]
+   },
+   {
+    "id": "prop:p_lo_zacha_ad_shemagia",
+    "type": "prop",
+    "label_he": "סלקא דעתך אמינא, כל כמה דלא מטא לידיה לא זכה ביה",
+    "label_en": "(hava amina) as long as it has not reached his hand, [the kohen] has not acquired it",
+    "locus": "Bekhorot.11b.11",
+    "daf": "11b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "seh_pidyon_peter_chamor_shehufrash",
+       "lo_zacha_kohen_ad_shemagia_leyado"
+      ]
+     }
+    },
+    "skel": [
+     0,
+     37
+    ]
+   },
+   {
+    "id": "prop:p_birshut_kohen_meet_hafrasha",
+    "type": "prop",
+    "label_he": "קא משמע לן דמעידנא דאפרשיה, ברשותיה דכהן קאי",
+    "label_en": "from the moment he separated it, it stands in the kohen's possession",
+    "locus": "Bekhorot.11b.11",
+    "daf": "11b",
+    "sentenceId": 10,
+    "data": {
+     "content": {
+      "pred": "din",
+      "args": [
+       "seh_pidyon_peter_chamor_shehufrash",
+       "birshut_kohen"
+      ]
+     }
+    },
+    "skel": [
+     37,
+     73
+    ]
+   },
+   {
+    "id": "hypothesis:h_met_bei_kohen",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (entertained) it died in the kohen's house, and the kohen benefits from it",
+    "locus": "Bekhorot.11b.10",
+    "daf": "11b",
+    "sentenceId": 9,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_11b",
+     "discharge_locus": "Bekhorot.11b.10"
+    }
+   },
+   {
+    "id": "hypothesis:h_sda_lo_zacha",
+    "type": "hypothesis",
+    "label_he": "סלקא דעתך",
+    "label_en": "suppose: (hava amina) as long as it has not reached his hand, [the kohen] has not acquired it",
+    "locus": "Bekhorot.11b.11",
+    "daf": "11b",
+    "sentenceId": 10,
+    "data": {
+     "verdict": "abandoned",
+     "opened_by": "stam_11b",
+     "discharge_locus": "Bekhorot.11b.11"
+    },
+    "skel": [
+     0,
+     8
+    ]
+   },
+   {
+    "id": "voice:stam_11b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "stam 11b",
+    "data": {
+     "kind": "stam"
+    }
+   },
+   {
+    "id": "voice:tanna_matnitin",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna matnitin",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "hypothesis:h_met_bei_kohen",
+    "target": "prop:p_met_bei_kohen",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_met_bei_kohen",
+    "target": "prop:p_met_bei_baalim",
+    "type": "discharge_concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_11b",
+    "target": "hypothesis:h_met_bei_kohen",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_sda_lo_zacha",
+    "target": "prop:p_lo_zacha_ad_shemagia",
+    "type": "assumes",
+    "regime": "structural"
+   },
+   {
+    "source": "hypothesis:h_sda_lo_zacha",
+    "target": "prop:p_birshut_kohen_meet_hafrasha",
+    "type": "discharge_concludes",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:stam_11b",
+    "target": "hypothesis:h_sda_lo_zacha",
+    "type": "advances",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_met_nehenim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_11b",
+    "target": "prop:p_met_bei_kohen",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_met_bei_kohen)"
+   },
+   {
+    "source": "voice:stam_11b",
+    "target": "prop:p_met_bei_baalim",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:stam_11b",
+    "target": "prop:p_lo_zacha_ad_shemagia",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "entertain",
+    "ctx": "hyp(h_sda_lo_zacha)"
+   },
+   {
+    "source": "voice:stam_11b",
+    "target": "prop:p_birshut_kohen_meet_hafrasha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:tanna_matnitin",
+    "target": "prop:p_birshut_kohen_meet_hafrasha",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-1e0ca9be3164e919"
+}

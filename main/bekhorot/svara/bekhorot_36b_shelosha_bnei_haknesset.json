@@ -1,0 +1,205 @@
+{
+ "sugya": "bekhorot_36b_shelosha_bnei_haknesset",
+ "tractate": "Bekhorot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Bekhorot.36b.16",
+  "end": "Bekhorot.36b.16"
+ },
+ "voices": [
+  {
+   "id": "tanna_kamma_36b",
+   "kind": "mishnah",
+   "note": "the anonymous first clause of the mishna at 36b.16"
+  },
+  {
+   "id": "r_yosei",
+   "kind": "tanna"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_shelosha_bnei_haknesset",
+   "gloss_en": "a firstborn whose eye was blinded, whose foreleg was severed or whose hind leg was broken is slaughtered on the word of three congregants",
+   "content": {
+    "pred": "size_required",
+    "args": [
+     "hatarat_bechor_bemumin_muvhakin",
+     "shlosha"
+    ]
+   },
+   "locus": "Bekhorot.36b.16",
+   "daf": "36b",
+   "sentenceId": 15
+  },
+  {
+   "id": "p_yosei_al_pi_mumche",
+   "gloss_en": "R' Yosei: even if twenty-three are there, it is slaughtered only on the word of an expert",
+   "content": {
+    "pred": "requires",
+    "args": [
+     "hatarat_bechor_bemumin_muvhakin",
+     "mumche"
+    ]
+   },
+   "locus": "Bekhorot.36b.16",
+   "daf": "36b",
+   "sentenceId": 15
+  }
+ ],
+ "commits": [
+  {
+   "holder": "tanna_kamma_36b",
+   "prop": "p_shelosha_bnei_haknesset",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.36b.16",
+   "daf": "36b",
+   "sentenceId": 15
+  },
+  {
+   "holder": "r_yosei",
+   "prop": "p_yosei_al_pi_mumche",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.36b.16",
+   "daf": "36b",
+   "sentenceId": 15
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [
+  {
+   "id": "m_hatarat_bechor_muvhak",
+   "topic": "hatarat_bechor_bemumin_muvhakin",
+   "parties": [
+    "tanna_kamma_36b",
+    "r_yosei"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/bekhorot_36b_shelosha_bnei_haknesset.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_shelosha_bnei_haknesset",
+    "type": "prop",
+    "label_he": "בכור שנסמית עינו, ושנקטעה ידו, ושנשברה רגלו — הרי זה ישחט על פי שלשה בני הכנסת",
+    "label_en": "a firstborn whose eye was blinded, whose foreleg was severed or whose hind leg was broken is slaugh…",
+    "locus": "Bekhorot.36b.16",
+    "daf": "36b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "size_required",
+      "args": [
+       "hatarat_bechor_bemumin_muvhakin",
+       "shlosha"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     64
+    ]
+   },
+   {
+    "id": "prop:p_yosei_al_pi_mumche",
+    "type": "prop",
+    "label_he": "רבי יוסי אומר: אפילו יש שם עשרים ושלשה, אינו נשחט אלא על פי מומחה",
+    "label_en": "R' Yosei: even if twenty-three are there, it is slaughtered only on the word of an expert",
+    "locus": "Bekhorot.36b.16",
+    "daf": "36b",
+    "sentenceId": 15,
+    "data": {
+     "content": {
+      "pred": "requires",
+      "args": [
+       "hatarat_bechor_bemumin_muvhakin",
+       "mumche"
+      ]
+     }
+    },
+    "skel": [
+     64,
+     114
+    ]
+   },
+   {
+    "id": "dispute:m_hatarat_bechor_muvhak",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "hatarat bechor bemumin muvhakin",
+    "data": {
+     "topic": "hatarat_bechor_bemumin_muvhakin"
+    }
+   },
+   {
+    "id": "voice:r_yosei",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yosei",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:tanna_kamma_36b",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "tanna kamma 36b",
+    "data": {
+     "kind": "mishnah"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_hatarat_bechor_muvhak",
+    "target": "voice:tanna_kamma_36b",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_hatarat_bechor_muvhak",
+    "target": "voice:r_yosei",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:tanna_kamma_36b",
+    "target": "prop:p_shelosha_bnei_haknesset",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_yosei",
+    "target": "prop:p_yosei_al_pi_mumche",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-1e0ca9be3164e919"
+}

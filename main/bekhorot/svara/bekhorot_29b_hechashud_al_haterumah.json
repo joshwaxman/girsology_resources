@@ -1,0 +1,200 @@
+{
+ "sugya": "bekhorot_29b_hechashud_al_haterumah",
+ "tractate": "Bekhorot",
+ "assurance": {
+  "authoredBy": "llm",
+  "humanReviewed": false,
+  "querySuite": false
+ },
+ "range": {
+  "start": "Bekhorot.29b.13",
+  "end": "Bekhorot.29b.13"
+ },
+ "voices": [
+  {
+   "id": "r_yehuda",
+   "kind": "tanna"
+  },
+  {
+   "id": "r_shimon",
+   "kind": "tanna"
+  }
+ ],
+ "props": [
+  {
+   "id": "p_ein_lokchin_afilu_mayim_umelach",
+   "gloss_en": "from one suspected of selling teruma as non-sacred produce one does not buy even water and salt",
+   "content": {
+    "pred": "asur",
+    "args": [
+     "lekichat_mayim_umelach_mechashud_al_haterumah"
+    ]
+   },
+   "locus": "Bekhorot.29b.13",
+   "daf": "29b",
+   "sentenceId": 12
+  },
+  {
+   "id": "p_ein_lokchin_zikat_terumah",
+   "gloss_en": "anything that bears a connection to teruma and tithes one does not buy from him",
+   "content": {
+    "pred": "asur",
+    "args": [
+     "lekichat_kol_sheyesh_bo_zikat_terumah_umaasrot_mechashud_al_haterumah"
+    ]
+   },
+   "locus": "Bekhorot.29b.13",
+   "daf": "29b",
+   "sentenceId": 12
+  }
+ ],
+ "commits": [
+  {
+   "holder": "r_yehuda",
+   "prop": "p_ein_lokchin_afilu_mayim_umelach",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.29b.13",
+   "daf": "29b",
+   "sentenceId": 12
+  },
+  {
+   "holder": "r_shimon",
+   "prop": "p_ein_lokchin_zikat_terumah",
+   "stance": "assert",
+   "ctx": "actual",
+   "locus": "Bekhorot.29b.13",
+   "daf": "29b",
+   "sentenceId": 12
+  }
+ ],
+ "schemas": [],
+ "questions": [],
+ "attributions": [],
+ "supports": [],
+ "frames": [],
+ "disputes": [
+  {
+   "id": "m_lekicha_mechashud_al_haterumah",
+   "topic": "lekicha_mechashud_al_haterumah",
+   "parties": [
+    "r_yehuda",
+    "r_shimon"
+   ]
+  }
+ ],
+ "hypotheses": [],
+ "challenges": [],
+ "objections": [],
+ "rulings": [],
+ "queries": [],
+ "kb": "svara/bekhorot_29b_hechashud_al_haterumah.pl",
+ "graph": {
+  "version": 1,
+  "semantics": {
+   "attack": "unanswered => the target falls; `live` reports whether the move currently defeats, per the solver",
+   "evidence": "records only; NO state of an evidence edge ever changes any verdict (lint-enforced theorem, report 014) -- do not render as the mirror of attack",
+   "structural": "composition; no dialectical force"
+  },
+  "nodes": [
+   {
+    "id": "prop:p_ein_lokchin_afilu_mayim_umelach",
+    "type": "prop",
+    "label_he": "החשוד להיות מוכר תרומה לשום חולין אין לוקחין ממנו אפילו מים ומלח",
+    "label_en": "from one suspected of selling teruma as non-sacred produce one does not buy even water and salt",
+    "locus": "Bekhorot.29b.13",
+    "daf": "29b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "asur",
+      "args": [
+       "lekichat_mayim_umelach_mechashud_al_haterumah"
+      ]
+     }
+    },
+    "skel": [
+     4,
+     57
+    ]
+   },
+   {
+    "id": "prop:p_ein_lokchin_zikat_terumah",
+    "type": "prop",
+    "label_he": "כל שיש בו זיקת תרומה ומעשרות אין לוקחין ממנו",
+    "label_en": "anything that bears a connection to teruma and tithes one does not buy from him",
+    "locus": "Bekhorot.29b.13",
+    "daf": "29b",
+    "sentenceId": 12,
+    "data": {
+     "content": {
+      "pred": "asur",
+      "args": [
+       "lekichat_kol_sheyesh_bo_zikat_terumah_umaasrot_mechashud_al_haterumah"
+      ]
+     }
+    },
+    "skel": [
+     81,
+     117
+    ]
+   },
+   {
+    "id": "dispute:m_lekicha_mechashud_al_haterumah",
+    "type": "dispute",
+    "label_he": "מחלוקת",
+    "label_en": "lekicha mechashud al haterumah",
+    "data": {
+     "topic": "lekicha_mechashud_al_haterumah"
+    }
+   },
+   {
+    "id": "voice:r_shimon",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r shimon",
+    "data": {
+     "kind": "tanna"
+    }
+   },
+   {
+    "id": "voice:r_yehuda",
+    "type": "voice",
+    "label_he": null,
+    "label_en": "r yehuda",
+    "data": {
+     "kind": "tanna"
+    }
+   }
+  ],
+  "edges": [
+   {
+    "source": "dispute:m_lekicha_mechashud_al_haterumah",
+    "target": "voice:r_yehuda",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "dispute:m_lekicha_mechashud_al_haterumah",
+    "target": "voice:r_shimon",
+    "type": "party",
+    "regime": "structural"
+   },
+   {
+    "source": "voice:r_yehuda",
+    "target": "prop:p_ein_lokchin_afilu_mayim_umelach",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   },
+   {
+    "source": "voice:r_shimon",
+    "target": "prop:p_ein_lokchin_zikat_terumah",
+    "type": "commit",
+    "regime": "structural",
+    "stance": "assert"
+   }
+  ]
+ },
+ "kbVersion": "sha256-1e0ca9be3164e919"
+}
