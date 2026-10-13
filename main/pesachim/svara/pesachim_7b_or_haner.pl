@@ -200,21 +200,21 @@ objection_against(identifies(bedika_leor_aruba, lehadei_aruba), obj_lehadei_hain
 objection_kind(obj_lehadei_hainu, svara).
 objection_by(obj_lehadei_hainu, stam_pes_7b).
 objection_source(obj_lehadei_hainu, p_hainu_achsadra).
-% Pesachim.8a.4 -- ואבוקה לא? והאמר רבא: ... למה צדיקים דומין בפני שכינה — כנר בפני האבוקה; ואמר רבא: אבוקה להבדלה מצוה מן המובחר (= p_rava_avuka_havdala, the second ground; the format admits one source per objection). Both memrot rank a torch's light above a lamp's, so why should the baraita exclude the torch? Answered four times, by four voices
+% Pesachim.8a.4 -- ואבוקה לא? והאמר רבא: ... למה צדיקים דומין בפני שכינה — כנר בפני האבוקה; ואמר רבא: אבוקה להבדלה מצוה מן המובחר. Both memrot rank a torch's light above a lamp's, so why should the baraita exclude the torch? Answered four times, by four voices
 objection_against(ein_bodkin_be(or_haavuka), obj_avuka_la).
 objection_kind(obj_avuka_la, svara).
 objection_by(obj_avuka_la, stam_pes_7b).
 objection_source(obj_avuka_la, p_rava_ner_bifnei_avuka).
-%   answered at Pesachim.8a.5: זה יכול להכניסו לחורין ולסדקין, וזה אינו יכול (= p_rnby_chorin): the lamp can be put into holes and cracks, the torch cannot
+%   answered at Pesachim.8a.5: זה יכול להכניסו לחורין ולסדקין, וזה אינו יכול: the lamp can be put into holes and cracks, the torch cannot
 objection_answered(obj_avuka_la, a_rnby_chorin).
 objection_answer_by(a_rnby_chorin, rav_nachman_bar_yitzchak).
-%   answered at Pesachim.8a.5: זה אורו לפניו, וזה אורו לאחריו (= p_zevid_oro): the lamp's light is before it, the torch's behind it
+%   answered at Pesachim.8a.5: זה אורו לפניו, וזה אורו לאחריו: the lamp's light is before it, the torch's behind it
 objection_answered(obj_avuka_la, a_zevid_oro).
 objection_answer_by(a_zevid_oro, rav_zevid).
-%   answered at Pesachim.8a.5: האי בעית, והאי לא בעית (= p_pappa_beit): with the torch he is afraid, with the lamp he is not
+%   answered at Pesachim.8a.5: האי בעית, והאי לא בעית: with the torch he is afraid, with the lamp he is not
 objection_answered(obj_avuka_la, a_pappa_beit).
 objection_answer_by(a_pappa_beit, rav_pappa).
-%   answered at Pesachim.8a.5: האי משיך נהורא, והאי מיקטף איקטופי (= p_ravina_meshich): the lamp's light is drawn out steadily, the torch's is cut off in flickers
+%   answered at Pesachim.8a.5: האי משיך נהורא, והאי מיקטף איקטופי: the lamp's light is drawn out steadily, the torch's is cut off in flickers
 objection_answered(obj_avuka_la, a_ravina_meshich).
 objection_answer_by(a_ravina_meshich, ravina).
 
